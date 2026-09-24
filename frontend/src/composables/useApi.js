@@ -2,9 +2,8 @@ import axios from 'axios'
 
 const api = axios.create({
   baseURL: '/api',
-  headers: {
-    'Content-Type': 'application/json',
-  },
+  // On ne fixe pas de Content-Type global ici, 
+  // car axios le gère automatiquement selon le type de payload (ex: FormData vs JSON)
 })
 
 api.interceptors.request.use((config) => {

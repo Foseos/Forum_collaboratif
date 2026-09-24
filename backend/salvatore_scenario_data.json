@@ -1,0 +1,215 @@
+[
+  {
+    "slug": "damon-salvatore",
+    "name": "Damon Salvatore",
+    "race": "Vampire",
+    "camp": "Bien · méthodes parfois contestables",
+    "age": "Apparence de 25 ans · né au XIXe siècle, transformé en 1864",
+    "origin": "Mystic Falls, Virginie",
+    "sex": "Masculin",
+    "job": "Gestion du patrimoine Salvatore · activité complémentaire au choix",
+    "family": "Époux d’Elena Gilbert Salvatore · frère aîné de Stefan",
+    "quote": "Tenir à quelqu’un ne me donne pas le droit de choisir à sa place.",
+    "character": [
+      "Qualités : courageux, perspicace, ingénieux, tenace et profondément loyal lorsqu’il s’engage.",
+      "Défauts : impulsif, sarcastique, jaloux, rancunier et enclin à répondre à la peur par la violence.",
+      "Damon transforme volontiers une conversation sérieuse en provocation. Son assurance et son humour lui évitent de montrer combien le rejet l’atteint. Il agit vite, improvise et accepte de se salir les mains, mais confond parfois efficacité et brutalité. Son attachement au Bien représente une direction choisie, pas une absolution de ses actes.",
+      "Il sait être attentif et présent, surtout lorsque les autres cessent d’attendre une démonstration spectaculaire. Son défi reste de tenir ses engagements dans la durée : entendre un refus, reconnaître une faute et soutenir un proche sans réclamer d’être pardonné en retour."
+    ],
+    "history": [
+      [
+        "Les frères de Mystic Falls",
+        "Damon grandit dans la famille Salvatore, sous l’autorité dure de Giuseppe. Il partage avec Stefan une histoire faite d’affection, de protection et de blessures mal exprimées. Leurs différences prennent progressivement la forme d’une rivalité, mais leur lien demeure bien plus ancien que les femmes qu’ils aimeront."
+      ],
+      [
+        "1864, la promesse brisée",
+        "L’arrivée de Katherine Pierce bouleverse leur vie. Damon s’attache à elle et envisage l’éternité à ses côtés. Les deux frères meurent avec son sang dans leur organisme lors de la chasse aux vampires. Alors que Damon veut renoncer après l’avoir crue perdue, Stefan le pousse à achever sa transition. La colère née de ce choix nourrit leur séparation pendant des décennies."
+      ],
+      [
+        "Une éternité de mauvais choix",
+        "Damon traverse les années en cultivant le cynisme et l’espoir de retrouver Katherine. Il utilise la contrainte, blesse et tue, parfois par colère, parfois pour obtenir ce qu’il veut. Ses souffrances expliquent certaines réactions sans rendre ses victimes responsables. Son retour à Mystic Falls l’oblige finalement à regarder l’écart entre l’amour auquel il s’accroche et la réalité de Katherine."
+      ],
+      [
+        "Elena, Bonnie et la possibilité de changer",
+        "Sa rencontre avec Elena ne le transforme pas instantanément en homme fiable. Leur rapprochement se construit au milieu de conflits et de décisions douloureuses. Avec Bonnie, notamment pendant leur enfermement dans le monde-prison, il développe une amitié qui dépasse leurs premières alliances contraintes. Ces liens lui donnent des raisons de changer, mais le travail lui appartient."
+      ],
+      [
+        "Un mariage dans une autre continuité",
+        "Dans Nexus Arcana, Damon est marié à Elena et tous deux restent vampires. La guérison finale montrée dans la série n’est pas retenue. Stefan demeure lui aussi vivant et vampire. Les enfants éventuels et les détails de la vie conjugale se définissent avec les joueurs concernés ; aucune naissance n’est imposée par cette fiche."
+      ],
+      [
+        "Faire une place au présent",
+        "La Convergence multiplie les rencontres et les menaces autour de Mystic Falls. Damon peut enquêter sur une disparition, chercher un renseignement ou participer à la protection de ses proches. Il doit apprendre que les nouvelles communautés ne lui doivent aucune obéissance. Un service rendu sans contrepartie, une confrontation avec Caroline ou une décision partagée avec Stefan peuvent éprouver ses progrès."
+      ]
+    ],
+    "links": [
+      [
+        "Elena Gilbert Salvatore",
+        "Épouse",
+        "Nous avons choisi de construire une vie ensemble. Je veux être à tes côtés sans transformer mes peurs en décisions prises pour toi. Notre mariage mérite de la confiance au quotidien, pas seulement des preuves d’amour lorsque tout menace de s’effondrer."
+      ],
+      [
+        "Stefan Salvatore",
+        "Petit frère, lien indestructible",
+        "Nous nous sommes protégés et déchirés pendant plus d’un siècle. Je sais provoquer ta culpabilité, et je dois cesser de m’en servir. Tu es mon frère avant d’être celui qui répare mes erreurs ; je veux apprendre à te soutenir sans te demander de te sacrifier."
+      ],
+      [
+        "Bonnie Bennett",
+        "Amie devenue essentielle",
+        "Nous avons appris à nous supporter, puis à compter l’un sur l’autre. Tu vois à travers mes plaisanteries et tu sais me rappeler mes responsabilités. Je tiens à toi pour la personne que tu es, pas pour les solutions que ta magie pourrait offrir."
+      ],
+      [
+        "Katherine Pierce",
+        "Ancien amour, illusions perdues",
+        "J’ai longtemps organisé ma vie autour de l’idée de te retrouver. Je connais désormais le prix de cette obsession. Notre passé ne disparaît pas, mais il ne me donne aucune raison de te laisser décider de mon présent."
+      ],
+      [
+        "Caroline Forbes",
+        "Un passé dont répondre",
+        "Je t’ai fait du mal et je ne peux pas exiger que mon changement suffise à effacer tes souvenirs. Tu es l’amie d’Elena et l’épouse de mon frère, mais tes limites t’appartiennent. Une coopération ne vaut pas pardon."
+      ]
+    ]
+  },
+  {
+    "slug": "stefan-salvatore",
+    "name": "Stefan Salvatore",
+    "race": "Vampire · double de Silas",
+    "camp": "Bien",
+    "age": "Apparence de jeune adulte · né au XIXe siècle, transformé en 1864",
+    "origin": "Mystic Falls, Virginie",
+    "sex": "Masculin",
+    "job": "Restauration de véhicules anciens · activité proposée",
+    "family": "Époux de Caroline Forbes Salvatore · frère cadet de Damon",
+    "quote": "Je ne peux pas changer mes actes passés. Je peux répondre de ceux que je choisis aujourd’hui.",
+    "character": [
+      "Qualités : attentif, patient, courageux, réfléchi, loyal et capable d’une grande douceur.",
+      "Défauts : secret, culpabilise excessivement, se replie sur lui-même, veut porter seul les difficultés et peut devenir rigide dans sa recherche de contrôle.",
+      "Stefan donne souvent l’impression d’être le plus stable de la pièce. Il écoute et évite les éclats, mais son calme demande un effort réel. Sa dépendance au sang humain demeure une vulnérabilité, même lorsqu’il va bien. Il a besoin de repères et d’appuis plutôt que d’une confiance aveugle dans sa volonté.",
+      "Il cherche facilement sa valeur dans le fait d’être utile ou de se sacrifier. Apprendre à vivre avec Caroline signifie aussi accepter une vie qui ne soit pas une pénitence permanente. Sa tendresse n’efface pas sa capacité à blesser, et reconnaître cette contradiction lui permet d’être plus honnête."
+    ],
+    "history": [
+      [
+        "Avant l’immortalité",
+        "Stefan grandit à Mystic Falls avec Damon. L’autorité de leur père et les silences familiaux façonnent son besoin d’approbation. Katherine entre dans sa vie en 1864 ; son attirance se mêle à la peur et à la contrainte qu’elle exerce sur lui. Leur histoire ne peut être présentée comme une relation entièrement libre."
+      ],
+      [
+        "Le sang et la rupture",
+        "Après sa mort avec le sang de Katherine dans son organisme, Stefan achève sa transformation. Il pousse Damon à faire de même, incapable d’imaginer l’éternité sans son frère. Cette décision lui laisse une culpabilité durable. Sa faim devient rapidement difficile à maîtriser, ouvrant des périodes de violence auxquelles sera associé le nom d’Éventreur."
+      ],
+      [
+        "Apprendre à se contenir",
+        "Avec l’aide de Lexi, Stefan apprend à chercher une autre manière de vivre. L’alimentation animale et des habitudes strictes deviennent des points d’appui, sans garantir l’absence de rechute. Ses années de perte de contrôle, notamment celles liées à Klaus, restent des blessures pour ses victimes. L’Éventreur n’est ni une seconde personne qui l’innocente ni un pouvoir supplémentaire."
+      ],
+      [
+        "Revenir à Mystic Falls",
+        "Elena lui donne envie de retrouver une place parmi les vivants. Leur histoire d’amour compte, tout comme les dangers qu’ils affrontent et les erreurs qu’il commet. Dans la continuité actuelle, Elena est mariée à Damon. Stefan respecte leur choix ; son passé avec elle peut nourrir une amitié sans imposer un nouveau triangle amoureux."
+      ],
+      [
+        "Caroline et une vie possible",
+        "L’aide qu’il apporte à Caroline après sa transformation devient une amitié profonde, puis un amour. Dans Nexus Arcana, leur mariage est conservé, mais Stefan ne subit ni la guérison ni le sacrifice final de la série : il demeure vivant et vampire. Caroline et lui peuvent donc construire leur quotidien. Sa place auprès de Josie et Lizzie se développe avec elles, sans remplacer leur père."
+      ],
+      [
+        "Choisir de rester",
+        "La Convergence lui offre de nouvelles rencontres autant que des situations susceptibles de fragiliser son équilibre. Il peut restaurer un véhicule, accompagner un vampire débutant ou enquêter sur une trace de son passé. L’enjeu n’est pas de réussir seul : demander de l’aide à Caroline ou parler franchement à Damon peut devenir une décision aussi importante qu’un affrontement."
+      ]
+    ],
+    "links": [
+      [
+        "Caroline Forbes",
+        "Épouse et meilleure amie",
+        "Notre amitié m’a appris à te connaître au-delà de ton énergie et de tes plans. Je veux construire avec toi un avenir concret, où nous pouvons parler de nos peurs sans disparaître pour protéger l’autre. Je respecte ta place de mère et les liens propres à tes filles."
+      ],
+      [
+        "Damon Salvatore",
+        "Frère aîné",
+        "Je porte encore la responsabilité de t’avoir poussé à achever ta transformation. Je ne peux pourtant pas expier éternellement à ta place les choix que tu fais. Je veux que nous restions frères en apprenant à nous parler et à nous laisser vivre."
+      ],
+      [
+        "Elena Gilbert Salvatore",
+        "Ancien amour, affection durable",
+        "Notre histoire a compté, et je ne souhaite pas la nier. Je respecte ta vie avec Damon et je veux que notre lien actuel se construise sans dette sentimentale. Nous pouvons nous soutenir sans devoir retrouver ce que nous étions."
+      ],
+      [
+        "Katherine Pierce",
+        "Passé troublé",
+        "Mes sentiments d’autrefois n’effacent ni les mensonges ni la contrainte. Ton retour peut réveiller des souvenirs, mais il ne t’accorde aucun droit sur ma vie. Une conversation sincère demanderait que tu acceptes aussi mes refus."
+      ],
+      [
+        "Niklaus Mikaelson",
+        "Ancienne complicité, méfiance",
+        "Tu connais les périodes de ma vie que je voudrais garder enfouies. Je me souviens de notre proximité autant que de la façon dont tu as utilisé mes faiblesses. Je refuse que cette histoire décide de ce que je dois redevenir pour te satisfaire."
+      ]
+    ]
+  },
+  {
+    "slug": "caroline-forbes-salvatore",
+    "name": "Caroline Forbes Salvatore",
+    "race": "Vampire",
+    "camp": "Bien",
+    "age": "Apparence de jeune adulte depuis sa transformation · âge chronologique à harmoniser avec le forum",
+    "origin": "Mystic Falls, Virginie",
+    "sex": "Féminin",
+    "job": "Accompagnement des jeunes surnaturels et organisation de projets éducatifs · fonction précise au choix",
+    "family": "Épouse de Stefan Salvatore · mère de Josie et Lizzie Saltzman",
+    "quote": "On peut avoir peur, préparer un plan et avancer quand même.",
+    "character": [
+      "Qualités : énergique, organisée, loyale, courageuse, sociable et persévérante.",
+      "Défauts : perfectionniste, parfois directive, anxieuse lorsque les choses lui échappent, susceptible et trop prompte à organiser la vie des autres.",
+      "Caroline prévoit, vérifie et recommence jusqu’à ce que chacun ait trouvé sa place. Ce talent peut rendre un projet possible autant qu’étouffer ceux qui n’ont pas demandé son aide. Elle apprend à distinguer le soutien du contrôle, particulièrement auprès de ses filles.",
+      "Son assurance s’est construite sur une ancienne peur de passer après les autres. Devenir vampire lui a permis de découvrir sa force, sans supprimer le besoin d’être aimée. Elle sait faire preuve de franchise, d’humour et de douceur, et tient à conserver des joies ordinaires au milieu des crises."
+    ],
+    "history": [
+      [
+        "La jeune fille qui voulait être choisie",
+        "Fille de Liz et Bill Forbes, Caroline grandit à Mystic Falls aux côtés d’Elena et Bonnie. Elle s’investit dans la vie du lycée et les événements locaux, tout en se comparant souvent aux autres. Derrière son besoin de briller se trouve la crainte de ne jamais suffire. Les tensions familiales lui apprennent tôt que l’image d’une famille et son intimité peuvent être très différentes."
+      ],
+      [
+        "Une transformation imposée",
+        "Hospitalisée après un accident et soignée avec le sang de Damon, Caroline est tuée par Katherine et devient vampire. Stefan l’aide à maîtriser sa faim. Elle découvre une discipline et une détermination qu’elle sous-estimait. Cette reconstruction ne transforme pas en souvenirs anodins la violence et la contrainte que Damon lui avait auparavant infligées."
+      ],
+      [
+        "Aimer et traverser le deuil",
+        "Ses relations, notamment avec Tyler et Klaus, l’amènent à définir ses limites et ses désirs. Sa relation avec sa mère évolue vers une complicité précieuse. La mort de Liz bouleverse cet équilibre ; Caroline traverse une période où elle coupe son humanité et blesse à son tour. Retrouver ses émotions implique d’affronter les conséquences plutôt que de reprendre sa vie comme si rien ne s’était passé."
+      ],
+      [
+        "Devenir mère",
+        "Un transfert magique exceptionnel lui permet de porter Josie et Lizzie, les filles biologiques de Jo et Alaric. Elle les élève et devient pleinement leur mère. Cet événement ne lui accorde aucun pouvoir de sorcière ni capacité de grossesse surnaturelle reproductible. Leur âge et leur autonomie suivent la chronologie de leurs propres fiches ; Caroline doit apprendre à protéger sans décider de tout."
+      ],
+      [
+        "Stefan et un avenir partagé",
+        "L’amitié née de leur expérience vampirique évolue en amour. Dans Nexus Arcana, Caroline et Stefan sont mariés et tous deux vampires. La mort finale de Stefan n’est pas retenue dans cette adaptation. Leur couple peut construire une vie commune, avec ses désaccords et ses projets, tandis que Caroline conserve ses amitiés, sa maternité et ses ambitions personnelles."
+      ],
+      [
+        "Accueillir le monde du Nexus",
+        "La Convergence fait se rencontrer des jeunes et des familles dont les traditions surnaturelles diffèrent. Caroline peut participer à des projets éducatifs, organiser un accueil ou aider une personne à comprendre sa nouvelle nature. Elle ne possède pas automatiquement la direction d’un établissement. Monter un événement, retrouver Bonnie ou accompagner ses filles constitue un point de départ aussi valable qu’une menace magique."
+      ]
+    ],
+    "links": [
+      [
+        "Stefan Salvatore",
+        "Époux, confiance construite",
+        "Tu m’as aidée à trouver mes repères lorsque je suis devenue vampire. Notre amour a grandi dans cette amitié. Je veux partager ta vie, pas attendre à distance que tu portes seul toutes tes difficultés ; nous avons le droit de bâtir des projets et de les discuter."
+      ],
+      [
+        "Elena Gilbert Salvatore",
+        "Meilleure amie",
+        "Nous avons grandi ensemble, avec nos comparaisons, nos confidences et nos désaccords. Je tiens à la femme que tu es devenue. Je peux soutenir ton mariage tout en gardant mon propre regard sur Damon, et j’attends de notre amitié qu’elle laisse cette place à la franchise."
+      ],
+      [
+        "Bonnie Bennett",
+        "Meilleure amie, soutien réciproque",
+        "Je connais ton réflexe de tout donner aux autres. Je veux aussi entendre tes envies, tes colères et tes projets. Notre amitié doit pouvoir exister autour d’un café ou d’une fête, sans qu’une urgence magique soit nécessaire pour nous retrouver."
+      ],
+      [
+        "Damon Salvatore",
+        "Beau-frère, limites nécessaires",
+        "Ton mariage avec Elena et le mien avec Stefan nous rapprochent dans la famille. Ils n’effacent pas ce que tu m’as fait. Je peux travailler avec toi et reconnaître tes efforts tout en conservant les limites dont j’ai besoin."
+      ],
+      [
+        "Niklaus Mikaelson",
+        "Attirance passée, indépendance présente",
+        "Tu as su voir en moi des envies d’ailleurs, mais je connais aussi ta violence. Notre passé ne te donne pas de droit sur ma vie ni sur mon mariage. Ce que nous pourrons nous dire aujourd’hui dépendra du respect de mes choix."
+      ]
+    ]
+  }
+]

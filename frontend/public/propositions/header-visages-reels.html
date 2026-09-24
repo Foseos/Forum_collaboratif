@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Proposition de header — Nexus Arcana</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #0b0715; color: #f8ecdf; font-family: Georgia, serif; }
+    .proposal { max-width: 1500px; margin: 2.5rem auto; padding: 0 1.2rem; }
+    .label { color: #c5a8e8; font: 700 .72rem Arial,sans-serif; letter-spacing: .22em; text-transform: uppercase; }
+    .banner { position: relative; min-height: 540px; margin-top: .7rem; overflow: hidden; border: 1px solid #5b416d; border-radius: 18px; isolation: isolate; background: #130d21; }
+    .world { position: absolute; inset: 0; z-index: -3; background: url('./nexus-world-background.png') center/cover no-repeat; }
+    .world::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg,rgba(8,5,15,.74),transparent 28%,rgba(9,5,17,.12) 100%); }
+    .nav { position: relative; z-index: 5; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.7rem; background: rgba(12,8,24,.66); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(245,215,110,.24); font: 600 .75rem Arial,sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+    .nav .brand { color: #f5d76e; font-family: Georgia,serif; font-size: 1.2rem; letter-spacing: .12em; }
+    .nav .items { display: flex; flex-wrap: wrap; gap: 1.2rem; color: #e4d9eb; }
+    .cast { position: absolute; z-index: 1; inset: 92px 0 106px; }
+    .portrait { position: absolute; bottom: 0; width: clamp(115px,13vw,180px); height: clamp(190px,23vw,285px); overflow: hidden; opacity: .88; filter: drop-shadow(0 6px 14px rgba(0,0,0,.5)); }
+    .portrait:nth-child(1) { left: 7%; bottom: 5%; }
+    .portrait:nth-child(2) { left: 30%; bottom: 0; height: clamp(205px,25vw,310px); }
+    .portrait:nth-child(3) { left: 54%; bottom: 3%; }
+    .portrait:nth-child(4) { right: 7%; bottom: 1%; }
+    .portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 16%; filter: saturate(.58) contrast(1.12) brightness(.86) sepia(.1); -webkit-mask-image: radial-gradient(ellipse 54% 58% at 50% 41%,#000 42%,rgba(0,0,0,.8) 59%,transparent 100%); mask-image: radial-gradient(ellipse 54% 58% at 50% 41%,#000 42%,rgba(0,0,0,.8) 59%,transparent 100%); }
+    .portrait:first-child img { -webkit-mask-image: radial-gradient(ellipse 45% 54% at 50% 37%,#000 40%,rgba(0,0,0,.65) 59%,transparent 100%); mask-image: radial-gradient(ellipse 45% 54% at 50% 37%,#000 40%,rgba(0,0,0,.65) 59%,transparent 100%); }
+    .portrait::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(0deg,rgba(29,16,42,.48),transparent 58%,rgba(93,53,110,.1)); -webkit-mask-image: radial-gradient(ellipse 54% 58% at 50% 41%,#000 42%,transparent 100%); mask-image: radial-gradient(ellipse 54% 58% at 50% 41%,#000 42%,transparent 100%); }
+    .portrait span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .title-wrap { position: absolute; z-index: 4; bottom: 0; left: 0; right: 0; padding: 2.3rem 1rem 1.6rem; text-align: center; background: linear-gradient(transparent,rgba(10,6,20,.92) 55%); }
+    h1 { margin: 0; color: #f5d76e; font-size: clamp(2.6rem,5.5vw,5.6rem); font-weight: 400; letter-spacing: .12em; line-height: 1; text-shadow: 0 3px 18px #05030a; }
+    .subtitle { margin: .6rem 0 0; color: #ddcbea; font: 600 .72rem Arial,sans-serif; letter-spacing: .25em; text-transform: uppercase; }
+    .note { max-width: 780px; color: #c4b5d4; font: .9rem/1.65 Arial,sans-serif; }
+    @media (max-width: 700px) { .proposal { margin: 1rem auto; padding: 0 .5rem; } .banner { min-height: 450px; } .nav { justify-content: center; } .nav .items { display: none; } .cast { inset: 112px 0 103px; } .portrait { width: 24%; height: 175px; } .portrait:nth-child(1) { left: 1%; } .portrait:nth-child(2) { left: 25%; height: 190px; } .portrait:nth-child(3) { left: 51%; } .portrait:nth-child(4) { right: 0; } h1 { font-size: 2.3rem; } .subtitle { font-size: .55rem; letter-spacing: .1em; } }
+  </style>
+</head>
+<body>
+  <main class="proposal">
+    <p class="label">Proposition visuelle · portraits réels</p>
+    <section class="banner" aria-label="Maquette de l’en-tête Nexus Arcana">
+      <div class="world"></div>
+      <div class="nav"><span class="brand">✦ Nexus Arcana</span><span class="items">Accueil　Univers　Groupes　Membres　Messagerie</span></div>
+      <div class="cast">
+        <div class="portrait"><img src="./prue-charlize-theron.jpg" alt="Charlize Theron, Prue" /><span>Prue</span></div>
+        <div class="portrait"><img src="./piper-sarah-michelle-gellar.jpg" alt="Sarah Michelle Gellar, Piper" /><span>Piper</span></div>
+        <div class="portrait"><img src="./phoebe-jennifer-love-hewitt.jpg" alt="Jennifer Love Hewitt, Phoebe" /><span>Phoebe</span></div>
+        <div class="portrait"><img src="./paige-anne-hathaway.jpg" alt="Anne Hathaway, Paige" /><span>Paige</span></div>
+      </div>
+      <div class="title-wrap"><h1>Nexus Arcana</h1><p class="subtitle">Les mondes se rencontrent · Saison 1</p></div>
+    </section>
+    <p class="note">Maquette de proposition. Les photos des actrices restent fidèles ; leurs contours et leur lumière se fondent dans le décor. Chaque visage peut être remplacé ou rejoint par un nouveau personnage sans refaire le fond.</p>
+  </main>
+</body>
+</html>

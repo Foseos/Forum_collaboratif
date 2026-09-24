@@ -1,5 +1,6 @@
 <template>
   <div class="page">
+    <div class="container">
     <div class="flex justify-between items-center mb-2">
       <h1 class="page-title" style="margin-bottom: 0">Notifications</h1>
       <button
@@ -44,6 +45,7 @@
         :count="notifications.pagination.count"
         @change="loadPage"
       />
+    </div>
     </div>
   </div>
 </template>

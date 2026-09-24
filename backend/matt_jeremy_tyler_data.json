@@ -1,0 +1,238 @@
+[
+  {
+    "slug": "matt-donovan",
+    "name": "Matt Donovan",
+    "race": "Humain",
+    "job": "Policier à Mystic Falls · grade à préciser",
+    "family": "Fils de Kelly Donovan · frère de Vicki · situation amoureuse au choix",
+    "quote": "Les gens ordinaires ont aussi le droit de rentrer chez eux en sécurité.",
+    "character": [
+      "Qualités : travailleur, courageux, loyal, pragmatique et attentif aux personnes isolées.",
+      "Défauts : obstiné, méfiant envers le surnaturel, parfois amer et peu disposé à demander de l’aide.",
+      "Matt a appris tôt à compter sur ses propres efforts. Il préfère les gestes concrets aux grandes promesses et peut sembler distant lorsqu’il essaie seulement de tenir. Ses pertes nourrissent une colère qu’il doit empêcher de devenir un jugement automatique sur toute une communauté. Il veut être utile sans rester celui dont la vie passe toujours après les urgences des autres."
+    ],
+    "history": [
+      [
+        "Grandir trop vite",
+        "Matt grandit à Mystic Falls avec Vicki, dans une famille marquée par les absences et l’instabilité. Travailler au Mystic Grill lui permet de payer ses dépenses et de garder un peu de contrôle sur son quotidien. Ses amitiés, le sport et sa relation adolescente avec Elena constituent alors ses principaux repères."
+      ],
+      [
+        "Découvrir ce qui se cache",
+        "La transformation de Vicki puis sa mort rendent le surnaturel terriblement concret. Matt découvre que ses proches lui ont caché une part essentielle de leur vie. Son histoire avec Caroline le confronte à la difficulté d’aimer et de faire confiance lorsque la peur s’en mêle. Il ne cesse pas de tenir à ses amis, mais refuse que son humanité le rende négligeable."
+      ],
+      [
+        "Protéger sans devenir aveugle",
+        "Son engagement dans la police prolonge son besoin de protéger les habitants. Il apprend à chercher des preuves et à écouter, même quand ses expériences personnelles le poussent à soupçonner les vampires. Une fonction publique ne lui donne pas le droit de punir une nature plutôt qu’un acte. Son grade et ses responsabilités précises restent à harmoniser avec les institutions du forum."
+      ],
+      [
+        "Rester humain dans le Nexus",
+        "Dans cette adaptation, Matt demeure humain, sans bague de résurrection accordée automatiquement. La Convergence lui fait rencontrer des créatures qui ne partagent pas toutes les habitudes de Mystic Falls. Une disparition, un témoignage contradictoire ou un conflit de voisinage peuvent lancer une enquête. Il souhaite aussi reconstruire un quotidien fait d’amitiés, de repos et de projets qui ne se résument pas à survivre."
+      ]
+    ],
+    "powers": [
+      [
+        "Observation et enquête",
+        "Recoupe des témoignages et examine des indices. Ses conclusions peuvent être erronées ; il ne détecte ni mensonges ni créatures par magie."
+      ],
+      [
+        "Premiers secours",
+        "Applique des gestes appris en attendant des soins adaptés. Ne guérit pas instantanément et ne remplace pas un médecin."
+      ],
+      [
+        "Défense et maniement d’équipement",
+        "Dispose d’un entraînement professionnel à préciser. Aucun tir ou affrontement n’est automatiquement réussi ; l’équipement suit les règles du forum."
+      ],
+      [
+        "Connaissance locale",
+        "Connaît les lieux et certains habitants de Mystic Falls. Cela ne lui donne pas accès à tous les secrets ni aux informations privées."
+      ]
+    ],
+    "links": [
+      [
+        "Elena Gilbert Salvatore",
+        "Ancien amour, amie d’enfance",
+        "Nous avons partagé une vie avant que tout change. Je respecte tes choix, même lorsque ton monde me fait peur. Je veux pouvoir te parler franchement sans que notre passé amoureux décide de notre présent."
+      ],
+      [
+        "Caroline Forbes",
+        "Ancienne compagne, amie",
+        "Ta transformation a bouleversé mes repères, et je n’ai pas toujours su réagir avec justesse. Je reconnais la personne que tu es devenue. Notre amitié peut continuer sans nier les difficultés que nous avons traversées."
+      ],
+      [
+        "Tyler Lockwood",
+        "Meilleur ami",
+        "Nous avons grandi ensemble, avec nos disputes et nos mauvais choix. Ton hybridité ne te résume pas à mes yeux. Je veux rester ton ami sans avoir à approuver chacune de tes décisions."
+      ],
+      [
+        "Jeremy Gilbert",
+        "Ami, deuil partagé",
+        "Vicki appartient à nos souvenirs à tous les deux. Nous avons aussi appris à nous entraider au-delà de cette douleur. Je sais que tu veux agir, mais je refuse de te laisser croire que prendre tous les risques est la seule façon d’être utile."
+      ],
+      [
+        "Bonnie Bennett",
+        "Amie et alliée",
+        "Je connais ton courage et ce que les autres attendent trop souvent de toi. Je peux me méfier de la magie sans te réduire à tes pouvoirs. Si nous travaillons ensemble, je veux que tu puisses aussi dire non."
+      ]
+    ]
+  },
+  {
+    "slug": "jeremy-gilbert",
+    "name": "Jeremy Gilbert",
+    "race": "Humain · chasseur",
+    "job": "Illustrateur et chasseur de terrain · activité civile proposée",
+    "family": "Frère d’Elena Gilbert Salvatore · fils de Grayson et Miranda Gilbert · situation amoureuse au choix",
+    "quote": "Je veux choisir ce que je protège, pas seulement ce que je combats.",
+    "character": [
+      "Qualités : sensible, courageux, créatif, persévérant et fidèle à ses proches.",
+      "Défauts : impulsif, secret, parfois téméraire et réticent à se laisser protéger.",
+      "Jeremy dessine souvent mieux qu’il ne parvient à dire ce qu’il ressent. Les deuils ont nourri son repli, puis son besoin d’agir. Il supporte mal d’être tenu à l’écart, mais peut reproduire ce comportement en cachant ses propres difficultés. Devenir autonome implique pour lui de préparer ses décisions plutôt que de prouver sa valeur en se mettant en danger."
+    ],
+    "history": [
+      [
+        "Le petit frère qui reste",
+        "La mort de Grayson et Miranda bouleverse Jeremy et Elena. Il traverse son adolescence dans le deuil, trouve refuge dans le dessin et se rapproche de Vicki, puis d’Anna. Les nouvelles pertes et les secrets surnaturels le privent progressivement de l’illusion d’une vie protégée."
+      ],
+      [
+        "Les Gilbert et leurs secrets",
+        "Jeremy découvre que sa famille connaît depuis longtemps l’existence des vampires. Les efforts d’Elena pour l’éloigner du danger lui paraissent parfois être une autre manière de lui retirer le choix. Il veut comprendre ce qu’il affronte et prendre sa place auprès de ceux qui tentent de défendre Mystic Falls."
+      ],
+      [
+        "Apprendre à chasser",
+        "L’héritage des chasseurs et son passage lié aux Cinq appartiennent à son parcours. Pour Nexus Arcana, la nature indiquée dans son scénario est conservée : Jeremy est un humain chasseur. La marque ne lui accorde ici ni force surnaturelle, ni pulsion magique imposée, ni immunité. Ses expériences avec les morts ne lui donnent pas davantage un don actif permanent de médium."
+      ],
+      [
+        "Bonnie et les liens vivants",
+        "Son histoire avec Bonnie lui a apporté de la tendresse et des blessures. Il garde de l’affection pour elle sans considérer son pardon ni une reprise de leur couple comme acquis. Ses anciennes expériences de mort et de retour ne sont pas un pouvoir reproductible. Il doit construire son avenir avec la même vulnérabilité qu’un autre humain."
+      ],
+      [
+        "Trouver sa place dans la Convergence",
+        "Elena est désormais mariée à Damon et reste vampire. Jeremy doit concilier son rôle de chasseur avec les personnes surnaturelles qu’il aime : une nature ne suffit pas à désigner un ennemi. Le Nexus offre des pistes d’enquête, mais aussi la possibilité de développer son dessin et une activité civile. Une illustration commandée, une trace retrouvée ou une mission partagée avec Matt peut amorcer son jeu."
+      ]
+    ],
+    "powers": [
+      [
+        "Pistage de terrain",
+        "Repère des traces matérielles et tente de reconstituer un passage. La météo, le terrain et les fausses pistes peuvent le tromper."
+      ],
+      [
+        "Maniement d’armes",
+        "Possède un entraînement humain, à préciser selon son équipement. Aucun coup automatique, précision parfaite ou arme spéciale gratuite."
+      ],
+      [
+        "Documentation surnaturelle",
+        "Compare ses observations aux archives disponibles. Ne connaît pas toutes les espèces et peut rencontrer des informations incomplètes."
+      ],
+      [
+        "Dessin d’observation",
+        "Réalise croquis, portraits et relevés d’indices à partir de ce qu’il voit. Aucun dessin prophétique ni reproduction parfaite d’un souvenir."
+      ]
+    ],
+    "links": [
+      [
+        "Elena Gilbert Salvatore",
+        "Grande sœur",
+        "Je sais que tu veux me garder en sécurité, mais j’ai besoin de prendre mes propres décisions. Je veux pouvoir compter sur toi sans redevenir le petit frère à qui l’on cache tout. Ta vie avec Damon ne change pas notre famille."
+      ],
+      [
+        "Bonnie Bennett",
+        "Ancien amour",
+        "Tu as compté énormément pour moi, et je ne veux pas effacer ce que nous avons partagé ni les blessures. Je respecte la vie que tu souhaites construire. Notre lien actuel se décidera ensemble, sans dette ni promesse imposée."
+      ],
+      [
+        "Matt Donovan",
+        "Ami et partenaire de terrain",
+        "Tu sais ce que signifie rester humain au milieu de tout cela. J’apprécie ton sens pratique, même quand tu me demandes de ralentir. Nous pouvons nous entraider sans prétendre que le courage nous protège des blessures."
+      ],
+      [
+        "Tyler Lockwood",
+        "De la rivalité à l’entraide",
+        "Nous n’avons pas toujours été amis, et notre passé ne manque pas de heurts. Nous avons pourtant appris à nous connaître autrement. Je veux te juger sur tes actes, pas seulement sur ce que mon rôle de chasseur pourrait me faire craindre."
+      ],
+      [
+        "Damon Salvatore",
+        "Beau-frère, confiance exigeante",
+        "Tu partages la vie de ma sœur, mais cela ne suffit pas à effacer nos différends. Je veux que tu me considères comme quelqu’un capable de choisir. La confiance se gagnera aussi lorsque tu accepteras de ne pas décider à ma place."
+      ]
+    ]
+  },
+  {
+    "slug": "tyler-lockwood",
+    "name": "Tyler Lockwood",
+    "race": "Hybride · loup-garou et vampire",
+    "job": "Gestion du patrimoine Lockwood · activité complémentaire au choix",
+    "family": "Fils de Richard et Carol Lockwood · neveu de Mason · situation amoureuse au choix",
+    "quote": "Ma liberté ne vaut rien si je m’en sers pour retirer celle des autres.",
+    "character": [
+      "Qualités : courageux, loyal, déterminé, protecteur et capable de remettre en cause ses anciens comportements.",
+      "Défauts : impulsif, orgueilleux, rancunier, parfois agressif et tenté de tout résoudre par l’affrontement.",
+      "Tyler a longtemps utilisé sa colère pour masquer sa peur et son besoin de reconnaissance. Découvrir sa nature n’excuse pas la violence de son adolescence. Il a appris le prix de l’obéissance forcée et tient désormais à son indépendance. Son défi est de défendre ses limites sans imposer sa volonté à ceux qu’il aime."
+    ],
+    "history": [
+      [
+        "L’héritier des Lockwood",
+        "Tyler grandit dans une famille influente de Mystic Falls, avec les privilèges et les exigences du nom Lockwood. Son amitié avec Matt lui offre un lien moins cérémonieux. Au lycée, ses accès de colère et ses comportements blessants laissent des traces dont il doit répondre."
+      ],
+      [
+        "La malédiction révélée",
+        "Mason lui fait découvrir l’héritage lycanthrope de sa famille. Une mort qu’il provoque accidentellement déclenche la malédiction ; les transformations lui apprennent une vulnérabilité qu’il n’avait jamais acceptée. Caroline l’accompagne dans cette période et leur rapprochement devient une relation importante."
+      ],
+      [
+        "Le cadeau qui était une chaîne",
+        "Klaus le transforme en hybride. Le soulagement d’échapper aux transformations imposées nourrit un lien d’asservissement que Tyler confond d’abord avec de la gratitude. Lorsqu’il mesure le danger pour ses proches, il s’engage dans un effort douloureux pour s’en libérer. Il aide ensuite d’autres hybrides à chercher la même indépendance."
+      ],
+      [
+        "La vengeance et ses conséquences",
+        "Klaus tue Carol, sa mère, et la perte devient le cœur de sa colère. Tyler risque de laisser cette vengeance décider de toute sa vie. Sa relation avec Caroline se brise au fil des conflits et des choix qu’ils ne parviennent plus à partager. Son passé avec elle ne lui donne aucun droit sur son présent."
+      ],
+      [
+        "Un hybride libre dans le Nexus",
+        "Dans cette adaptation, Tyler reste vivant et hybride, comme indiqué dans son scénario. La perte ultérieure de son hybridité et sa mort dans la série ne sont pas retenues. Son lien d’asservissement à Klaus est rompu. Caroline est mariée à Stefan ; Tyler peut reconstruire ses amitiés et choisir ses propres projets. Accueillir un loup isolé, rechercher une archive Lockwood ou retrouver Matt peut lui donner une place au-delà de la vengeance."
+      ]
+    ],
+    "powers": [
+      [
+        "Transformation lupine",
+        "Prend une forme de loup avec effort et fatigue. La transformation n’est pas instantanée ; elle ne confère ni invulnérabilité ni maîtrise parfaite de ses réactions."
+      ],
+      [
+        "Force surnaturelle",
+        "Déploie une force supérieure à celle d’un humain sur une action ciblée. Ne garantit pas la victoire et ne permet pas une destruction massive."
+      ],
+      [
+        "Vitesse surnaturelle",
+        "Accélère brièvement sur une courte distance dégagée. Ne traverse pas les obstacles et ne se téléporte pas."
+      ],
+      [
+        "Régénération",
+        "Récupère plus vite de blessures ordinaires selon leur gravité et son état. Ne revient pas d’une mort définitive et n’annule pas toute blessure magique."
+      ]
+    ],
+    "links": [
+      [
+        "Matt Donovan",
+        "Meilleur ami",
+        "Tu me connais depuis avant les transformations et les menaces de Klaus. Je tiens à cette histoire commune. Ta confiance ne m’est pas due : je veux pouvoir être présent pour toi autant que tu l’as été pour moi."
+      ],
+      [
+        "Caroline Forbes",
+        "Ancien amour",
+        "Tu m’as aidé lorsque j’avais peur de ce que je devenais. Je garde ce souvenir et celui de nos blessures. Tu es aujourd’hui mariée à Stefan ; je respecte ce choix et ne veux pas transformer notre passé en droit sur ton avenir."
+      ],
+      [
+        "Niklaus Mikaelson",
+        "Créateur et ennemi",
+        "Tu as changé ma nature, voulu diriger mes actes et tué ma mère. Je ne te dois ni gratitude ni obéissance. Mon lien d’asservissement est rompu ; une rencontre ou une trêve éventuelle ne signifiera jamais que ce passé est effacé."
+      ],
+      [
+        "Jeremy Gilbert",
+        "Ancien rival, allié possible",
+        "Nous avons eu nos raisons de nous opposer, puis de nous entraider. Ton rôle de chasseur peut créer des tensions avec ma nature. Je souhaite que nous parlions de nos actes avant de nous enfermer dans ces étiquettes."
+      ],
+      [
+        "Bonnie Bennett",
+        "Amie, respect à préserver",
+        "Je sais que tu as souvent été appelée lorsque tout semblait perdu. Je respecte ton courage et ton droit de refuser. Si nous affrontons un danger commun, je veux participer à l’effort sans faire de ta magie notre seule issue."
+      ]
+    ]
+  }
+]

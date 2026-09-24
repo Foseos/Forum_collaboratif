@@ -1,0 +1,883 @@
+{
+  "continents": [
+    {
+      "slug": "europe",
+      "icon": "🏰",
+      "name": "Europe",
+      "desc": "Du vieux continent aux villes chargées d'histoire, entre charmes ancestraux et magie millénaire",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "asie",
+      "icon": "🏯",
+      "name": "Asie",
+      "desc": "Terre de sagesse et de mystères, où les arts martiaux côtoient les esprits et les traditions magiques",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "afrique",
+      "icon": "🌍",
+      "name": "Afrique",
+      "desc": "Berceau de la magie ancestrale, entre savanes infinies, déserts enchantés et rituels séculaires",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "amerique-du-sud",
+      "icon": "🌎",
+      "name": "Amérique du Sud",
+      "desc": "Forêts amazoniennes mystiques, civilisations perdues et magie chamanique au cœur du continent",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "oceanie",
+      "icon": "🏝️",
+      "name": "Océanie",
+      "desc": "Archipels isolés et peuples anciens gardant les secrets d'une magie née avec les océans",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "antarctique",
+      "icon": "❄️",
+      "name": "Antarctique",
+      "desc": "Les glaces éternelles du bout du monde, territoire hostile où se cachent des puissances oubliées",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+  "lesCieux": [
+    {
+      "slug": "repaire-des-fondateurs",
+      "icon": "✨",
+      "name": "Repaire des Fondateurs",
+      "desc": "Le sanctuaire céleste des puissances fondatrices qui veillent sur l'équilibre du monde magique",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "repaire-des-gardiens-des-sceaux",
+      "icon": "🔏",
+      "name": "Repaire des Gardiens des Sceaux",
+      "desc": "Le domaine des gardiens qui protègent les sceaux sacrés maintenant l'ordre entre les plans d'existence",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "repaire-des-veilleurs-de-laube",
+      "icon": "🌅",
+      "name": "Repaire des Veilleurs de l'Aube",
+      "desc": "Le refuge des veilleurs qui gardent la frontière entre la nuit et la lumière, entre le Mal et le Bien",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+  "dimensionsAlternatives": [
+    {
+      "slug": "monde-des-contes",
+      "icon": "📖",
+      "name": "Monde des contes",
+      "desc": "Un univers enchanté où les personnages de contes prennent vie, entre magie féerique et récits ancestraux",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "monde-miroir",
+      "icon": "🪞",
+      "name": "Monde miroir",
+      "desc": "Le reflet inversé de notre réalité, où le Bien et le Mal s'échangent et où rien n'est ce qu'il semble",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+  "lesEnfers": [
+    {
+      "slug": "repaire-source-du-mal",
+      "icon": "🔥",
+      "name": "Repaire de la Source du Mal",
+      "desc": "Le cœur ténébreux de toute magie noire, là où règne la puissance absolue du Mal",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "ecole-magie-noire",
+      "icon": "🖤",
+      "name": "École de magie noire",
+      "desc": "Institution démoniaque où les apprentis se forment aux arts obscurs et aux sortilèges interdits",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "les-souterrains",
+      "icon": "🕳️",
+      "name": "Les Souterrains",
+      "desc": "Galeries infernales et passages secrets reliant les différents repaires des forces du Mal",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "repaire-triade",
+      "icon": "🔱",
+      "name": "Repaire de la Triade",
+      "desc": "Quartier général de la Triade du Mal, maîtres des démons de haut rang",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "repaire-conclave-abime",
+      "icon": "🌑",
+      "name": "Repaire du Conclave de l'Abîme",
+      "desc": "Sanctuaire obscur du Conclave, conseil suprême des forces démoniaques les plus anciennes",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "repaire-cavaliers-apocalypse",
+      "icon": "🐎",
+      "name": "Repaire des Cavaliers de l'Apocalypse",
+      "desc": "Domaine des quatre Cavaliers — Guerre, Famine, Pestilence et Mort — attendant leur heure",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "le-tartare",
+      "icon": "⛓️",
+      "name": "Le Tartare",
+      "desc": "Abîme le plus profond des Enfers, prison éternelle des démons condamnés par leurs pairs",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "ecoleMagie": [
+    {
+      "slug": "garderie",
+      "icon": "🧒",
+      "name": "Garderie",
+      "desc": "Les tout-petits initiés à la magie dans un espace protégé et bienveillant",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "salles-de-cours",
+      "icon": "📖",
+      "name": "Salles de cours",
+      "desc": "Là où sorts, théories et pratiques magiques sont enseignés aux élèves",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "bibliotheque",
+      "icon": "📚",
+      "name": "Bibliothèque",
+      "desc": "Grimoires anciens, archives secrètes et savoirs interdits accessibles aux initiés",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "cour-exterieure",
+      "icon": "🌳",
+      "name": "Cour extérieure",
+      "desc": "Espace de récréation et d'entraînement à ciel ouvert, entre herbes magiques et duels improvisés",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "dortoir",
+      "icon": "🛏️",
+      "name": "Dortoir",
+      "desc": "Chambres des élèves résidents, refuge nocturne où les secrets circulent à voix basse",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "salle-des-professeurs",
+      "icon": "👨‍🏫",
+      "name": "Salle des professeurs",
+      "desc": "Sanctuaire des enseignants, où se préparent les cours et se nouent les intrigues du corps pédagogique",
+      "topics": 0, "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "bienvenue": [
+    {
+      "slug": "scenarios-a-prendre",
+      "icon": "🎭",
+      "name": "Scénarios à prendre",
+      "desc": "Personnages et histoires disponibles à incarner",
+      "topics": 8,
+      "posts": 24,
+      "lastPost": { "title": "Cherche partenaire — Sorcière Bien", "author": "Modo1", "date": "28 fév. 2026" }
+    },
+    {
+      "slug": "modele-fiche-de-presentation",
+      "icon": "📋",
+      "name": "Modèle fiche de présentation",
+      "desc": "Template officiel pour créer votre personnage",
+      "topics": 1,
+      "posts": 1,
+      "lastPost": { "title": "Fiche type — version 3", "author": "AvaBartholomé", "date": "1 janv. 2026" }
+    },
+    {
+      "slug": "fiches-de-presentation-terminees",
+      "icon": "✨",
+      "name": "Fiches en attente de validation",
+      "desc": "Lisez les nouvelles fiches et souhaitez la bienvenue aux personnages",
+      "topics": 42,
+      "posts": 189,
+      "lastPost": { "title": "Présentation de Léa Moreau", "author": "Modo2", "date": "1 mars 2026" }
+    },
+    {
+      "slug": "demande-double-compte",
+      "icon": "👥",
+      "name": "Demande de double compte",
+      "desc": "Présentez votre projet de second personnage avec le formulaire dédié",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "Nouvelle demande", "author": "Staff", "date": "—" }
+    },
+    {
+      "slug": "parrainage",
+      "icon": "🤝",
+      "name": "Parrainage",
+      "desc": "Un sujet par binôme pour accueillir et accompagner les nouveaux membres",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "Guide du parrainage", "author": "Ava Bartholomé", "date": "—" }
+    }
+  ],
+
+  "grimoire": [
+    {
+      "slug": "reglement-du-forum",
+      "icon": "⚖️",
+      "name": "Règlement du forum",
+      "desc": "Les lois fondamentales de Nexus Arcana",
+      "topics": 5,
+      "posts": 18,
+      "lastPost": { "title": "Charte des membres v2", "author": "AvaBartholomé", "date": "28 fév. 2026" }
+    },
+    {
+      "slug": "creatures-et-races",
+      "icon": "🐉",
+      "name": "Créatures et races",
+      "desc": "Encyclopédie des êtres magiques",
+      "topics": 14,
+      "posts": 62,
+      "lastPost": { "title": "Fiche : Traqueurs de Sombres", "author": "Modo1", "date": "25 fév. 2026" }
+    },
+    {
+      "slug": "factions",
+      "icon": "⚜️",
+      "name": "Factions",
+      "desc": "Alliances, clans et ordres secrets",
+      "topics": 8,
+      "posts": 34,
+      "lastPost": { "title": "Les Vengeances du Nexus", "author": "AdminPrincipal", "date": "22 fév. 2026" }
+    },
+    {
+      "slug": "bottin-des-avatars",
+      "icon": "📸",
+      "name": "Bottin des avatars",
+      "desc": "Registre officiel des célébrités",
+      "topics": 27,
+      "posts": 109,
+      "lastPost": { "title": "Réservation : Alyssa Milano", "author": "Modo2", "date": "27 fév. 2026" }
+    },
+    {
+      "slug": "bottin-des-formes-demoniaques",
+      "icon": "👹",
+      "name": "Bottin des formes démoniaques",
+      "desc": "Répertoire des apparences démoniaques",
+      "topics": 11,
+      "posts": 43,
+      "lastPost": { "title": "Nouvelle forme : Ombre du Chaos", "author": "Modo1", "date": "20 fév. 2026" }
+    },
+    {
+      "slug": "contextes-et-animations",
+      "icon": "🎭",
+      "name": "Contextes et animations",
+      "desc": "Événements et fils narratifs actifs",
+      "topics": 6,
+      "posts": 29,
+      "lastPost": { "title": "Événement : Nuit de Samhain", "author": "AvaBartholomé", "date": "1 mars 2026" }
+    },
+    {
+      "slug": "grimoire-des-pouvoirs",
+      "icon": "⚡",
+      "name": "Grimoire des Pouvoirs",
+      "desc": "Répertoire officiel des pouvoirs magiques et de leurs évolutions",
+      "topics": 1,
+      "posts": 1,
+      "lastPost": { "title": "Liste des Pouvoirs Magiques & Évolutions", "author": "Staff", "date": "27 mars 2026" }
+    }
+  ],
+
+  "liens": [
+    {
+      "slug": "recherche-de-rp",
+      "icon": "🔍",
+      "name": "Recherche de RP",
+      "desc": "Trouvez des partenaires pour vos aventures roleplay",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "fiche-personnage",
+      "icon": "📋",
+      "name": "Fiche personnage",
+      "desc": "Carnets récapitulatifs des personnages validés",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "situation": [
+    {
+      "slug": "agence-immobiliere",
+      "icon": "🏠",
+      "name": "Agence immobilière",
+      "desc": "Choisissez votre lieu de vie dans les villes du Nexus",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "boutique-magique",
+      "icon": "🔮",
+      "name": "La boutique magique",
+      "desc": "Achetez des objets magiques, potions et cristaux",
+      "topics": 1,
+      "posts": 1,
+      "lastPost": { "title": "📜 Catalogue de la Boutique Magique", "author": "Admin", "date": "Aujourd'hui" }
+    }
+  ],
+
+  "question": [
+    {
+      "slug": "questions-invites",
+      "icon": "👤",
+      "name": "Questions invités",
+      "desc": "Vous n'êtes pas encore membre ? Posez vos questions ici",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "questions-membres",
+      "icon": "💬",
+      "name": "Questions membres",
+      "desc": "Vous êtes membre de Nexus Arcana ? Posez vos questions à l'équipe",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "signaler-absence",
+      "icon": "🌙",
+      "name": "Signaler une absence",
+      "desc": "Prévenez l'équipe de votre absence ou retour",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "quartierAffaires": [
+    {
+      "slug": "bay-mirror",
+      "icon": "📰",
+      "name": "Bay Mirror",
+      "desc": "Le grand quotidien de San Francisco, là où les secrets deviennent des unes",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "cabinet-avocats",
+      "icon": "⚖️",
+      "name": "Cabinet d'avocats",
+      "desc": "Droit des mortels et des créatures, affaires classées ou non",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "mediatheque",
+      "icon": "📚",
+      "name": "Médiathèque",
+      "desc": "Archives publiques, grimoires sous licence et savoirs interdits",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "centre-archives",
+      "icon": "🗃️",
+      "name": "Centre des archives",
+      "desc": "Registres officiels, dossiers scellés et mémoire de la ville",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "buckland",
+      "icon": "🏛️",
+      "name": "Buckland",
+      "desc": "Les couloirs et bureaux de l'agence Buckland, au cœur du quartier des affaires",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "civicCenter": [
+    {
+      "slug": "hotel-de-ville",
+      "icon": "🏛️",
+      "name": "Hôtel de ville",
+      "desc": "Le siège du pouvoir municipal, où se décide l'avenir de San Francisco",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "tribunal",
+      "icon": "⚖️",
+      "name": "Tribunal",
+      "desc": "Salle d'audience où mortels et créatures répondent de leurs actes",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "hopital",
+      "icon": "🏥",
+      "name": "Hôpital",
+      "desc": "Urgences, soins et secrets médicaux au cœur de San Francisco",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "cimetiere": [
+    {
+      "slug": "mausolee",
+      "icon": "🪦",
+      "name": "Mausolée",
+      "desc": "Sépultures des grandes familles de San Francisco, gardées par des ombres plus anciennes qu'elles",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "crypte",
+      "icon": "💀",
+      "name": "Crypte",
+      "desc": "Galeries souterraines où les morts ne restent pas toujours silencieux",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "cathedrale",
+      "icon": "⛪",
+      "name": "Cathédrale",
+      "desc": "Lieu de culte et de refuge, où le sacré et l'obscur se disputent chaque pierre",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "fishermansWharf": [
+    {
+      "slug": "agence-de-tourisme",
+      "icon": "🗺️",
+      "name": "Agence de tourisme",
+      "desc": "Excursions organisées, circuits secrets et voyages entre deux mondes pour les plus curieux",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "boutiques-de-souvenirs",
+      "icon": "🛍️",
+      "name": "Boutiques de souvenirs",
+      "desc": "Objets du quai, babioles enchantées et curiosités qui ne sont pas toujours ce qu'elles semblent",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "chocolaterie",
+      "icon": "🍫",
+      "name": "Chocolaterie",
+      "desc": "Douceurs artisanales et effluves sucrés qui attirent autant les mortels que les créatures",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "presidio": [
+    {
+      "slug": "golden-gate-bridge",
+      "icon": "🌉",
+      "name": "Golden Gate Bridge",
+      "desc": "Le pont mythique de San Francisco, passage entre deux mondes, mortel et magique",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "collines",
+      "icon": "⛰️",
+      "name": "Collines",
+      "desc": "Les hauteurs sauvages du Presidio, refuge discret pour créatures et sorciers en fuite",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "prison-alcatraz",
+      "icon": "⛓️",
+      "name": "Prison d'Alcatraz",
+      "desc": "L'île-prison hantée par les âmes de ses anciens détenus, humains ou non",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "glenPark": [
+    {
+      "slug": "glen-canyon-park",
+      "icon": "🏞️",
+      "name": "Glen Canyon Park",
+      "desc": "Le grand parc naturel de San Francisco, refuge de faune sauvage et de créatures oubliées",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "sentiers-de-randonnee",
+      "icon": "🥾",
+      "name": "Sentiers de randonnée",
+      "desc": "Chemins boisés où la frontière entre le monde mortel et le monde magique s'efface",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "serre-botanique",
+      "icon": "🌿",
+      "name": "Serre botanique",
+      "desc": "Plantes rares, herbes magiques et secrets de la nature cultivés sous verre",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "stade",
+      "icon": "🏟️",
+      "name": "Stade",
+      "desc": "Compétitions sportives et confrontations où mortels et créatures se mesurent",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "oceanBeach": [
+    {
+      "slug": "zoo",
+      "icon": "🦁",
+      "name": "Zoo",
+      "desc": "Animaux sauvages et créatures magiques côte à côte sous les regards curieux des visiteurs",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "plage",
+      "icon": "🏖️",
+      "name": "Plage",
+      "desc": "Le sable d'Ocean Beach, entre vagues du Pacifique et secrets enfouis",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "institut-de-beaute",
+      "icon": "💆",
+      "name": "Institut de beauté",
+      "desc": "Soins, transformations et confidences entre les mains expertes des esthéticiennes",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "caserne-des-pompiers",
+      "icon": "🚒",
+      "name": "Caserne des pompiers",
+      "desc": "Les héros du feu, humains ou non, prêts à intervenir à toute heure",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "commissariat-de-police",
+      "icon": "🚔",
+      "name": "Commissariat de police",
+      "desc": "Interrogatoires, affaires classées et enquêtes qui dépassent le simple cadre mortel",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "quartierCulturel": [
+    {
+      "slug": "creche",
+      "icon": "🍼",
+      "name": "Crèche",
+      "desc": "Les nourrissons et leurs premiers instants magiques, gardés par des âmes bienveillantes",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "ecole-maternelle",
+      "icon": "🌸",
+      "name": "École maternelle",
+      "desc": "Les tout-petits de San Francisco, entre magie et innocence",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "ecole-primaire",
+      "icon": "🎒",
+      "name": "École primaire",
+      "desc": "Les premiers apprentissages, humains et magiques confondus",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "lycee",
+      "icon": "📐",
+      "name": "Lycée",
+      "desc": "Couloirs, cours et secrets d'adolescents pas tout à fait ordinaires",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "universite",
+      "icon": "🎓",
+      "name": "Université",
+      "desc": "Amphithéâtres et bibliothèques où savoir et pouvoir se croisent",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "musee",
+      "icon": "🏛️",
+      "name": "Musée",
+      "desc": "Artefacts anciens et reliques magiques exposés au grand public",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "ruesCommercantes": [
+    {
+      "slug": "salle-arcade",
+      "icon": "🕹️",
+      "name": "Salle d'arcade",
+      "desc": "Jeux, compétitions et rencontres dans les salles obscures du centre",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "tattoo-shop",
+      "icon": "🖊️",
+      "name": "Tattoo shop",
+      "desc": "Encres magiques et marques indélébiles pour sorcières et démons",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "p3",
+      "icon": "🎶",
+      "name": "P3",
+      "desc": "Le club de Piper Halliwell, haut lieu de la nuit à San Francisco",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "herboristerie",
+      "icon": "🌿",
+      "name": "Herboristerie",
+      "desc": "Plantes rares, remèdes magiques et secrets de la nature",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "pepper-place",
+      "icon": "🫙",
+      "name": "Pepper Place",
+      "desc": "Épicerie fine et point de rencontre discret du quartier commerçant",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "discotheque",
+      "icon": "🪩",
+      "name": "Discothèque",
+      "desc": "Piste de danse, lumières tamisées et nuits qui n'en finissent pas",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "bowling",
+      "icon": "🎳",
+      "name": "Bowling",
+      "desc": "Soirées détente entre amis, humains ou non",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "hotel",
+      "icon": "🏨",
+      "name": "Hôtel",
+      "desc": "Résidence de passage pour voyageurs, créatures et esprits en transit",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "centreVille": [
+    {
+      "slug": "le-quake",
+      "icon": "🎵",
+      "name": "Le Quake",
+      "desc": "Bar musical emblématique du centre-ville de San Francisco",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "salon-de-the",
+      "icon": "☕",
+      "name": "Salon de thé",
+      "desc": "Un havre de paix pour les discussions et rencontres inattendues",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "bars",
+      "icon": "🍸",
+      "name": "Bars",
+      "desc": "Les différents bars animés du centre-ville",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "centre-commercial",
+      "icon": "🛍️",
+      "name": "Centre commercial",
+      "desc": "Shopping, rencontres fortuites et intrigues entre les boutiques",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "salle-omnisport",
+      "icon": "🏋️",
+      "name": "Salle omnisport",
+      "desc": "Complexe sportif ouvert à tous, humains comme créatures magiques",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ],
+
+  "quartiers": [
+    {
+      "slug": "prescott-street",
+      "icon": "🏡",
+      "name": "Prescott Street",
+      "desc": "La rue emblématique de Nexus Arcana",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "tenderloin",
+      "icon": "🌆",
+      "name": "Tenderloin",
+      "desc": "Un quartier populaire aux ruelles animées",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "bayview-hunters",
+      "icon": "🏗️",
+      "name": "Bayview-Hunters",
+      "desc": "Quartier industriel en bord de baie",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "noe-valley",
+      "icon": "🌿",
+      "name": "Noe Valley",
+      "desc": "Quartier résidentiel paisible aux maisons victoriennes",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "presidio-heights",
+      "icon": "🏰",
+      "name": "Presidio Heights",
+      "desc": "Quartier huppé surplombant la baie de San Francisco",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    },
+    {
+      "slug": "bayview",
+      "icon": "🌊",
+      "name": "Bayview",
+      "desc": "Quartier en bord de baie, entre passé industriel et renouveau",
+      "topics": 0,
+      "posts": 0,
+      "lastPost": { "title": "—", "author": "—", "date": "—" }
+    }
+  ]
+}

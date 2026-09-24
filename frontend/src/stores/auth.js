@@ -11,7 +11,7 @@ export const useAuthStore = defineStore('auth', {
   getters: {
     isAuthenticated: (state) => !!state.accessToken,
     isModerator: (state) =>
-      state.user?.role === 'admin' || state.user?.role === 'moderator',
+      state.user?.role === 'admin' || state.user?.role === 'moderator' || state.user?.role === 'fondatrice',
   },
 
   actions: {
@@ -26,10 +26,6 @@ export const useAuthStore = defineStore('auth', {
 
     async register(userData) {
       await api.post('/auth/register/', userData)
-      await this.login({
-        username: userData.username,
-        password: userData.password,
-      })
     },
 
     async fetchProfile() {

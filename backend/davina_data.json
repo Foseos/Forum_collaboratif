@@ -1,0 +1,79 @@
+[
+  {
+    "slug": "davina-claire",
+    "name": "Davina Claire",
+    "race": "Sorcière",
+    "sex": "Féminin",
+    "kind": "witch",
+    "camp": "Neutre",
+    "age": "Jeune adulte · âge précis à harmoniser avec la chronologie du forum",
+    "origin": "Quartier français de La Nouvelle-Orléans",
+    "family": "Famille Claire · fille de cœur de Marcel Gerard · lien amoureux avec Kol Mikaelson",
+    "job": "Études et recherche en histoire de la magie · activité à personnaliser",
+    "quote": "Ma magie m’appartient. Ma vie aussi.",
+    "character": [
+      "Qualités : courageuse, inventive, loyale, persévérante et sensible à la souffrance des personnes isolées.",
+      "Défauts : obstinée, méfiante, parfois impulsive et prompte à rechercher une solution dangereuse lorsqu’un proche est menacé.",
+      "Davina a appris très tôt que des adultes pouvaient appeler devoir ce qu’ils imposaient à une enfant. Elle supporte mal les décisions prises à sa place et les promesses qui exigent son obéissance en retour. Sa colère peut l’aider à poser des limites, mais aussi l’enfermer dans des conflits dont elle oublie le prix.",
+      "Derrière la sorcière déterminée demeure une jeune femme qui veut apprendre, aimer et profiter d’une vie ordinaire. Elle n’a pas à prouver sa valeur par un exploit magique. Accepter du soutien sans renoncer à son autonomie, puis offrir la même liberté aux autres, constitue une part importante de son chemin."
+    ],
+    "history": [
+      [
+        "Une enfant du Quartier français",
+        "Davina grandit dans la communauté des sorcières de La Nouvelle-Orléans. Choisie pour la Moisson, elle découvre que sa vie doit devenir l’instrument d’un rituel dont les adultes affirment connaître l’issue. La peur et la rupture de confiance marquent durablement son rapport aux traditions et à l’autorité."
+      ],
+      [
+        "Le refuge de Marcel",
+        "Marcel la soustrait au rituel et la cache. Il devient une figure paternelle, mais sa protection s’accompagne d’un isolement et d’un rôle dans ses luttes de pouvoir. La puissance exceptionnelle liée à cette période ne constitue pas une réserve permanente. Davina veut retrouver la possibilité de choisir ses amis et de sortir d’une existence organisée autour du danger."
+      ],
+      [
+        "Apprendre à diriger sans reproduire",
+        "Ses rapports avec les covens et son passage à la régence lui font découvrir le poids de décisions qui touchent d’autres vies. Elle peut défendre les sorcières tout en critiquant les méthodes héritées des Ancêtres. Dans le Nexus, aucun titre ne lui donne automatiquement autorité sur les covens ou personnages des autres joueurs."
+      ],
+      [
+        "Kol et la confiance",
+        "Elle rencontre Kol alors qu’il occupe le corps du sorcier Kaleb. Leur rapprochement se construit autour de la magie, de la complicité et de blessures qui ne se ressemblent pas toujours. Elle tient à lui sans devenir responsable de tous ses choix. Leur engagement actuel reste à définir ensemble, conformément à la fiche de Kol."
+      ],
+      [
+        "Survivre aux décisions des autres",
+        "La mort, les liens aux Ancêtres et les tentatives de retour ont traversé son parcours. Dans cette adaptation, Davina est une sorcière vivante, libre de construire son avenir. Ces événements passés ne lui donnent ni résurrection personnelle, ni accès illimité aux morts, ni énergie ancestrale disponible à volonté. Sa confiance envers les Mikaelson reste une question à jouer."
+      ],
+      [
+        "Une place choisie dans le Nexus",
+        "La Convergence ouvre des rencontres avec des traditions magiques nouvelles. Davina peut étudier un grimoire, rechercher l’origine d’un objet ou reprendre une activité sans lien avec les crises de sa communauté. Elle garde son attachement à Marcel et à Kol tout en souhaitant être reconnue pour ses propres projets. Quatre capacités seulement sont disponibles au départ ; les autres se débloquent en jeu avec des Arcana Flouz."
+      ]
+    ],
+    "links": [
+      [
+        "Marcel Gerard",
+        "Père de cœur",
+        "Tu m’as protégée lorsque je ne savais plus à qui faire confiance. Je tiens à toi, mais j’ai besoin que tu reconnaisses mes décisions même lorsqu’elles t’inquiètent. Ma magie ne doit pas devenir le prix de ma place auprès de toi."
+      ],
+      [
+        "Kol Mikaelson",
+        "Amour et choix partagés",
+        "Tu as vu en moi autre chose qu’une puissance à utiliser. Je veux construire une relation où nous pouvons nous soutenir sans nous demander de renoncer à nous-mêmes. Nos projets et notre engagement actuel se décident ensemble."
+      ],
+      [
+        "Vincent Griffith",
+        "Allié et regard exigeant",
+        "Tu connais les blessures laissées par notre communauté et les dangers de certaines décisions. Je peux apprendre de ton expérience sans accepter de suivre chaque conseil. J’aimerais que nous puissions nous parler franchement sans transformer un désaccord en rupture."
+      ],
+      [
+        "Klaus Mikaelson",
+        "Méfiance et rapports de force",
+        "Je connais ton habitude de décider au nom des autres. Une coopération peut être nécessaire, mais elle ne te donne aucun droit sur mes pouvoirs ou mes proches. Ma confiance se gagne autrement que par une menace."
+      ],
+      [
+        "Freya Mikaelson",
+        "Savoir partagé, confiance fragile",
+        "Nous pouvons comprendre la pression que la magie et la famille font peser sur une personne. Cela ne suffit pas à effacer nos différends. Si nous travaillons ensemble, je veux que les risques et les choix soient dits clairement."
+      ],
+      [
+        "Hope Mikaelson",
+        "Une rencontre hors des héritages",
+        "Tu n’es pas responsable des actes de ton père, et je ne veux pas te réduire au nom Mikaelson. Nous pouvons échanger sur la magie ou sur ce que les autres attendent de nous. Notre lien reste à construire, sans amitié ni hostilité imposée."
+      ]
+    ]
+  }
+]

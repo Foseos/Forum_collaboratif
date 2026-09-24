@@ -1,6 +1,18 @@
 from django.contrib import admin
 
-from .models import Category, Post, Reaction, Topic
+from .models import AvatarDirectoryEntry, Category, DemonicFormEntry, Post, Reaction, Topic
+
+
+@admin.register(AvatarDirectoryEntry)
+class AvatarDirectoryEntryAdmin(admin.ModelAdmin):
+    list_display = ["character", "avatar", "status"]
+    search_fields = ["character", "avatar"]
+
+
+@admin.register(DemonicFormEntry)
+class DemonicFormEntryAdmin(admin.ModelAdmin):
+    list_display = ["name", "character"]
+    search_fields = ["name", "character"]
 
 
 @admin.register(Category)
@@ -12,8 +24,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Topic)
 class TopicAdmin(admin.ModelAdmin):
-    list_display = ["title", "category", "author", "is_pinned", "is_locked", "created_at"]
-    list_filter = ["category", "is_pinned", "is_locked"]
+    list_display = ["title", "category", "author", "scenario_status", "is_pinned", "is_locked", "created_at"]
+    list_filter = ["category", "scenario_status", "is_pinned", "is_locked"]
     search_fields = ["title"]
     prepopulated_fields = {"slug": ("title",)}
 

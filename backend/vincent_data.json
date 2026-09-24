@@ -1,0 +1,79 @@
+[
+  {
+    "slug": "vincent-griffith",
+    "name": "Vincent Griffith",
+    "race": "Sorcier",
+    "sex": "Masculin",
+    "kind": "witch",
+    "camp": "Neutre",
+    "age": "Adulte · âge précis à harmoniser avec la chronologie du forum",
+    "origin": "La Nouvelle-Orléans · communauté de Tremé",
+    "family": "Ancien époux d’Eva Sinclair · situation amoureuse actuelle au choix",
+    "job": "Recherche occulte, transmission et médiation communautaire · fonction précise à construire",
+    "quote": "Protéger une communauté commence par écouter ceux qui y vivent.",
+    "character": [
+      "Qualités : lucide, courageux, persévérant, franc et profondément attaché à la protection des plus vulnérables.",
+      "Défauts : méfiant, obstiné, parfois sévère et porté à s’isoler lorsqu’il pense que personne ne mesurera le danger.",
+      "Vincent ne se laisse pas facilement impressionner par un nom ancien ou une démonstration de puissance. Il préfère demander qui supportera les conséquences d’une décision. Son regard critique peut être précieux autant que difficile à entendre ; il doit veiller à ne pas transformer sa propre expérience en certitude sur les choix des autres.",
+      "Il a connu la perte de contrôle de sa vie et de son corps. Cette histoire nourrit son besoin de limites claires, mais ne le condamne pas à la solitude. Il sait écouter, transmettre et prendre soin. Son défi est de défendre sa communauté sans croire qu’il doit porter seul toutes ses blessures."
+    ],
+    "history": [
+      [
+        "Les racines de Tremé",
+        "Vincent grandit au sein d’une communauté de sorciers de La Nouvelle-Orléans. La magie fait partie d’une histoire collective, de ses liens et de ses responsabilités. Il développe un savoir solide, tout en découvrant que la tradition peut être utilisée pour exiger des sacrifices auxquels chacun n’a pas réellement consenti."
+      ],
+      [
+        "Eva et les chemins dangereux",
+        "Sa relation avec Eva Sinclair devient un mariage marqué par des recherches magiques qui franchissent des limites destructrices. La perte de leur avenir commun et les actes d’Eva le poussent à prendre ses distances avec la pratique et les conflits des covens. Son retrait ne signifie pas qu’il a cessé de tenir aux habitants de sa ville."
+      ],
+      [
+        "Un corps qui ne lui appartenait plus",
+        "Esther utilise son corps pour y installer Finn Mikaelson. Libéré de cette possession, Vincent doit retrouver ses repères et affronter des conséquences dont il n’a pas choisi les causes. Il n’est pas Finn et ne partage pas automatiquement ses souvenirs, ses pouvoirs ou ses responsabilités. Dans le Nexus, Finn est revenu dans son propre corps ; Vincent reste libre du sien."
+      ],
+      [
+        "Revenir vers la communauté",
+        "Les crises de La Nouvelle-Orléans le ramènent vers les sorcières et les sorciers. Son passage à la régence lui apprend que refuser une mauvaise décision ne suffit pas toujours : il faut aussi proposer des moyens de protéger les personnes concernées. Dans le forum, cette expérience ne lui donne pas une autorité automatique sur les covens ou les joueurs."
+      ],
+      [
+        "Des alliances qui exigent des limites",
+        "Marcel et Camille deviennent des interlocuteurs importants. Davina réveille son souci de défendre les jeunes sorcières sans décider à leur place. Ses rapports avec les Mikaelson restent tendus, même lorsqu’une menace commune impose une coopération. Il peut reconnaître l’aide de Freya sans approuver tout ce que sa famille entreprend."
+      ],
+      [
+        "Choisir la transmission dans le Nexus",
+        "La Convergence rapproche des traditions que Vincent ne connaît pas toutes. Il peut comparer des archives, accompagner un apprentissage ou participer à une médiation. Sa vie personnelle reste ouverte : aucun mariage ni lien parental supplémentaire n’est imposé dans cette adaptation. Il commence avec quatre capacités ; son expérience ne débloque pas automatiquement les autres dons de la série."
+      ]
+    ],
+    "links": [
+      [
+        "Marcel Gerard",
+        "Allié, désaccords nécessaires",
+        "Nous tenons tous les deux à cette ville et aux personnes qui y vivent. Je peux travailler avec toi tout en contestant une décision qui favorise les vampires aux dépens des autres. Notre confiance doit pouvoir supporter cette franchise."
+      ],
+      [
+        "Davina Claire",
+        "Sorcière respectée, soutien",
+        "Je connais ta détermination et le prix des décisions prises à ta place. Je veux t’offrir mon expérience sans réclamer ton obéissance. Tu peux refuser un conseil tout en restant quelqu’un sur qui je souhaite veiller."
+      ],
+      [
+        "Camille O’Connell",
+        "Amie et confiance",
+        "Tu sais écouter sans transformer chaque personne en menace ou en ressource. J’apprécie cette franchise et je veux rester présent pendant que tu construis ta vie de vampire. Ton avenir ne doit pas se résumer aux crises des Mikaelson."
+      ],
+      [
+        "Finn Mikaelson",
+        "Ancien possesseur, limites absolues",
+        "Tu as vécu dans mon corps sans mon consentement. Ton retour dans le tien ne fait pas disparaître cette histoire. Je ne te dois ni proximité ni pardon ; toute conversation commence par le respect de ma liberté."
+      ],
+      [
+        "Freya Mikaelson",
+        "Expertise partagée, vigilance",
+        "Nous pouvons confronter nos connaissances et chercher des solutions ensemble. Je veux que les risques soient dits clairement et que la survie de ta famille ne rende pas celle des autres secondaire."
+      ],
+      [
+        "Klaus Mikaelson",
+        "Coopération sous conditions",
+        "Je ne suis pas impressionné par ton nom au point d’oublier ceux que tes décisions touchent. Une alliance reste possible si elle protège réellement les personnes concernées. Ma magie ne t’appartient pas."
+      ]
+    ]
+  }
+]

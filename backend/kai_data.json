@@ -1,0 +1,33 @@
+[
+  {
+    "slug": "kai-parker", "name": "Kai Parker", "race": "Sorcier siphonneur", "sex": "Masculin", "kind": "witch", "camp": "Neutre",
+    "age": "Né en 1972 · apparence de jeune adulte, marquée par les années figées du monde-prison",
+    "origin": "Portland, Oregon · coven Gemini",
+    "family": "Malachai Parker, fils de Joshua · frère jumeau de Josette, frère de Liv et Luke · oncle de Josie et Lizzie Saltzman",
+    "job": "Occupation au choix · recherche d’archives et d’artefacts magiques",
+    "quote": "Une porte fermée reste une porte. Il suffit de trouver ce qui l’ouvre.",
+    "character": [
+      "Qualités : inventif, observateur, persévérant et particulièrement rapide à comprendre une situation dont il peut tirer parti.",
+      "Défauts : manipulateur, égocentrique, cruel, rancunier et profondément mauvais perdant.",
+      "Kai transforme volontiers une menace en plaisanterie. Bavard, familier et parfois désarmant, il observe les réactions pour trouver une faille, obtenir une information ou détourner l’attention. L’humour lui permet aussi d’éviter de reconnaître sa solitude et son besoin d’être accepté.",
+      "Le rejet de sa famille a nourri sa colère, mais ne justifie pas les violences qu’il a choisies. Il supporte mal de dépendre de quelqu’un et confond souvent liberté et absence de conséquences. Son camp neutre ne gomme pas sa dangerosité : une alliance avec lui demande des limites, et une éventuelle évolution personnelle devra se montrer dans ses actes."
+    ],
+    "history": [
+      ["L’enfant sans réserve magique", "Malachai grandit au sein du coven Gemini, auprès de sa jumelle Josette et de leurs frères et sœurs. Siphonneur, il ne produit pas sa propre magie : il doit l’emprunter à une source extérieure. Traité comme une anomalie, il développe une rancœur tenace envers son père et les traditions de son clan."],
+      ["La fracture de 1994", "Lorsque la perspective de diriger le coven lui échappe, Kai s’en prend à sa fratrie et tue plusieurs de ses frères et sœurs. Jo protège Liv et Luke. Pour l’empêcher de poursuivre, sa famille l’enferme dans un monde-prison qui répète la même journée de 1994. Ses crimes restent une part de son histoire ; ils ne deviennent pas une simple conséquence excusable de son exclusion."],
+      ["Le jour qui recommence", "Seul dans cette copie du monde, Kai apprend à tuer le temps et à chercher une sortie. Les habitudes les plus banales deviennent des repères dans un quotidien immobile. L’isolement renforce son obsession de s’échapper et sa tendance à considérer les autres comme des moyens d’obtenir ce qu’il veut."],
+      ["Bonnie et Damon", "L’arrivée de Bonnie Bennett et de Damon Salvatore rompt cette solitude. Kai comprend que leur présence peut rendre une évasion possible. L’Ascendant et la magie Bennett deviennent au cœur de négociations, de tromperies et d’affrontements. Bonnie et Damon connaissent désormais ce qui se cache derrière ses plaisanteries ; leur méfiance ne disparaît pas parce qu’il change de décor."],
+      ["Une bifurcation vers le Nexus", "Pour conserver la nature indiquée sur cette fiche, la continuité de Nexus Arcana bifurque avant sa Fusion avec Luke et sa transformation en Hérétique. Une brèche liée à la Convergence l’arrache à l’impasse du monde-prison et le conduit à San Francisco. Il arrive vivant, sorcier siphonneur, sans vampirisme ni magie personnelle issue de la Fusion. Ce passage exceptionnel ne lui donne aucun pouvoir de voyage entre les mondes."],
+      ["Des proches venus d’autres chemins", "Les parcours se croisent dans le Nexus sans obliger tous les personnages à partager exactement la même chronologie. Kai peut rencontrer les filles de Jo, Josie et Lizzie, dont il découvre l’existence ici. Les événements ultérieurs de sa version de la série ne sont pas ajoutés à son passé comme des actes déjà accomplis. Les souvenirs d’Alaric et de ses filles restent ceux de leurs propres fiches, à accorder entre joueurs."],
+      ["Une liberté à éprouver", "San Francisco lui offre des sources de magie inconnues, des archives et de nouvelles personnes à convaincre. Il peut proposer ses connaissances contre l’accès à un objet enchanté, rechercher les traces du coven Gemini ou enquêter sur la brèche qui l’a transporté. Sa difficulté sera de garder une place parmi les autres sans transformer chaque rencontre en rapport de force."]
+    ],
+    "links": [
+      ["Bonnie Bennett", "Méfiance et dette du monde-prison", "Tu as vu mes méthodes lorsque je cherchais une sortie. Je peux avoir besoin de ton savoir, mais cela ne me donne aucun droit sur ta magie ni sur ton pardon. Nous avons un passé commun que mes plaisanteries ne suffiront pas à effacer."],
+      ["Damon Salvatore", "Compagnon d’impasse, adversaire", "Nous connaissons la même journée répétée et l’envie d’en sortir à tout prix. Tu sais reconnaître mes marchés empoisonnés. Une coopération reste possible si nous y trouvons chacun un intérêt, mais la confiance devra se gagner."],
+      ["Alaric Saltzman", "La famille de Jo", "Tu es lié à ma sœur et tu protèges ses filles. Le Nexus nous place face à des histoires qui ne coïncident pas toujours. Je ne peux pas invoquer mon nom pour exiger une place auprès de ta famille ; notre rencontre devra partir de ce que chacun sait et accepte."],
+      ["Josie Saltzman", "Nièce et héritage siphonneur", "Tu portes un héritage que je connais trop bien : emprunter la magie pour pouvoir l’utiliser. Cette ressemblance peut ouvrir une conversation, pas faire de moi ton mentor par défaut. Tu choisiras ce que tu veux savoir et la distance que tu souhaites garder."],
+      ["Lizzie Saltzman", "Nièce aux limites bien à elle", "Je découvre en toi une autre branche de notre famille. Je pourrais chercher à gagner ta curiosité par une remarque ou une information sur les Gemini. Tu n’as pourtant rien à me devoir, et notre parenté ne m’autorise pas à te manipuler."],
+      ["Caroline Forbes", "Une mère vigilante", "Tu protèges Josie et Lizzie, et mon arrivée a de quoi t’inquiéter. Aucun sourire ne remplacera des actes cohérents. Si je veux approcher ta famille, il faudra accepter que tu poses des limites et que les filles décident elles-mêmes."]
+    ]
+  }
+]

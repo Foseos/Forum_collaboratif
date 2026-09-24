@@ -1,0 +1,79 @@
+[
+  {
+    "slug": "camille-oconnell",
+    "name": "Camille O’Connell",
+    "race": "Vampire",
+    "sex": "Féminin",
+    "kind": "vampire",
+    "camp": "Neutre",
+    "age": "Adulte · apparence figée depuis sa transformation, âge précis à harmoniser",
+    "origin": "Parcours familial lié à La Nouvelle-Orléans",
+    "family": "Sœur jumelle de Sean O’Connell · nièce de Kieran O’Connell · situation amoureuse à construire",
+    "job": "Formation en psychologie · activité professionnelle à préciser, ancienne barmaid",
+    "quote": "Comprendre quelqu’un ne signifie pas tout lui pardonner.",
+    "character": [
+      "Qualités : empathique, perspicace, courageuse, tenace et capable de franchise face aux personnes qui l’intimident.",
+      "Défauts : obstinée, parfois imprudente dans ses recherches, portée à vouloir comprendre au-delà de ses propres limites et peu disposée à reconnaître son épuisement.",
+      "Camille pose des questions que les autres préfèrent éviter. Elle cherche les causes d’un comportement sans confondre explication et excuse. Sa formation lui donne des outils d’écoute, pas la capacité de lire les pensées ou de diagnostiquer quelqu’un en une conversation. Elle peut se tromper et doit apprendre à ne pas faire de chaque relation une personne à sauver.",
+      "Sa transformation rend ses émotions plus difficiles à contenir. La colère, la peur et le besoin de reprendre la maîtrise de sa vie coexistent avec sa compassion. Elle veut préserver cette sensibilité sans devenir la conscience attitrée des Mikaelson. Son avenir doit aussi comporter ses propres envies, des amitiés et des moments ordinaires."
+    ],
+    "history": [
+      [
+        "Chercher la vérité",
+        "La mort tragique de son frère jumeau Sean conduit Camille à rechercher des réponses à La Nouvelle-Orléans. Elle refuse de réduire ce qui s’est passé à l’idée d’un mal inexplicable. Ses études en psychologie et son travail de barmaid lui permettent de rencontrer les habitants tout en poursuivant ses recherches."
+      ],
+      [
+        "Une ville sous la surface",
+        "Elle découvre progressivement les communautés surnaturelles et les manipulations qui traversent leur histoire. Klaus prend une place importante dans sa vie, mais la contrainte exercée sur elle brise la confiance et lui rappelle le prix de son ignorance. Retrouver ses souvenirs signifie aussi reprendre le droit de choisir ce qu’elle accepte."
+      ],
+      [
+        "L’héritage des O’Connell",
+        "Le sort de Kieran lui révèle combien sa famille a été mêlée aux affaires occultes de la ville. Sa perte laisse des archives, des secrets et la responsabilité d’examiner un héritage dangereux. Connaître l’existence d’objets occultes ne lui en donne pas automatiquement la possession ou l’usage dans le forum."
+      ],
+      [
+        "Une transformation imposée",
+        "Aurora provoque sa mort alors qu’elle porte du sang vampirique dans son organisme. Camille devient vampire et doit apprendre à vivre avec une nature qu’elle n’a pas librement choisie. Vincent lui apporte un soutien précieux. Elle conserve ses connaissances humaines, mais ni son métier ni son écoute ne remplacent la nécessité de maîtriser sa faim."
+      ],
+      [
+        "Aimer sans s’effacer",
+        "Son attachement à Klaus est profond et complexe. Elle peut reconnaître ses blessures tout en lui demandant de répondre de ses actes. Leur situation sentimentale actuelle se construit avec son joueur. Sa relation avec Marcel, son amitié avec Vincent et ses alliances avec Davina ou Hayley lui donnent des liens qui ne dépendent pas tous de Klaus."
+      ],
+      [
+        "Continuer dans le Nexus",
+        "Dans cette adaptation, Camille reste vivante et vampire : sa mort causée par le venin de Lucien n’est pas retenue. Cette divergence ne lui confère aucune immunité. Elle peut reprendre ses projets professionnels, étudier une archive de Kieran ou aider à ouvrir un dialogue entre communautés. Quatre capacités seulement sont disponibles à la création ; les dons manquants s’acquièrent ensuite en jeu avec des Arcana Flouz."
+      ]
+    ],
+    "links": [
+      [
+        "Klaus Mikaelson",
+        "Attachement, confiance à reconstruire",
+        "Je vois en toi davantage que la violence que tu montres, mais cela ne m’oblige pas à l’accepter. Je veux pouvoir te parler librement, sans contrainte ni décision prise pour moi. Notre relation présente doit laisser une place entière à ma propre vie."
+      ],
+      [
+        "Marcel Gerard",
+        "Ancien rapprochement, amitié",
+        "Notre histoire a commencé au milieu de secrets qui nous dépassaient. Je tiens à la possibilité d’une amitié franche, où je peux reconnaître ce que tu construis et contester tes méthodes lorsque je les crois injustes."
+      ],
+      [
+        "Vincent Griffith",
+        "Ami et soutien",
+        "Tu m’as aidée lorsque ma vie changeait et que je ne savais plus à quoi me raccrocher. J’apprécie ta franchise autant que ton attention. Je veux aussi pouvoir être présente pour toi, sans considérer ta magie comme la réponse à toutes mes difficultés."
+      ],
+      [
+        "Davina Claire",
+        "Alliée, respect mutuel",
+        "Je sais combien d’autres personnes ont voulu décider de ta vie. Je respecte ton droit de choisir, même lorsque je m’inquiète. Nos échanges peuvent porter sur les archives et les dangers de la ville, mais aussi sur ce que nous souhaitons construire."
+      ],
+      [
+        "Hayley Marshall",
+        "Alliée et indépendance",
+        "Nous savons ce que signifie être entraînée dans les conflits des Mikaelson. J’apprécie ta détermination à garder ta voix. Nous pouvons nous soutenir sans devoir approuver toutes les décisions de cette famille."
+      ],
+      [
+        "Aurora de Martel",
+        "Transformation imposée, blessure ouverte",
+        "Tu as bouleversé ma vie en me retirant le choix de ma nature. Je ne veux plus être un moyen d’atteindre Klaus ou de régler votre passé. Une rencontre entre nous ne suppose ni pardon, ni confiance, ni oubli."
+      ]
+    ]
+  }
+]

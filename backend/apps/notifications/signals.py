@@ -13,6 +13,16 @@ def notify_on_new_post(sender, instance, created, **kwargs):
         return
 
     topic = instance.topic
+    if instance.is_trusted_html and 'data-nexus-validation="1"' in instance.content:
+        Notification.objects.create(
+            recipient=topic.author,
+            sender=instance.author,
+            notification_type=Notification.NotificationType.TOPIC_REPLY,
+            message=f"Votre fiche « {topic.title} » a été validée par la fondatrice.",
+            target_content_type=ContentType.objects.get_for_model(instance),
+            target_object_id=instance.pk,
+        )
+        return
     # Notify topic author if someone else replied
     if topic.author != instance.author:
         Notification.objects.create(

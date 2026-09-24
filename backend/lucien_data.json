@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "lucien-castle",
+    "name": "Lucien Castle",
+    "race": "Vampire",
+    "sex": "Masculin",
+    "kind": "vampire",
+    "camp": "Neutre",
+    "age": "Plus d’un millénaire · apparence adulte depuis sa transformation",
+    "origin": "France médiévale · parcours international",
+    "family": "Premier vampire de la lignée de Klaus · situation amoureuse actuelle au choix",
+    "job": "Entrepreneur et investisseur · liens historiques avec Kingmaker Land Development",
+    "quote": "Je veux être reconnu pour ce que je construis, pas pour celui que j’ai été.",
+    "character": [
+      "Qualités : ingénieux, adaptable, persévérant, charismatique et habile à comprendre les rapports de force.",
+      "Défauts : orgueilleux, rancunier, manipulateur et obsédé par la comparaison avec ceux qu’il estime privilégiés.",
+      "Lucien sait entrer dans une pièce avec le sourire et donner l’impression qu’il possède déjà la réponse. Son goût du luxe et de la réussite masque un besoin ancien de ne plus être humilié. Il peut proposer une aide réelle tout en attendant qu’elle modifie l’équilibre d’une relation à son avantage.",
+      "Son passé de victime ne rend pas ses représailles légitimes. Il doit apprendre à distinguer reconnaissance et domination, amour et conquête. Une réussite personnelle perd son sens lorsqu’elle ne sert qu’à prouver quelque chose à Klaus, Tristan ou Aurora. Le Nexus peut lui offrir des ambitions nouvelles, à condition qu’il accepte de ne pas contrôler tous ceux qui y participent."
+    ],
+    "history": [
+      [
+        "Un homme sans titre",
+        "Lucien vit comme serviteur dans l’entourage des de Martel au début du XIe siècle. Son attachement à Aurora se heurte aux hiérarchies sociales et à la violence de Tristan. L’arrivée des Mikaelson lui fait entrevoir une autre existence, tout en l’entraînant dans leurs secrets."
+      ],
+      [
+        "Le premier transformé",
+        "Le sang de Klaus soigne ses blessures, puis Lucien meurt et devient vampire. Il est le premier vampire créé dans la lignée de Klaus, sans devenir lui-même un Originel. Cette transformation lui donne une nouvelle vie, mais nourrit aussi un lien mêlant reconnaissance, jalousie et besoin de se mesurer à son créateur."
+      ],
+      [
+        "Des années sous une autre identité",
+        "Elijah contraint Lucien, Aurora et Tristan à se prendre pour les Mikaelson afin de détourner Mikael. Lucien vit sous l’identité de Klaus avant de retrouver la sienne. Ce temps confisqué laisse une colère durable envers ceux qui ont traité sa vie comme un moyen de fuite."
+      ],
+      [
+        "Construire une réussite",
+        "Au fil des siècles, il développe des affaires, des contacts et une image d’homme capable de tout obtenir. Kingmaker Land Development appartient à son parcours entrepreneurial. Dans Nexus Arcana, ses ressources et ses fonctions actuelles restent à définir : cette histoire ne lui donne ni fortune illimitée ni accès automatique aux recherches ou aux secrets des autres personnages."
+      ],
+      [
+        "Les anciennes rivalités",
+        "Son retour auprès des Mikaelson et des de Martel ravive les alliances intéressées. Son attachement à Aurora ne lui donne aucun droit sur ses sentiments. Tristan demeure une source de rancœur, tandis que Klaus lui renvoie ce qu’il voudrait dépasser. Lucien peut négocier avec eux sans qu’une confiance réelle soit acquise."
+      ],
+      [
+        "Un avenir différent dans le Nexus",
+        "Cette adaptation conserve Lucien vivant et vampire ordinaire, conformément à sa nature affichée. Le sérum qui en faisait un vampire amélioré, son venin exceptionnel et sa mort finale ne sont pas retenus comme acquis. La mort de Camille liée à cette intrigue est également écartée, en cohérence avec sa fiche. Lucien commence avec quatre capacités : ses projets scientifiques ou commerciaux ne permettent pas de contourner les achats en Arcana Flouz et la validation du staff."
+      ],
+      [
+        "Des pistes à construire",
+        "Une proposition d’investissement, une archive du château de Martel ou une négociation entre communautés peut lancer ses sujets. Il peut vouloir créer quelque chose de durable autant que régler un vieux compte. Ses interlocuteurs restent libres de refuser une offre, d’en discuter le prix ou de choisir une autre alliance."
+      ]
+    ],
+    "links": [
+      [
+        "Klaus Mikaelson",
+        "Créateur et rival",
+        "Ton sang a changé ma vie, mais je refuse d’exister seulement comme celui que tu as transformé. Ma gratitude et ma rancœur se mêlent encore. Si nous faisons alliance, je veux que nous parlions comme deux personnes capables de refuser."
+      ],
+      [
+        "Aurora de Martel",
+        "Attachement ancien",
+        "J’ai longtemps espéré que tu me regardes comme je te regardais. Cette attente ne me donne aucun droit sur toi. Je dois décider qui je veux être sans transformer tes sentiments en récompense à obtenir."
+      ],
+      [
+        "Tristan de Martel",
+        "Humiliation et intérêts communs",
+        "Je n’ai pas oublié la violence que tu m’as infligée lorsque ton rang te semblait tout permettre. Nos intérêts peuvent se rejoindre sans effacer cette histoire. Une alliance devra avoir des limites claires, et non reposer sur une obéissance supposée."
+      ],
+      [
+        "Elijah Mikaelson",
+        "Identité volée",
+        "Tu nous as envoyés vivre sous vos noms pour assurer votre fuite. Je ne confonds pas ta courtoisie avec une réparation. Reconnaître le prix de cette décision serait un début, pas une dette immédiatement réglée."
+      ],
+      [
+        "Marcel Gerard",
+        "Ambitions et reconnaissance",
+        "Nous connaissons chacun le poids d’un lien avec Klaus et l’envie de construire quelque chose à soi. Cela peut ouvrir une discussion, sans faire de nous des alliés naturels. Nos projets et nos méthodes devront être jugés sur leurs actes."
+      ],
+      [
+        "Camille O’Connell",
+        "Regard indépendant",
+        "Tu occupes une place dans la vie de Klaus qui pourrait réveiller mes rivalités. Je ne peux pas pour autant te traiter comme un moyen de l’atteindre. Dans cette continuité où tu es vivante, notre relation reste à construire à partir de nos choix présents."
+      ]
+    ]
+  }
+]

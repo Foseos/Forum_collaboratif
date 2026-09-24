@@ -36,6 +36,7 @@ dist/
 # IDE
 .vscode/
 .idea/
+.claude/
 *.swp
 *.swo
 *~
@@ -46,6 +47,11 @@ Thumbs.db
 
 # Docker
 docker-compose.override.yml
+
+# Local forum data and working backups
+backend/forum.db
+backend/dump.txt
+backend/data/*_backups/
 
 # Coverage
 htmlcov/

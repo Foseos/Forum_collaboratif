@@ -1,0 +1,64 @@
+[
+ {
+  "slug":"lizzie-saltzman","name":"Lizzie Saltzman","race":"Sorcière siphonneuse","sex":"Féminin","kind":"witch","camp":"Neutre",
+  "age":"Jeune adulte · même âge que Josie, chronologie ajustée à la Convergence",
+  "origin":"Mystic Falls, Virginie · héritage du coven Gemini",
+  "family":"Elizabeth Saltzman · jumelle de Josie · fille biologique d’Alaric et de Josette Laughlin, portée et élevée par Caroline Forbes · nièce de Kai Parker",
+  "job":"Ancienne élève de l’école Salvatore · études ou activité à choisir à San Francisco",
+  "quote":"Je peux apprendre à prendre ma place sans prendre toute la place.",
+  "character":[
+   "Qualités : franche, inventive, courageuse, perspicace et profondément loyale lorsqu’elle accorde sa confiance.",
+   "Défauts : impulsive, susceptible, exigeante et prompte à utiliser le sarcasme lorsqu’elle se sent mise à l’écart.",
+   "Lizzie aime les belles choses, les réparties précises et l’impression de maîtriser son entrée dans une pièce. Sous son assurance, elle redoute de ne pas compter autant que les autres. Elle peut réclamer de l’attention maladroitement, puis regretter de n’avoir pas su demander simplement du soutien.",
+   "Sa relation avec Josie lui apprend à entendre un refus sans le confondre avec un abandon. Son évolution passe par des excuses suivies d’actes, une meilleure écoute et la possibilité de trouver ses propres appuis. Ses difficultés émotionnelles ne résument ni son caractère ni sa valeur ; elles ne constituent pas un pouvoir magique ou une excuse aux blessures infligées."
+  ],
+  "history":[
+   ["Deux enfants sauvées", "Lizzie et Josie sont les filles d’Alaric Saltzman et de Josette Laughlin. Après la mort de Jo, un sort du coven Gemini permet leur survie en les transférant dans le corps de Caroline Forbes. Caroline les porte puis les élève avec Alaric. Elizabeth reçoit le prénom de la mère de Caroline et grandit avec plusieurs histoires familiales à comprendre."],
+   ["Grandir sans magie à soi", "Comme Josie, Lizzie est une siphonneuse : elle doit absorber une magie extérieure avant de lancer un sort. À l’école Salvatore, elle découvre un cadre où cette différence n’est pas une honte. Les exercices, les amitiés et les conflits lui apprennent cependant que connaître une formule ne suffit pas à maîtriser une situation."],
+   ["La sœur que l’on croit connaître", "Les jumelles s’aiment, mais leurs habitudes peuvent les enfermer : Lizzie prend souvent les devants pendant que Josie cède du terrain. Comprendre ce déséquilibre lui demande de regarder au-delà de ses propres peurs. Elle veut protéger sa sœur tout en apprenant à ne plus décider à sa place."],
+   ["Hope et les autres", "L’attention qu’Alaric porte à Hope a longtemps alimenté sa jalousie. Les épreuves partagées lui permettent de découvrir une personne derrière le nom Mikaelson. Leur lien reste fait de désaccords, de réparties et de confiance construite. Lizzie peut compter sur des amis sans faire de chacun le gardien permanent de son équilibre."],
+   ["Refuser un avenir imposé", "L’héritage Gemini porte la menace de la Fusion, rituel censé opposer les jumelles au profit d’une seule. Caroline recherche une autre issue. Dans cette adaptation, la Convergence suspend l’échéance de ce rituel : aucune Fusion mortelle n’a eu lieu et aucune sœur n’a absorbé l’autre. Cette particularité du Nexus devient un sujet de recherche, pas une immunité générale ni un pouvoir reproductible."],
+   ["Une vie à San Francisco", "Lizzie rejoint San Francisco en conservant sa nature de sorcière siphonneuse. Sa mort et sa transformation en Hérétique ne sont pas retenues dans cette continuité. Elle veut explorer la ville, choisir une activité et découvrir qui elle est hors de l’école et des comparaisons. Ses relations amoureuses présentes restent à construire avec les joueurs concernés."],
+   ["Pistes de jeu", "Une soirée qui tourne autrement que prévu, un objet enchanté à examiner avec prudence ou une archive Gemini peuvent lancer un sujet. Retrouver sa famille dans un café compte autant qu’enquêter sur le Nexus : Lizzie cherche aussi un quotidien qui lui ressemble."]
+  ],
+  "links":[
+   ["Josie Saltzman","Jumelle, amour et autonomie","Tu es ma sœur, pas la personne chargée de réparer chacune de mes journées. Je veux apprendre à t’écouter avant de supposer que tu es d’accord. Nous pouvons rester proches en choisissant parfois des chemins différents."],
+   ["Caroline Forbes","Mère et point d’appui","Tu m’as portée et élevée ; tu es ma mère. Je reconnais ton courage dans la recherche d’une issue à la Fusion. J’ai aussi besoin de partager avec toi des moments ordinaires, sans que chaque conversation concerne notre avenir magique."],
+   ["Alaric Saltzman","Père, présence à retrouver","J’ai parfois cru devoir me battre pour ton attention. Je veux pouvoir te dire ce qui me manque sans transformer Hope en rivale. Tes conseils comptent, mais j’ai besoin que mes décisions aient aussi leur place."],
+   ["Hope Mikaelson","De la friction à la confiance","Nous savons exactement comment nous provoquer. Nous avons aussi appris que nous pouvions nous épauler. Je veux laisser notre relation évoluer sans faire de nos anciennes jalousies une règle pour l’avenir."],
+   ["Bonnie Bennett","Une expérience à écouter","Tu connais notre famille et les dangers que certains sorts font courir. Je peux venir te poser des questions sur une trace Gemini, sans attendre une solution immédiate. Ton aide doit rester un choix et non un devoir envers nous."],
+   ["Damon Salvatore","Un proche à l’humour piquant","Tu fais partie de l’entourage de mes parents et de l’histoire de l’école. Nos échanges peuvent être mordants, mais je compte bien défendre mes idées. Une enquête commune serait l’occasion de découvrir ce que nous pouvons réellement nous apporter."]
+  ]
+ },
+ {
+  "slug":"josie-saltzman","name":"Josie Saltzman","race":"Sorcière siphonneuse","sex":"Féminin","kind":"witch","camp":"Neutre",
+  "age":"Jeune adulte · même âge que Lizzie, chronologie ajustée à la Convergence",
+  "origin":"Mystic Falls, Virginie · héritage du coven Gemini",
+  "family":"Josette Saltzman · jumelle de Lizzie · fille biologique d’Alaric et de Josette Laughlin, portée et élevée par Caroline Forbes · nièce de Kai Parker",
+  "job":"Ancienne élève de l’école Salvatore · études ou activité à choisir à San Francisco",
+  "quote":"Dire non ne signifie pas que je t’aime moins.",
+  "character":[
+   "Qualités : attentive, réfléchie, persévérante, sensible et courageuse lorsqu’elle défend une personne ou une conviction.",
+   "Défauts : se sacrifie trop facilement, garde ses frustrations pour elle, peut devenir jalouse et hésite à exprimer ses propres envies.",
+   "Josie remarque les silences et les détails que d’autres négligent. Elle aide volontiers, parfois avant même qu’on le lui demande. Mais répondre aux attentes de chacun finit par lui faire perdre de vue ce qu’elle désire. Sa douceur ne l’empêche ni de ressentir de la colère ni de prendre de mauvaises décisions.",
+   "Elle apprend à poser des limites sans chercher aussitôt à les justifier. Son autonomie ne suppose pas de devenir dure ou de rejeter Lizzie. Elle souhaite construire des liens où l’attention circule dans les deux sens et retrouver le plaisir d’étudier, de sortir ou d’aimer sans se sentir responsable de tous les équilibres."
+  ],
+  "history":[
+   ["Le prénom de Jo", "Josie porte le prénom de sa mère biologique, Josette Laughlin. Elle et Lizzie survivent à sa mort grâce au sort Gemini qui les transfère dans le corps de Caroline Forbes. Caroline les met au monde puis les élève avec leur père, Alaric. Josie grandit avec l’amour de sa famille et des questions sur une mère qu’elle n’a pas pu connaître au quotidien."],
+   ["Apprendre à emprunter la magie", "À l’école Salvatore, Josie étudie avec des élèves dont les natures diffèrent de la sienne. Elle n’a pas de réserve magique personnelle : elle doit siphonner une source pour alimenter ses sorts. Sa curiosité et son sérieux l’aident à progresser, sans lui donner accès à toutes les formules des grimoires."],
+   ["S’effacer n’est pas protéger", "Josie prend souvent soin de Lizzie en taisant ses propres difficultés. Cette habitude entretient parfois les tensions qu’elle espérait éviter. Elle découvre progressivement qu’une relation solide peut supporter un désaccord et que sa sœur doit pouvoir l’entendre sans qu’elle transforme chaque besoin en excuse."],
+   ["La tentation des raccourcis", "Le danger de la magie noire appartient aux expériences qui lui ont appris à se méfier d’une puissance obtenue trop vite. Dans cette adaptation, Dark Josie n’est ni une personnalité jouable séparée ni une réserve de pouvoirs disponible. Josie reste responsable de ses choix présents, avec la possibilité de demander de l’aide et de choisir des méthodes moins destructrices."],
+   ["Deux vies à préserver", "La perspective de la Fusion lui fait craindre de perdre Lizzie ou de disparaître elle-même. La Convergence suspend ici l’échéance du rituel, sans Fusion mortelle accomplie entre les sœurs. Cette divergence partagée leur laisse le temps de rechercher une solution durable. Elle ne leur permet pas de défaire librement les malédictions d’autrui."],
+   ["Se choisir dans le Nexus", "À San Francisco, Josie demeure une sorcière siphonneuse vivante. Elle veut bâtir une vie qui ne soit pas seulement une réponse aux besoins de sa famille. Les études, les amitiés et la découverte de nouvelles traditions magiques peuvent lui ouvrir d’autres horizons. Ses liens amoureux actuels restent à définir ensemble, sans imposer un couple à un autre personnage."],
+   ["Pistes de jeu", "Josie peut chercher une archive sur Jo, préparer une sortie avec Hope ou confronter un indice Gemini aux recherches de Caroline. Un désaccord avec Lizzie peut aussi devenir l’occasion d’apprendre à se parler autrement. Aucun de ces sujets ne l’oblige à être celle qui trouve toujours la solution."]
+  ],
+  "links":[
+   ["Lizzie Saltzman","Jumelle, proximité à réinventer","Je t’aime et je veux rester près de toi, mais je dois aussi pouvoir choisir pour moi. Un refus n’est pas un abandon. J’aimerais que nous apprenions à nous soutenir sans décider à l’avance laquelle doit céder."],
+   ["Caroline Forbes","Mère et confiance","Tu es ma mère et l’un de mes repères les plus sûrs. Je sais combien tu as cherché à nous protéger de la Fusion. Je veux pouvoir te parler de mes envies personnelles autant que de mes inquiétudes, et participer à notre avenir au lieu de simplement l’attendre."],
+   ["Alaric Saltzman","Père et besoin d’être entendue","J’ai souvent donné l’impression d’aller bien parce que d’autres avaient besoin de toi. Je veux apprendre à te parler avant d’être dépassée. Tu peux m’aider sans prendre chaque décision à ma place."],
+   ["Hope Mikaelson","Amie, écoute réciproque","Nous savons ce que signifie porter une histoire familiale trop lourde. Je veux être présente pour toi sans oublier mes propres limites. Notre amitié peut aussi vivre dans une sortie, un projet ou une conversation qui ne concerne aucun danger."],
+   ["Bonnie Bennett","Conseils et héritage magique","Ton expérience m’intéresse autant que ta façon de protéger tes proches. J’aimerais comparer mes recherches Gemini aux tiennes, si tu le souhaites. Je ne te demande ni de résoudre ma vie ni de me prêter ta magie par habitude."],
+   ["Damon Salvatore","Un proche de la famille","Tu appartiens à l’histoire de mon père et de l’école où j’ai grandi. Derrière les provocations, je peux chercher un souvenir ou une information utile. Je garde pourtant le droit de contester tes méthodes et de choisir les miennes."]
+  ]
+ }
+]

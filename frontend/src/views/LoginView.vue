@@ -36,6 +36,7 @@
       </form>
 
       <div class="auth-footer">
+        <router-link to="/mot-de-passe-oublie">Mot de passe oublié ?</router-link><br />
         Pas encore de compte ?
         <router-link to="/register">S'inscrire</router-link>
       </div>

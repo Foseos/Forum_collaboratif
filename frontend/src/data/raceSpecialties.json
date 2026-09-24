@@ -1,0 +1,300 @@
+{
+  "Elfe": [
+    {
+      "name": "Elfes sylvains",
+      "description": "Forêts, pistage et perception du vivant ; leur discrétion repose aussi sur l’apprentissage."
+    },
+    {
+      "name": "Elfes des sources",
+      "description": "Rivières, sanctuaires et magie de l’eau ; adaptation originale du forum."
+    },
+    {
+      "name": "Elfes des astres",
+      "description": "Lumière et lecture symbolique des cycles ; les présages restent fragmentaires."
+    },
+    {
+      "name": "Elfes noirs",
+      "description": "Branche des lieux souterrains, du crépuscule ou des sanctuaires oubliés. Certains peuvent entretenir un lien magique avec le sang ou les os, notamment dans leurs perceptions ou leurs rituels. Vision nocturne, perception des ombres ou enchantement de dissimulation peuvent aussi former leur spécialité. « Noir » désigne une affinité magique, sans imposer apparence, société ou camp ; les capacités choisies doivent figurer dans la fiche validée."
+    }
+  ],
+  "Cupidon": [
+    {
+      "name": "Cupidons des rencontres",
+      "description": "Affinité avec les rapprochements et les occasions de rencontre."
+    },
+    {
+      "name": "Cupidons des liens éprouvés",
+      "description": "Branche originale tournée vers la perception des liens fragilisés."
+    }
+  ],
+  "Phoenix": [
+    {
+      "name": "Phénix de Legacies",
+      "description": "Nature surnaturelle illustrée par Landon Kirby. Son histoire est liée à un cycle de mort et de renaissance ; toute renaissance jouable doit être définie dans la fiche avec ses conditions et ses conséquences. Cette origine ne fait pas du personnage une sorcière Phénix de Charmed."
+    },
+    {
+      "name": "Phénix de Charmed",
+      "description": "Lignée de sorcières dont Bianca est un exemple. Leur tradition est liée à la magie et à des missions d’assassinat ; la reconstitution du corps montrée dans cette continuité n’est pas la renaissance du Phénix de Legacies. Une sorcière de cette lignée reste une sorcière, pas une créature de feu par défaut."
+    }
+  ],
+  "Valkyrie": [
+    {
+      "name": "Valkyries gardiennes",
+      "description": "Veillent sur un lieu, un passage ou une communauté qu’elles se sont engagées à protéger. Leur serment les pousse à défendre ceux qui y trouvent refuge et à préserver la mémoire des combattants tombés. Le lieu protégé et les obligations du serment sont précisés dans la fiche."
+    },
+    {
+      "name": "Valkyries errantes",
+      "description": "Parcourent les territoires à la recherche de personnes, de traces de batailles ou de serments oubliés. Elles peuvent escorter des vivants en danger et témoigner du sort des morts, sans être liées durablement à un sanctuaire. Leur quête et les liens qu’elles entretiennent sont précisés dans la fiche ; cette branche est une adaptation du forum."
+    }
+  ],
+  "Nymphe/Satyre": [
+    {
+      "name": "Nymphes des bois",
+      "description": "Lien avec un bosquet ou une forêt."
+    },
+    {
+      "name": "Nymphes des sources",
+      "description": "Lien avec une source ou une rivière."
+    },
+    {
+      "name": "Nymphes des roches",
+      "description": "Lien avec une falaise ou un massif ; branche proposée pour le forum."
+    },
+    {
+      "name": "Satyres",
+      "description": "Affinité avec les espaces sauvages et les rythmes du vivant ; branche distincte, pas un cumul de dons de nymphe."
+    }
+  ],
+  "Humain": [
+    {
+      "name": "Humains non initiés",
+      "description": "Découverte progressive du surnaturel."
+    },
+    {
+      "name": "Humains initiés",
+      "description": "Connaissances et liens avec les communautés magiques."
+    },
+    {
+      "name": "Chasseurs",
+      "description": "Profil entraîné, avec équipement et compétences justifiés."
+    },
+    {
+      "name": "Médiums",
+      "description": "Profil doté de perceptions seulement si celles-ci sont validées."
+    }
+  ],
+  "sirene-triton-charmed": [
+    {
+      "name": "Peuples des mers",
+      "description": "Milieu marin et grandes étendues d’eau."
+    },
+    {
+      "name": "Peuples des eaux douces",
+      "description": "Branche originale liée aux lacs et rivières."
+    },
+    {
+      "name": "Peuples des abysses",
+      "description": "Branche originale liée aux profondeurs ; l’obscurité ne détermine pas leur camp."
+    }
+  ],
+  "Vampire": [
+    {
+      "name": "Vampires de lignée",
+      "description": "Vampires ordinaires issus d’une lignée connue. Ils peuvent être jeunes ou plus expérimentés ; cette appellation n’ajoute aucun pouvoir particulier."
+    },
+    {
+      "name": "Vampires anciens",
+      "description": "Vampires ayant traversé plusieurs générations, mais toujours moins âgés que les Originels. Leur ancienneté ne donne pas automatiquement leurs capacités."
+    },
+    {
+      "name": "Vampires originels",
+      "description": "Réservés aux personnages originels présents dans les séries et aux scénarios déjà existants sur le forum. Aucun Originel inédit ne peut être créé librement."
+    }
+  ],
+  "Loup-garou": [
+    {
+      "name": "Lignées TVD / The Originals",
+      "description": "Héritage et transformation définis selon cette continuité."
+    },
+    {
+      "name": "Lignées Teen Wolf",
+      "description": "Origine et fonctionnement définis selon cette continuité."
+    },
+    {
+      "name": "Alpha, bêta et oméga",
+      "description": "Statuts de meute, lorsque pertinents ; ce ne sont pas trois races cumulables."
+    }
+  ],
+  "Fée": [
+    {
+      "name": "Fées sylvestres",
+      "description": "Affinité avec la végétation et les refuges forestiers ; perception des plantes ou camouflage végétal à choisir."
+    },
+    {
+      "name": "Fées des eaux",
+      "description": "Affinité avec les sources et les brumes ; respiration aquatique ou manipulation limitée de l’eau à choisir."
+    },
+    {
+      "name": "Fées lumineuses",
+      "description": "Lumières féeriques et illusions visuelles. Certaines peuvent être guérisseuses : la guérison doit alors figurer parmi les capacités choisies et validées dans leur fiche. Leur éclat ne détermine pas leur camp."
+    },
+    {
+      "name": "Fées noires",
+      "description": "Branche liée à la nuit, aux ombres et aux enchantements trompeurs. Certaines fées noires peuvent aussi entretenir un lien magique avec le sang ou les os, par exemple dans leurs perceptions ou leurs rituels. Un voile d’ombre, une illusion ou la perception des maléfices peuvent également orienter leurs dons. Ces affinités ne déterminent pas leur camp et chaque capacité utilisée doit figurer dans la fiche validée."
+    }
+  ],
+  "Muse": [
+    {
+      "name": "Muses des arts",
+      "description": "Expression visuelle, musique ou écriture."
+    },
+    {
+      "name": "Muses des idées",
+      "description": "Branche originale liée à l’invention et à la réflexion."
+    }
+  ],
+  "sorcier-tvd": [
+    {
+      "name": "Sorciers de coven",
+      "description": "Membres d’un coven choisi et nommé dans la fiche ; leurs pratiques et leurs liens dépendent de ce coven."
+    },
+    {
+      "name": "Sorciers indépendants",
+      "description": "Sorciers qui pratiquent hors d’un coven, seuls ou avec des alliés, sans appartenance à une communauté magique établie."
+    }
+  ],
+  "sirene-tvd": [
+    {
+      "name": "Sirènes de l’appel",
+      "description": "Profil centré sur la voix ou l’appel psychique pour attirer l’attention, établir un lien et influencer une cible à portée définie. La forme de l’appel et ses effets précis doivent être validés : il ne commande pas librement les actes d’un autre personnage."
+    },
+    {
+      "name": "Sirènes du souvenir",
+      "description": "Profil centré sur la perception des souvenirs et des failles émotionnelles, à partir d’un lien psychique établi. Une altération de souvenir éventuelle est une capacité distincte, soumise à validation et à l’accord du joueur concerné ; ce profil est une adaptation du forum."
+    }
+  ],
+  "Banshee": [
+    {
+      "name": "Banshees de présage",
+      "description": "Leur récit met l’accent sur les indices de mort : impressions soudaines, sons, images ou lieux qui prennent sens peu à peu. Elles cherchent à comprendre qui est en danger et ce qui pourrait arriver, sans recevoir de réponse complète ni de date certaine."
+    },
+    {
+      "name": "Banshees de lamentation",
+      "description": "Leur récit met l’accent sur le cri : manifestation d’abord involontaire face à un danger ou à un présage, puis éventuellement mieux maîtrisée. Un usage sonore capable de repousser ou de blesser doit être choisi comme capacité et délimité dans la fiche. Ce nom de profil est une adaptation du forum."
+    }
+  ],
+  "Kanima": [
+    {
+      "name": "Kanimas en quête d’identité",
+      "description": "Transformation et identité au centre du personnage."
+    },
+    {
+      "name": "Kanimas stabilisés",
+      "description": "Version adaptée au forum avec une maîtrise partielle validée."
+    }
+  ],
+  "Kitsune": [
+    {
+      "name": "Kitsunes de l’eau",
+      "description": "Affinité avec les courants et les sources ; une manipulation de l’eau doit être choisie et délimitée dans la fiche."
+    },
+    {
+      "name": "Kitsunes de la glace",
+      "description": "Affinité avec le froid, le givre et la glace ; elle ne donne pas automatiquement tous les pouvoirs de l’eau."
+    },
+    {
+      "name": "Kitsunes du feu",
+      "description": "Affinité avec les flammes et la chaleur ; portée et intensité dépendent des capacités validées."
+    },
+    {
+      "name": "Kitsunes de la terre",
+      "description": "Affinité avec les sols et la pierre ; les manifestations importantes demandent une progression en jeu."
+    },
+    {
+      "name": "Kitsunes de l’air",
+      "description": "Affinité avec les vents et les mouvements de l’air ; le vol ou les tempêtes ne sont pas acquis par défaut."
+    },
+    {
+      "name": "Kitsunes soniques",
+      "description": "Affinité avec les sons et les vibrations ; portée et effets sur autrui restent limités."
+    },
+    {
+      "name": "Kitsunes de la lumière",
+      "description": "Affinité avec la clarté et les phénomènes lumineux ; leur nature ne détermine pas leur camp."
+    },
+    {
+      "name": "Kitsunes de l’ombre",
+      "description": "Affinité avec l’obscurité et la dissimulation ; elle ne fait pas automatiquement d’eux des Nogitsune."
+    },
+    {
+      "name": "Kitsunes des plantes",
+      "description": "Affinité avec la végétation ; leurs dons nécessitent un environnement et une portée définis."
+    },
+    {
+      "name": "Kitsunes de l’esprit",
+      "description": "Affinité avec les perceptions et les manifestations spirituelles ; aucune lecture totale des pensées ou contrôle d’autrui."
+    },
+    {
+      "name": "Kitsunes du sang",
+      "description": "Affinité rituelle ou sensorielle liée au sang ; elle ne permet ni contrôle du corps d’autrui ni vol de pouvoirs."
+    },
+    {
+      "name": "Kitsunes du tonnerre",
+      "description": "Affinité avec l’électricité et les éclairs ; intensité et précision sont définies dans la fiche."
+    }
+  ],
+  "Chien de l'enfer": [
+    {
+      "name": "Gardiens du surnaturel",
+      "description": "Profil centré sur la protection d’un lieu, d’un secret ou d’un passage lié au monde surnaturel. La mission et ses limites sont définies dans la fiche ; elle ne confère aucune autorité générale sur les autres créatures."
+    },
+    {
+      "name": "Veilleurs des morts",
+      "description": "Profil tourné vers les signes de mort et les événements qui menacent l’équilibre surnaturel. Le personnage peut enquêter ou intervenir selon son histoire, sans prédire chaque décès ni disposer des âmes. Ce profil est une adaptation du forum."
+    }
+  ],
+  "Chimère": [
+    {
+      "name": "Chimères composites",
+      "description": "Une seule branche pour toutes les chimères, quelle que soit la combinaison de leurs traits. Les origines et les capacités propres au personnage sont détaillées dans sa fiche."
+    }
+  ],
+  "Hérétique": [
+    {
+      "name": "Hérétiques de coven",
+      "description": "Identité construite autour d’une communauté magique."
+    },
+    {
+      "name": "Hérétiques indépendants",
+      "description": "Pratique individuelle et recherche d’autonomie ; ce mode de vie n’ajoute aucune capacité."
+    }
+  ],
+  "Sphinx": [
+    {
+      "name": "Sphinx des archives",
+      "description": "Attachés à un lieu, une collection ou une tradition dont ils préservent les récits. Leurs énigmes partent de traces du passé, de témoignages ou de documents. Ils peuvent rechercher une vérité oubliée, mais ne connaissent que ce qu’ils ont appris ou découvert."
+    },
+    {
+      "name": "Sphinx des carrefours",
+      "description": "Attentifs aux décisions et aux chemins qui s’ouvrent devant les personnages. Leurs énigmes mettent en lumière des conséquences possibles ou des choix négligés, sans révéler un avenir certain ni décider à la place des autres. Cette branche est une création du forum."
+    }
+  ],
+  "Hybride": [
+    {
+      "name": "Sorcier / être de lumière",
+      "description": "Deux héritages, une seule réserve de quatre pouvoirs."
+    },
+    {
+      "name": "Sorcier / démon",
+      "description": "Affinités choisies entre les deux origines."
+    },
+    {
+      "name": "Vampire / loup-garou",
+      "description": "Transformation et contraintes communes à définir."
+    },
+    {
+      "name": "Autres doubles héritages",
+      "description": "Par exemple fée / sorcier : proposition à justifier et valider, sans disponibilité automatique."
+    }
+  ]
+}

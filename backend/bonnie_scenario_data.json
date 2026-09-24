@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "slug": "bonnie-bennett",
+      "name": "Bonnie Bennett",
+      "race": "Sorcière · lignée Bennett",
+      "camp": "Bien",
+      "age": "Adulte · âge précis à harmoniser avec Elena et Caroline",
+      "origin": "Mystic Falls, Virginie",
+      "job": "Recherche et conservation d’archives occultes · activité proposée",
+      "family": "Fille d’Abby Bennett et de Rudy Hopkins · petite-fille de Sheila Bennett · situation amoureuse actuelle à définir",
+      "quote": "Ma vie ne doit pas être le prix à payer pour celle des autres.",
+      "character": [
+        "Qualités : loyale, courageuse, intuitive, persévérante, généreuse et lucide face au danger.",
+        "Défauts : obstinée, secrète lorsqu’elle souffre, parfois rancunière et trop prompte à faire passer ses besoins après ceux des autres.",
+        "Bonnie écoute et observe avant de parler. Elle peut sembler calme jusqu’au moment où une limite est franchie ; sa franchise devient alors très ferme. Son sens du devoir l’a souvent conduite à cacher son épuisement pour rassurer ses proches. Elle apprend à demander de l’aide avant de ne plus avoir la force de le faire.",
+        "Elle aime profondément ses amis, mais souhaite aussi voyager, apprendre et construire une vie qui ne dépende pas des crises de Mystic Falls. Son humour, sa curiosité et ses envies ordinaires méritent autant de place que sa magie. Refuser un rituel dangereux ne signifie pas qu’elle aime moins ceux qui le lui demandent."
+      ],
+      "history": [
+        [
+          "Les racines Bennett",
+          "Bonnie grandit à Mystic Falls et partage son adolescence avec Elena Gilbert et Caroline Forbes. Les récits de sa grand-mère Sheila, qu’elle appelle Grams, lui paraissent d’abord appartenir aux traditions familiales. Lorsque ses intuitions et ses premiers phénomènes magiques deviennent impossibles à ignorer, Sheila l’aide à reconnaître son héritage. Bonnie découvre une lignée dont elle peut être fière, sans connaître d’emblée tous ses secrets."
+        ],
+        [
+          "Apprendre le prix de la magie",
+          "Le surnaturel bouleverse ses amitiés et la confronte à des choix auxquels elle n’était pas préparée. La mort de Sheila, après un rituel éprouvant, marque durablement sa façon d’envisager les demandes des vampires. Elle comprend qu’une formule réussie peut néanmoins coûter trop cher. Ses pertes familiales et les absences de ses parents rendent la confiance difficile, mais ne l’empêchent pas de chercher des liens sincères."
+        ],
+        [
+          "Aimer sans se perdre",
+          "Sa relation avec Jeremy Gilbert mêle tendresse, espoir et blessures. Bonnie prend des risques pour ceux qu’elle aime, parfois jusqu’à nier ses propres besoins. Dans cette adaptation, ce passé amoureux est conservé sans imposer une reprise de leur couple. Les anciennes expériences liées à l’Autre Côté appartiennent à son histoire ; elles ne lui donnent aucun statut actuel d’Ancre ni accès permanent aux morts."
+        ],
+        [
+          "L’enfermement et le retour",
+          "Le monde-prison de 1994 la retient avec Damon. La répétition des journées, les efforts pour rentrer et la menace de Kai mettent à l’épreuve sa résistance. Une amitié inattendue grandit avec Damon, sans effacer leurs différends. Revenir parmi ses proches ne guérit pas immédiatement la solitude et la peur éprouvées là-bas. Bonnie peut encore avoir besoin de temps, de repères et d’un espace où raconter ce qu’elle a vécu."
+        ],
+        [
+          "Une vie qui lui appartient",
+          "Enzo occupe une place importante dans son parcours sentimental et dans sa découverte d’un avenir possible au-delà du sacrifice. Leur situation présente et son sort restent ouverts pour cette continuité, à harmoniser avec son scénario s’il est joué. La mort d’Enzo et les événements du final ne sont donc pas imposés ici. Bonnie ne possède ni dimension psychique personnelle ni pouvoir de résurrection à sa disposition."
+        ],
+        [
+          "Les Bennett face au Nexus",
+          "La Convergence rapproche des traditions magiques que Bonnie ne connaît pas toutes. Elle peut rechercher des archives familiales, échanger avec d’autres sorcières ou étudier un objet dont l’origine reste incertaine. Son nom attire parfois des personnes qui voudraient utiliser son sang ou son savoir ; elle n’a aucune obligation d’accepter. Elena demeure vampire et mariée à Damon, tandis que Stefan est vivant et marié à Caroline. Bonnie conserve ses amitiés tout en choisissant enfin ses propres projets."
+        ]
+      ],
+      "links": [
+        [
+          "Elena Gilbert Salvatore",
+          "Elena Gilbert Salvatore — Meilleure amie",
+          "Nous avons grandi ensemble et traversé des épreuves qui auraient pu nous séparer. Je tiens à toi, mais je veux que notre amitié laisse aussi une place à mes limites et à mes envies. Ta nature vampirique ne change pas ce que tu représentes pour moi ; elle ne fait pas de ma magie une solution toujours disponible."
+        ],
+        [
+          "Caroline Forbes",
+          "Caroline Forbes Salvatore — Meilleure amie",
+          "Tu sais organiser le monde quand je ne sais plus par où commencer. J’aime ton énergie et ta façon de rester présente. Je peux aussi te demander de ralentir et de m’écouter sans chercher tout de suite une solution. Je veux partager tes joies autant que tes inquiétudes."
+        ],
+        [
+          "Damon Salvatore",
+          "Damon Salvatore — Amitié forgée dans l’épreuve",
+          "Le monde-prison nous a appris à compter l’un sur l’autre derrière nos disputes. Tu es devenu quelqu’un d’important pour moi, et c’est aussi pour cela que tes absences ou tes décisions peuvent me blesser. Je veux une amitié où nous pouvons être honnêtes sans qu’une catastrophe nous y oblige."
+        ],
+        [
+          "Jeremy Gilbert",
+          "Jeremy Gilbert — Ancien amour, tendresse persistante",
+          "Notre histoire a connu des moments précieux et des blessures que je ne veux pas minimiser. Je garde de l’affection pour toi sans que cela décide de notre avenir amoureux. Nous pouvons apprendre à nous retrouver autrement, si nous le souhaitons tous les deux."
+        ],
+        [
+          "Stefan Salvatore",
+          "Stefan Salvatore — Allié, confiance à entretenir",
+          "Nous tenons à plusieurs des mêmes personnes et avons affronté des dangers ensemble. Je reconnais tes efforts pour vivre autrement, mais je ne veux pas devenir celle qui doit réparer chaque crise. Notre confiance se construit dans les actes et dans le respect de mes choix."
+        ]
+      ]
+    }
+  ],
+  "powers": [
+    [
+      "Télékinésie",
+      "Déplace un petit objet visible à courte distance. Le poids et la précision augmentent la fatigue. Aucun contrôle des organes ni déplacement forcé du corps d’un autre personnage."
+    ],
+    [
+      "Allumage magique",
+      "Allume une bougie ou une petite matière combustible à proximité, sous concentration. Ne crée pas de brasier, ne contrôle pas un incendie et ne permet pas d’enflammer directement une personne."
+    ],
+    [
+      "Bouclier de protection",
+      "Dresse brièvement un écran magique devant elle pour amortir un impact limité. Le bouclier peut céder et ne protège ni un groupe entier ni un bâtiment. Il ne renvoie pas les attaques."
+    ],
+    [
+      "Perception des enchantements",
+      "Au contact d’un objet, ressent la présence d’une magie active. Elle n’en identifie pas automatiquement l’auteur, la formule ou les intentions et ne peut pas la dissiper par cette seule perception."
+    ]
+  ]
+}

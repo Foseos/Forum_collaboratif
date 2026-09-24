@@ -5,6 +5,7 @@ export const useNotificationStore = defineStore('notifications', {
   state: () => ({
     notifications: [],
     unreadCount: 0,
+    unreadMsgCount: 0,
     pagination: { count: 0, next: null, previous: null },
     _intervalId: null,
   }),
@@ -29,6 +30,15 @@ export const useNotificationStore = defineStore('notifications', {
       }
     },
 
+    async fetchUnreadMessages() {
+      try {
+        const { data } = await api.get('/messages/unread/')
+        this.unreadMsgCount = data.unread ?? 0
+      } catch {
+        // Silently fail if not authenticated
+      }
+    },
+
     async markRead(id) {
       await api.post(`/notifications/${id}/read/`)
       const notif = this.notifications.find((n) => n.id === id)
@@ -44,7 +54,11 @@ export const useNotificationStore = defineStore('notifications', {
 
     startPolling() {
       this.fetchUnreadCount()
-      this._intervalId = setInterval(() => this.fetchUnreadCount(), 30000)
+      this.fetchUnreadMessages()
+      this._intervalId = setInterval(() => {
+        this.fetchUnreadCount()
+        this.fetchUnreadMessages()
+      }, 30000)
     },
 
     stopPolling() {

@@ -1,0 +1,490 @@
+[
+  {
+    "slug": "klaus-mikaelson",
+    "name": "Klaus Mikaelson",
+    "race": "Hybride originel · vampire et loup-garou",
+    "sex": "Masculin",
+    "kind": "hybrid",
+    "family": "Père de Hope avec Hayley Marshall · fils d’Esther et d’Ansel",
+    "job": "Artiste peintre et gestionnaire de son patrimoine",
+    "quote": "Je veux que ma fille ait une vie qui ne ressemble pas à ma guerre.",
+    "character": [
+      "Créatif, stratège, courageux et profondément attaché aux siens, Klaus est aussi possessif, cruel, rancunier et obsédé par la trahison. Il peut confondre l’amour avec le contrôle. Son talent pour comprendre les failles des autres contraste avec sa difficulté à reconnaître sa propre peur de l’abandon. Hope lui donne une raison de changer ; elle ne devient pas responsable de sa rédemption."
+    ],
+    "history": [
+      [
+        "La blessure originelle",
+        "Élevé sous l’autorité violente de Mikael, Klaus découvre après sa transformation que son père biologique est Ansel, un loup-garou. Esther réprime sa nature lupine. La honte, la peur et le ressentiment nourrissent une longue quête pour libérer cette part de lui-même."
+      ],
+      [
+        "Le pouvoir et la fuite",
+        "Devenu l’hybride originel, il impose sa volonté à des alliés, des ennemis et jusque dans sa fratrie. Ses liens avec Katherine, Stefan et Tyler portent les marques de cette violence. Il veut une famille fidèle, mais ses menaces et ses enfermements contribuent aux trahisons qu’il redoute."
+      ],
+      [
+        "La Nouvelle-Orléans et Hope",
+        "La ville, Marcel et Hayley bouleversent les certitudes du conquérant. La naissance de Hope lui donne une relation qu’il ne peut réussir par la seule force. Protéger sa fille implique aussi de respecter sa mère et les personnes qui l’aident à grandir."
+      ],
+      [
+        "La vie dans le Nexus",
+        "Cette version conserve Klaus vivant et hybride originel : son sacrifice final n’est pas retenu comme sa mort actuelle. Hope est devenue une tribride pleinement activée, avec sa propre vie. Klaus peut renouer avec l’art, négocier ou affronter d’anciennes victimes ; aucune réconciliation ne lui est garantie."
+      ]
+    ],
+    "camp": "Neutre",
+    "origin": "Lignée Mikaelson · origines anciennes et liens avec La Nouvelle-Orléans",
+    "age": "Plus d’un millénaire depuis sa naissance · apparence adulte",
+    "links": [
+      [
+        "Elijah Mikaelson",
+        "Frère et soutien",
+        "Tu as cru en moi lorsque je ne savais plus le faire. Je dois apprendre à recevoir cette fidélité sans exiger que tu sacrifies ta vie à mes erreurs."
+      ],
+      [
+        "Rebekah Mikaelson",
+        "Sœur et liberté",
+        "Je t’ai privée de choix en prétendant te protéger. Notre affection ne rend pas ces actes acceptables. Une confiance nouvelle demande que je respecte tes décisions."
+      ],
+      [
+        "Hope Mikaelson",
+        "Fille",
+        "Je veux te garder en sécurité, mais ta vie t’appartient. Tu n’as pas à devenir ma seconde chance ni à me pardonner pour que je fasse mieux."
+      ],
+      [
+        "Freya Mikaelson",
+        "Sœur retrouvée",
+        "Ton retour a éprouvé ma méfiance. Je reconnais ce que tu apportes à notre famille et je dois cesser de considérer ta magie comme une ressource toujours disponible."
+      ],
+      [
+        "Esther Mikaelson",
+        "Mère, confiance rompue",
+        "Tes secrets ont façonné ma vie. Je peux entendre tes raisons sans accepter que tu décides encore de ma nature ou du destin de ma fille."
+      ]
+    ]
+  },
+  {
+    "slug": "elijah-mikaelson",
+    "name": "Elijah Mikaelson",
+    "race": "Vampire originel",
+    "sex": "Masculin",
+    "kind": "original",
+    "family": "Fils d’Esther et de Mikael · oncle de Hope",
+    "job": "Négociateur et amateur d’art · activité proposée",
+    "quote": "Une promesse ne vaut que par les actes qui la suivent.",
+    "character": [
+      "Éloquent, patient et attentif, Elijah cultive la mesure et la courtoisie. Il reste capable d’une violence extrême lorsqu’il estime sa famille menacée. Son sens de l’honneur peut devenir un récit qui dissimule ses compromis. Il doit apprendre à tenir parole sans demander à d’autres de payer le prix de sa loyauté envers Klaus."
+    ],
+    "history": [
+      [
+        "Avant les Originels",
+        "Elijah connaît une vie humaine, une famille et un amour pour Tatia avant le rituel d’Esther. La transformation le confronte à une faim qu’il ne maîtrise pas. Il tue Tatia, dont la mort demeure une blessure enfouie derrière les récits et les souvenirs altérés."
+      ],
+      [
+        "Le gardien de la famille",
+        "Au fil des siècles, il fait de la cohésion familiale sa mission. Il négocie, répare et menace, tout en espérant que Klaus puisse changer. Cette fidélité ne l’innocente pas des vies sacrifiées et des décisions prises au nom des siens."
+      ],
+      [
+        "Choisir au-delà du devoir",
+        "Ses attachements, notamment à Hayley, lui montrent qu’une vie personnelle ne se confond pas avec le service rendu à son frère. Ses élans de protection peuvent pourtant étouffer. La confiance exige qu’il accepte les choix de ceux qu’il aime."
+      ],
+      [
+        "Retrouver Tatia",
+        "Elijah reste vivant et vampire originel dans le Nexus ; sa mort finale n’est pas retenue. Tatia est revenue humaine. Elle ne lui doit ni pardon ni amour. Il peut lui proposer la vérité, mais doit respecter son refus éventuel, tout en découvrant ce que signifie vivre pour lui-même."
+      ]
+    ],
+    "camp": "Neutre",
+    "origin": "Lignée Mikaelson · origines anciennes et liens avec La Nouvelle-Orléans",
+    "age": "Plus d’un millénaire depuis sa naissance · apparence adulte",
+    "links": [
+      [
+        "Klaus Mikaelson",
+        "Frère",
+        "Je veux te soutenir sans faire de ta rédemption l’unique raison de mon existence. Ma fidélité doit aussi savoir poser des limites."
+      ],
+      [
+        "Rebekah Mikaelson",
+        "Sœur",
+        "Je connais ton désir d’une vie choisie. Je veux le défendre sans parler à ta place ni te demander d’attendre encore que la famille soit prête."
+      ],
+      [
+        "Hope Mikaelson",
+        "Nièce",
+        "Tu n’es pas une promesse chargée de réparer notre nom. Je souhaite être un appui auquel tu peux dire non."
+      ],
+      [
+        "Esther Mikaelson",
+        "Mère",
+        "Je garde le souvenir de notre famille humaine. Il ne suffit pas à effacer les conséquences de tes rituels et de nos actes."
+      ],
+      [
+        "Tatia Petrova",
+        "Tatia Petrova — Amour ancien, vérité nécessaire",
+        "Ton retour me confronte à ce que j’ai fait. Je ne te demande pas de porter ma culpabilité ; tu choisiras si tu veux me parler."
+      ]
+    ]
+  },
+  {
+    "slug": "rebekah-mikaelson",
+    "name": "Rebekah Mikaelson",
+    "race": "Vampire originelle",
+    "sex": "Féminin",
+    "kind": "original",
+    "family": "Fille d’Esther et de Mikael · tante de Hope",
+    "job": "Mécénat et projets culturels · activité proposée",
+    "quote": "Je veux une vie choisie, pas une éternité accordée à condition d’obéir.",
+    "character": [
+      "Franche, généreuse, courageuse et passionnée, Rebekah peut aussi être impulsive, jalouse et vindicative. Son désir d’amour et de foyer a souvent été traité comme une faiblesse. Elle refuse désormais d’avoir à s’excuser de vouloir une existence personnelle. Sa tendresse pour Hope coexiste avec une colère légitime envers sa famille."
+    ],
+    "history": [
+      [
+        "Une jeunesse interrompue",
+        "La transformation voulue par ses parents lui retire brutalement l’avenir humain qu’elle imaginait. Rebekah apprend à survivre auprès de ses frères, avec leurs ennemis et leurs règles. Elle aime cette famille sans accepter tous les sacrifices exigés d’elle."
+      ],
+      [
+        "Des siècles sous conditions",
+        "Les mises au sommeil imposées par Klaus brisent des relations et des projets. Elle tente de trouver des espaces de liberté, parfois au prix d’alliances dangereuses. Sa colère ne disparaît pas parce qu’un frère affirme l’avoir protégée."
+      ],
+      [
+        "Marcel et la possibilité d’un foyer",
+        "Son lien amoureux avec Marcel appartient à son histoire. Leur engagement actuel et leur quotidien se construisent avec son joueur, sans imposer ici un mariage absent des fiches déjà établies. L’arrivée de Hope révèle également sa capacité à prendre soin sans chercher une récompense."
+      ],
+      [
+        "Une place entière dans le Nexus",
+        "Rebekah demeure vampire originelle ; aucune prise du remède n’est imposée. Son envie d’humanité peut rester un désir ou une question ouverte. Elle peut soutenir un projet artistique, accueillir sa nièce ou renouer une amitié, en exigeant que ses choix soient respectés."
+      ]
+    ],
+    "camp": "Neutre",
+    "origin": "Lignée Mikaelson · origines anciennes et liens avec La Nouvelle-Orléans",
+    "age": "Plus d’un millénaire depuis sa naissance · apparence adulte",
+    "links": [
+      [
+        "Klaus Mikaelson",
+        "Frère",
+        "Je t’aime, mais je ne veux plus que cette affection serve à restreindre ma liberté. Nos retrouvailles devront respecter ma vie."
+      ],
+      [
+        "Elijah Mikaelson",
+        "Frère",
+        "Je connais ton dévouement. J’aimerais te voir choisir aussi quelque chose pour toi, sans transformer notre famille en dette éternelle."
+      ],
+      [
+        "Kol Mikaelson",
+        "Frère et complice",
+        "Nous savons rire de ce que les autres prennent trop au sérieux. Je peux pourtant te demander des comptes lorsque ta provocation blesse."
+      ],
+      [
+        "Freya Mikaelson",
+        "Sœur retrouvée",
+        "Nous avons perdu beaucoup de temps. Je veux apprendre à te connaître dans des moments où aucune urgence magique ne nous réunit."
+      ],
+      [
+        "Hope Mikaelson",
+        "Nièce",
+        "Je garde de la tendresse pour l’enfant que j’ai protégée, mais je veux connaître la personne que tu deviens et soutenir ses choix."
+      ]
+    ]
+  },
+  {
+    "slug": "kol-mikaelson",
+    "name": "Kol Mikaelson",
+    "race": "Vampire originel",
+    "sex": "Masculin",
+    "kind": "original",
+    "family": "Fils d’Esther et de Mikael · lien amoureux avec Davina Claire",
+    "job": "Collection et expertise d’objets occultes · activité proposée",
+    "quote": "Je peux aimer ma famille sans lui appartenir.",
+    "character": [
+      "Vif, curieux, charmeur et inventif, Kol cache mal son impulsivité et sa rancœur. Il provoque pour attirer l’attention ou reprendre l’avantage, et a longtemps traité la violence comme un divertissement. Ses connaissances occultes sont réelles, mais elles ne remplacent pas une conscience des conséquences. Davina compte pour lui sans avoir à le surveiller ni à le sauver."
+    ],
+    "history": [
+      [
+        "La magie perdue",
+        "Kol a connu la magie avant sa transformation. Devenir vampire lui retire cet accès et nourrit son intérêt pour les sorcières, les objets enchantés et les savoirs interdits. Il peut comprendre un rituel sans pouvoir le lancer sous sa nature actuelle."
+      ],
+      [
+        "Le frère tenu à l’écart",
+        "Les conflits de la fratrie et les périodes d’enfermement renforcent sa défiance envers Klaus. Il répond souvent à l’exclusion par la provocation. Les blessures qu’il a subies ne justifient pas celles qu’il inflige à son tour."
+      ],
+      [
+        "Davina et le retour",
+        "Sa rencontre avec Davina, au cours de ses changements de corps et de ses retours, lui ouvre une autre forme d’attachement. Il apprend à tenir à quelqu’un sans transformer chaque relation en rivalité familiale. Leur vie actuelle et leur engagement précis restent à harmoniser avec elle."
+      ],
+      [
+        "L’Originel dans le Nexus",
+        "Kol est présent dans son corps de vampire originel, sans sorcellerie active ajoutée. Il peut rechercher un artefact ou offrir son expertise, mais ne possède pas toutes les solutions. Sa liberté se mesure aussi à sa capacité de rester lorsque la confiance exige plus qu’une plaisanterie."
+      ]
+    ],
+    "camp": "Neutre",
+    "origin": "Lignée Mikaelson · origines anciennes et liens avec La Nouvelle-Orléans",
+    "age": "Plus d’un millénaire depuis sa naissance · apparence adulte",
+    "links": [
+      [
+        "Rebekah Mikaelson",
+        "Sœur et complice",
+        "Tu connais mon humour et tu sais quand je m’en sers pour esquiver. Je tiens à cette complicité qui peut aussi me rappeler à l’ordre."
+      ],
+      [
+        "Klaus Mikaelson",
+        "Frère, rivalité",
+        "Je refuse de redevenir le frère que tu fais taire lorsque je te dérange. Une alliance entre nous exige davantage que ton besoin du moment."
+      ],
+      [
+        "Finn Mikaelson",
+        "Frère, désaccords",
+        "Nous ne partageons pas le même regard sur notre nature. Je peux entendre ce que tu as perdu sans accepter d’être condamné d’avance."
+      ],
+      [
+        "Freya Mikaelson",
+        "Sœur et savoirs",
+        "Nos connaissances occultes peuvent se compléter. Ma curiosité ne m’autorise pas à exiger que tu lances les sorts auxquels je n’ai plus accès."
+      ],
+      [
+        "Hope Mikaelson",
+        "Nièce",
+        "Je peux te transmettre des histoires et quelques mauvaises plaisanteries. Je veux surtout que tu puisses te construire sans devoir choisir un camp dans nos disputes."
+      ]
+    ]
+  },
+  {
+    "slug": "finn-mikaelson",
+    "name": "Finn Mikaelson",
+    "race": "Vampire originel",
+    "sex": "Masculin",
+    "kind": "original",
+    "family": "Fils d’Esther et de Mikael · attachement ancien à Sage",
+    "job": "Étude des archives et activité civile au choix",
+    "quote": "Je veux savoir qui je suis lorsque personne ne décide de mon silence.",
+    "character": [
+      "Réfléchi, fidèle et exigeant, Finn peut devenir rigide, amer et moralisateur. Son expérience de l’enfermement rend son rapport au temps profondément douloureux. Il condamne facilement les autres pour garder une certitude sur sa propre place. Retrouver une vie demande de reconnaître sa souffrance sans la convertir en droit de condamner toute sa famille."
+    ],
+    "history": [
+      [
+        "Le frère d’avant la rupture",
+        "Finn conserve des souvenirs de Freya avant qu’elle soit emmenée par Dahlia. La transformation familiale le plonge dans une existence qu’il accepte mal. Il voit le vampirisme comme une corruption, même lorsque ses sentiments pour Sage lui donnent une raison de s’y attacher."
+      ],
+      [
+        "Le temps confisqué",
+        "Maintenu dans un cercueil pendant près de neuf siècles, il perd l’essentiel de l’histoire vécue par ses frères et sœurs. Son réveil ne le rend pas immédiatement familier du monde contemporain. Son ressentiment repose sur une privation réelle de liberté."
+      ],
+      [
+        "Les convictions et leurs victimes",
+        "Son alliance avec Esther et ses projets contre les vampires le mettent en conflit avec les siens. Persuadé d’agir justement, il peut ignorer les personnes que ses décisions mettent en danger. Sa relation avec Freya reste une possibilité de parler autrement que par reproches."
+      ],
+      [
+        "Un retour propre au Nexus",
+        "Pour cette adaptation, la Convergence ramène Finn dans son corps de vampire originel. Ce retour exceptionnel ne lui donne pas de pouvoir de résurrection ni les dons de ses anciens corps de sorcier. Le sort actuel de Sage reste ouvert. Il peut apprendre une activité, retrouver des archives ou demander à sa famille de l’écouter enfin."
+      ]
+    ],
+    "camp": "Neutre",
+    "origin": "Lignée Mikaelson · origines anciennes et liens avec La Nouvelle-Orléans",
+    "age": "Plus d’un millénaire depuis sa naissance · apparence adulte",
+    "links": [
+      [
+        "Freya Mikaelson",
+        "Sœur, souvenir préservé",
+        "Je me souviens de toi avant la séparation. Nos retrouvailles ne rendront pas le temps perdu, mais elles peuvent ouvrir une relation qui nous appartienne."
+      ],
+      [
+        "Esther Mikaelson",
+        "Mère, convictions à interroger",
+        "Je t’ai longtemps accordé ma confiance. Je dois désormais distinguer mes choix de tes projets et mesurer qui en supporte les conséquences."
+      ],
+      [
+        "Klaus Mikaelson",
+        "Frère, années volées",
+        "Mon enfermement ne disparaît pas parce que tu souhaites tourner la page. Si nous parlons, ce sera aussi de ce que tu m’as retiré."
+      ],
+      [
+        "Kol Mikaelson",
+        "Frère, opposition",
+        "Ton insouciance m’irrite, mais je ne connais pas tout de tes blessures. Je veux pouvoir te répondre autrement que par une condamnation."
+      ],
+      [
+        "Hope Mikaelson",
+        "Nièce, rencontre nouvelle",
+        "Tu ne portes pas la responsabilité des choix de tes parents. Je dois apprendre à te connaître sans voir en toi une preuve dans mes propres convictions."
+      ]
+    ]
+  },
+  {
+    "slug": "freya-mikaelson",
+    "name": "Freya Mikaelson",
+    "race": "Sorcière",
+    "sex": "Féminin",
+    "kind": "witch",
+    "family": "Fille aînée d’Esther et de Mikael · épouse de Keelin · mère de Nik",
+    "job": "Recherche magique et création de protections · activité proposée",
+    "quote": "Protéger les miens ne doit pas signifier me perdre.",
+    "character": [
+      "Déterminée, méthodique, tendre avec ses proches et très résistante à l’épreuve, Freya peut être autoritaire, méfiante et prête à franchir des limites au nom de sa famille. Elle a longtemps appris que sa valeur dépendait de sa puissance. Sa vie avec Keelin et leur enfant lui rappelle qu’elle mérite aussi du repos et des relations où elle n’est pas appelée seulement pour résoudre une crise."
+    ],
+    "history": [
+      [
+        "Le prix d’un pacte",
+        "Enfant, Freya est confiée à Dahlia en paiement du pacte conclu par Esther. Elle grandit loin de sa famille dans une relation de dépendance et de contrôle. Les longs sommeils magiques la privent d’une vie continue, malgré les siècles traversés."
+      ],
+      [
+        "Retrouver les siens",
+        "Lorsqu’elle rejoint ses frères et sœurs, l’appartenance qu’elle espérait n’est pas immédiate. La méfiance de Klaus et les conflits familiaux lui demandent de se faire connaître. Elle contribue à leur survie, mais doit apprendre à ne pas faire de chaque service la condition de son acceptation."
+      ],
+      [
+        "Une famille choisie",
+        "Sa relation avec Keelin devient une part essentielle de son avenir. Leur mariage et leur fils Nik lui donnent un foyer qui ne se limite pas à la fratrie. Elle doit consacrer à cette vie une présence réelle, et non les instants qui restent entre deux dangers."
+      ],
+      [
+        "La magie dans le Nexus",
+        "Freya reste une sorcière, libérée de l’ancien lien à Dahlia. Son expérience lui apporte méthode et connaissances ; elle ne garantit aucun rituel. Elle peut échanger avec Bonnie, aider Hope ou rechercher des protections tout en refusant de devenir l’unique recours de sa famille."
+      ]
+    ],
+    "camp": "Neutre",
+    "origin": "Lignée Mikaelson · origines anciennes et liens avec La Nouvelle-Orléans",
+    "age": "Plus d’un millénaire depuis sa naissance · apparence adulte",
+    "links": [
+      [
+        "Finn Mikaelson",
+        "Frère, premiers souvenirs",
+        "Tu appartiens à la vie dont on m’a arrachée. Je veux retrouver ce lien sans devenir l’arbitre de tous tes conflits avec nos frères."
+      ],
+      [
+        "Esther Mikaelson",
+        "Mère, abandon",
+        "Tu peux expliquer ton pacte, mais tu ne peux pas décider de ce qu’il a représenté pour moi. Une relation entre nous demandera du temps et mes propres limites."
+      ],
+      [
+        "Klaus Mikaelson",
+        "Frère",
+        "Je tiens à toi et à Hope. Cela ne signifie pas que ma magie ou mon foyer doivent céder à chaque nouvelle urgence."
+      ],
+      [
+        "Rebekah Mikaelson",
+        "Sœur",
+        "Je veux partager avec toi des moments simples, des projets et des confidences qui ne concernent pas seulement la survie de nos frères."
+      ],
+      [
+        "Hope Mikaelson",
+        "Nièce et apprentissage",
+        "Je peux t’accompagner dans ta magie sans te réduire à ta puissance. Tu as le droit de ne pas savoir, d’être fatiguée et de choisir une autre priorité."
+      ]
+    ]
+  },
+  {
+    "slug": "esther-mikaelson",
+    "name": "Esther Mikaelson",
+    "race": "Sorcière originelle · créatrice des premiers vampires",
+    "sex": "Féminin",
+    "kind": "witch",
+    "family": "Mère de Freya, Finn, Elijah, Klaus, Kol, Rebekah et Henrik · sœur de Dahlia",
+    "job": "Recherche rituelle · activité actuelle au choix",
+    "quote": "Réparer commence peut-être par accepter de ne plus décider seule.",
+    "character": [
+      "Érudite, persévérante et capable d’affection, Esther est aussi secrète, obstinée et persuadée de savoir ce qui convient aux autres. Sa culpabilité peut prendre la forme d’un projet imposé. Elle veut corriger ce qu’elle a créé, mais peine à écouter les êtres que ses actes ont transformés. Son intelligence ne la dispense pas de répondre de ses choix."
+    ],
+    "history": [
+      [
+        "Le pacte et la famille",
+        "Son désir d’avoir des enfants la conduit à accepter l’aide de Dahlia. Le prix est Freya, puis la menace pesant sur les premiers-nés de sa lignée. Esther dissimule cette perte derrière un récit qui brise la confiance avant même que ses autres enfants en connaissent la vérité."
+      ],
+      [
+        "Créer pour ne plus perdre",
+        "Après la mort d’Henrik, elle transforme Mikael et plusieurs de ses enfants en vampires avec un rituel utilisant notamment le sang de Tatia. Elle veut les protéger, mais crée de nouveaux besoins et de nouvelles violences. Elle réprime aussi la nature lupine de Klaus, issue de sa relation avec Ansel."
+      ],
+      [
+        "Vouloir défaire son œuvre",
+        "Esther tente ensuite de mettre fin au vampirisme de ses enfants ou de leur imposer une autre existence. Ses projets mêlent remords et contrôle. Finn lui accorde une confiance que les autres ne partagent pas, tandis que Freya porte la blessure de son abandon."
+      ],
+      [
+        "Revenir et répondre",
+        "Dans cette adaptation, le Nexus ramène Esther vivante dans son apparence d’origine, en tant que sorcière. Le titre de sorcière originelle désigne son rôle historique, pas une nature vampirique ni une invulnérabilité. Elle ne peut ni recréer librement des Originels ni modifier la nature de ses enfants sans intrigue concertée. Tatia et Hope peuvent enfin lui répondre en leur propre nom."
+      ]
+    ],
+    "camp": "Neutre",
+    "origin": "Lignée Mikaelson · origines anciennes et liens avec La Nouvelle-Orléans",
+    "age": "Plus d’un millénaire depuis sa naissance · apparence adulte",
+    "links": [
+      [
+        "Freya Mikaelson",
+        "Fille, faute première",
+        "Je t’ai sacrifiée à un pacte que j’avais accepté. Je ne peux pas réclamer ta confiance au nom de mon regret ; tes limites doivent avoir une place."
+      ],
+      [
+        "Finn Mikaelson",
+        "Fils, confiance fragile",
+        "Tu m’as soutenue lorsque les autres me rejetaient. Je dois veiller à ne pas utiliser cette proximité pour faire de toi l’instrument de mes convictions."
+      ],
+      [
+        "Klaus Mikaelson",
+        "Fils, secrets et blessures",
+        "J’ai voulu contenir une part de toi et cacher ce que je craignais de révéler. Te retrouver impose de répondre de ces actes sans prendre encore le contrôle."
+      ],
+      [
+        "Elijah Mikaelson",
+        "Fils, mémoire",
+        "Nos souvenirs familiaux portent des vérités difficiles. Je ne peux pas espérer reconstruire un lien en les dissimulant une nouvelle fois."
+      ],
+      [
+        "Hope Mikaelson",
+        "Petite-fille",
+        "Tu représentes un avenir que mes anciennes décisions n’avaient pas prévu. Je dois te rencontrer comme une personne et renoncer à décider de ta valeur à partir de ton sang."
+      ]
+    ]
+  },
+  {
+    "slug": "hope-mikaelson",
+    "name": "Hope Mikaelson",
+    "race": "Tribride originelle unique · sorcière, loup-garou et vampire",
+    "sex": "Féminin",
+    "kind": "tribrid",
+    "family": "Fille de Klaus Mikaelson et de Hayley Marshall · nièce de la fratrie Mikaelson",
+    "job": "Études et projets artistiques · activité à personnaliser",
+    "quote": "Je suis plus que ce que mon sang permet de faire.",
+    "character": [
+      "Créative, courageuse et loyale, Hope peut être solitaire, méfiante et prompte à prendre tous les risques pour éviter une nouvelle perte. Elle a grandi sous le poids des attentes et des menaces liées à sa naissance. Son ironie masque parfois le besoin d’être aimée simplement. Elle doit apprendre à demander de l’aide sans croire que sa puissance lui impose de tout porter."
+    ],
+    "history": [
+      [
+        "Une enfant avant une exception",
+        "Fille de Klaus et de Hayley, Hope réunit des héritages qui attirent très tôt la peur et la convoitise. Sa famille cherche à la protéger, parfois en lui cachant des vérités essentielles. Elle développe une sensibilité artistique et un besoin d’amitiés qui ne reposent pas sur son nom."
+      ],
+      [
+        "Apprendre au milieu des dangers",
+        "Son apprentissage auprès de sa famille et dans l’environnement éducatif Salvatore l’amène à côtoyer d’autres jeunes surnaturels. Les liens avec Josie, Lizzie et Landon appartiennent à son parcours, sans imposer ici leur situation présente. Ses relations méritent d’exister au-delà des prophéties."
+      ],
+      [
+        "Les trois natures éveillées",
+        "Dans cette version, Hope est une tribride pleinement activée et conserve sa magie après l’éveil vampirique. Elle doit composer avec ses instincts, sa faim et ses émotions amplifiées. Sa singularité ne donne ni maîtrise parfaite ni connaissance de tous les sorts."
+      ],
+      [
+        "La famille réunie autrement",
+        "Le Nexus conserve Klaus et Elijah vivants dans cette continuité et permet le retour de Finn et d’Esther. Hope doit découvrir ces relations au présent, sans se voir imposer une proximité immédiate. Le sort de Hayley suit sa propre continuité. Un projet artistique, un échange avec Freya ou une première conversation avec Esther peut lui permettre d’exister autrement que comme héritière."
+      ]
+    ],
+    "camp": "Neutre",
+    "origin": "Lignée Mikaelson · origines anciennes et liens avec La Nouvelle-Orléans",
+    "age": "Jeune adulte · chronologie à harmoniser avec les autres scénarios",
+    "links": [
+      [
+        "Klaus Mikaelson",
+        "Père",
+        "Je tiens à toi, mais je veux une relation où je peux avoir mes propres choix. Ta protection doit me laisser vivre, pas me tenir à l’écart de tout."
+      ],
+      [
+        "Elijah Mikaelson",
+        "Oncle",
+        "Je sais la place que la famille prend dans ta vie. J’aimerais pouvoir te parler sans devenir une nouvelle responsabilité à porter en silence."
+      ],
+      [
+        "Freya Mikaelson",
+        "Tante et guide",
+        "Ta présence m’aide à comprendre ma magie. Je veux pouvoir venir vers toi avec des questions, mais aussi pour partager ce qui me rend heureuse."
+      ],
+      [
+        "Rebekah Mikaelson",
+        "Tante",
+        "Tu connais une partie de mon enfance dont je garde peu de souvenirs. Je veux créer avec toi des moments nouveaux et apprendre de ta détermination à rester libre."
+      ],
+      [
+        "Esther Mikaelson",
+        "Grand-mère, inconnue",
+        "Je connais des récits sur toi, pas encore la personne revenue dans le Nexus. Je peux être curieuse et prudente à la fois ; aucune intimité ne nous est due."
+      ]
+    ]
+  }
+]

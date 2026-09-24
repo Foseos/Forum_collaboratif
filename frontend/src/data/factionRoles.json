@@ -1,0 +1,186 @@
+{
+  "Les gardiens des sceaux primordiaux": [
+    {
+      "name": "Gardien du Sceau de la Vie",
+      "element": "Terre",
+      "symbol": "🌍",
+      "powers": [
+        {
+          "name": "Guérison",
+          "description": "Soigne les blessures et neutralise certaines afflictions surnaturelles."
+        },
+        {
+          "name": "Canalisation vitale",
+          "description": "Puise dans l’énergie naturelle environnante pour restaurer ou renforcer temporairement une personne."
+        },
+        {
+          "name": "Aura protectrice",
+          "description": "Génère une barrière d’énergie capable de protéger plusieurs personnes d’une attaque magique."
+        },
+        {
+          "name": "Modelage de la terre",
+          "description": "Déplace une quantité limitée de terre ou de pierre pour former un obstacle, ouvrir un passage ou stabiliser un sol proche."
+        }
+      ]
+    },
+    {
+      "name": "Gardien du Sceau de l’Esprit",
+      "element": "Eau",
+      "symbol": "🌊",
+      "powers": [
+        {
+          "name": "Télépathie",
+          "description": "Communique mentalement et perçoit les pensées superficielles d’autrui."
+        },
+        {
+          "name": "Projection astrale",
+          "description": "Permet à son esprit de quitter temporairement son corps et de voyager sous une forme immatérielle."
+        },
+        {
+          "name": "Bouclier mental",
+          "description": "Protège son esprit et celui d’autrui contre possession, télépathie et manipulation mentale."
+        },
+        {
+          "name": "Mouvement des eaux",
+          "description": "Déplace et façonne un volume limité d’eau déjà présent, sans en créer ni contrôler une étendue entière."
+        }
+      ]
+    },
+    {
+      "name": "Gardien du Sceau du Temps",
+      "element": "Vent",
+      "symbol": "🌪️",
+      "powers": [
+        {
+          "name": "Chrono-perception",
+          "description": "Perçoit les échos du passé ou de possibles fragments du futur liés à une personne, un objet ou un lieu."
+        },
+        {
+          "name": "Suspension temporelle",
+          "description": "Immobilise pendant quelques instants les êtres et objets présents dans une zone limitée."
+        },
+        {
+          "name": "Accélération temporelle",
+          "description": "Accélère brièvement les gestes et les réflexes du gardien ou d’un allié proche, sans voyage dans le temps ni déplacement instantané. L’effet ne dure que quelques instants et ne peut être maintenu en continu."
+        },
+        {
+          "name": "Maîtrise des courants d’air",
+          "description": "Oriente les vents proches pour dévier un objet léger, dissiper une brume ou ralentir une chute sur une courte distance."
+        }
+      ]
+    },
+    {
+      "name": "Gardien du Sceau de la Volonté",
+      "element": "Feu",
+      "symbol": "🔥",
+      "powers": [
+        {
+          "name": "Télékinésie",
+          "description": "Déplace, repousse, attire ou immobilise objets et adversaires par la seule force de l’esprit."
+        },
+        {
+          "name": "Volonté inébranlable",
+          "description": "Offre une forte résistance aux illusions, possessions, manipulations émotionnelles et contrôles mentaux."
+        },
+        {
+          "name": "Imposition de volonté",
+          "description": "Projette sa volonté sur l’adversaire afin de perturber sa concentration, interrompre une action magique ou repousser psychiquement les êtres les plus faibles."
+        },
+        {
+          "name": "Maîtrise des flammes",
+          "description": "Allume ou dirige une flamme de taille limitée à proximité ; elle ne protège pas automatiquement le gardien du feu."
+        }
+      ]
+    }
+  ],
+  "Les cavaliers de l'apocalypse": [
+    {
+      "name": "Guerre",
+      "symbol": "⚔️",
+      "powers": [
+        {
+          "name": "Incitation à la violence",
+          "description": "Amplifie colère, haine et agressivité jusqu’à pousser ses victimes à s’affronter."
+        },
+        {
+          "name": "Manipulation des armes",
+          "description": "Contrôle à distance les armes et peut les retourner contre leurs propriétaires."
+        },
+        {
+          "name": "Instinct de bataille",
+          "description": "Perçoit les mouvements hostiles immédiats autour de lui et réagit plus vite pendant un affrontement. Cette vigilance ne prédit pas les intentions à l’avance et ne le rend pas invulnérable."
+        },
+        {
+          "name": "Matérialisation d’armes",
+          "description": "Fait apparaître une arme de combat ordinaire dans sa main pendant trois tours de RP. L’arme disparaît ensuite ou si le Cavalier la dématérialise. Elle n’est pas enchantée, ne garantit pas de toucher et ne peut pas être conservée ou donnée durablement."
+        }
+      ]
+    },
+    {
+      "name": "Mort",
+      "symbol": "☠️",
+      "powers": [
+        {
+          "name": "Sursis funèbre",
+          "description": "Retarde quelques instants l’aggravation d’une blessure mortelle chez une personne encore vivante. Le pouvoir ne soigne pas, ne ressuscite pas et ne remplace pas une intervention adaptée ; son usage se décide avec le joueur concerné."
+        },
+        {
+          "name": "Nécromancie",
+          "description": "Communique avec les morts et rappelle temporairement quelques combattants spectraux placés sous ses ordres. Ils disparaissent à la fin de l’invocation : ce pouvoir ne ressuscite personne. Faire intervenir un défunt incarné par un autre joueur demande son accord."
+        },
+        {
+          "name": "Drain vital",
+          "description": "Absorbe la force vitale d’autrui afin de restaurer sa propre puissance."
+        },
+        {
+          "name": "Froid sépulcral",
+          "description": "Fait chuter la température autour d’une cible pendant deux tours de RP. Le froid engourdit ses mouvements et rend ses gestes moins précis, sans la paralyser ni provoquer de blessure durable."
+        }
+      ]
+    },
+    {
+      "name": "Famine",
+      "symbol": "🌾",
+      "powers": [
+        {
+          "name": "Appétit insatiable",
+          "description": "Provoque une faim surnaturelle qui épuise progressivement le corps de ses victimes."
+        },
+        {
+          "name": "Disette magique",
+          "description": "Raréfie temporairement l’énergie surnaturelle dans une zone limitée : les pouvoirs restent utilisables, mais exigent davantage d’effort et fatiguent plus vite. Elle n’annule aucun don et ne vide pas durablement les réserves d’autrui."
+        },
+        {
+          "name": "Miroir du manque",
+          "description": "Pouvoir psychique qui confronte une victime à l’illusion de ce qui lui manque le plus, provoquant obsession, détresse et perte de concentration."
+        },
+        {
+          "name": "Érosion de l’endurance",
+          "description": "Pendant deux tours de RP, les efforts physiques d’une cible lui coûtent davantage d’énergie. Elle peut continuer d’agir et récupère ensuite ; le pouvoir ne la neutralise pas automatiquement."
+        }
+      ]
+    },
+    {
+      "name": "Pestilence",
+      "symbol": "☣️",
+      "powers": [
+        {
+          "name": "Contagion",
+          "description": "Provoque et transmet des maladies surnaturelles dont il peut contrôler certains symptômes."
+        },
+        {
+          "name": "Nuage toxique",
+          "description": "Libère une brume empoisonnée qui affaiblit progressivement ceux qui la respirent."
+        },
+        {
+          "name": "Corruption organique",
+          "description": "Contamine un organisme vivant et perturbe temporairement son fonctionnement, provoquant faiblesse et souffrance."
+        },
+        {
+          "name": "Fièvre délirante",
+          "description": "Provoque pendant deux tours de RP une fièvre et des perceptions troublées. La cible garde le contrôle de ses actes ; l’effet ne cause ni blessure durable ni perte de connaissance automatique."
+        }
+      ]
+    }
+  ]
+}

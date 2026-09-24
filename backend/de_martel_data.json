@@ -1,0 +1,156 @@
+[
+  {
+    "slug": "aurora-de-martel",
+    "name": "Aurora de Martel",
+    "race": "Vampire",
+    "sex": "Féminin",
+    "kind": "vampire",
+    "camp": "Neutre",
+    "age": "Plus d’un millénaire · apparence adulte depuis sa transformation",
+    "origin": "Sud de la France · ancienne famille de Martel",
+    "family": "Sœur cadette de Tristan de Martel · situation amoureuse actuelle au choix",
+    "job": "Mécénat et collection d’art · activité proposée",
+    "quote": "Je veux choisir mon avenir sans rejouer éternellement mon passé.",
+    "character": [
+      "Qualités : vive, cultivée, observatrice, passionnée et capable d’une grande détermination.",
+      "Défauts : jalouse, rancunière, manipulatrice et parfois impulsive lorsqu’elle se sent rejetée.",
+      "Aurora recherche une affection qui ne soit ni une dette ni une prison. Les siècles de contrôle et de mensonges ont fragilisé sa confiance, sans expliquer à eux seuls chacun de ses choix. Elle peut faire preuve d’humour, de sensibilité et de curiosité autant que de cruauté. Ses actes restent sa responsabilité ; sa souffrance ne transforme pas les autres en personnes qu’elle aurait le droit de posséder.",
+      "Elle doit apprendre à distinguer le désir d’être aimée de la volonté d’obtenir une réponse précise. Sa relation à Tristan, son passé avec Klaus et les attentes de Lucien peuvent occuper toute la place si elle ne construit pas aussi ses propres projets. L’art et les rencontres nouvelles offrent des moyens d’exister hors de ces rivalités."
+    ],
+    "history": [
+      [
+        "Une vie sous surveillance",
+        "Aurora grandit dans une famille noble, au sein d’un ordre où son avenir dépend largement des décisions d’autrui. Son frère Tristan occupe une place centrale, mêlant affection et contrôle. L’arrivée des Mikaelson et la rencontre avec Klaus ouvrent une possibilité de rupture avec cette vie."
+      ],
+      [
+        "La première de sa lignée",
+        "Après avoir reçu le sang de Rebekah, Aurora meurt puis devient vampire. Elle est la première personne transformée dans cette lignée, sans devenir elle-même une Originelle. Son histoire avec Klaus et les conflits qu’elle suscite se mêlent rapidement aux secrets des Mikaelson."
+      ],
+      [
+        "Un passé volé",
+        "Elijah contraint Aurora, Tristan et Lucien à croire qu’ils sont les Mikaelson pour détourner la poursuite de Mikael. Retrouver leur identité ne répare pas les années vécues sous cette emprise. Aurora porte aussi les blessures des enfermements imposés par son frère, qu’elle ne veut plus laisser définir toute sa vie."
+      ],
+      [
+        "La Nouvelle-Orléans et Camille",
+        "Son retour ranime ses sentiments pour Klaus et une volonté de revanche. Elle s’en prend à Camille et provoque sa transformation, un acte dont elle doit répondre. Dans le Nexus, Camille demeure vivante et vampire ; aucune réconciliation n’est acquise. Aurora ne peut réclamer une place dans la vie de Klaus au nom de leur ancien amour."
+      ],
+      [
+        "Une autre continuité",
+        "Cette adaptation conserve Aurora vivante, vampire et libre de commencer de nouvelles intrigues. Sa mort finale dans Legacies, la possession du corps de Hope et tout statut de vampire amélioré ne sont pas retenus comme acquis. Elle commence avec quatre capacités seulement. Son ancienneté ne donne ni contrôle de toute une lignée ni droit sur les autres personnages."
+      ],
+      [
+        "Construire au lieu d’attendre",
+        "Le Nexus permet de renouer avec l’art, de rechercher un objet familial ou de rencontrer des personnes sans lien avec les Mikaelson. Tristan et Lucien demeurent des relations importantes, mais leur présence ne décide pas de son avenir amoureux. Une première limite posée à son frère peut compter autant qu’un affrontement."
+      ]
+    ],
+    "links": [
+      [
+        "Tristan de Martel",
+        "Frère, affection et emprise",
+        "Tu as été mon soutien autant que celui qui décidait de mes limites. Je tiens à toi, mais je refuse que le mot protection justifie de m’enfermer ou de choisir ma vie. Nous devons apprendre à nous parler sans exiger l’obéissance."
+      ],
+      [
+        "Klaus Mikaelson",
+        "Ancien amour",
+        "Notre histoire a compté pour moi et je ne veux pas la nier. Elle ne me donne pourtant aucun droit sur tes sentiments actuels. Ce que nous pourrons construire ou laisser derrière nous se décidera au présent."
+      ],
+      [
+        "Rebekah Mikaelson",
+        "Origine de ma vie vampirique",
+        "Ton sang a changé mon existence. Nous partageons une histoire ancienne, sans que cela fasse de moi ton obligée ni de toi ma protectrice. Je souhaite pouvoir te rencontrer hors des conflits de nos frères."
+      ],
+      [
+        "Elijah Mikaelson",
+        "Identité confisquée",
+        "Tu as utilisé notre esprit et nos vies pour détourner un danger. Ton sens de l’honneur ne suffit pas à effacer cette décision. Si nous parlons, je veux que tu reconnaisses ce que tu nous as pris."
+      ],
+      [
+        "Lucien Castle",
+        "Attachement et attentes",
+        "Nous avons traversé une histoire que peu de personnes peuvent comprendre. Je ne veux pas utiliser tes sentiments pour obtenir ton aide, ni devoir les partager en échange de ta présence. Notre relation mérite des choix clairs."
+      ],
+      [
+        "Camille O’Connell",
+        "Victime de mes choix",
+        "Je t’ai privée du choix de ta nature pour atteindre Klaus. Je ne peux pas te demander de comprendre mes raisons comme si elles annulaient ce que j’ai fait. Tes limites et ton refus de me pardonner t’appartiennent."
+      ]
+    ]
+  },
+  {
+    "slug": "tristan-de-martel",
+    "name": "Tristan de Martel",
+    "race": "Vampire",
+    "sex": "Masculin",
+    "kind": "vampire",
+    "camp": "Neutre",
+    "age": "Plus d’un millénaire · apparence adulte depuis sa transformation",
+    "origin": "Sud de la France · ancienne famille de Martel",
+    "family": "Frère aîné d’Aurora de Martel · situation amoureuse au choix",
+    "job": "Gestion de patrimoine et réseaux d’influence · activité proposée",
+    "quote": "Une alliance durable doit survivre à un désaccord.",
+    "character": [
+      "Qualités : cultivé, patient, stratège, éloquent et persévérant.",
+      "Défauts : arrogant, possessif, calculateur et capable d’une violence froide lorsqu’il perd le contrôle d’une situation.",
+      "Tristan préfère prévoir les réactions plutôt que hausser la voix. Son élégance et sa politesse peuvent masquer une conception très hiérarchique des relations. Il sait offrir une place et un soutien tout en attendant une fidélité qu’il présente comme naturelle. Son défi est de comprendre qu’une alliance libre ne se construit pas comme une dépendance.",
+      "Son attachement à Aurora est profond, mais il l’a trop souvent exprimé en lui retirant ses choix. Il peut craindre sincèrement de la perdre sans avoir raison de la contrôler. Face à un monde où son titre ne suffit plus, il doit apprendre à gagner une confiance qu’il ne pourra pas simplement acheter."
+    ],
+    "history": [
+      [
+        "L’héritier de Martel",
+        "Tristan grandit dans une famille noble du sud de la France, avec le sentiment que son rang l’autorise à décider. Sa proximité avec Aurora se mêle à un contrôle de ses relations. Sa brutalité envers Lucien laisse des blessures bien avant que leur vie ne devienne surnaturelle."
+      ],
+      [
+        "Le premier transformé d’Elijah",
+        "Elijah le transforme en vampire. Tristan appartient à sa lignée sans posséder le statut d’Originel. La contrainte qui lui impose ensuite l’identité d’Elijah le transforme, avec Aurora et Lucien, en leurre destiné à Mikael. Cette période nourrit un ressentiment durable envers ceux qui ont disposé de sa vie."
+      ],
+      [
+        "Les Strix et l’influence",
+        "Au fil des siècles, il prend la tête des Strix, société fondée par Elijah. Il développe des réseaux, des alliances et une façon de gouverner par les dettes et l’anticipation. Dans Nexus Arcana, cette expérience appartient à son passé : elle ne lui accorde pas automatiquement le commandement d’une organisation ou des personnages joués."
+      ],
+      [
+        "La guerre des lignées",
+        "Les rivalités avec les Mikaelson et la peur des conséquences de leur mort l’entraînent dans des projets de capture et de contrôle. La protection d’Aurora devient l’un de ses arguments, sans lui donner le droit de décider pour elle. Les alliances avec Lucien restent traversées par une ancienne hostilité."
+      ],
+      [
+        "Une continuité ouverte",
+        "Pour cette adaptation, Tristan est présent, libre et vampire. Sa captivité finale sous l’océan et sa mort liée à celle d’Elijah ne sont pas retenues comme son état actuel. Il ne possède aucun artefact de confinement automatiquement. Ses quatre capacités de départ sont les seules disponibles avant achats validés en Arcana Flouz."
+      ],
+      [
+        "Négocier dans le Nexus",
+        "La Convergence multiplie les interlocuteurs et rend ses anciens réseaux moins prévisibles. Tristan peut chercher à financer un projet culturel, retrouver des archives des Strix ou négocier une alliance. Son pouvoir social devra se construire en jeu, avec des partenaires capables de refuser. Sa relation avec Aurora peut devenir l’épreuve la plus intime de cette nouvelle manière d’agir."
+      ]
+    ],
+    "links": [
+      [
+        "Aurora de Martel",
+        "Sœur, liberté à respecter",
+        "Je tiens à toi et j’ai trop souvent confondu ma peur avec le droit de choisir pour toi. Notre lien ne pourra changer que si je respecte réellement tes décisions, y compris lorsqu’elles me déplaisent."
+      ],
+      [
+        "Elijah Mikaelson",
+        "Créateur et rival",
+        "Tu m’as donné le vampirisme puis utilisé mon identité pour préserver la tienne. Nous connaissons tous deux la valeur d’une promesse ; je veux que les tiennes soient jugées à leurs conséquences, pas seulement à leur élégance."
+      ],
+      [
+        "Klaus Mikaelson",
+        "Adversaire ancien",
+        "Ta place dans la vie d’Aurora a nourri notre hostilité. Elle ne fait pourtant pas de ma sœur un territoire à défendre contre toi. Une négociation entre nous devra porter sur nos actes et non sur le contrôle de ses choix."
+      ],
+      [
+        "Lucien Castle",
+        "Allié, rancune ancienne",
+        "Nous partageons des ennemis et un passé dont je ne peux effacer ma propre brutalité. Une alliance d’intérêt ne constitue pas une confiance. Chacun devra dire clairement ce qu’il attend et ce qu’il refuse."
+      ],
+      [
+        "Rebekah Mikaelson",
+        "Lien de lignée avec Aurora",
+        "Tu occupes une place particulière dans l’histoire de ma sœur. Je ne peux pas utiliser ce lien comme un argument pour négocier sa vie. Une entente entre nous exige aussi de respecter son autonomie."
+      ],
+      [
+        "Marcel Gerard",
+        "Influence concurrente",
+        "Tu as appris à rassembler autrement que par un titre hérité. Je peux reconnaître cette force sans renoncer à mes ambitions. Notre rapport aux Strix et aux communautés du Nexus se construira par des accords réels, jamais par une autorité présumée."
+      ]
+    ]
+  }
+]

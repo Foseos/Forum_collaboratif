@@ -16,7 +16,7 @@ export const useForumStore = defineStore('forum', {
     async fetchCategories() {
       this.loading = true
       try {
-        const { data } = await api.get('/categories/')
+        const { data } = await api.get('/categories/?page_size=200')
         this.categories = data.results
       } finally {
         this.loading = false
@@ -91,10 +91,10 @@ export const useForumStore = defineStore('forum', {
     },
 
     async updatePost(id, content) {
-      const { data } = await api.patch(`/posts/${id}/`, { content })
-      const index = this.posts.findIndex((p) => p.id === id)
-      if (index !== -1) this.posts[index] = data
-      return data
+      await api.patch(`/posts/${id}/`, { content })
+      if (this.currentTopic) {
+        await this.fetchPosts(this.currentTopic.slug, this.pagination.page)
+      }
     },
 
     async deletePost(id) {

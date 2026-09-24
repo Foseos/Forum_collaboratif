@@ -1,0 +1,343 @@
+[
+    {
+        "id": "pouvoir-des-quatre",
+        "nom": "Le Pouvoir des Quatre",
+        "description": "Une alliance magique des sœurs Halliwell et de leur allié(e), unie pour protéger les innocents.",
+        "couleur": "primary",
+        "icone": "Pouvoir_des_Quatre_v2.png",
+        "type": "faction",
+        "membres_count": 4
+    },
+    {
+        "id": "etre-de-lumiere",
+        "nom": "Être de Lumière",
+        "description": "Anges gardiens des sorcières et futurs Êtres de Lumière, guidant et soignant leurs protégés.",
+        "couleur": "gold",
+        "icone": "🕊️",
+        "type": "race"
+    },
+    {
+        "id": "la-triade",
+        "nom": "La Triade",
+        "description": "Un groupe de démons de niveau supérieur régnant sur le monde souterrain.",
+        "couleur": "danger",
+        "icone": "Triade_Mal.png",
+        "type": "faction",
+        "membres_count": 3
+    },
+    {
+        "id": "fondateurs",
+        "nom": "Les Fondateurs",
+        "description": "Haut conseil des Êtres de Lumière dictant les règles de la magie blanche.",
+        "couleur": "accent",
+        "icone": "Fondateurs.png",
+        "type": "faction"
+    },
+    {
+        "id": "Conclave de l'abime",
+        "nom": "Conclave de l'abime",
+        "description": "Le conclave de l'abime est un groupe de démons de niveau supérieur bras droits de la source.",
+        "couleur": "accent",
+        "icone": "Conclave_de_labime.png",
+        "type": "faction"
+    },
+    {
+        "id": "demon",
+        "nom": "Démon",
+        "description": "Les entités démoniaques.",
+        "couleur": "dark",
+        "icone": "💀",
+        "type": "race"
+    },
+    {
+        "id": "Les veilleurs de l'aube",
+        "nom": "Les veilleurs de l'aube",
+        "description": "Instance bénéfique, les veilleurs de l'aube sont les protecteurs des innocents.",
+        "couleur": "gold",
+        "icone": "V_de_aube.png",
+        "type": "faction",
+        "membres_count": 3
+    },
+    {
+        "id": "Les cavaliers de l'apocalypse",
+        "nom": "Les cavaliers de l'apocalypse",
+        "description": "Quatre sièges distincts, Guerre, Mort, Famine et Pestilence. Chaque Cavalier dispose de pouvoirs de fonction propres à son rôle, définis dans sa fiche après validation.",
+        "couleur": "purple",
+        "icone": "Cava_Apo.png",
+        "type": "faction",
+        "membres_count": 4
+    },
+    {
+        "id": "Les gardiens des sceaux primordiaux",
+        "nom": "Les gardiens des sceaux primordiaux",
+        "description": "Ordre chargé de protéger les sceaux contre les forces apocalyptiques. Ses quatre gardiens occupent les sièges de la Vie/Terre, de l’Esprit/Eau, du Temps/Vent et de la Volonté/Feu ; chacun possède des pouvoirs liés à sa fonction.",
+        "couleur": "purple",
+        "icone": "Gardiens_sceaux.png",
+        "type": "faction",
+        "membres_count": 4
+    },
+    {
+        "id": "meute-beacon-hills",
+        "nom": "La Meute de Beacon Hills",
+        "description": "Loups, humains et alliés veillent ensemble sur Beacon Hills et le Nemeton. Depuis la Convergence, la meute protège les siens tout en cherchant à comprendre les nouvelles menaces qui traversent les quatre villes.",
+        "couleur": "green",
+        "icone": "Meute_Beacon_Hills.png",
+        "type": "faction"
+    },
+    {
+        "id": "gardiens-mystic-falls",
+        "nom": "Les Gardiens de Mystic Falls",
+        "description": "Une alliance de sorciers, vampires, loups et humains qui enquête sur les effets de la Convergence à Mystic Falls et défend la ville sans effacer les rivalités entre ses membres.",
+        "couleur": "blue",
+        "icone": "Gardiens_Mystic_Falls.png",
+        "type": "faction"
+    },
+    {
+        "id": "maison-seconde-soif",
+        "nom": "La Maison de la Seconde Soif",
+        "description": "Coven d'Hérétiques : des vampires siphonneurs qui puisent la magie dans des sources disponibles, notamment leur propre vampirisme. Leur solidarité n'efface ni la soif ni les choix individuels.",
+        "couleur": "danger",
+        "icone": "Coven_Seconde_Soif.png",
+        "type": "faction"
+    },
+    {
+        "id": "chambre-murmures",
+        "nom": "La Chambre des Murmures",
+        "description": "Coven de sorcières qui étudient et pratiquent en priorité l'Expression. Ses membres débattent de ses limites et des conséquences de leurs rituels.",
+        "couleur": "purple",
+        "icone": "Coven_Chambre_Murmures.png",
+        "type": "faction"
+    },
+    {
+        "id": "heritiers-vide",
+        "nom": "Les Héritiers du Vide",
+        "description": "Coven de siphonneurs non vampiriques qui apprennent à identifier des sources de magie et à négocier leur utilisation. Ils restent distincts des Hérétiques.",
+        "couleur": "blue",
+        "icone": "Coven_Heritiers_Vide.png",
+        "type": "faction"
+    },
+    {
+        "id": "veilleurs-voile",
+        "nom": "Les Veilleurs du Voile",
+        "description": "Coven attaché aux rites ancestraux de La Nouvelle-Orléans. Il entretient la mémoire des morts sans supposer que leurs volontés doivent toujours être suivies.",
+        "couleur": "gold",
+        "icone": "Coven_Veilleurs_Voile.png",
+        "type": "faction"
+    },
+    {
+        "id": "cercle-terres-perdues",
+        "nom": "Le Cercle des Terres Perdues",
+        "description": "Coven de Voyageurs itinérants. Ses membres conservent des rites collectifs, parcourent les lieux touchés par la Convergence et cherchent une place où établir leurs propres accords.",
+        "couleur": "green",
+        "icone": "Coven_Terres_Perdues.png",
+        "type": "faction"
+    },
+    {
+        "id": "sorcier-charmed",
+        "nom": "Sorcier Charmed",
+        "description": "Sorciers et sorcières issus de Charmed. Leur magie personnelle, leurs sorts et leurs potions sont définis dans leur fiche ; ils ne choisissent aucune branche, seulement leur camp selon leurs convictions.",
+        "couleur": "purple",
+        "icone": "🧙",
+        "type": "race"
+    },
+    {
+        "id": "Elfe",
+        "nom": "Elfe",
+        "description": "Les elfes sont des êtres anciens et gracieux, profondément liés à la nature et à la magie primordiale, veillant en silence sur les équilibres invisibles entre les mondes.",
+        "couleur": "purple",
+        "icone": "🧝",
+        "type": "race"
+    },
+    {
+        "id": "Cupidon",
+        "nom": "Cupidon",
+        "description": "Le cupidon est en charge du maintien et de la propagation de l'amour.",
+        "couleur": "purple",
+        "icone": "💘",
+        "type": "race"
+    },
+    {
+        "id": "Phoenix",
+        "nom": "Phénix",
+        "description": "Deux origines distinctes : le Phénix de Legacies, lié au cycle de renaissance, et la lignée de sorcières Phénix de Charmed. Leurs pouvoirs ne se cumulent pas et doivent être définis dans la fiche.",
+        "couleur": "purple",
+        "icone": "🦅",
+        "type": "race"
+    },
+    {
+        "id": "Valkyrie",
+        "nom": "Valkyrie",
+        "description": "Guerrières liées aux serments et à la mémoire des combattants, les Valkyries peuvent veiller sur un lieu ou poursuivre une quête de territoire en territoire. Leur branche précise leur mission ; leurs capacités et leur camp dépendent de leur fiche.",
+        "couleur": "purple",
+        "icone": "⚔️",
+        "type": "race"
+    },
+    {
+        "id": "Nymphe/Satyre",
+        "nom": "Nymphe/Satyre",
+        "description": "Esprits de la nature liés aux forêts, sources et montagnes, les Nymphes et Satyres canalisent les forces primordiales du monde vivant. Gardiens de la faune et de la flore, ils peuvent embrasser la lumière comme l'ombre.",
+        "couleur": "purple",
+        "icone": "🌿",
+        "type": "race"
+    },
+    {
+        "id": "Humain",
+        "nom": "Humain",
+        "description": "Les humains sont des êtres sans pouvoirs magiques, mais dotés d'une grande intelligence et d'une capacité d'adaptation,ils peuvent bénéficier de capacités spécifiques comme les médiums",
+        "couleur": "purple",
+        "icone": "🧑",
+        "type": "race"
+    },
+    {
+        "id": "sirene-triton-charmed",
+        "nom": "Sirène/Triton Charmed",
+        "description": "Créatures aquatiques de l'univers Charmed, liées à l'eau, au chant envoûtant et à leur forme marine.",
+        "couleur": "purple",
+        "icone": "🧜",
+        "type": "race"
+    },
+    {
+        "id": "Vampire",
+        "nom": "Vampire",
+        "description": "Les vampires se nourrissent de sang et possèdent des capacités surnaturelles. Les vampires de lignée ont un âge variable, les anciens restent moins âgés que les Originels, réservés aux personnages des séries et aux scénarios existants.",
+        "couleur": "purple",
+        "icone": "🧛",
+        "type": "race"
+    },
+    {
+        "id": "Loup-garou",
+        "nom": "Loup-garou",
+        "description": "Les loups-garous sont des êtres magiques qui cherchent à se nourrir de sang pour survivre.Ils développent des capacités de transformation en loup et une force surnaturelle",
+        "couleur": "purple",
+        "icone": "🐺",
+        "type": "race"
+    },
+    {
+        "id": "Fée",
+        "nom": "Fée",
+        "description": "Peuple magique aux affinités variées : sylvestres, aquatiques, lumineuses ou obscures. Une fée lumineuse peut être guérisseuse ; une fée noire peut être liée au sang ou aux os. La branche ne fixe pas le camp.",
+        "couleur": "purple",
+        "icone": "🧚",
+        "type": "race"
+    },
+    {
+        "id": "Muse",
+        "nom": "Muse",
+        "description": "Inspiratrices immortelles, les Muses transmettent leur énergie créatrice aux artistes, poètes et inventeurs pour faire avancer l'humanité. Leur pouvoir réside dans l'inspiration qu'elles insufflent — et dans la lumière qu'elles peuvent retenir ou offrir.",
+        "couleur": "purple",
+        "icone": "🎨",
+        "type": "race"
+    },
+    {
+        "id": "sorcier-tvd",
+        "nom": "Sorcier",
+        "description": "Sorciers et sorcières de The Vampire Diaries, The Originals et Legacies : membres d’un coven ou indépendants. Leurs traditions et aptitudes magiques se précisent dans leur fiche.",
+        "couleur": "purple",
+        "icone": "🕯️",
+        "type": "race"
+    },
+    {
+        "id": "sirene-tvd",
+        "nom": "Sirène",
+        "description": "Sirènes psychiques de The Vampire Diaries, liées à l’appel, à la perception et à l’influence mentale. Elles sont distinctes des peuples marins ; leur origine et leurs capacités sont précisées dans la fiche.",
+        "couleur": "purple",
+        "icone": "🎶",
+        "type": "race"
+    },
+    {
+        "id": "Banshee",
+        "nom": "Banshee",
+        "description": "Dans Teen Wolf, les Banshees perçoivent des signes liés à la mort et peuvent manifester un cri surnaturel. Les profils de présage et de lamentation décrivent l’accent donné à leur histoire, sans séparer leurs dons ni prédire un destin certain.",
+        "couleur": "purple",
+        "icone": "🕯️",
+        "type": "race"
+    },
+    {
+        "id": "Kanima",
+        "nom": "Kanima",
+        "description": "Créature reptilienne née d'un loup-garou dont la transformation a été altérée, le Kanima agit souvent sous l'influence d'un maître. Sa paralysie venimeuse et son instinct de protection en font un allié aussi redoutable qu'imprévisible.",
+        "couleur": "purple",
+        "icone": "🦎",
+        "type": "race"
+    },
+    {
+        "id": "WereCoyote",
+        "nom": "WereCoyote",
+        "description": "Changeformes guidés par l'instinct, les WereCoyotes sont réputés pour leur adaptabilité, leur intelligence et leur loyauté farouche envers ceux qu'ils choisissent comme meute.",
+        "couleur": "purple",
+        "icone": "🐺",
+        "type": "race"
+    },
+    {
+        "id": "WereJaguar",
+        "nom": "WereJaguar",
+        "description": "Prédateurs solitaires et agiles, les WereJaguars tirent leur force de leur lien à la jungle et à la nuit. Leur transformation amplifie leurs sens, leur vitesse et leur puissance physique.",
+        "couleur": "purple",
+        "icone": "🐆",
+        "type": "race"
+    },
+    {
+        "id": "WereLion",
+        "nom": "WereLion",
+        "description": "Fiers et protecteurs, les WereLions portent une présence imposante et un instinct de chef naturel. Leur rugissement et leur force font d'eux de précieux gardiens de territoire.",
+        "couleur": "purple",
+        "icone": "🦁",
+        "type": "race"
+    },
+    {
+        "id": "Kitsune",
+        "nom": "Kitsune",
+        "description": "Esprits-renards de Teen Wolf répartis dans Nexus Arcana selon une affinité dominante. Eau, glace, feu, terre, air, son, lumière, ombre, plantes, esprit, sang et tonnerre orientent les pouvoirs proposés sans les accorder tous.",
+        "couleur": "purple",
+        "icone": "🦊",
+        "type": "race"
+    },
+    {
+        "id": "Chien de l'enfer",
+        "nom": "Chien de l'enfer · Hellhound",
+        "description": "Dans Teen Wolf, le Hellhound est un esprit surnaturel lié à un hôte humain, comme Jordan Parrish. Associé au feu, à la mort et à la protection du monde surnaturel, il n’est pas un démon de Charmed. Ses missions et capacités sont précisées dans la fiche.",
+        "couleur": "purple",
+        "icone": "🐕",
+        "type": "race"
+    },
+    {
+        "id": "Chimère",
+        "nom": "Chimère",
+        "description": "Êtres aux origines multiples, les Chimères portent en elles des traits de plusieurs créatures. Leur nature singulière peut leur donner des capacités rares, mais exige une grande maîtrise de leurs instincts.",
+        "couleur": "purple",
+        "icone": "🪽",
+        "type": "race"
+    },
+    {
+        "id": "Trybride",
+        "nom": "Trybride",
+        "description": "Être exceptionnel réunissant les héritages de sorcière, vampire et loup-garou, la Trybride possède un potentiel magique immense. L'équilibre de ses trois natures demande toutefois une discipline constante.",
+        "couleur": "purple",
+        "icone": "🔱",
+        "type": "race"
+    },
+    {
+        "id": "Hérétique",
+        "nom": "Hérétique",
+        "description": "À la fois vampire et siphonneur de magie, l'Hérétique peut absorber l'énergie mystique qui l'entoure et la canaliser. Sa soif et sa magie doivent rester maîtrisées pour préserver son équilibre.",
+        "couleur": "purple",
+        "icone": "🩸",
+        "type": "race"
+    },
+    {
+        "id": "Sphinx",
+        "nom": "Sphinx",
+        "description": "Créature liée aux énigmes et aux savoirs, le Sphinx peut garder les traces du passé ou explorer les choix possibles. Ses présages restent ouverts à l’interprétation ; sa branche n’accorde aucun pouvoir exclusif.",
+        "couleur": "purple",
+        "icone": "🗿",
+        "type": "race"
+    },
+    {
+        "id": "Hybride",
+        "nom": "Hybride",
+        "description": "Les hybrides sont ler résultat d'un mélange entre deux races, ils développent souvent des capacités et des pouvoirs mêlés entre leurs deux races",
+        "couleur": "purple",
+        "icone": "",
+        "type": "race"
+    }
+]
