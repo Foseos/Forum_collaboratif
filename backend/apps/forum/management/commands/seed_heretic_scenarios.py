@@ -9,6 +9,15 @@ from django.db import transaction
 from apps.forum.models import Category, Post, Topic
 
 
+LINK_GIFS = {
+    "Valérie Tulle": "https://media.tenor.com/-SrvDzmkULAAAAAC/valerie-tulle-the-vampire-diaries.gif",
+    "Mary Louise": "https://media.tenor.com/b2MsZTkCAYoAAAAC/mary-louise-the-vampire-diaries.gif",
+    "Nora Hildegard": "https://media.tenor.com/7SxQpQtLPkQAAAAC/nora-hildegard-nora.gif",
+    "Stefan Salvatore": "https://media.tenor.com/wD9Tb8gIE1EAAAAM/stefan-salvatore.gif",
+    "Bonnie Bennett": "https://media.tenor.com/SgwzIqg9Z_QAAAAC/bonnie-bennett.gif",
+}
+
+
 SCENARIOS = [
     {
         "title": "Valérie Tulle",
@@ -173,6 +182,14 @@ class Command(BaseCommand):
                 )
                 post = topic.posts.order_by("created_at", "id").first()
                 if post:
+                    cards = [dict(card) for card in topic.scenario_link_cards]
+                    for card in cards:
+                        if not card.get("gif") and card.get("title") in LINK_GIFS:
+                            card["gif"] = LINK_GIFS[card["title"]]
+                    if cards != topic.scenario_link_cards:
+                        topic.scenario_link_cards = cards
+                        topic.save(update_fields=["scenario_link_cards"])
+                        self.stdout.write(self.style.SUCCESS(f"GIF des liens ajoutés : {data['title']}"))
                     content = post.content
                     old_image = data.get("previous_image")
                     if 'data-heretic-scenario="1"' in content:
@@ -192,7 +209,7 @@ class Command(BaseCommand):
                     topic.scenario_avatar_name = data["actor"]
                 topic.is_locked = True
                 topic.scenario_link_cards = [
-                    {"gif": "", "title": name, "text": description}
+                    {"gif": LINK_GIFS.get(name, ""), "title": name, "text": description}
                     for name, _, description in data["links"]
                 ]
                 topic.save(update_fields=["scenario_avatar_name", "scenario_link_cards", "is_locked"])
