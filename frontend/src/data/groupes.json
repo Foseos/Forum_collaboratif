@@ -103,7 +103,7 @@
     {
         "id": "chambre-murmures",
         "nom": "La Chambre des Murmures",
-        "description": "Coven de sorcières qui étudient et pratiquent en priorité l'Expression. Ses membres débattent de ses limites et des conséquences de leurs rituels.",
+        "description": "Dirigée par Belisama Vaskov, la Chambre des Murmures réunit des sorcières et sorciers qui étudient et pratiquent en priorité l'Expression. Ses membres débattent de ses limites et des conséquences de leurs rituels.",
         "couleur": "purple",
         "icone": "Coven_Chambre_Murmures.png",
         "type": "faction"
