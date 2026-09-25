@@ -4,7 +4,7 @@
     <div v-if="forum.currentTopic">
       <router-link
         v-if="forum.currentTopic.category"
-        :to="`/categories/${forum.currentTopic.category_name ? forum.currentTopic.slug : ''}`"
+        :to="`/categories/${forum.currentTopic.category_slug}`"
         class="text-sm text-secondary"
       >
         &larr; Retour

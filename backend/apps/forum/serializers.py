@@ -102,12 +102,13 @@ class TopicSerializer(serializers.ModelSerializer):
     author = AuthorSerializer(read_only=True)
     post_count = serializers.IntegerField(read_only=True)
     category_name = serializers.CharField(source="category.name", read_only=True)
+    category_slug = serializers.CharField(source="category.slug", read_only=True)
     first_image = serializers.SerializerMethodField()
 
     class Meta:
         model = Topic
         fields = [
-            "id", "title", "slug", "category", "category_name", "author",
+            "id", "title", "slug", "category", "category_name", "category_slug", "author",
             "is_pinned", "is_locked", "scenario_status", "scenario_avatar_name", "scenario_links", "scenario_link_cards", "post_count", "created_at", "updated_at",
             "first_image",
         ]
@@ -203,11 +204,12 @@ class TopicDetailSerializer(serializers.ModelSerializer):
     author = AuthorSerializer(read_only=True)
     post_count = serializers.IntegerField(read_only=True)
     category_name = serializers.CharField(source="category.name", read_only=True)
+    category_slug = serializers.CharField(source="category.slug", read_only=True)
 
     class Meta:
         model = Topic
         fields = [
-            "id", "title", "slug", "category", "category_name", "author",
+            "id", "title", "slug", "category", "category_name", "category_slug", "author",
             "is_pinned", "is_locked", "scenario_status", "scenario_avatar_name", "scenario_links", "scenario_link_cards", "post_count", "created_at", "updated_at",
         ]
         read_only_fields = [

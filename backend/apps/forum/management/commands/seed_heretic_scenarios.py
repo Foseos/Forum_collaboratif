@@ -14,7 +14,8 @@ SCENARIOS = [
         "title": "Valérie Tulle",
         "slug": "valerie-tulle",
         "actor": "Elizabeth Blackmore",
-        "image": "https://light.sunphoto.ro/photos/normal/112549028_ENPDSIJ3.jpg",
+        "image": "https://i.pinimg.com/originals/6a/0e/d6/6a0ed60d2bf039c858af53255595aead.jpg",
+        "previous_image": "https://light.sunphoto.ro/photos/normal/112549028_ENPDSIJ3.jpg",
         "birth": "14 septembre 1845 · repère adapté pour Nexus Arcana",
         "age": "188 ans en 2033 · apparence d'environ 18 ans",
         "origin": "Coven Gemini, puis famille des Hérétiques de Lily Salvatore",
@@ -46,7 +47,8 @@ SCENARIOS = [
         "title": "Mary Louise",
         "slug": "mary-louise",
         "actor": "Teressa Liane",
-        "image": "https://www.hypnoweb.net/photo/153/3624/ok/1-Luinel.jpg",
+        "image": "https://i.pinimg.com/736x/9e/c6/ed/9ec6ede8402146df0e0381900d5f0503.jpg",
+        "previous_image": "https://www.hypnoweb.net/photo/153/3624/ok/1-Luinel.jpg",
         "birth": "22 mai 1851 · repère adapté pour Nexus Arcana",
         "age": "182 ans en 2033 · apparence d'environ 25 ans",
         "origin": "Coven Gemini, puis famille des Hérétiques de Lily Salvatore",
@@ -165,8 +167,14 @@ class Command(BaseCommand):
                     category=category, slug=data["slug"],
                     defaults={"title": data["title"], "author": author, "is_locked": True},
                 )
-                if topic.posts.exists():
-                    self.stdout.write(f"Fiche existante conservée : {data['title']}")
+                post = topic.posts.order_by("created_at", "id").first()
+                if post:
+                    old_image = data.get("previous_image")
+                    if 'data-heretic-scenario="1"' in post.content and old_image and old_image in post.content:
+                        Post.objects.filter(pk=post.pk).update(content=post.content.replace(old_image, data["image"]))
+                        self.stdout.write(self.style.SUCCESS(f"Portrait corrigé : {data['title']}"))
+                    else:
+                        self.stdout.write(f"Fiche existante conservée : {data['title']}")
                     continue
                 if not topic.scenario_avatar_name:
                     topic.scenario_avatar_name = data["actor"]
