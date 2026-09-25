@@ -22,6 +22,7 @@ from .validation_emails import send_character_validation_email
 from .email_confirmation import read_token, send_confirmation, notify_previous_email
 from .password_recovery import send_reset_link, user_for_reset
 from django.contrib.auth.password_validation import validate_password
+from django.core.exceptions import ValidationError
 
 User = get_user_model()
 
@@ -171,6 +172,29 @@ class PasswordResetConfirmView(APIView):
             user.set_password(password)
             user.save(update_fields=['password'])
         return Response({'detail': 'Mot de passe modifié. Vous pouvez vous connecter.'})
+
+
+class ChangePasswordView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request):
+        current_password = request.data.get('current_password', '')
+        new_password = request.data.get('new_password', '')
+        if new_password != request.data.get('new_password_confirm', ''):
+            return Response({'new_password_confirm': ['Les mots de passe ne correspondent pas.']}, status=400)
+        with transaction.atomic():
+            user = User.objects.select_for_update().get(pk=request.user.pk)
+            if not user.check_password(current_password):
+                return Response({'current_password': ['Mot de passe actuel incorrect.']}, status=400)
+            if user.check_password(new_password):
+                return Response({'new_password': ['Choisissez un nouveau mot de passe différent.']}, status=400)
+            try:
+                validate_password(new_password, user)
+            except ValidationError as exc:
+                return Response({'new_password': list(exc.messages)}, status=400)
+            user.set_password(new_password)
+            user.save(update_fields=['password'])
+        return Response({'detail': 'Mot de passe modifié. Reconnectez-vous avec le nouveau mot de passe.'})
 
 
 class UserIPHistoryView(generics.GenericAPIView):

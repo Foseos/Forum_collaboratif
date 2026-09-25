@@ -2,8 +2,11 @@
 Commande de création d'utilisateurs de test répartis dans les groupes du forum.
 Usage : python manage.py create_test_users
 """
+import os
+
+from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand, CommandError
 
 User = get_user_model()
 
@@ -272,9 +275,6 @@ TEST_USERS = [
     },
 ]
 
-PASSWORD = "Test@Forum2026"
-
-
 class Command(BaseCommand):
     help = "Crée des utilisateurs de test répartis dans les groupes du forum."
 
@@ -286,6 +286,12 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
+        if not settings.DEBUG:
+            raise CommandError("La création de comptes de test est réservée au développement.")
+        password = os.environ.get("TEST_USERS_PASSWORD")
+        if not password:
+            raise CommandError("Définissez TEST_USERS_PASSWORD pour créer les comptes de test.")
+
         if options["reset"]:
             deleted, _ = User.objects.filter(
                 email__endswith="@cercle.fr"
@@ -320,7 +326,7 @@ class Command(BaseCommand):
                 nature=data.get("nature", ""),
                 compte_bancaire=data.get("compte_bancaire", 0),
             )
-            user.set_password(PASSWORD)
+            user.set_password(password)
             user.save()
 
             self.stdout.write(
@@ -334,4 +340,4 @@ class Command(BaseCommand):
                 f"[DONE] {created_count} utilisateur(s) cree(s), {skipped_count} ignore(s)."
             )
         )
-        self.stdout.write(f"[PWD] Mot de passe commun : {PASSWORD}")
+        self.stdout.write("[PWD] Mot de passe défini par TEST_USERS_PASSWORD.")

@@ -1,9 +1,10 @@
 from django.urls import path
 
-from .views import ActivityAlertsView, LinkedAccountsView, PresenceView, ProfileView, UserDetailView, UserIPHistoryView, UserListView
+from .views import ActivityAlertsView, ChangePasswordView, LinkedAccountsView, PresenceView, ProfileView, UserDetailView, UserIPHistoryView, UserListView
 
 urlpatterns = [
     path("me/", ProfileView.as_view(), name="user-profile"),
+    path("me/change-password/", ChangePasswordView.as_view(), name="user-change-password"),
     path("presence/", PresenceView.as_view(), name="user-presence"),
     path("activity-alerts/", ActivityAlertsView.as_view(), name="user-activity-alerts"),
     path("<int:pk>/ip-history/", UserIPHistoryView.as_view(), name="user-ip-history"),

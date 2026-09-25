@@ -3,6 +3,7 @@
     <div class="auth-card card">
       <h1>Connexion</h1>
 
+      <div v-if="route.query.password_changed === '1'" class="alert alert-success mb-2">Mot de passe modifié. Connectez-vous avec le nouveau.</div>
       <div v-if="error" class="form-error mb-2">{{ error }}</div>
 
       <form @submit.prevent="handleLogin">

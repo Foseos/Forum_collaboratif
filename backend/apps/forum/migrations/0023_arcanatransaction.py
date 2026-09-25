@@ -14,7 +14,10 @@ def opening_balances(apps, schema_editor):
 
 
 class Migration(migrations.Migration):
-    dependencies = [('forum', '0022_lotterydraw'), migrations.swappable_dependency(settings.AUTH_USER_MODEL)]
+    dependencies = [
+        ('forum', '0022_lotterydraw'),
+        ('users', '0002_user_age_personnage_user_avatar_name_and_more'),
+    ]
 
     operations = [
         migrations.CreateModel(

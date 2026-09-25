@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir -r requirements/prod.txt
 
 COPY . .
 
-RUN python manage.py collectstatic --noinput --settings=config.settings.prod || true
+RUN python manage.py collectstatic --noinput --settings=config.settings.docker_dev
 
 EXPOSE 8000
 
