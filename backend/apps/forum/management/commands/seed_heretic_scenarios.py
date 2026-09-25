@@ -18,6 +18,7 @@ SCENARIOS = [
         "previous_image": "https://light.sunphoto.ro/photos/normal/112549028_ENPDSIJ3.jpg",
         "birth": "14 septembre 1845 · repère adapté pour Nexus Arcana",
         "age": "188 ans en 2033 · apparence d'environ 18 ans",
+        "orientation": "Au choix de la joueuse ; son histoire passée avec Stefan reste établie",
         "origin": "Coven Gemini, puis famille des Hérétiques de Lily Salvatore",
         "camp": "Au choix du joueur, selon son parcours actuel",
         "quote": "Survivre n'est pas la même chose que recommencer.",
@@ -51,6 +52,7 @@ SCENARIOS = [
         "previous_image": "https://www.hypnoweb.net/photo/153/3624/ok/1-Luinel.jpg",
         "birth": "22 mai 1851 · repère adapté pour Nexus Arcana",
         "age": "182 ans en 2033 · apparence d'environ 25 ans",
+        "orientation": "Lesbienne · fiancée à Nora Hildegard",
         "origin": "Coven Gemini, puis famille des Hérétiques de Lily Salvatore",
         "camp": "Au choix du joueur ; sa loyauté envers Nora reste un lien établi",
         "quote": "Il m'a fallu un siècle pour apprendre à dire qui j'aime.",
@@ -83,6 +85,7 @@ SCENARIOS = [
         "image": "https://i.pinimg.com/736x/f0/95/b4/f095b4f2ab72c7879f617e696ccf087a.jpg",
         "birth": "3 novembre 1852 · repère adapté pour Nexus Arcana",
         "age": "181 ans en 2033 · apparence d'environ 23 ans",
+        "orientation": "Lesbienne · fiancée à Mary Louise",
         "origin": "Coven Gemini, puis famille des Hérétiques de Lily Salvatore",
         "camp": "Au choix du joueur ; sa relation avec Mary Louise reste établie",
         "quote": "Une seconde vie mérite plus qu'une seconde cage.",
@@ -130,6 +133,7 @@ def render_scenario(data):
     ]
     for label, value in [
         ("Âge", data["age"]), ("Date de naissance", data["birth"]),
+        ("Orientation sexuelle", data["orientation"]),
         ("Origines", data["origin"]), ("Nature", "Hérétique · vampire siphonneuse"),
         ("Camp", data["camp"]),
         ("Faction", "Maison de la Seconde Soif possible, sous validation de l'administration"),
@@ -169,12 +173,20 @@ class Command(BaseCommand):
                 )
                 post = topic.posts.order_by("created_at", "id").first()
                 if post:
+                    content = post.content
                     old_image = data.get("previous_image")
-                    if 'data-heretic-scenario="1"' in post.content and old_image and old_image in post.content:
-                        Post.objects.filter(pk=post.pk).update(content=post.content.replace(old_image, data["image"]))
-                        self.stdout.write(self.style.SUCCESS(f"Portrait corrigé : {data['title']}"))
-                    else:
-                        self.stdout.write(f"Fiche existante conservée : {data['title']}")
+                    if 'data-heretic-scenario="1"' in content:
+                        if old_image and old_image in content:
+                            content = content.replace(old_image, data["image"])
+                        if '>Orientation sexuelle</dt>' not in content:
+                            anchor = '<dt style="color:#a78bfa;margin-top:.6rem;">Origines</dt>'
+                            orientation = f'<dt style="color:#a78bfa;margin-top:.6rem;">Orientation sexuelle</dt><dd style="margin:.2rem 0;">{escape(data["orientation"])}</dd>'
+                            content = content.replace(anchor, orientation + anchor, 1)
+                        if content != post.content:
+                            Post.objects.filter(pk=post.pk).update(content=content)
+                            self.stdout.write(self.style.SUCCESS(f"Fiche actualisée : {data['title']}"))
+                            continue
+                    self.stdout.write(f"Fiche existante conservée : {data['title']}")
                     continue
                 if not topic.scenario_avatar_name:
                     topic.scenario_avatar_name = data["actor"]
