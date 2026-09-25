@@ -127,7 +127,7 @@
     {
         "id": "cercle-terres-perdues",
         "nom": "Le Cercle des Terres Perdues",
-        "description": "Coven de Voyageurs itinérants. Ses membres conservent des rites collectifs, parcourent les lieux touchés par la Convergence et cherchent une place où établir leurs propres accords.",
+        "description": "Dirigé par Moira Osborne, le Cercle des Terres Perdues réunit des Voyageurs itinérants. Ses membres conservent des rites collectifs, parcourent les lieux touchés par la Convergence et cherchent un endroit où s'établir.",
         "couleur": "green",
         "icone": "Coven_Terres_Perdues.png",
         "type": "faction"
