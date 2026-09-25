@@ -111,7 +111,7 @@
     {
         "id": "heritiers-vide",
         "nom": "Les Héritiers du Vide",
-        "description": "Coven de siphonneurs non vampiriques qui apprennent à identifier des sources de magie et à négocier leur utilisation. Ils restent distincts des Hérétiques.",
+        "description": "Dirigés par Florie Delacroix, les Héritiers du Vide sont un coven de siphonneurs non vampiriques. Ils apprennent à identifier des sources de magie et à négocier leur utilisation. Ils restent distincts des Hérétiques.",
         "couleur": "blue",
         "icone": "Coven_Heritiers_Vide.png",
         "type": "faction"
