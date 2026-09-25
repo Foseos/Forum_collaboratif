@@ -82,6 +82,39 @@ class TopicTest(TestCase):
         self.assertEqual(response.data["count"], 1)
 
 
+class ScenarioRepliesTest(TestCase):
+    def setUp(self):
+        self.client = APIClient()
+        self.admin = User.objects.create_user(username="scenario-admin", password="AdminPass123!", role="admin")
+        self.moderator = User.objects.create_user(username="scenario-moderator", password="ModPass123!", role="moderator")
+        self.member = User.objects.create_user(username="scenario-member", password="MemberPass123!")
+        self.category = Category.objects.create(name="Scénarios à prendre", slug="scenarios-a-prendre")
+        self.topic = Topic.objects.create(title="Scénario test", slug="scenario-test", category=self.category, author=self.admin)
+        self.sheet = Post.objects.create(topic=self.topic, author=self.admin, content="Fiche originale")
+
+    def test_member_can_reply_but_cannot_edit_scenario_sheet(self):
+        self.client.force_authenticate(user=self.member)
+        response = self.client.post("/api/topics/scenario-test/posts/", {"content": "Je suis intéressée."})
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        response = self.client.patch(f"/api/posts/{self.sheet.pk}/", {"content": "Fiche modifiée"})
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+        self.sheet.refresh_from_db()
+        self.assertEqual(self.sheet.content, "Fiche originale")
+
+    def test_moderator_cannot_edit_scenario_sheet_or_title(self):
+        self.client.force_authenticate(user=self.moderator)
+        self.assertEqual(self.client.patch(f"/api/posts/{self.sheet.pk}/", {"content": "Fiche modifiée"}).status_code, status.HTTP_403_FORBIDDEN)
+        self.assertEqual(self.client.patch("/api/topics/scenario-test/", {"title": "Titre modifié"}).status_code, status.HTTP_403_FORBIDDEN)
+
+    def test_member_can_edit_own_scenario_reply(self):
+        reply = Post.objects.create(topic=self.topic, author=self.member, content="Premier message")
+        self.client.force_authenticate(user=self.member)
+        response = self.client.patch(f"/api/posts/{reply.pk}/", {"content": "Message corrigé"})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        reply.refresh_from_db()
+        self.assertEqual(reply.content, "Message corrigé")
+
+
 class PostTest(TestCase):
     def setUp(self):
         self.client = APIClient()

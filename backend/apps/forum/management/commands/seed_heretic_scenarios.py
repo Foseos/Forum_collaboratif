@@ -178,7 +178,7 @@ class Command(BaseCommand):
             for data in SCENARIOS:
                 topic, created = Topic.objects.get_or_create(
                     category=category, slug=data["slug"],
-                    defaults={"title": data["title"], "author": author, "is_locked": True},
+                    defaults={"title": data["title"], "author": author, "is_locked": False},
                 )
                 post = topic.posts.order_by("created_at", "id").first()
                 if post:
@@ -207,7 +207,7 @@ class Command(BaseCommand):
                     continue
                 if not topic.scenario_avatar_name:
                     topic.scenario_avatar_name = data["actor"]
-                topic.is_locked = True
+                topic.is_locked = False
                 topic.scenario_link_cards = [
                     {"gif": LINK_GIFS.get(name, ""), "title": name, "text": description}
                     for name, _, description in data["links"]

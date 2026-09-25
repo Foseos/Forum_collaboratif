@@ -382,13 +382,13 @@ class PostViewSet(viewsets.ModelViewSet):
             return [IsAuthorOrModeratorOrReadOnly()]
         return [permissions.AllowAny()]
 
-    def _protect_scenario_avatar(self, post):
+    def _protect_scenario_sheet(self, post):
         if post.topic.category.slug != 'scenarios-a-prendre':
             return
         first_post = post.topic.posts.order_by('created_at', 'pk').first()
         if first_post and first_post.pk == post.pk and self.request.user.role not in ('admin', 'fondatrice'):
             from rest_framework.exceptions import PermissionDenied
-            raise PermissionDenied("Seuls les administrateurs peuvent modifier l'avatar d'un scénario.")
+            raise PermissionDenied("Seule l’administration peut modifier la fiche d’un scénario.")
 
     def perform_update(self, serializer):
         if serializer.instance.dice_result is not None:
@@ -397,7 +397,7 @@ class PostViewSet(viewsets.ModelViewSet):
         if serializer.instance.topic.is_locked and self.request.user.role not in ('admin', 'fondatrice'):
             from rest_framework.exceptions import PermissionDenied
             raise PermissionDenied("Ce sujet est archivé et ne peut plus être modifié.")
-        self._protect_scenario_avatar(serializer.instance)
+        self._protect_scenario_sheet(serializer.instance)
         serializer.save(is_trusted_html=self.request.user.role in ('admin', 'fondatrice'))
 
     def perform_destroy(self, instance):
@@ -407,7 +407,7 @@ class PostViewSet(viewsets.ModelViewSet):
         if instance.topic.is_locked and self.request.user.role not in ('admin', 'fondatrice'):
             from rest_framework.exceptions import PermissionDenied
             raise PermissionDenied("Ce sujet est archivé et ne peut plus être modifié.")
-        self._protect_scenario_avatar(instance)
+        self._protect_scenario_sheet(instance)
         instance.delete()
 
     @transaction.atomic

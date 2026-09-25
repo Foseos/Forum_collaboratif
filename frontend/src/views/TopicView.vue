@@ -55,7 +55,7 @@
 
     <!-- Bouton admin : modifier le contenu (topics verrouillés, hors règlement) -->
     <div
-      v-if="auth.isModerator && (forum.currentTopic?.is_locked || isHtmlEditableTopic || (isScenario && isAdminOrFondatrice)) && forum.posts.length > 0"
+      v-if="auth.isModerator && (forum.currentTopic?.is_locked || isHtmlEditableTopic || (isScenario && isAdminOrFondatrice)) && forum.posts[0]?.id === forum.currentTopic?.first_post_id"
       class="admin-edit-bar"
     >
       <button v-if="!editingPost" class="btn-admin-edit" @click="startEdit(forum.posts[0])">
@@ -66,7 +66,7 @@
       </button>
     </div>
 
-    <div v-if="isScenario && editingPost" ref="scenarioEditorRef" class="mt-2">
+    <div v-if="isScenario && editingPost?.id === forum.currentTopic?.first_post_id" ref="scenarioEditorRef" class="mt-2">
       <p v-if="editError" role="alert">{{ editError }}</p>
       <p class="text-secondary">Le code complet de la fiche est affiché ci-dessous. Modifiez les adresses des images, puis enregistrez la fiche.</p>
       <PostEditor :edit-post="editingPost" :start-in-source-mode="true" :loading="posting" @submit="handleEditSubmit" @cancel="editingPost = null" />
@@ -210,6 +210,7 @@
             :key="post.id"
             :post="post"
             :locked="forum.currentTopic?.is_locked"
+            :scenario-first-post="isScenario && post.id === forum.currentTopic?.first_post_id"
             :grimoire="slug === 'liste-des-pouvoirs-magiques'"
             @edit="startEdit"
             @delete="handleDelete"
@@ -291,7 +292,7 @@
         />
 
         <!-- Post Editor -->
-        <div v-if="editingPost && !isScenario" ref="postEditorRef" class="mt-2">
+        <div v-if="editingPost && (!isScenario || editingPost.id !== forum.currentTopic?.first_post_id)" ref="postEditorRef" class="mt-2">
           <p v-if="editError" role="alert">{{ editError }}</p>
           <PostEditor
             :edit-post="editingPost"
@@ -414,6 +415,7 @@ const savingTitle = ref(false)
 const titleError = ref('')
 const titleSaved = ref(false)
 const canEditTitle = computed(() => Boolean(auth.user && forum.currentTopic && (
+  (!isScenario.value || ['admin', 'fondatrice'].includes(auth.user.role)) &&
   (!forum.currentTopic.is_locked || ['admin', 'fondatrice'].includes(auth.user.role)) &&
   (auth.user.id === forum.currentTopic.author?.id || ['admin', 'fondatrice', 'moderator'].includes(auth.user.role))
 )))
@@ -709,7 +711,7 @@ async function startEdit(post) {
   editError.value = ''
   editingPost.value = post
   await nextTick()
-  ;(isScenario.value ? scenarioEditorRef.value : postEditorRef.value)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  ;(isScenario.value && post.id === forum.currentTopic?.first_post_id ? scenarioEditorRef.value : postEditorRef.value)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 async function handleEditSubmit(content, onPublished) {

@@ -212,6 +212,7 @@ const props = defineProps({
   post: { type: Object, required: true },
   grimoire: { type: Boolean, default: false },
   locked: { type: Boolean, default: false },
+  scenarioFirstPost: { type: Boolean, default: false },
 })
 const showGrimoire = computed(() => props.grimoire && props.post.content.includes('NEXUS-ARCANA-POWER-DIRECTORY'))
 const isRaceDirectory = computed(() => props.post.content.includes('data-nexus-race-directory="1"'))
@@ -261,6 +262,7 @@ function initAccordion() {
 const canEdit = computed(() => {
   if (props.post.dice_result != null) return false
   if (!auth.isAuthenticated) return false
+  if (props.scenarioFirstPost && !['admin', 'fondatrice'].includes(auth.user?.role)) return false
   if (props.locked && !['admin', 'fondatrice'].includes(auth.user?.role)) return false
   return auth.user?.id === props.post.author?.id || auth.isModerator
 })

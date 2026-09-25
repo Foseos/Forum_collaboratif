@@ -120,6 +120,8 @@ class TopicSerializer(serializers.ModelSerializer):
         request = self.context.get('request')
         if not request or request.user.role not in ('admin', 'fondatrice'):
             raise serializers.ValidationError("Seule l’administration peut verrouiller un sujet.")
+        if value and self.instance and self.instance.category.slug == 'scenarios-a-prendre':
+            raise serializers.ValidationError("Les scénarios restent ouverts aux réponses.")
         return value
 
     def validate_is_pinned(self, value):
@@ -205,12 +207,16 @@ class TopicDetailSerializer(serializers.ModelSerializer):
     post_count = serializers.IntegerField(read_only=True)
     category_name = serializers.CharField(source="category.name", read_only=True)
     category_slug = serializers.CharField(source="category.slug", read_only=True)
+    first_post_id = serializers.SerializerMethodField()
+
+    def get_first_post_id(self, obj):
+        return obj.posts.order_by("created_at", "pk").values_list("pk", flat=True).first()
 
     class Meta:
         model = Topic
         fields = [
             "id", "title", "slug", "category", "category_name", "category_slug", "author",
-            "is_pinned", "is_locked", "scenario_status", "scenario_avatar_name", "scenario_links", "scenario_link_cards", "post_count", "created_at", "updated_at",
+            "is_pinned", "is_locked", "scenario_status", "scenario_avatar_name", "scenario_links", "scenario_link_cards", "first_post_id", "post_count", "created_at", "updated_at",
         ]
         read_only_fields = [
             "id", "slug", "author", "post_count", "created_at", "updated_at",
