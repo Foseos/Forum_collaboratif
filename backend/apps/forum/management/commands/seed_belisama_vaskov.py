@@ -61,10 +61,10 @@ def render_sheet():
     for label, value in [
         ("Âge", "48 ans en 2033"),
         ("Date de naissance", "16 janvier 1985"),
-        ("Orientation sexuelle", "Au choix de la joueuse"),
-        ("Origines", "Famille de sorciers ; parcours et liens familiaux à préciser avec la joueuse"),
+        ("Orientation sexuelle", "Au choix du joueur"),
+        ("Origines", "Famille de sorciers ; parcours et liens familiaux à préciser avec le joueur"),
         ("Nature", "Sorcière TVD"),
-        ("Camp", "Au choix de la joueuse ; ses décisions ont des conséquences à assumer"),
+        ("Camp", "Au choix du joueur ; ses décisions ont des conséquences à assumer"),
         ("Faction", "La Chambre des Murmures — dirigeante, sous validation de l'administration"),
         ("Résidence", "Mystic Falls"),
         ("Activité", "Chercheuse en traditions magiques et responsable des archives du coven"),
@@ -84,7 +84,7 @@ def render_sheet():
     for paragraph in [
         "Belisama a appris la magie au sein d'une famille attachée aux rituels et aux règles transmises de génération en génération. En découvrant l'Expression, elle a d'abord cherché ce qu'elle permettait là où les sorts connus échouaient. Une expérience menée trop vite a blessé une personne proche d'elle ; Belisama n'en tire ni une interdiction absolue ni une excuse. Elle a choisi d'étudier cette pratique avec plus de méthode.",
         "Elle a fondé la Chambre des Murmures pour rassembler des sorcières et des sorciers prêts à discuter leurs essais, leurs échecs et leurs limites. Le coven utilise l'Expression en priorité, mais ses membres ne sont pas tenus de penser comme elle. Certains souhaitent aller plus loin ; d'autres jugent que Belisama ouvre une porte qu'elle ne pourra pas refermer. Sa direction tient à la confiance de ces membres, pas à un pouvoir sur eux.",
-        "En 2033, les perturbations de la Convergence touchent Mystic Falls. Belisama cherche à savoir si elles modifient les sorts d'Expression, sans prétendre connaître l'origine du phénomène. Elle veut comparer ses observations avec d'autres covens ; ses rapports avec Sélène, Bonnie et Davina seront décidés avec leurs joueuses.",
+        "En 2033, les perturbations de la Convergence touchent Mystic Falls. Belisama cherche à savoir si elles modifient les sorts d'Expression, sans prétendre connaître l'origine du phénomène. Elle veut comparer ses observations avec d'autres covens ; ses rapports avec Sélène, Bonnie et Davina seront décidés avec leurs joueurs.",
     ]:
         parts.append(f'<p style="line-height:1.8;">{escape(paragraph)}</p>')
     parts.append(f'</section><section style="{section}"><h2 style="color:#c4b5fd;">IV. Liens</h2><ul>')

@@ -95,7 +95,7 @@
     {
         "id": "maison-seconde-soif",
         "nom": "La Maison de la Seconde Soif",
-        "description": "Coven d'Hérétiques : des vampires siphonneurs qui puisent la magie dans des sources disponibles, notamment leur propre vampirisme. Leur solidarité n'efface ni la soif ni les choix individuels.",
+        "description": "Dirigée par Mélissandre Barden, la Maison de la Seconde Soif est un coven d'Hérétiques : des vampires siphonneurs qui puisent la magie dans des sources disponibles, notamment leur propre vampirisme. Leur solidarité n'efface ni la soif ni les choix individuels.",
         "couleur": "danger",
         "icone": "Coven_Seconde_Soif.png",
         "type": "faction"

@@ -58,10 +58,10 @@ def render_sheet():
     for label, value in [
         ("Âge", "43 ans en 2033"),
         ("Date de naissance", "8 mars 1990"),
-        ("Orientation sexuelle", "Au choix de la joueuse"),
-        ("Origines", "Famille et lieu de naissance à préciser avec la joueuse"),
+        ("Orientation sexuelle", "Au choix du joueur"),
+        ("Origines", "Famille et lieu de naissance à préciser avec le joueur"),
         ("Nature", "Sorcière siphonneuse TVD, non vampirique"),
-        ("Camp", "Au choix de la joueuse"),
+        ("Camp", "Au choix du joueur"),
         ("Faction", "Les Héritiers du Vide — dirigeante, sous validation de l’administration"),
         ("Résidence", "Mystic Falls"),
         ("Activité", "Coordonne les recherches de sources magiques et les accords du coven"),
@@ -81,7 +81,7 @@ def render_sheet():
     for paragraph in [
         "Florie a grandi parmi des sorciers qui interprétaient son incapacité à produire sa propre magie comme un manque à cacher. Elle a appris à reconnaître les objets enchantés et à demander la permission avant d’y puiser. Cette discipline lui a donné une place que personne ne lui avait offerte.",
         "Elle a ensuite réuni d’autres siphonneurs non vampiriques. Les Héritiers du Vide partagent des connaissances, recensent les sources disponibles et négocient leur usage avec leurs propriétaires. Florie dirige ces échanges parce qu’elle a gagné leur confiance ; elle doit encore convaincre certains membres que la prudence ne signifie pas renoncer à agir.",
-        "En 2033, la Convergence fait apparaître de nouvelles anomalies autour de Mystic Falls. Florie y voit des pistes à étudier, sans prétendre savoir quelle puissance en est à l’origine. Ses recherches peuvent la rapprocher de Valérie, Belisama ou Bonnie, selon les choix des joueuses concernées.",
+        "En 2033, la Convergence fait apparaître de nouvelles anomalies autour de Mystic Falls. Florie y voit des pistes à étudier, sans prétendre savoir quelle puissance en est à l’origine. Ses recherches peuvent la rapprocher de Valérie, Belisama ou Bonnie, selon les choix des joueurs concernés.",
     ]:
         parts.append(f'<p style="line-height:1.8;">{escape(paragraph)}</p>')
     parts.append(f'</section><section style="{section}"><h2 style="color:#c4b5fd;">IV. Liens</h2><ul>')

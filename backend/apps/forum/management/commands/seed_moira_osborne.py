@@ -58,10 +58,10 @@ def render_sheet():
     for label, value in [
         ("Âge", "45 ans en 2033"),
         ("Date de naissance", "6 juillet 1988"),
-        ("Orientation sexuelle", "Au choix de la joueuse"),
-        ("Origines", "Lignée de Voyageurs ; lieu de naissance et famille proche à préciser avec la joueuse"),
+        ("Orientation sexuelle", "Au choix du joueur"),
+        ("Origines", "Lignée de Voyageurs ; lieu de naissance et famille proche à préciser avec le joueur"),
         ("Nature", "Voyageuse · sorcière TVD"),
-        ("Camp", "Au choix de la joueuse ; la survie du Cercle guide nombre de ses décisions"),
+        ("Camp", "Au choix du joueur ; la survie du Cercle guide nombre de ses décisions"),
         ("Faction", "Le Cercle des Terres Perdues — dirigeante, sous validation de l'administration"),
         ("Résidence", "Itinérante entre les villes de la Convergence"),
         ("Activité", "Organisatrice des déplacements et gardienne des rites du Cercle"),
@@ -81,7 +81,7 @@ def render_sheet():
     for paragraph in [
         "Moira a grandi au sein d'une lignée de Voyageurs pour qui les routes, les haltes et les départs faisaient partie de la vie quotidienne. Elle a appris les rites collectifs avant de savoir ce que signifiait habiter longtemps au même endroit. Lorsqu'une halte s'est terminée par une rupture avec des sorciers locaux, elle a compris qu'un refuge ne se gagne pas par la seule force d'un sort.",
         "Elle a rassemblé le Cercle des Terres Perdues autour d'un projet plus durable que la survie de la semaine suivante : conserver leurs pratiques, négocier leurs passages et chercher un lieu qui puisse devenir le leur. Certains Voyageurs préfèrent rester mobiles ; d'autres voudraient s'établir tout de suite. Moira dirige leurs échanges, mais ne peut imposer un foyer à ceux qui ne le choisissent pas.",
-        "En 2033, la Convergence perturbe plusieurs endroits traversés par le Cercle. Moira relève ces anomalies sans prétendre connaître la puissance à leur origine. Ses voyages l'amènent vers Mystic Falls et La Nouvelle-Orléans, où elle pourrait croiser Bonnie, Belisama ou Sélène. La suite de ces liens appartient aux joueuses concernées.",
+        "En 2033, la Convergence perturbe plusieurs endroits traversés par le Cercle. Moira relève ces anomalies sans prétendre connaître la puissance à leur origine. Ses voyages l'amènent vers Mystic Falls et La Nouvelle-Orléans, où elle pourrait croiser Bonnie, Belisama ou Sélène. La suite de ces liens appartient aux joueurs concernés.",
     ]:
         parts.append(f'<p style="line-height:1.8;">{escape(paragraph)}</p>')
     parts.append(f'</section><section style="{section}"><h2 style="color:#c4b5fd;">IV. Liens</h2><ul>')

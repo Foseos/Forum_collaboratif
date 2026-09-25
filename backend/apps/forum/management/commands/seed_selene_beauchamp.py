@@ -63,7 +63,7 @@ def render_sheet():
     for label, value in [
         ("Âge", "50 ans en 2033"),
         ("Date de naissance", "12 février 1983"),
-        ("Orientation sexuelle", "Au choix de la joueuse"),
+        ("Orientation sexuelle", "Au choix du joueur"),
         ("Origines", "La Nouvelle-Orléans ; famille de sorcières liée aux rites ancestraux"),
         ("Nature", "Sorcière TVD"),
         ("Camp", "Attachée à la protection des vivants ; ses choix moraux restent à jouer"),

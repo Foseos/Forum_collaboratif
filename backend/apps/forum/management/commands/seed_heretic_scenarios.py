@@ -27,7 +27,7 @@ SCENARIOS = [
         "previous_image": "https://light.sunphoto.ro/photos/normal/112549028_ENPDSIJ3.jpg",
         "birth": "14 septembre 1845 · repère adapté pour Nexus Arcana",
         "age": "188 ans en 2033 · apparence d'environ 18 ans",
-        "orientation": "Au choix de la joueuse ; son histoire passée avec Stefan reste établie",
+        "orientation": "Au choix du joueur ; son histoire passée avec Stefan reste établie",
         "origin": "Coven Gemini, puis famille des Hérétiques de Lily Salvatore",
         "camp": "Au choix du joueur, selon son parcours actuel",
         "quote": "Survivre n'est pas la même chose que recommencer.",
@@ -68,7 +68,7 @@ SCENARIOS = [
         "history": [
             "Siphonneuse rejetée par les siens, Mary Louise a trouvé auprès de Lily et des Hérétiques la famille qui lui avait manqué. Le monde-prison de 1903 a renforcé sa fidélité aux personnes qu'elle aime, mais aussi sa peur de les perdre.",
             "Elle et Nora étaient fiancées. Dans la continuité de Nexus Arcana, la Convergence ouvre une bifurcation avant leur sacrifice : elles survivent sans comprendre la force qui a changé ce destin. Cela ne leur donne aucun pouvoir sur les mondes, la mort ou le temps.",
-            "En 2033, Mary Louise hésite entre protéger Nora à tout prix et lui laisser l'espace qu'elle réclame. Elle observe avec méfiance les covens de Mystic Falls, puis découvre la Maison de la Seconde Soif. Leur couple est établi ; son évolution se décide avec la joueuse de Nora.",
+            "En 2033, Mary Louise hésite entre protéger Nora à tout prix et lui laisser l'espace qu'elle réclame. Elle observe avec méfiance les covens de Mystic Falls, puis découvre la Maison de la Seconde Soif. Leur couple est établi ; son évolution se décide avec le joueur de Nora.",
         ],
         "powers": [
             ("Siphonnage", "Puise une réserve limitée de magie par contact avec une source, notamment son propre vampirisme ; ne vole pas durablement les pouvoirs d'autrui."),
@@ -112,7 +112,7 @@ SCENARIOS = [
         "links": [
             ("Mary Louise", "mary-louise", "Sa fiancée et son amour de longue date. Elles doivent redéfinir ensemble leur avenir."),
             ("Valérie Tulle", "valerie-tulle", "Une sœur de cœur dont elle connaît les forces et les silences."),
-            ("Bonnie Bennett", "bonnie-bennett", "Une amitié possible née de leur curiosité mutuelle ; la suite appartient aux joueuses."),
+            ("Bonnie Bennett", "bonnie-bennett", "Une amitié possible née de leur curiosité mutuelle ; la suite appartient aux joueurs."),
         ],
         "hooks": [
             "Chercher ce qui a fait bifurquer son destin sans prétendre maîtriser la Convergence.",

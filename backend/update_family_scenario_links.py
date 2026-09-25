@@ -9,7 +9,7 @@ def card(title, image, text):
 PHOEBE = 'https://zupimages.net/up/26/38/zka2.gif'
 COLE = 'https://zupimages.net/up/26/38/w78v.gif'
 COOP = 'https://zupimages.net/up/26/38/fpca.gif'
-PJ = 'https://zupimages.net/up/26/38/sjm5.gif'
+PJ = 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Emma_Watson_ONU_2017.jpg'
 PARKER = 'https://zupimages.net/up/26/38/y6h2.gif'
 PEYTON = 'https://zupimages.net/up/26/38/un3l.gif'
 
