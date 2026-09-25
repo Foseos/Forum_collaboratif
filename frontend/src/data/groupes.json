@@ -119,7 +119,7 @@
     {
         "id": "veilleurs-voile",
         "nom": "Les Veilleurs du Voile",
-        "description": "Coven attaché aux rites ancestraux de La Nouvelle-Orléans. Il entretient la mémoire des morts sans supposer que leurs volontés doivent toujours être suivies.",
+        "description": "Dirigés par Sélène Beauchamp, les Veilleurs du Voile préservent les rites ancestraux de La Nouvelle-Orléans. Ils entretiennent la mémoire des morts sans supposer que leurs volontés doivent toujours être suivies.",
         "couleur": "gold",
         "icone": "Coven_Veilleurs_Voile.png",
         "type": "faction"
