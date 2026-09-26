@@ -8,9 +8,9 @@ from django.db import transaction
 from apps.forum.models import Topic
 
 
-PORTRAIT = "https://upload.wikimedia.org/wikipedia/commons/f/f9/Emma_Watson_ONU_2017.jpg"
+PORTRAIT = "https://upload.wikimedia.org/wikipedia/commons/0/0a/Emma_Watson_interview_in_2017.jpg"
 LINK_GIF = "https://media1.tenor.com/m/Rx-rtspGFXoAAAAd/emma-watson.gif"
-PHOTO_SOURCE = "https://commons.wikimedia.org/wiki/File:Emma_Watson_ONU_2017.jpg"
+PHOTO_SOURCE = "https://commons.wikimedia.org/wiki/File:Emma_Watson_interview_in_2017.jpg"
 OLD_PORTRAIT = "https://zupimages.net/up/26/39/yqne.png"
 PREVIOUS_PORTRAIT = "https://upload.wikimedia.org/wikipedia/commons/2/2e/Emma_Watson_2017_%28cropped%29.jpg"
 
@@ -35,23 +35,46 @@ class Command(BaseCommand):
                 count=1,
                 flags=re.IGNORECASE,
             )
+            content = re.sub(
+                r'(<img\s+src="[^"]+")(?=\s+style=)',
+                lambda match: f'{match.group(1)} alt="Prudence Johanna Halliwell Everhart, incarnée par Emma Watson"',
+                content,
+                count=1,
+                flags=re.IGNORECASE,
+            )
             content = content.replace('alt="Prénom NOM"', 'alt="Prudence Johanna Halliwell, incarnée par Emma Watson"')
             content = content.replace("Ft Kristen Stewart", "Ft Emma Watson")
             content = content.replace(
                 "Prettyvacantavatars - TUMBLR",
-                "Photo principale : ONU Brasil / Wikimedia Commons (CC BY 3.0)",
+                "Photo principale : Mars Films / Wikimedia Commons (CC BY 3.0)",
             )
             content = content.replace(
                 'Photo : FR / Wikimedia Commons, CC BY-SA 4.0',
+                'Photo : Mars Films / Wikimedia Commons, CC BY 3.0',
+            )
+            content = content.replace(
                 'Photo : ONU Brasil / Wikimedia Commons, CC BY 3.0',
+                'Photo : Mars Films / Wikimedia Commons, CC BY 3.0',
+            )
+            content = content.replace(
+                'Photo : Mel-Graph -TUMBLR',
+                'Photo : Mars Films / Wikimedia Commons, CC BY 3.0',
+            )
+            content = content.replace(
+                'Photo principale : ONU Brasil / Wikimedia Commons (CC BY 3.0)',
+                'Photo principale : Mars Films / Wikimedia Commons (CC BY 3.0)',
             )
             content = content.replace(
                 'https://commons.wikimedia.org/wiki/File:Emma_Watson_2017_(cropped).jpg',
                 PHOTO_SOURCE,
             )
+            content = content.replace(
+                'https://commons.wikimedia.org/wiki/File:Emma_Watson_ONU_2017.jpg',
+                PHOTO_SOURCE,
+            )
             credit = (
                 f' <a href="{PHOTO_SOURCE}" target="_blank" rel="noopener noreferrer" '
-                'style="color:#c4b5fd;">Photo : ONU Brasil / Wikimedia Commons, CC BY 3.0</a>.'
+                'style="color:#c4b5fd;">Photo : Mars Films / Wikimedia Commons, CC BY 3.0</a>.'
             )
             marker = "Ft Emma Watson (négociable - échange avec le staff)</p>"
             if marker in content:
