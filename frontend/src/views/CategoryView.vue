@@ -100,6 +100,11 @@
     </section>
 
     <!-- Sous-catégories Bienvenue à Nexus Arcana -->
+    <router-link v-if="props.slug === 'bienvenue-san-francisco'" to="/bienvenue/parcours-arrivee" class="recap-guide card arrival-guide-link">
+      <p class="recap-eyebrow">✦ Nouveau sur le forum ?</p>
+      <h2>Suivre le parcours d’arrivée →</h2>
+      <p>Du contexte à ton premier RP, retrouve les étapes et les liens utiles au même endroit.</p>
+    </router-link>
     <div v-if="props.slug === 'bienvenue-san-francisco'" class="sub-list">
       <!-- CTA Créer ma fiche -->
       <div class="sub-cta">

@@ -19,11 +19,13 @@ import CreateFicheView from '../views/CreateFicheView.vue'
 import DemandeDoubleCompteView from '../views/DemandeDoubleCompteView.vue'
 import AvatarDirectoryView from '../views/AvatarDirectoryView.vue'
 import DemonicFormsView from '../views/DemonicFormsView.vue'
+import ArrivalGuideView from '../views/ArrivalGuideView.vue'
 
 const routes = [
   { path: '/mes-rp', name: 'my-rp', component: () => import('../views/MyRPView.vue'), meta: { auth: true } },
   { path: '/administration/alertes-activite', name: 'activity-alerts', component: () => import('../views/ActivityAlertsView.vue'), meta: { auth: true, admin: true } },
   { path: '/', name: 'home', component: HomeView },
+  { path: '/bienvenue/parcours-arrivee', name: 'arrival-guide', component: ArrivalGuideView },
   {
     path: '/login',
     name: 'login',

@@ -385,6 +385,7 @@
           <div>
             <h2 class="bgroup-title">Bienvenue à toi</h2>
             <p class="bgroup-subtitle">Découvre Nexus Arcana, présente-toi et commence ton histoire dans la ville de ton choix</p>
+            <router-link to="/bienvenue/parcours-arrivee" class="btn btn-secondary btn-sm">Mes premiers pas →</router-link>
           </div>
         </div>
 

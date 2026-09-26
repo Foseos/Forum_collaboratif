@@ -281,6 +281,7 @@
 
       <section v-if="auth.user?.fiche_status === 'validated'" class="card" style="margin-top:1rem;padding:1.5rem">
         <h2 style="margin-top:0">Mes premiers pas sur Nexus Arcana</h2>
+        <router-link to="/bienvenue/parcours-arrivee" class="btn btn-secondary btn-sm">Voir le parcours complet →</router-link>
         <p class="text-secondary">Quelques pistes pour lancer votre personnage à votre rythme.</p>
         <ul v-if="nextSteps" class="next-steps-list">
           <li><span>{{ nextSteps?.recap ? '✓' : '○' }}</span> <router-link to="/categories/fiche-personnage">Publier ma fiche personnage récapitulative</router-link></li>
