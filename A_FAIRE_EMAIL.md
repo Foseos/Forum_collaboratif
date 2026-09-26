@@ -1,5 +1,7 @@
 # À reprendre quand le forum sera terminé
 
+La préparation de la mise en ligne est maintenant décrite dans [MISE_EN_LIGNE.md](MISE_EN_LIGNE.md). Ce document conserve le diagnostic de l'envoi d'e-mails local et les étapes de configuration à terminer avant l'ouverture publique.
+
 L'envoi d'e-mails du forum n'est pas encore opérationnel : le test SMTP du 23 septembre 2026 a été refusé avec « Authentication credentials invalid ». Le forum affiche une erreur claire lors d'une inscription ou d'une demande de lien et ne crée pas de compte bloqué.
 
 ## Étapes à faire plus tard
