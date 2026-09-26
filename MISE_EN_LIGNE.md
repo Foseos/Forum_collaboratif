@@ -24,6 +24,8 @@ Le fichier `.env.production` est ignoré par Git. Le garder lisible seulement pa
 
 La base PostgreSQL locale contient les comptes, scénarios, sujets et messages ; le volume `media_data` contient les images envoyées. **Ne pas démarrer un forum public vide en pensant que GitHub transporte ces données.**
 
+Les anciens scripts ponctuels qui ont servi à rédiger ou corriger les scénarios ont été retirés du code actif. Ils restent consultables dans l'archive Git `archive-scenario-scripts-2026-09-26`. Cette archive ne remplace pas la sauvegarde de la base : les contenus publiés se trouvent dans PostgreSQL.
+
 Avant la migration, arrêter temporairement les nouvelles écritures sur le forum local, créer une sauvegarde cohérente de la base et une archive du volume `media_data`, puis transférer les deux au VPS par un canal chiffré. Restaurer la base et les images sur le serveur avant l'ouverture publique. Contrôler les nombres de comptes, sujets et messages ainsi que plusieurs avatars et images. Conserver une copie de secours hors du VPS et tester une restauration.
 
 Les sauvegardes contiennent des données personnelles : elles ne vont ni sur GitHub ni dans une conversation.

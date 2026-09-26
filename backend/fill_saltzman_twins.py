@@ -1,7 +1,0 @@
-from pathlib import Path
-source=Path('fill_kai_scenario.py').read_text(encoding='utf-8-sig')
-source=source.replace('kai_data.json','saltzman_twins_data.json').replace("'assert len(topics)==1'","'assert len(topics)==2'").replace("'kai-'","'saltzman-twins-'").replace('data-kai-scenario','data-saltzman-twins-scenario')
-source=source.replace("'Bonnie Bennett':", "'Hope Mikaelson':'https://media1.tenor.com/m/flkkkhUPqKMAAAAC/hope-mikaelson4x16-tribrid-hope.gif',\n'Bonnie Bennett':")
-source=source.replace('qu’il conserve','qu’elle conserve').replace('Kai ne produit','Elle ne produit')
-source=source.replace('Continuité Nexus Arcana : Kai reste un sorcier siphonneur vivant, sans Fusion ni transformation en Hérétique. Son arrivée résulte d’une bifurcation liée au Nexus. Les liens familiaux et les souvenirs issus de chronologies différentes s’accordent entre joueurs. Ses connaissances ne donnent aucun sort supplémentaire gratuit.','Continuité Nexus Arcana : les deux jumelles restent des sorcières siphonneuses vivantes. Lizzie ne devient pas Hérétique. La Convergence suspend ici l’échéance de la Fusion sans en faire un pouvoir. Le Kai présent vient d’une autre bifurcation, antérieure à ses crimes ultérieurs : cette différence de parcours ne modifie pas leurs souvenirs et ne crée aucune confiance automatique. Les liens et les âges précis se coordonnent entre joueurs. Les capacités supplémentaires et leurs améliorations passent par les achats en Arcana Flouz.')
-exec(compile(source,'saltzman-twins-renderer','exec'))

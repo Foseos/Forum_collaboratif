@@ -1,7 +1,0 @@
-from pathlib import Path
-source=Path('fill_matt_jeremy_tyler.py').read_text(encoding='utf-8-sig')
-source=source.replace('matt_jeremy_tyler_data.json','alaric_scenario_data.json').replace("'matt-jeremy-tyler-'","'alaric-'").replace('fiche et cinq liens avec GIFs enregistrés','fiche et six liens avec GIFs enregistrés')
-source=source.replace('Adulte · âge précis à harmoniser avec la chronologie du forum','Adulte · génération des parents de Josie et Lizzie, âge précis à harmoniser avec leurs fiches')
-source=source.replace('Adaptation Nexus Arcana : Matt est humain, Jeremy humain chasseur et Tyler hybride vivant, libre de son ancien lien d’asservissement. Les métiers proposés, la situation amoureuse et les détails des relations se construisent avec les joueurs concernés. Les aptitudes et pouvoirs restent limités à ce qui est décrit dans cette fiche.','Adaptation Nexus Arcana : Alaric est humain. Ses quatre aptitudes ne sont pas des pouvoirs magiques. Il ne dispose plus de ses anciennes capacités vampiriques et aucun objet de résurrection n’est accordé automatiquement. Sa fonction éducative, sa situation amoureuse et les détails de sa chronologie se construisent avec les joueurs concernés.')
-source=source.replace('def verify(name):',"gifs.update({'Josie Saltzman':'https://media1.tenor.com/m/bO6PajzKtcQAAAAC/josie-saltzman-kaylee-bryant.gif','Lizzie Saltzman':'https://media1.tenor.com/m/iQSHhVwHW_QAAAAC/jenny-boyd-lizzie-saltzman.gif'})\ndef verify(name):")
-exec(compile(source,'alaric-renderer','exec'))

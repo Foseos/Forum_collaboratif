@@ -1,5 +1,0 @@
-from pathlib import Path
-source=Path('fill_de_martel_scenarios.py').read_text(encoding='utf-8-sig')
-source=source.replace('de_martel_data.json','lucien_data.json').replace("'de-martel-'","'lucien-'").replace('data-de-martel-scenario','data-lucien-scenario').replace("'assert len(topics)==2'","'assert len(topics)==1'")
-source=source.replace('Continuité Nexus Arcana : Aurora et Tristan sont présents, libres et vampires non originels. Chacun commence avec quatre capacités maximum, actives et passives comprises. Les capacités manquantes et les évolutions passent par la boutique en Arcana Flouz. Les relations, fonctions et alliances se construisent avec les joueurs concernés.','Continuité Nexus Arcana : Lucien est vivant et vampire non originel, avec quatre capacités maximum à la création. Son sérum et son venin exceptionnel ne sont pas acquis. Les capacités manquantes et les évolutions s’achètent en jeu avec des Arcana Flouz après validation. Ses activités et alliances ne lui donnent aucune autorité automatique sur les autres personnages.')
-exec(compile(source,'lucien-renderer','exec'))
