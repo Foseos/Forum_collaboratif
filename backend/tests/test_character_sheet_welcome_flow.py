@@ -14,8 +14,13 @@ class CharacterSheetWelcomeFlowTests(APITestCase):
         self.guest = User.objects.create_user(username='fiche-guest', password='test-password')
         self.admin = User.objects.create_user(username='fiche-admin', password='test-password', role='admin')
         self.founder = User.objects.create_user(username='fiche-founder', password='test-password', role='fondatrice')
-        Category.objects.create(name='Bienvenue à Nexus Arcana', slug='bienvenue-san-francisco')
-        self.pending = Category.objects.create(name='Fiches en attente de validation', slug='fiches-de-presentation-terminees')
+        Category.objects.get_or_create(
+            slug='bienvenue-san-francisco', defaults={'name': 'Bienvenue à Nexus Arcana'},
+        )
+        self.pending, _ = Category.objects.get_or_create(
+            slug='fiches-de-presentation-terminees',
+            defaults={'name': 'Fiches en attente de validation'},
+        )
 
     def test_sheet_is_visible_and_welcomes_are_allowed_until_admin_validation(self):
         self.client.force_authenticate(self.author)
@@ -95,7 +100,7 @@ class CharacterSheetWelcomeFlowTests(APITestCase):
             'title': 'Fiche mal placée', 'first_post_content': 'Présentation',
         }, format='json')
         self.assertEqual(response.status_code, 403)
-        Category.objects.create(name='Fiche personnage', slug='fiche-personnage')
+        Category.objects.get_or_create(slug='fiche-personnage', defaults={'name': 'Fiche personnage'})
         alternate = self.client.post('/api/categories/fiche-personnage/topics/', {
             'title': 'Autre fiche mal placée', 'first_post_content': 'Présentation',
         }, format='json')
@@ -103,7 +108,7 @@ class CharacterSheetWelcomeFlowTests(APITestCase):
         self.assertFalse(Topic.objects.exists())
 
     def test_validated_member_can_create_one_editable_recap_topic(self):
-        Category.objects.create(name='Fiche personnage', slug='fiche-personnage')
+        Category.objects.get_or_create(slug='fiche-personnage', defaults={'name': 'Fiche personnage'})
         self.author.fiche_status = 'validated'
         self.author.save(update_fields=['fiche_status'])
         self.client.force_authenticate(self.author)
@@ -122,7 +127,7 @@ class CharacterSheetWelcomeFlowTests(APITestCase):
         self.assertEqual(duplicate.status_code, 403)
 
     def test_official_recap_model_is_pinned_locked_and_does_not_take_admin_slot(self):
-        Category.objects.create(name='Fiche personnage', slug='fiche-personnage')
+        Category.objects.get_or_create(slug='fiche-personnage', defaults={'name': 'Fiche personnage'})
         call_command('seed_recap_model', verbosity=0)
         model = Topic.objects.get(slug='modele-fiche-personnage')
         self.assertTrue(model.is_pinned)

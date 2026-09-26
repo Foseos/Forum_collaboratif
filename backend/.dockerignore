@@ -1,0 +1,15 @@
+# N'envoyer au serveur que le code nécessaire à Django.
+# Les scripts ponctuels, bases locales et sauvegardes restent sur l'ordinateur.
+*
+!manage.py
+!expand_race_directory.py
+!requirements/
+!requirements/**
+!config/
+!config/**
+!apps/
+!apps/**
+**/__pycache__/
+**/*.pyc
+**/media/
+**/staticfiles/

@@ -1,5 +1,5 @@
 from apps.users.models import User
-from apps.forum.models import Topic, Post
+from apps.forum.models import Topic
 
 t = Topic.objects.filter(slug='demande-de-partenaire-de-rp').first()
 p = t.posts.order_by('created_at').first()

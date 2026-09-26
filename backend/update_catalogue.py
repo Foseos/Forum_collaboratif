@@ -1,5 +1,5 @@
 import re
-from apps.forum.models import Topic, Post
+from apps.forum.models import Topic
 
 t = Topic.objects.filter(slug='catalogue-boutique-magique').first()
 if not t:

@@ -1,5 +1,5 @@
-import re,json
-from apps.forum.models import Topic,SitePage
+import re
+from apps.forum.models import Topic
 for t in Topic.objects.filter(slug__in=['reglement-officiel-du-forum','liste-des-pouvoirs-magiques','catalogue-boutique-magique','encyclopedie-des-creatures-et-races']):
  p=t.posts.order_by('created_at','pk').first();s=re.sub('<[^>]+>',' ',p.content)
  print(t.slug)

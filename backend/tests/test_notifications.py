@@ -78,6 +78,18 @@ class NotificationTest(TestCase):
             Notification.objects.filter(recipient=self.user, is_read=False).count(), 0
         )
 
+    def test_anonymous_user_cannot_mark_all_read(self):
+        Notification.objects.create(
+            recipient=self.user,
+            notification_type="new_post",
+            message="Test",
+        )
+        response = self.client.post("/api/notifications/read-all/")
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+        self.assertEqual(
+            Notification.objects.filter(recipient=self.user, is_read=False).count(), 1
+        )
+
     def test_unread_count(self):
         for i in range(3):
             Notification.objects.create(

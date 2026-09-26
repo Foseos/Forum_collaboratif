@@ -110,20 +110,25 @@ def render():
     return out + '</section></div>'
 
 
-with transaction.atomic():
-    topic = Topic.objects.select_for_update().get(slug='encyclopedie-des-creatures-et-races')
-    post = topic.posts.select_for_update().order_by('created_at', 'pk').first()
-    assert post is not None
-    content = render()
-    assert content.count('<details ') == sum(len(rows) for _, rows in GROUPS)
-    assert 'Fées noires' in content and 'Elfes noirs' in content
-    folder = Path(settings.BASE_DIR) / 'data/scenario_backups'
-    folder.mkdir(parents=True, exist_ok=True)
-    (folder / ('race-directory-' + timezone.now().strftime('%Y%m%dT%H%M%S%f') + '.json')).write_text(json.dumps(dict(topic_id=topic.pk, title=topic.title, post_id=post.pk, content=post.content), ensure_ascii=False), encoding='utf-8')
-    post.content = content
-    post.save(update_fields=['content', 'is_edited', 'updated_at'])
-    topic.title = 'Bottin des créatures et des profils'
-    topic.save(update_fields=['title'])
-    post.refresh_from_db()
-    assert post.content == content
-    print(f'Bottin enregistré : {sum(len(rows) for _, rows in GROUPS)} fiches, {sum(len(row[2]) for _, rows in GROUPS for row in rows)} branches et profils, {len(GROUPS)} familles.')
+def main():
+    with transaction.atomic():
+        topic = Topic.objects.select_for_update().get(slug='encyclopedie-des-creatures-et-races')
+        post = topic.posts.select_for_update().order_by('created_at', 'pk').first()
+        assert post is not None
+        content = render()
+        assert content.count('<details ') == sum(len(rows) for _, rows in GROUPS)
+        assert 'Fées noires' in content and 'Elfes noirs' in content
+        folder = Path(settings.BASE_DIR) / 'data/scenario_backups'
+        folder.mkdir(parents=True, exist_ok=True)
+        (folder / ('race-directory-' + timezone.now().strftime('%Y%m%dT%H%M%S%f') + '.json')).write_text(json.dumps(dict(topic_id=topic.pk, title=topic.title, post_id=post.pk, content=post.content), ensure_ascii=False), encoding='utf-8')
+        post.content = content
+        post.save(update_fields=['content', 'is_edited', 'updated_at'])
+        topic.title = 'Bottin des créatures et des profils'
+        topic.save(update_fields=['title'])
+        post.refresh_from_db()
+        assert post.content == content
+        print(f'Bottin enregistré : {sum(len(rows) for _, rows in GROUPS)} fiches, {sum(len(row[2]) for _, rows in GROUPS for row in rows)} branches et profils, {len(GROUPS)} familles.')
+
+
+if __name__ == '__main__':
+    main()

@@ -1,8 +1,6 @@
 """Refresh the generated race directory while preserving the rules appended to it."""
 
-import ast
 import json
-from html import escape
 from pathlib import Path
 
 from django.conf import settings
@@ -11,20 +9,11 @@ from django.db import transaction
 from django.utils import timezone
 
 from apps.forum.models import Topic
+from expand_race_directory import render
 
 
 def render_from_source():
-    source = Path(settings.BASE_DIR) / "expand_race_directory.py"
-    tree = ast.parse(source.read_text(encoding="utf-8"))
-    definitions = [
-        node for node in tree.body
-        if (isinstance(node, ast.Assign) and any(
-            isinstance(target, ast.Name) and target.id == "GROUPS" for target in node.targets
-        )) or (isinstance(node, ast.FunctionDef) and node.name in {"p", "render"})
-    ]
-    namespace = {"escape": escape}
-    exec(compile(ast.Module(body=definitions, type_ignores=[]), str(source), "exec"), namespace)
-    return namespace["render"]()
+    return render()
 
 
 class Command(BaseCommand):

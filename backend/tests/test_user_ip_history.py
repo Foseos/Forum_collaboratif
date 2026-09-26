@@ -27,6 +27,8 @@ class UserIPHistoryTests(APITestCase):
             'username': 'new-ip-member', 'password': 'wrong',
         }, format='json', REMOTE_ADDR='192.0.2.11').status_code, 401)
         self.assertFalse(UserIPLog.objects.filter(user=newcomer, event='login').exists())
+        newcomer.is_active = True  # Simule la confirmation de l'adresse e-mail.
+        newcomer.save(update_fields=['is_active'])
         self.assertEqual(self.client.post('/api/auth/login/', {
             'username': 'new-ip-member', 'password': 'StrongTestPassword!24',
         }, format='json', REMOTE_ADDR='192.0.2.11').status_code, 200)

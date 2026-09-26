@@ -1,4 +1,4 @@
-from apps.forum.models import Topic, Post
+from apps.forum.models import Topic
 
 t = Topic.objects.filter(slug='modele-de-fiche-de-presentation').first()
 p = t.posts.order_by('created_at').first()

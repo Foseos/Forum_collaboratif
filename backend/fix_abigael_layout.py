@@ -1,6 +1,5 @@
 import json
 import re
-from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
 from django.conf import settings

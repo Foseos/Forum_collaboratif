@@ -262,7 +262,9 @@ class TopicViewSet(viewsets.ModelViewSet):
     filterset_fields = ["is_pinned", "is_locked", "author"]
 
     def get_queryset(self):
-        queryset = Topic.objects.annotate(post_count=Count("posts"))
+        queryset = Topic.objects.annotate(post_count=Count("posts")).order_by(
+            "-is_pinned", "-created_at", "-pk"
+        )
         category_slug = self.kwargs.get("category_slug")
         if category_slug:
             queryset = queryset.filter(category__slug=category_slug)

@@ -15,6 +15,13 @@ class UserRegistrationTest(TestCase):
         self.client = APIClient()
         self.register_url = "/api/auth/register/"
 
+    def test_anonymous_user_cannot_update_profile(self):
+        user = User.objects.create_user(username="member", password="StrongPass123!")
+        response = self.client.patch("/api/users/me/", {"username": "changed"})
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+        user.refresh_from_db()
+        self.assertEqual(user.username, "member")
+
     def test_register_success(self):
         data = {
             "username": "testuser",

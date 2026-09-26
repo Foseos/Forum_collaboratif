@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import api from '../composables/useApi'
+import { useAuthStore } from './auth'
 
 export const useNotificationStore = defineStore('notifications', {
   state: () => ({
@@ -40,6 +41,7 @@ export const useNotificationStore = defineStore('notifications', {
     },
 
     async markRead(id) {
+      if (!useAuthStore().isAuthenticated) return
       await api.post(`/notifications/${id}/read/`)
       const notif = this.notifications.find((n) => n.id === id)
       if (notif) notif.is_read = true
@@ -47,6 +49,7 @@ export const useNotificationStore = defineStore('notifications', {
     },
 
     async markAllRead() {
+      if (!useAuthStore().isAuthenticated) return
       await api.post('/notifications/read-all/')
       this.notifications.forEach((n) => (n.is_read = true))
       this.unreadCount = 0

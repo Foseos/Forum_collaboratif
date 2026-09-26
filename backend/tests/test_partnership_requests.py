@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.core.management import call_command
+from django.core.cache import cache
 from rest_framework.test import APITestCase
 
 from apps.forum.models import Category, Topic
@@ -7,6 +8,7 @@ from apps.forum.models import Category, Topic
 
 class PartnershipRequestTests(APITestCase):
     def setUp(self):
+        cache.clear()
         User = get_user_model()
         self.founder = User.objects.create_user(username='partnership-founder', password='test', role='fondatrice')
         self.member = User.objects.create_user(username='partnership-member', password='test')

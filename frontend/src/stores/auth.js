@@ -38,6 +38,9 @@ export const useAuthStore = defineStore('auth', {
     },
 
     async updateProfile(profileData) {
+      if (!this.isAuthenticated) {
+        throw new Error('Connexion requise pour modifier le profil.')
+      }
       const { data } = await api.patch('/users/me/', profileData)
       this.user = data
     },
