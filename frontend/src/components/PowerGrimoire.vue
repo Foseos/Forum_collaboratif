@@ -85,6 +85,13 @@ const query = ref('')
 const family = ref('')
 const mode = ref('powers')
 const tabs = [{ id: 'powers', label: 'Tous les pouvoirs' }, { id: 'paths', label: 'Évolutions possibles' }, { id: 'rules', label: 'Règles et limites' }]
+const featuredPathTitles = new Set([
+  'Empathie inversée', 'Réplique de pouvoir', 'Toucher paralysant',
+  'Phytokinésie (contrôle végétal)', "Aquakinésie (contrôle de l'eau)",
+  'Hématokinésie', 'Aérokinésie', 'Sens aiguisés', 'Régénération',
+  'Force accrue', 'Suggestion mentale', 'Perception des liens affectifs',
+  'Élan affectif',
+])
 function heading(element) {
   let parent = element.parentElement
   while (parent) {
@@ -112,7 +119,15 @@ const entries = computed(() => {
       steps: evolution.split('·').map(label => ({ label: label.trim(), explanation: explainStep(label) })),
     })
   }
-  const paths = [], rules = []
+  const paths = powers.filter(power => featuredPathTitles.has(power.title)).map(power => ({
+    id: `power-${power.id}`, title: power.title, description: power.description,
+    family: power.family, requiresStaff: power.requiresStaff,
+    steps: [
+      { label: power.title, explanation: power.notes?.[0] || power.description },
+      ...power.steps,
+    ],
+  }))
+  const rules = []
   for (const item of doc.querySelectorAll('li')) {
     if (item.closest('table')) continue
     const strong = item.querySelector('strong')
@@ -122,6 +137,7 @@ const entries = computed(() => {
     const family = heading(item)
     if (title.includes('→')) {
       const names = title.split('→').map(name => name.trim())
+      if (featuredPathTitles.has(names[0])) continue
       const explanations = pathwayNotes[names[0]]
       paths.push({ id: paths.length, title, description, family, requiresStaff: names[0] === 'Perception temporelle',
         steps: names.map((label, index) => ({ label, explanation: explanations?.[index] || explainStep(label) })),
