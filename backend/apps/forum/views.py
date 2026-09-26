@@ -99,6 +99,12 @@ class ContactRequestAdminView(APIView):
     def get(self, request):
         if request.user.role not in ('admin', 'fondatrice'):
             return Response(status=403)
+        if request.query_params.get('counts') == '1':
+            pending = ContactRequest.objects.filter(is_resolved=False)
+            return Response({
+                'reports': pending.filter(kind=ContactRequest.Kind.REPORT).count(),
+                'questions': pending.exclude(kind=ContactRequest.Kind.REPORT).count(),
+            })
         requests = ContactRequest.objects.select_related('post__topic', 'author')
         if request.query_params.get('kind') == 'report':
             requests = requests.filter(kind=ContactRequest.Kind.REPORT)

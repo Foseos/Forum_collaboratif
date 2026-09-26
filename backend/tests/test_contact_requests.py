@@ -66,3 +66,14 @@ class ContactRequestTests(APITestCase):
         payload = {'kind': 'privacy', 'email': 'visitor@example.com', 'message': 'Je souhaite supprimer mes données.'}
         self.assertEqual(self.client.post('/api/contact/', payload).status_code, 201)
         self.assertEqual(self.client.post('/api/contact/', payload).status_code, 429)
+
+    def test_admin_counters_include_only_unresolved_requests(self):
+        ContactRequest.objects.create(kind='report', email='report@example.com', message='Signalement', post=self.post)
+        question = ContactRequest.objects.create(kind='general', email='visitor@example.com', message='Une question')
+        self.client.force_authenticate(self.member)
+        self.assertEqual(self.client.get('/api/administration/contact/?counts=1').status_code, 403)
+        self.client.force_authenticate(self.admin)
+        self.assertEqual(self.client.get('/api/administration/contact/?counts=1').data, {'reports': 1, 'questions': 1})
+        question.is_resolved = True
+        question.save(update_fields=['is_resolved'])
+        self.assertEqual(self.client.get('/api/administration/contact/?counts=1').data, {'reports': 1, 'questions': 0})

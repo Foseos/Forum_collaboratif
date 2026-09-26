@@ -21,8 +21,10 @@
 import { onMounted, ref, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import api from '../composables/useApi'
+import { useNotificationStore } from '../stores/notifications'
 
 const route = useRoute()
+const notifications = useNotificationStore()
 const reportsOnly = computed(() => route.path === '/administration/signalements')
 const labels = { privacy: 'Données personnelles', report: 'Signalement', general: 'Autre demande' }
 const requests = ref([])
@@ -43,6 +45,7 @@ async function toggleResolved(item) {
   try {
     const { data } = await api.patch('/administration/contact/', { id: item.id, is_resolved: !item.is_resolved })
     item.is_resolved = data.is_resolved
+    await notifications.fetchAdminContactCounts()
   } catch { error.value = 'Impossible de mettre à jour cette demande.' }
 }
 </script>

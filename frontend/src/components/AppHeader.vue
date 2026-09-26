@@ -37,6 +37,8 @@
       <!-- Right Actions -->
       <div class="header-actions">
         <template v-if="auth.isAuthenticated">
+          <router-link v-if="isAdmin && notifications.pendingReports" to="/administration/signalements" class="admin-alert-link" :aria-label="`${notifications.pendingReports} signalement(s) à traiter`" title="Signalements à traiter">⚑ <strong>{{ notifications.pendingReports }}</strong></router-link>
+          <router-link v-if="isAdmin && notifications.pendingQuestions" to="/administration/demandes" class="admin-alert-link" :aria-label="`${notifications.pendingQuestions} demande(s) de visiteurs à traiter`" title="Demandes de visiteurs à traiter">✉ <strong>{{ notifications.pendingQuestions }}</strong></router-link>
           <!-- Notifications Bell -->
           <router-link to="/notifications" class="btn-icon notification-btn" title="Notifications">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -66,11 +68,11 @@
                 </router-link>
                 <router-link v-if="['admin', 'fondatrice'].includes(auth.user?.role)" to="/administration/demandes" class="dropdown-item" @click="menuOpen = false">
                   <span aria-hidden="true">✉</span>
-                  Demandes des visiteurs
+                  Demandes des visiteurs <span v-if="notifications.pendingQuestions" class="nav-msg-badge">{{ notifications.pendingQuestions }}</span>
                 </router-link>
                 <router-link v-if="['admin', 'fondatrice'].includes(auth.user?.role)" to="/administration/signalements" class="dropdown-item" @click="menuOpen = false">
                   <span aria-hidden="true">⚑</span>
-                  Signalements
+                  Signalements <span v-if="notifications.pendingReports" class="nav-msg-badge">{{ notifications.pendingReports }}</span>
                 </router-link>
                 <button class="dropdown-item" @click="handleLogout">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
@@ -112,8 +114,8 @@
         <div class="nav-mobile-divider"></div>
 
         <router-link v-if="['admin', 'fondatrice'].includes(auth.user?.role)" to="/administration/alertes-activite" class="nav-mobile-link">⚑ Alertes d’activité</router-link>
-        <router-link v-if="['admin', 'fondatrice'].includes(auth.user?.role)" to="/administration/demandes" class="nav-mobile-link">✉ Demandes des visiteurs</router-link>
-        <router-link v-if="['admin', 'fondatrice'].includes(auth.user?.role)" to="/administration/signalements" class="nav-mobile-link">⚑ Signalements</router-link>
+        <router-link v-if="isAdmin" to="/administration/demandes" class="nav-mobile-link">✉ Demandes des visiteurs <span v-if="notifications.pendingQuestions" class="nav-msg-badge">{{ notifications.pendingQuestions }}</span></router-link>
+        <router-link v-if="isAdmin" to="/administration/signalements" class="nav-mobile-link">⚑ Signalements <span v-if="notifications.pendingReports" class="nav-msg-badge">{{ notifications.pendingReports }}</span></router-link>
 
         <template v-if="!auth.isAuthenticated">
           <router-link to="/login" class="nav-mobile-link">Connexion</router-link>
@@ -125,7 +127,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useAuthStore } from '../stores/auth'
 import { useNotificationStore } from '../stores/notifications'
@@ -137,6 +139,7 @@ const route = useRoute()
 const menuOpen = ref(false)
 const mobileOpen = ref(false)
 const isScrolled = ref(false)
+const isAdmin = computed(() => ['admin', 'fondatrice'].includes(auth.user?.role))
 
 const navItems = [
   { path: '/mes-rp', label: 'Mes RP', icon: '📜' },
@@ -328,6 +331,20 @@ html.light .header.scrolled {
   gap: 0.5rem;
   flex-shrink: 0;
 }
+
+.admin-alert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .3rem .5rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: .82rem;
+  white-space: nowrap;
+}
+.admin-alert-link:hover { background: var(--primary-light); }
 
 .notification-btn {
   position: relative;
