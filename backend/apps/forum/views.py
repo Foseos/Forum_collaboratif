@@ -62,6 +62,26 @@ class ContactRequestView(APIView):
         serializer = ContactRequestSerializer(data=request.data, context={'request': request})
         serializer.is_valid(raise_exception=True)
         data = serializer.validated_data
+        if request.user.is_authenticated and data['kind'] != ContactRequest.Kind.REPORT:
+            ava = get_user_model().objects.filter(username__iexact='Ava Bartholomé', is_active=True).first()
+            if ava and ava.pk != request.user.pk:
+                subject = {
+                    ContactRequest.Kind.PRIVACY: 'Demande concernant mes données',
+                    ContactRequest.Kind.REPORT: 'Signalement d’un message',
+                    ContactRequest.Kind.GENERAL: 'Question à l’administration',
+                }[data['kind']]
+                if PrivateMessage.objects.filter(
+                    sender=request.user, recipient=ava, subject=subject,
+                    created_at__gte=timezone.now() - timedelta(minutes=1),
+                ).exists():
+                    return Response({'detail': 'Une demande vient déjà d’être envoyée. Réessayez dans une minute.'}, status=429)
+                body = data['message']
+                if data.get('post'):
+                    post = data['post']
+                    body = f"Message signalé : {request.build_absolute_uri(f'/topics/{post.topic.slug}')} (message n° {post.pk})\n\n{body}"
+                pm = PrivateMessage.objects.create(sender=request.user, recipient=ava, subject=subject, body=body)
+                transaction.on_commit(lambda: send_private_message_email(pm.pk))
+                return Response({'detail': 'Votre message privé a été envoyé à Ava Bartholomé.'}, status=201)
         if ContactRequest.objects.filter(
             email__iexact=data['email'],
             created_at__gte=timezone.now() - timedelta(minutes=1),
@@ -79,7 +99,12 @@ class ContactRequestAdminView(APIView):
     def get(self, request):
         if request.user.role not in ('admin', 'fondatrice'):
             return Response(status=403)
-        requests = ContactRequest.objects.select_related('post__topic', 'author')[:100]
+        requests = ContactRequest.objects.select_related('post__topic', 'author')
+        if request.query_params.get('kind') == 'report':
+            requests = requests.filter(kind=ContactRequest.Kind.REPORT)
+        elif request.query_params.get('kind') == 'other':
+            requests = requests.exclude(kind=ContactRequest.Kind.REPORT)
+        requests = requests[:100]
         return Response([{
             'id': item.pk,
             'kind': item.kind,

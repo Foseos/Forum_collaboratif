@@ -1,6 +1,7 @@
 <template>
   <div class="page admin-requests-page"><div class="container">
-    <h1>Demandes et signalements</h1>
+    <h1>{{ reportsOnly ? 'Signalements' : 'Demandes des visiteurs' }}</h1>
+    <p class="text-secondary">{{ reportsOnly ? 'Cette boîte contient uniquement les messages et images signalés.' : 'Les membres connectés écrivent directement à Ava par message privé.' }}</p>
     <p v-if="loading">Chargement…</p>
     <p v-else-if="error" role="alert">{{ error }}</p>
     <p v-else-if="!requests.length">Aucune demande reçue.</p>
@@ -17,19 +18,26 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, computed, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import api from '../composables/useApi'
 
+const route = useRoute()
+const reportsOnly = computed(() => route.path === '/administration/signalements')
 const labels = { privacy: 'Données personnelles', report: 'Signalement', general: 'Autre demande' }
 const requests = ref([])
 const loading = ref(true)
 const error = ref('')
 
-onMounted(async () => {
-  try { requests.value = (await api.get('/administration/contact/')).data }
+async function loadRequests() {
+  loading.value = true
+  error.value = ''
+  try { requests.value = (await api.get('/administration/contact/', { params: { kind: reportsOnly.value ? 'report' : 'other' } })).data }
   catch { error.value = 'Impossible de charger les demandes.' }
   finally { loading.value = false }
-})
+}
+onMounted(loadRequests)
+watch(reportsOnly, loadRequests)
 
 async function toggleResolved(item) {
   try {

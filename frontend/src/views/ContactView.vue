@@ -2,7 +2,7 @@
   <div class="page contact-page">
     <div class="container contact-wrap">
       <h1>Contacter l’administration</h1>
-      <p>Utilisez ce formulaire pour une question sur vos données, signaler un contenu ou demander de l’aide. Votre demande est visible uniquement par l’administration.</p>
+      <p>Utilisez ce formulaire pour une question sur vos données, signaler un contenu ou demander de l’aide. <template v-if="form.kind === 'report'">Votre signalement ira dans une boîte distincte, réservée à l’administration.</template><template v-else-if="auth.isAuthenticated">Votre demande sera envoyée par message privé à Ava Bartholomé. Elle pourra vous répondre dans votre <router-link to="/messageries">messagerie</router-link>.</template><template v-else>Votre demande sera transmise à l’administration, qui pourra vous répondre par e-mail.</template></p>
       <form class="card contact-form" @submit.prevent="submit">
         <label for="contact-kind">Motif</label>
         <select id="contact-kind" v-model="form.kind" class="form-input">

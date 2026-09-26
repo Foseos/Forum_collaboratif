@@ -142,6 +142,9 @@
             <div class="divider"></div>
 
             <div class="profile-sheet-links">
+              <router-link v-if="auth.isAuthenticated && !isOwnProfile && member.username === 'Ava Bartholomé'" :to="`/messageries?to=${member.id}&username=${encodeURIComponent(member.username)}`" class="btn btn-primary btn-sm">✉ Envoyer un message privé à Ava</router-link>
+              <router-link v-if="isOwnProfile && member.username === 'Ava Bartholomé'" to="/messageries" class="btn btn-primary btn-sm">✉ Voir mes messages privés</router-link>
+              <router-link v-if="isOwnProfile && member.username === 'Ava Bartholomé'" to="/administration/signalements" class="btn btn-secondary btn-sm">⚑ Voir les signalements</router-link>
               <router-link v-if="member.presentation_topic_slug" :to="`/topics/${member.presentation_topic_slug}`" class="btn btn-secondary btn-sm">✦ Présentation validée</router-link>
               <span v-else class="text-secondary text-sm">Présentation validée : aucune fiche archivée.</span>
               <router-link v-if="member.recap_topic_slug" :to="`/topics/${member.recap_topic_slug}`" class="btn btn-secondary btn-sm">✦ Carnet du personnage</router-link>
