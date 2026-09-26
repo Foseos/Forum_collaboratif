@@ -91,6 +91,12 @@ const featuredPathTitles = new Set([
   'Hématokinésie', 'Aérokinésie', 'Sens aiguisés', 'Régénération',
   'Force accrue', 'Suggestion mentale', 'Perception des liens affectifs',
   'Élan affectif',
+  'Projection de peur', 'Rayonnement de joie', 'Vertige de folie',
+  'Chagrin partagé', 'Élan de courage',
+  'Illusion',
+  'Malaise surnaturel',
+  'Réminiscence',
+  'Manipulation des sentiments',
 ])
 function heading(element) {
   let parent = element.parentElement

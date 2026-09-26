@@ -110,6 +110,14 @@ POWER_DIRECTORY += """
     <tr><td>Suggestion mentale</td><td>Tente d'influencer brièvement une décision simple chez une cible réceptive. Ne force pas un joueur à agir ni n'efface ses souvenirs.</td><td>Hypnose ★ · Suggestion différée ★</td></tr>
     <tr><td>Perception des liens affectifs</td><td>Ressent l'existence d'un attachement émotionnel marqué entre deux personnes proches, sans en connaître la nature exacte ni accéder à leurs pensées.</td><td>Lecture affinée des liens ★ · Écho affectif ★</td></tr>
     <tr><td>Élan affectif</td><td>Favorise une émotion positive déjà présente entre deux personnes consentantes, sans créer de l'amour ni imposer une relation.</td><td>Apaisement partagé ★ · Harmonie passagère ★</td></tr>
+    <tr><td>Projection de peur</td><td>Éveille brièvement une peur liée au contexte chez une cible proche. La cible choisit sa réaction et peut résister à l'effet.</td><td>Écho des craintes ★ · Onde d'effroi ★</td></tr>
+    <tr><td>Rayonnement de joie</td><td>Diffuse une sensation de joie passagère autour du personnage, sans effacer une peine profonde ni forcer l'enthousiasme.</td><td>Joie partagée ★ · Réconfort durable ★</td></tr>
+    <tr><td>Vertige de folie</td><td>Trouble brièvement les perceptions d'une cible, comme si le décor devenait incohérent. Ne provoque ni maladie mentale ni perte durable de contrôle.</td><td>Illusions sensorielles ★ · Désorientation de groupe ★</td></tr>
+    <tr><td>Chagrin partagé</td><td>Fait ressentir une tristesse passagère ou permet d'en porter une part avec une personne consentante. Aucun souvenir n'est modifié.</td><td>Écho mélancolique ★ · Partage du fardeau ★</td></tr>
+    <tr><td>Élan de courage</td><td>Soutient temporairement la détermination d'une personne consentante face à une peur, sans supprimer le danger ni garantir sa réussite.</td><td>Courage collectif ★ · Résistance à l'effroi ★</td></tr>
+    <tr><td>Malaise surnaturel</td><td>Provoque brièvement des symptômes fictifs comme une faiblesse, des frissons ou des vertiges. Ne transmet aucune maladie réelle, ne se propage pas et ne laisse aucune séquelle.</td><td>Symptômes ciblés ★ · Onde de malaise ★</td></tr>
+    <tr><td>Réminiscence</td><td>Perçoit un fragment de souvenir lié à une personne consentante ou à un objet touché. Les images restent partielles et n'offrent pas un accès libre aux secrets d'autrui.</td><td>Partage de souvenir ★ · Reconstitution mémorielle ★</td></tr>
+    <tr><td>Manipulation des sentiments</td><td>Influe sur l'intensité ou la nature d'un sentiment, et peut notamment faire naître l'amour. Pour un personnage joué, l'effet et sa durée sont convenus avec son joueur ; aucun lien amoureux ni aucune relation ne sont imposés.</td><td>Éveil amoureux ★ · Sentiment durable ★</td></tr>
   </tbody></table></div>
 </div>"""
 

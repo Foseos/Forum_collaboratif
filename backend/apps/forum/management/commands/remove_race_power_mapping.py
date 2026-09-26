@@ -46,6 +46,10 @@ class Command(BaseCommand):
         )
         updated = updated.replace(">Contrôle végétal</td>", ">Phytokinésie (contrôle végétal)</td>")
         updated = updated.replace(">Contrôle de l'eau</td>", ">Aquakinésie (contrôle de l'eau)</td>")
+        updated = updated.replace(
+            "Illusion tactile (perçue par tous les sens) ★</td>",
+            "Illusion tactile (perçue par tous les sens) ★ · Illusion partagée ★</td>",
+        )
         directory_start = updated.find(DIRECTORY_MARKER)
         if directory_start >= 0:
             progression_start = updated.find('<section data-power-progression="creation-max-4"', directory_start)
