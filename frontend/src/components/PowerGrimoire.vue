@@ -93,7 +93,7 @@ const featuredPathTitles = new Set([
   'Élan affectif',
   'Projection de peur', 'Rayonnement de joie', 'Vertige de folie',
   'Chagrin partagé', 'Élan de courage',
-  'Illusion',
+  'Illusion visuelle', 'Illusion mentale',
   'Malaise surnaturel',
   'Réminiscence',
   'Manipulation des sentiments',
@@ -121,7 +121,7 @@ const entries = computed(() => {
     const family = heading(row.closest('table'))
     powers.push({ id: powers.length, title, description, evolution, family,
       notes: powerNotes[title], hasStar: evolution.includes('★'),
-      requiresStaff: ['Portail temporel', 'Réplique de pouvoir'].includes(title),
+      requiresStaff: title === 'Réplique de pouvoir',
       steps: evolution.split('·').map(label => ({ label: label.trim(), explanation: explainStep(label) })),
     })
   }

@@ -118,6 +118,7 @@ POWER_DIRECTORY += """
     <tr><td>Malaise surnaturel</td><td>Provoque brièvement des symptômes fictifs comme une faiblesse, des frissons ou des vertiges. Ne transmet aucune maladie réelle, ne se propage pas et ne laisse aucune séquelle.</td><td>Symptômes ciblés ★ · Onde de malaise ★</td></tr>
     <tr><td>Réminiscence</td><td>Perçoit un fragment de souvenir lié à une personne consentante ou à un objet touché. Les images restent partielles et n'offrent pas un accès libre aux secrets d'autrui.</td><td>Partage de souvenir ★ · Reconstitution mémorielle ★</td></tr>
     <tr><td>Manipulation des sentiments</td><td>Influe sur l'intensité ou la nature d'un sentiment, et peut notamment faire naître l'amour. Pour un personnage joué, l'effet et sa durée sont convenus avec son joueur ; aucun lien amoureux ni aucune relation ne sont imposés.</td><td>Éveil amoureux ★ · Sentiment durable ★</td></tr>
+    <tr><td>Illusion mentale</td><td>Fait percevoir à une cible une scène, une voix ou une sensation qui n'existe que dans son esprit. Le décor réel ne change pas et la cible garde ses décisions.</td><td>Illusion multisensorielle ★ · Projection mentale multiple ★</td></tr>
   </tbody></table></div>
 </div>"""
 
