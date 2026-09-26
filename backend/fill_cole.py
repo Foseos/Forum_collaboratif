@@ -114,7 +114,7 @@ Le mariage de Cole et Phoebe fut une victoire arrachée à l'impossible — et p
 Phoebe avait tout donné. Elle ne pouvait plus. Cole le comprit. Il ne se battit pas contre sa décision — non par résignation, mais parce qu'il l'aimait assez pour respecter ce qu'elle choisissait pour elle-même.<br><br>
 
 <strong style="color: #e2d9f3;">Les années de reconstruction — et Phoebe, Coop, les filles</strong><br>
-Phoebe rencontra Coop Swann. Elle eut trois filles avec lui : Prudence Johanna, Parker, et Peyton. Cole aurait pu disparaître. Il n'en fit rien.<br><br>
+Phoebe rencontra Coop Everhart. Elle eut trois filles avec lui : Prudence Johanna, Parker, et Peyton. Cole aurait pu disparaître. Il n'en fit rien.<br><br>
 
 Non par amour possessif ou incapacité à tourner la page, mais parce que Jensen était quelque part dans le monde sous une emprise obscure, et parce que ces trois filles grandissaient dans un univers magique complexe. Cole resta — à distance d'abord, puis graduellement plus présent. Il ne chercha jamais à remplacer Coop. Il devint autre chose : un adulte de confiance, une présence stable, quelqu'un qui avait traversé le pire et était revenu.<br><br>
 

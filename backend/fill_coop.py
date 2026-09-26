@@ -12,13 +12,13 @@ CONTENT = """<div style="font-family: Georgia, 'Times New Roman', serif; backgro
 <tr>
   <td style="vertical-align: top; padding-right: 1.5rem;">
     <p style="margin: 0 0 0.5rem; font-size: 0.58rem; letter-spacing: 0.38em; text-transform: uppercase; color: #6d28d9;">✦ Nexus Arcana · Livre des Ombres ✦</p>
-    <h1 style="margin: 0 0 0.6rem; font-size: 2rem; font-weight: normal; font-style: italic; color: #f5d76e; letter-spacing: 0.04em; line-height: 1.2;">Coop<br>Swann</h1>
+    <h1 style="margin: 0 0 0.6rem; font-size: 2rem; font-weight: normal; font-style: italic; color: #f5d76e; letter-spacing: 0.04em; line-height: 1.2;">Coop<br>Everhart</h1>
     <p style="margin: 0 0 1rem; font-size: 0.82rem; color: #a78bfa; font-style: italic; letter-spacing: 0.06em;">Cupidon · Le Bien · Père de P.J., Parker et Peyton</p>
     <p style="margin: 0; font-size: 0.75rem; color: #4b3a6b; font-style: italic; line-height: 1.7;">« L'amour, c'est ma nature. Ma mission, mon sang, ma raison d'être. Alors même quand il fait mal — surtout quand il fait mal — je sais qu'il est réel. »</p>
   </td>
   <td style="vertical-align: top; width: 210px; text-align: center;">
-    <img src="https://zupimages.net/up/26/11/ia6b.jpg" alt="Coop Swann" style="width:200px;height:320px;object-fit:cover;border-radius:6px;border:2px solid rgba(124,58,237,0.35);display:block;margin:0 auto;">
-    <p style="margin: 0.35rem 0 0; font-size: 0.6rem; color: #3d2d5e; font-style: italic;">Coop Swann — Ft Victor Webster</p>
+    <img src="https://zupimages.net/up/26/11/ia6b.jpg" alt="Coop Everhart" style="width:200px;height:320px;object-fit:cover;border-radius:6px;border:2px solid rgba(124,58,237,0.35);display:block;margin:0 auto;">
+    <p style="margin: 0.35rem 0 0; font-size: 0.6rem; color: #3d2d5e; font-style: italic;">Coop Everhart — Ft Victor Webster</p>
   </td>
 </tr>
 </table>
@@ -91,7 +91,7 @@ Peut paraître naïf face à la complexité du monde</p>
   </div>
   <div style="padding: 1rem;">
     <p style="margin: 0; line-height: 1.9; color: #c4b5d4; text-align: justify; font-size: 0.9rem;"><strong style="color: #e2d9f3;">Un Cupidon parmi les hommes — des siècles de missions</strong><br>
-Coop Swann existe depuis plus longtemps qu'il ne sait l'expliquer. Les Cupidons ne naissent pas — ils émergent, façonnés par l'énergie de l'amour lui-même, porteurs d'une mission aussi ancienne que l'humanité : guider les âmes vers ce qui leur est destiné. Pendant des siècles, Coop accomplit cette mission avec la sérénité d'un être qui ne doute pas de sa nature. Il observait, guidait, disparaissait. Il ne s'attachait jamais. Ce n'était pas dans sa nature — ou du moins, c'est ce qu'il croyait.<br><br>
+Coop Everhart existe depuis plus longtemps qu'il ne sait l'expliquer. Les Cupidons ne naissent pas — ils émergent, façonnés par l'énergie de l'amour lui-même, porteurs d'une mission aussi ancienne que l'humanité : guider les âmes vers ce qui leur est destiné. Pendant des siècles, Coop accomplit cette mission avec la sérénité d'un être qui ne doute pas de sa nature. Il observait, guidait, disparaissait. Il ne s'attachait jamais. Ce n'était pas dans sa nature — ou du moins, c'est ce qu'il croyait.<br><br>
 
 <strong style="color: #e2d9f3;">Phoebe Halliwell — l'assignation impossible</strong><br>
 Les Anciens lui confièrent une mission particulière : Phoebe Halliwell, Charmed One, sorcière de la lignée Halliwell, avait vécu un amour dévastateur et n'arrivait plus à croire qu'un autre était possible. Sa mission — lui redonner confiance en l'amour, l'aider à s'ouvrir à quelqu'un de nouveau.<br><br>
@@ -123,9 +123,9 @@ Coop continue d'exercer son rôle de Cupidon. Il guide des âmes, organise des r
 
 </div>"""
 
-t = Topic.objects.filter(slug='coop-swann').first()
+t = Topic.objects.filter(slug='coop-everhart').first()
 if not t:
-    print("ERROR: topic 'coop-swann' not found")
+    print("ERROR: topic 'coop-everhart' not found")
     exit(1)
 
 p = Post.objects.filter(topic=t).first()
@@ -135,4 +135,4 @@ if not p:
 
 p.content = CONTENT
 p.save()
-print(f"OK — fiche Coop Swann saved (post id={p.id}, {len(CONTENT)} chars)")
+print(f"OK — fiche Coop Everhart saved (post id={p.id}, {len(CONTENT)} chars)")

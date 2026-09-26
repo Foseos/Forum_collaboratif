@@ -62,6 +62,10 @@ const routes = [
     props: true,
   },
   {
+    path: '/topics/coop-swann',
+    redirect: '/topics/coop-everhart',
+  },
+  {
     path: '/topics/:slug',
     name: 'topic',
     component: TopicView,

@@ -22,7 +22,7 @@ SCENARIO_AGES = {
     'christopher-halliwell': ('29 ans en 2033', '16 juillet 2004'),
     'christie-jenkins': ('35 ans depuis sa naissance en 2033 · apparence physique plus jeune que Billie depuis son retour', '20 janvier 1998 · date adaptée à Nexus Arcana'),
     'cole-turner': ('148 ans depuis sa naissance en 2033 · apparence d’un homme d’une quarantaine d’années', '14 novembre 1885, San Francisco'),
-    'coop-swann': ('Âge chronologique indéterminé · apparence d’un homme d’une quarantaine d’années', 'Date inconnue · existence antérieure à l’époque contemporaine'),
+    'coop-everhart': ('Âge chronologique indéterminé · apparence d’un homme d’une quarantaine d’années', 'Date inconnue · existence antérieure à l’époque contemporaine'),
     'cora-hale': ('28 ans en 2033', '18 septembre 2005 · date adaptée à Nexus Arcana'),
     'damon-salvatore': ('194 ans depuis sa naissance en 2033 · apparence d’environ 25 ans', '18 juin 1839'),
     'davina-claire': ('29 ans en 2033', '12 mai 2004 · date adaptée à Nexus Arcana'),
