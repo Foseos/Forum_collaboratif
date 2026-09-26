@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import AvatarDirectoryEntry, Category, DemonicFormEntry, Post, Reaction, Topic
+from .models import AvatarDirectoryEntry, Category, ContactRequest, DemonicFormEntry, Post, Reaction, Topic
 
 
 @admin.register(AvatarDirectoryEntry)
@@ -41,3 +41,11 @@ class PostAdmin(admin.ModelAdmin):
 class ReactionAdmin(admin.ModelAdmin):
     list_display = ["user", "post", "reaction_type", "created_at"]
     list_filter = ["reaction_type"]
+
+
+@admin.register(ContactRequest)
+class ContactRequestAdmin(admin.ModelAdmin):
+    list_display = ['kind', 'email', 'post', 'is_resolved', 'created_at']
+    list_filter = ['kind', 'is_resolved', 'created_at']
+    search_fields = ['email', 'message']
+    readonly_fields = ['kind', 'email', 'message', 'post', 'author', 'created_at']

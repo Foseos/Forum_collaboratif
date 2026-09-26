@@ -40,6 +40,10 @@
           <router-link to="/membres">Membres</router-link>
           <span class="footer-dot">·</span>
           <router-link to="/groupes">Groupes</router-link>
+          <span class="footer-dot">·</span>
+          <router-link to="/contact">Contact et signalements</router-link>
+          <span class="footer-dot">·</span>
+          <router-link to="/confidentialite">Vos données</router-link>
         </div>
         <p class="footer-copy">© 2026 Nexus Arcana — Forum RPG crossover non officiel</p>
         <p class="footer-rights">

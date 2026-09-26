@@ -195,6 +195,7 @@
           :user-reactions="post.user_reactions || []"
           @react="(type) => $emit('react', post.id, type)"
         />
+        <router-link class="post-report-link" :to="`/contact?post=${post.id}`">Signaler ce message</router-link>
       </div>
 
     </div>
@@ -329,6 +330,7 @@ function formatDate(dateStr) {
 </script>
 
 <style scoped>
+.post-report-link { display: inline-block; margin-top: .55rem; font-size: .78rem; color: var(--text-secondary); }
 .dice-result { padding:.75rem 1rem;margin:0 0 1rem;border:1px solid rgba(245,215,110,.45);border-radius:8px;background:rgba(245,215,110,.08);color:#f5d76e;display:flex;gap:.5rem;flex-wrap:wrap;align-items:center; }
 .post-card {
   margin-bottom: 1rem;

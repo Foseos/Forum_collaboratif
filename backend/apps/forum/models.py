@@ -231,6 +231,26 @@ class PrivateMessage(models.Model):
         return f"PM: {self.sender} → {self.recipient} | {self.subject[:30]}"
 
 
+class ContactRequest(models.Model):
+    class Kind(models.TextChoices):
+        PRIVACY = 'privacy', 'Données personnelles'
+        REPORT = 'report', 'Signalement'
+        GENERAL = 'general', 'Autre demande'
+
+    kind = models.CharField(max_length=10, choices=Kind.choices)
+    email = models.EmailField()
+    message = models.TextField(max_length=3000)
+    post = models.ForeignKey(Post, on_delete=models.SET_NULL, null=True, blank=True)
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True,
+    )
+    is_resolved = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+
 class SitePage(models.Model):
     slug = models.SlugField(max_length=100, unique=True)
     content = models.TextField(blank=True, default='')

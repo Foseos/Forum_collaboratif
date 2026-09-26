@@ -1,9 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.password_validation import validate_password
 from rest_framework import serializers
-from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-
-from .ip_tracking import record_ip_event
 
 User = get_user_model()
 
@@ -24,12 +21,6 @@ class UniqueAccountEmailMixin:
             )
         return email
 
-
-class TrackedTokenObtainPairSerializer(TokenObtainPairSerializer):
-    def validate(self, attrs):
-        data = super().validate(attrs)
-        record_ip_event(self.user, self.context['request'], 'login')
-        return data
 
 # Tous les champs du profil RPG
 PROFILE_FIELDS = [

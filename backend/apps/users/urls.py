@@ -1,13 +1,13 @@
 from django.urls import path
-from rest_framework_simplejwt.views import TokenRefreshView
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from .views import (ConfirmEmailView, RegisterView, RequestEmailChangeView,
-                    ResendConfirmationView, TrackedTokenObtainPairView,
+                    ResendConfirmationView,
                     PasswordResetRequestView, PasswordResetConfirmView)
 
 urlpatterns = [
     path("register/", RegisterView.as_view(), name="auth-register"),
-    path("login/", TrackedTokenObtainPairView.as_view(), name="auth-login"),
+    path("login/", TokenObtainPairView.as_view(), name="auth-login"),
     path("refresh/", TokenRefreshView.as_view(), name="auth-refresh"),
     path("confirm-email/", ConfirmEmailView.as_view(), name="auth-confirm-email"),
     path("resend-confirmation/", ResendConfirmationView.as_view(), name="auth-resend-confirmation"),

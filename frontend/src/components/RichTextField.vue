@@ -24,6 +24,7 @@
       <input v-model="urlInput" type="url" class="form-input" placeholder="https://exemple.fr/image.gif" aria-label="Adresse de l’image" @keydown.enter.prevent="insertImageUrl" />
       <button type="button" class="btn btn-secondary btn-sm" @click="insertImageUrl">Insérer</button>
     </div>
+    <p v-if="showUrl && !sourceMode" class="external-image-note">Une image externe est chargée depuis son site d’origine, qui peut recevoir les données techniques du visiteur. Utilisez seulement une image que vous êtes autorisé à partager.</p>
     <div v-if="showLink && !sourceMode" class="url-row">
       <input v-model="linkLabel" type="text" class="form-input" placeholder="Texte du lien" aria-label="Texte du lien" />
       <input v-model="linkUrl" type="text" class="form-input" placeholder="/topics/mon-sujet ou https://…" aria-label="Adresse du lien" @keydown.enter.prevent="insertLink" />
@@ -173,6 +174,7 @@ async function uploadImage(event) {
 </script>
 
 <style scoped>
+.external-image-note { margin: .35rem .5rem .65rem; color: var(--text-secondary); font-size: .78rem; line-height: 1.5; }
 .rich-field { border: 1px solid rgba(124,58,237,.28); border-radius: 7px; overflow: hidden; }
 .rich-toolbar { display: flex; align-items: center; gap: .25rem; flex-wrap: wrap; padding: .45rem .55rem; background: rgba(109,40,217,.08); border-bottom: 1px solid rgba(124,58,237,.2); }
 .rich-toolbar button { min-height: 2rem; padding: 0 .55rem; border: 1px solid transparent; border-radius: 5px; background: transparent; color: #c4b5d4; cursor: pointer; }

@@ -17,30 +17,6 @@
           <router-link to="/profile" class="btn btn-sm btn-primary own-edit-btn">✏️ Modifier mon profil</router-link>
         </div>
 
-        <section v-if="canViewIPHistory" class="card ip-history-card">
-          <div class="ip-history-heading">
-            <div><strong>🔒 Suivi des adresses IP</strong><p>Réservé à la fondatrice et à l’administration.</p></div>
-            <button class="btn btn-secondary btn-sm" @click="toggleIPHistory">{{ showIPHistory ? 'Masquer les IP' : 'Consulter les IP' }}</button>
-          </div>
-          <div v-if="showIPHistory" class="ip-history-content">
-            <p class="text-secondary">Une adresse commune peut correspondre à un foyer, un réseau partagé ou un VPN ; elle ne prouve pas à elle seule un double compte.</p>
-            <p v-if="ipHistoryLoading">Chargement…</p>
-            <p v-else-if="ipHistoryError" role="alert">{{ ipHistoryError }}</p>
-            <template v-else-if="ipHistory">
-              <h3>Autres comptes vus sur une même IP</h3>
-              <ul v-if="ipHistory.shared_accounts.length">
-                <li v-for="account in ipHistory.shared_accounts" :key="account.id"><router-link :to="`/membres/${account.id}?ip=1`">{{ account.name }}</router-link> · {{ account.shared_ips.join(', ') }}</li>
-              </ul>
-              <p v-else>Aucun autre compte correspondant dans l’historique conservé.</p>
-              <h3>Inscriptions et connexions récentes</h3>
-              <ul v-if="ipHistory.entries.length">
-                <li v-for="(entry, index) in ipHistory.entries" :key="index">{{ entry.ip_address }} · {{ entry.event === 'registration' ? 'Inscription' : 'Connexion' }} · {{ formatDateTime(entry.created_at) }}</li>
-              </ul>
-              <p v-else>Aucune adresse enregistrée pour ce compte.</p>
-            </template>
-          </div>
-        </section>
-
         <section v-if="canDeleteMember" class="card delete-character-card">
           <div class="delete-character-heading">
             <div><strong>Administration du personnage</strong><p>Supprimer définitivement ce personnage, son compte, ses sujets et ses messages.</p></div>
@@ -68,7 +44,7 @@
           </form>
         </section>
 
-        <section v-if="canViewIPHistory" class="card ip-history-card">
+        <section v-if="canManageAccounts" class="card linked-accounts-card">
           <strong>🔒 Comptes liés validés par le staff</strong>
           <p class="text-secondary">Après acceptation d'une demande de double compte, choisissez ici son compte principal.</p>
           <div class="form-group">
@@ -292,7 +268,7 @@ const auth = useAuthStore()
 const member = ref(null)
 const loading = ref(true)
 const error = ref('')
-const canViewIPHistory = computed(() => ['admin', 'fondatrice'].includes(auth.user?.role))
+const canManageAccounts = computed(() => ['admin', 'fondatrice'].includes(auth.user?.role))
 const isFounder = computed(() => auth.user?.role === 'fondatrice')
 const showNameForm = ref(false)
 const newUsername = ref('')
@@ -316,7 +292,7 @@ async function saveUsername() {
     savingUsername.value = false
   }
 }
-const canDeleteMember = computed(() => canViewIPHistory.value && member.value?.role === 'user' && !isOwnProfile.value)
+const canDeleteMember = computed(() => canManageAccounts.value && member.value?.role === 'user' && !isOwnProfile.value)
 const showDeleteForm = ref(false)
 const deleteConfirmation = ref('')
 const deletingMember = ref(false)
@@ -335,10 +311,6 @@ async function deleteMember() {
     deletingMember.value = false
   }
 }
-const showIPHistory = ref(false)
-const ipHistory = ref(null)
-const ipHistoryLoading = ref(false)
-const ipHistoryError = ref('')
 const linkedAccounts = ref(null)
 const selectedMainAccount = ref('')
 const accountOptions = ref([])
@@ -347,7 +319,7 @@ const linkMessage = ref('')
 const availableMainAccounts = computed(() => accountOptions.value.filter(account => account.id !== member.value?.id))
 
 async function loadLinkedAccounts() {
-  if (!canViewIPHistory.value) return
+  if (!canManageAccounts.value) return
   try {
     const [links, users] = await Promise.all([
       api.get(`/users/${props.id}/linked-accounts/`), api.get('/users/'),
@@ -373,21 +345,6 @@ async function saveLinkedAccount() {
     linkMessage.value = e.response?.data?.detail || 'Enregistrement impossible.'
   } finally {
     linkSaving.value = false
-  }
-}
-
-async function toggleIPHistory() {
-  showIPHistory.value = !showIPHistory.value
-  if (!showIPHistory.value || ipHistory.value) return
-  ipHistoryLoading.value = true
-  ipHistoryError.value = ''
-  try {
-    const { data } = await api.get(`/users/${props.id}/ip-history/`)
-    ipHistory.value = data
-  } catch {
-    ipHistoryError.value = 'Impossible de charger l’historique des IP.'
-  } finally {
-    ipHistoryLoading.value = false
   }
 }
 
@@ -479,7 +436,6 @@ async function fetchMember() {
     newUsername.value = data.username
     if (canDeleteMember.value && route.query.supprimer === '1') showDeleteForm.value = true
     await loadLinkedAccounts()
-    if (canViewIPHistory.value && route.query.ip === '1' && !showIPHistory.value) await toggleIPHistory()
   } catch {
     error.value = 'Membre introuvable ou profil inaccessible.'
   } finally {
@@ -491,8 +447,6 @@ onMounted(fetchMember)
 watch(() => props.id, () => {
   member.value = null
   loading.value = true
-  ipHistory.value = null
-  showIPHistory.value = false
   showDeleteForm.value = false
   deleteConfirmation.value = ''
   showNameForm.value = false
@@ -503,12 +457,7 @@ watch(() => props.id, () => {
 
 <style scoped>
 .profile-page { padding: 2.5rem 0; }
-.ip-history-card { margin: 0 0 1.5rem; padding: 1.25rem; border-color: rgba(167,139,250,.45); }
-.ip-history-heading { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
-.ip-history-heading p { margin:.25rem 0 0; color:var(--text-secondary); font-size:.82rem; }
-.ip-history-content { margin-top: 1rem; line-height: 1.7; overflow-wrap: anywhere; }
-.ip-history-content h3 { margin: 1rem 0 .4rem; color: var(--accent); font-size: 1rem; }
-.ip-history-content ul { margin: 0; padding-left: 1.3rem; }
+.linked-accounts-card { margin: 0 0 1.5rem; padding: 1.25rem; border-color: rgba(167,139,250,.45); }
 .delete-character-card { margin: 0 0 1.5rem; padding: 1.25rem; border-color: rgba(239, 68, 68, .4); }
 .delete-character-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .delete-character-heading p, .delete-character-form p { color: var(--text-secondary); margin: .4rem 0; }

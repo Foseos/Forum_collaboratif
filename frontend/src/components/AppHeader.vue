@@ -64,6 +64,10 @@
                   <span aria-hidden="true">⚑</span>
                   Alertes d’activité
                 </router-link>
+                <router-link v-if="['admin', 'fondatrice'].includes(auth.user?.role)" to="/administration/demandes" class="dropdown-item" @click="menuOpen = false">
+                  <span aria-hidden="true">✉</span>
+                  Demandes et signalements
+                </router-link>
                 <button class="dropdown-item" @click="handleLogout">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
                   Déconnexion
@@ -104,6 +108,7 @@
         <div class="nav-mobile-divider"></div>
 
         <router-link v-if="['admin', 'fondatrice'].includes(auth.user?.role)" to="/administration/alertes-activite" class="nav-mobile-link">⚑ Alertes d’activité</router-link>
+        <router-link v-if="['admin', 'fondatrice'].includes(auth.user?.role)" to="/administration/demandes" class="nav-mobile-link">✉ Demandes et signalements</router-link>
 
         <template v-if="!auth.isAuthenticated">
           <router-link to="/login" class="nav-mobile-link">Connexion</router-link>

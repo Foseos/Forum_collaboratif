@@ -13,7 +13,7 @@ from rest_framework.views import APIView
 
 from apps.users.permissions import IsAdminOrModerator
 
-from .models import ArcanaTransaction, AvatarDirectoryEntry, Category, ChatMessage, DemonicFormEntry, Post, PrivateMessage, Reaction, SitePage, Topic
+from .models import ArcanaTransaction, AvatarDirectoryEntry, Category, ChatMessage, ContactRequest, DemonicFormEntry, Post, PrivateMessage, Reaction, SitePage, Topic
 from .avatar_directory import clean_avatar_name, scenario_avatar
 from .permissions import IsAuthorOrModeratorOrReadOnly, IsTopicNotLocked
 from .rewards import award_publication
@@ -34,6 +34,73 @@ from .serializers import (
     TopicDetailSerializer,
     TopicSerializer,
 )
+
+
+class ContactRequestSerializer(serializers.Serializer):
+    kind = serializers.ChoiceField(choices=ContactRequest.Kind.choices)
+    email = serializers.EmailField(required=False, allow_blank=True)
+    message = serializers.CharField(max_length=3000, min_length=10)
+    post = serializers.PrimaryKeyRelatedField(queryset=Post.objects.all(), required=False)
+
+    def validate(self, attrs):
+        if attrs['kind'] == ContactRequest.Kind.REPORT and not attrs.get('post'):
+            raise serializers.ValidationError({'post': 'Indiquez le message à signaler.'})
+        if attrs['kind'] != ContactRequest.Kind.REPORT and attrs.get('post'):
+            raise serializers.ValidationError({'post': 'Ce champ est réservé aux signalements.'})
+        request = self.context['request']
+        email = request.user.email if request.user.is_authenticated else attrs.get('email', '')
+        if not email:
+            raise serializers.ValidationError({'email': 'Indiquez une adresse pour recevoir une réponse.'})
+        attrs['email'] = email.strip().lower()
+        return attrs
+
+
+class ContactRequestView(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def post(self, request):
+        serializer = ContactRequestSerializer(data=request.data, context={'request': request})
+        serializer.is_valid(raise_exception=True)
+        data = serializer.validated_data
+        if ContactRequest.objects.filter(
+            email__iexact=data['email'],
+            created_at__gte=timezone.now() - timedelta(minutes=1),
+        ).exists():
+            return Response({'detail': 'Une demande vient déjà d’être envoyée. Réessayez dans une minute.'}, status=429)
+        ContactRequest.objects.create(
+            **data, author=request.user if request.user.is_authenticated else None,
+        )
+        return Response({'detail': 'Votre demande a été transmise à l’administration.'}, status=201)
+
+
+class ContactRequestAdminView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        if request.user.role not in ('admin', 'fondatrice'):
+            return Response(status=403)
+        requests = ContactRequest.objects.select_related('post__topic', 'author')[:100]
+        return Response([{
+            'id': item.pk,
+            'kind': item.kind,
+            'email': item.email,
+            'message': item.message,
+            'post_id': item.post_id,
+            'topic_slug': item.post.topic.slug if item.post else None,
+            'author': item.author.username if item.author else None,
+            'is_resolved': item.is_resolved,
+            'created_at': item.created_at,
+        } for item in requests])
+
+    def patch(self, request):
+        if request.user.role not in ('admin', 'fondatrice'):
+            return Response(status=403)
+        item = generics.get_object_or_404(ContactRequest, pk=request.data.get('id'))
+        if not isinstance(request.data.get('is_resolved'), bool):
+            return Response({'is_resolved': ['Indiquez vrai ou faux.']}, status=400)
+        item.is_resolved = request.data['is_resolved']
+        item.save(update_fields=['is_resolved'])
+        return Response({'id': item.pk, 'is_resolved': item.is_resolved})
 
 
 # Ces rubriques restent accessibles avant validation afin qu'un nouveau membre
@@ -268,6 +335,8 @@ class TopicViewSet(viewsets.ModelViewSet):
         category_slug = self.kwargs.get("category_slug")
         if category_slug:
             queryset = queryset.filter(category__slug=category_slug)
+            if category_slug == "scenarios-a-prendre":
+                queryset = queryset.order_by("-is_pinned", "created_at", "pk")
         return queryset
 
     def get_serializer_class(self):

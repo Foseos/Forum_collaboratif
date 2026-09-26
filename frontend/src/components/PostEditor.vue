@@ -39,6 +39,7 @@
       <input v-model="imageUrl" class="form-input" type="url" placeholder="https://exemple.fr/image.gif" aria-label="Adresse de l’image" @keydown.enter.prevent="insertImageUrl" />
       <button type="button" class="btn btn-secondary btn-sm" @click="insertImageUrl">Insérer</button>
     </div>
+    <p v-if="showImageUrl && tab === 'write' && !sourceMode" class="external-image-note">Une image externe est chargée depuis son site d’origine, qui peut recevoir les données techniques du visiteur. Utilisez seulement une image que vous êtes autorisé à partager.</p>
     <div v-if="showLinkUrl && tab === 'write' && !sourceMode" class="image-url-bar">
       <input v-model="linkLabel" class="form-input" type="text" placeholder="Texte du lien" aria-label="Texte du lien" />
       <input v-model="linkUrl" class="form-input" type="text" placeholder="/topics/mon-sujet ou https://…" aria-label="Adresse du lien" @keydown.enter.prevent="insertLink" />
@@ -315,6 +316,7 @@ function submit() {
 </script>
 
 <style scoped>
+.external-image-note { margin: .35rem .5rem .65rem; color: var(--text-secondary); font-size: .78rem; line-height: 1.5; }
 .post-editor { padding: 1.25rem; }
 
 /* En-tête */

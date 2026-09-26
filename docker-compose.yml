@@ -32,26 +32,6 @@ services:
     depends_on:
       - db
 
-  ip_cleanup:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    command: sh -c "while true; do python manage.py prune_ip_logs; sleep 3600; done"
-    volumes:
-      - ./backend:/app
-    env_file:
-      - .env
-    environment:
-      - DJANGO_SETTINGS_MODULE=config.settings.docker_dev
-      - DB_HOST=db
-      - DB_PORT=5432
-      - DB_NAME=forum
-      - DB_USER=forum_user
-      - DB_PASSWORD=forum_password
-    depends_on:
-      - db
-    restart: unless-stopped
-
   frontend:
     build:
       context: ./frontend

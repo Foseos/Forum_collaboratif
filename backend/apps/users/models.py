@@ -179,18 +179,3 @@ class User(AbstractUser):
     @property
     def is_moderator(self):
         return self.role in (self.Role.ADMIN, self.Role.MODERATOR, self.Role.FONDATRICE)
-
-
-class UserIPLog(models.Model):
-    class Event(models.TextChoices):
-        REGISTRATION = 'registration', 'Inscription'
-        LOGIN = 'login', 'Connexion'
-
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='ip_logs')
-    ip_address = models.GenericIPAddressField()
-    event = models.CharField(max_length=12, choices=Event.choices)
-    created_at = models.DateTimeField(auto_now_add=True, db_index=True)
-
-    class Meta:
-        ordering = ['-created_at']
-        indexes = [models.Index(fields=['ip_address', 'created_at'], name='users_iplog_ip_created_idx')]

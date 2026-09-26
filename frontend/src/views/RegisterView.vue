@@ -56,6 +56,7 @@
           />
         </div>
 
+        <p class="text-secondary" style="font-size:.82rem;line-height:1.55">Avant de vous inscrire, consultez <router-link to="/confidentialite">les informations sur vos données</router-link>. Pour toute question ou demande de suppression, <router-link to="/contact">contactez l’administration</router-link>.</p>
         <button type="submit" class="btn btn-primary" style="width: 100%" :disabled="loading">
           {{ loading ? 'Inscription...' : "S'inscrire" }}
         </button>

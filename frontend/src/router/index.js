@@ -22,6 +22,9 @@ import DemonicFormsView from '../views/DemonicFormsView.vue'
 import ArrivalGuideView from '../views/ArrivalGuideView.vue'
 
 const routes = [
+  { path: '/contact', name: 'contact', component: () => import('../views/ContactView.vue') },
+  { path: '/confidentialite', name: 'privacy', component: () => import('../views/PrivacyView.vue') },
+  { path: '/administration/demandes', name: 'admin-requests', component: () => import('../views/AdminContactRequestsView.vue'), meta: { auth: true, admin: true } },
   { path: '/mes-rp', name: 'my-rp', component: () => import('../views/MyRPView.vue'), meta: { auth: true } },
   { path: '/administration/alertes-activite', name: 'activity-alerts', component: () => import('../views/ActivityAlertsView.vue'), meta: { auth: true, admin: true } },
   { path: '/', name: 'home', component: HomeView },

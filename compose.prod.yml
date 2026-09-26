@@ -33,19 +33,6 @@ services:
       db:
         condition: service_healthy
 
-  ip_cleanup:
-    build: ./backend
-    restart: unless-stopped
-    env_file: .env.production
-    environment:
-      DJANGO_SETTINGS_MODULE: config.settings.prod
-      DB_HOST: db
-      DB_PORT: "5432"
-    command: sh -c "while true; do python manage.py prune_ip_logs; sleep 3600; done"
-    depends_on:
-      db:
-        condition: service_healthy
-
   frontend:
     build: ./frontend
     restart: unless-stopped

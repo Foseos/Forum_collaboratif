@@ -7,6 +7,7 @@ from .views import (
     PostViewSet, ReactionToggleView, SitePageView, TopicViewSet, UserParticipatedTopicsView,
     PartnershipRequestView, PartnershipApproveView,
     DiceRollView, LotteryDrawView, ArcanaHistoryView, NextStepsView,
+    ContactRequestView, ContactRequestAdminView,
 )
 
 # Category URLs
@@ -29,6 +30,8 @@ post_detail = PostViewSet.as_view(
 )
 
 urlpatterns = [
+    path('contact/', ContactRequestView.as_view(), name='contact-request'),
+    path('administration/contact/', ContactRequestAdminView.as_view(), name='admin-contact-requests'),
     path('posts/images/', PostImageUploadView.as_view(), name='post-image-upload'),
     path('arcana/history/', ArcanaHistoryView.as_view(), name='arcana-history'),
     path('next-steps/', NextStepsView.as_view(), name='next-steps'),

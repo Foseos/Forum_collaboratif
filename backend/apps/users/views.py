@@ -12,11 +12,8 @@ from rest_framework import generics, permissions, status
 from rest_framework.views import APIView
 from rest_framework import serializers
 from rest_framework.response import Response
-from rest_framework_simplejwt.views import TokenObtainPairView
 
-from .serializers import AdminProfileSerializer, ProfileSerializer, RegisterSerializer, TrackedTokenObtainPairSerializer, UserSerializer
-from .ip_tracking import prune_ip_logs, record_ip_event
-from .models import UserIPLog
+from .serializers import AdminProfileSerializer, ProfileSerializer, RegisterSerializer, UserSerializer
 from apps.forum.models import Category, Post, Topic
 from .validation_emails import send_character_validation_email
 from .email_confirmation import read_token, send_confirmation, notify_previous_email
@@ -25,10 +22,6 @@ from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
 
 User = get_user_model()
-
-
-class TrackedTokenObtainPairView(TokenObtainPairView):
-    serializer_class = TrackedTokenObtainPairSerializer
 
 
 class RegisterView(generics.CreateAPIView):
@@ -45,7 +38,6 @@ class RegisterView(generics.CreateAPIView):
                 send_confirmation(user, 'registration')
                 user.last_confirmation_sent_at = timezone.now()
                 user.save(update_fields=['last_confirmation_sent_at'])
-                record_ip_event(user, request, UserIPLog.Event.REGISTRATION)
         except (SMTPException, OSError):
             return Response({'detail': 'Le service e-mail est indisponible. Aucun compte n’a été créé ; réessayez plus tard.'}, status=503)
         return Response(
@@ -195,24 +187,6 @@ class ChangePasswordView(APIView):
             user.set_password(new_password)
             user.save(update_fields=['password'])
         return Response({'detail': 'Mot de passe modifié. Reconnectez-vous avec le nouveau mot de passe.'})
-
-
-class UserIPHistoryView(generics.GenericAPIView):
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get(self, request, pk):
-        if request.user.role not in ('admin', 'fondatrice'):
-            return Response({'detail': 'Réservé à l’administration.'}, status=status.HTTP_403_FORBIDDEN)
-        member = generics.get_object_or_404(User, pk=pk)
-        prune_ip_logs()
-        entries = list(UserIPLog.objects.filter(user=member).values('ip_address', 'event', 'created_at')[:100])
-        ips = {entry['ip_address'] for entry in entries}
-        shared = []
-        if ips:
-            for other in User.objects.filter(ip_logs__ip_address__in=ips).exclude(pk=member.pk).distinct().order_by('username')[:100]:
-                shared_ips = sorted(set(UserIPLog.objects.filter(user=other, ip_address__in=ips).values_list('ip_address', flat=True)))
-                shared.append({'id': other.pk, 'name': other.username, 'shared_ips': shared_ips})
-        return Response({'entries': entries, 'shared_accounts': shared})
 
 
 class LinkedAccountsView(APIView):

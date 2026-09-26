@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
-from .models import User, UserIPLog
+from .models import User
 
 
 @admin.register(User)
@@ -14,17 +14,3 @@ class UserAdmin(BaseUserAdmin):
     add_fieldsets = BaseUserAdmin.add_fieldsets + (
         ("Profil", {"fields": ("role", "avatar", "avatar_name", "bio")}),
     )
-
-
-@admin.register(UserIPLog)
-class UserIPLogAdmin(admin.ModelAdmin):
-    list_display = ['user', 'ip_address', 'event', 'created_at']
-    list_filter = ['event', 'created_at']
-    search_fields = ['user__username', 'ip_address']
-    readonly_fields = ['user', 'ip_address', 'event', 'created_at']
-
-    def has_add_permission(self, request):
-        return False
-
-    def has_change_permission(self, request, obj=None):
-        return False

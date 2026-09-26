@@ -1,0 +1,51 @@
+from django.contrib.auth import get_user_model
+from rest_framework.test import APITestCase
+
+from apps.forum.models import Category, ContactRequest, Post, Topic
+
+
+class ContactRequestTests(APITestCase):
+    def setUp(self):
+        User = get_user_model()
+        self.member = User.objects.create_user(username='report-member', email='member@example.com', password='test')
+        self.admin = User.objects.create_user(username='report-admin', email='admin@example.com', password='test', role='admin')
+        category = Category.objects.create(name='Forum', slug='forum-test')
+        topic = Topic.objects.create(title='Sujet', category=category, author=self.member)
+        self.post = Post.objects.create(topic=topic, author=self.member, content='Message à signaler')
+
+    def test_guest_can_request_data_deletion_without_publication(self):
+        response = self.client.post('/api/contact/', {
+            'kind': 'privacy', 'email': 'visitor@example.com', 'message': 'Je souhaite supprimer mes données.',
+        })
+        self.assertEqual(response.status_code, 201)
+        self.assertEqual(ContactRequest.objects.count(), 1)
+        self.assertIsNone(ContactRequest.objects.first().author)
+        self.assertEqual(self.client.get('/api/administration/contact/').status_code, 401)
+
+    def test_report_is_visible_only_to_admin(self):
+        self.client.force_authenticate(self.member)
+        response = self.client.post('/api/contact/', {
+            'kind': 'report', 'post': self.post.pk, 'message': 'Cette image pose un problème de droits.',
+        })
+        self.assertEqual(response.status_code, 201)
+        self.assertEqual(ContactRequest.objects.first().email, 'member@example.com')
+        self.assertEqual(self.client.get('/api/administration/contact/').status_code, 403)
+        self.client.force_authenticate(self.admin)
+        listing = self.client.get('/api/administration/contact/')
+        self.assertEqual(listing.status_code, 200)
+        self.assertEqual(listing.data[0]['post_id'], self.post.pk)
+        update = self.client.patch('/api/administration/contact/', {
+            'id': listing.data[0]['id'], 'is_resolved': True,
+        }, format='json')
+        self.assertEqual(update.status_code, 200)
+        self.assertTrue(ContactRequest.objects.first().is_resolved)
+
+    def test_report_requires_existing_post_and_requests_are_rate_limited(self):
+        invalid = self.client.post('/api/contact/', {
+            'kind': 'report', 'email': 'visitor@example.com', 'post': 999999,
+            'message': 'Je signale ce contenu.',
+        })
+        self.assertEqual(invalid.status_code, 400)
+        payload = {'kind': 'privacy', 'email': 'visitor@example.com', 'message': 'Je souhaite supprimer mes données.'}
+        self.assertEqual(self.client.post('/api/contact/', payload).status_code, 201)
+        self.assertEqual(self.client.post('/api/contact/', payload).status_code, 429)
