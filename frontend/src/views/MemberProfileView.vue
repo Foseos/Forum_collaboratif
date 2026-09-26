@@ -146,6 +146,7 @@
               <router-link v-if="isOwnProfile && member.username === 'Ava Bartholomé'" to="/messageries" class="btn btn-primary btn-sm">✉ Voir mes messages privés</router-link>
               <router-link v-if="isOwnProfile && member.username === 'Ava Bartholomé'" to="/administration/signalements" class="btn btn-secondary btn-sm">⚑ Voir les signalements <span v-if="notifications.pendingReports" class="nav-msg-badge">{{ notifications.pendingReports }}</span></router-link>
               <router-link v-if="isOwnProfile && member.username === 'Ava Bartholomé'" to="/administration/demandes" class="btn btn-secondary btn-sm">✉ Demandes des visiteurs <span v-if="notifications.pendingQuestions" class="nav-msg-badge">{{ notifications.pendingQuestions }}</span></router-link>
+              <router-link v-if="isOwnProfile && member.username === 'Ava Bartholomé'" to="/administration/questions" class="btn btn-secondary btn-sm">? Questions du forum <span v-if="notifications.pendingForumQuestions" class="nav-msg-badge">{{ notifications.pendingForumQuestions }}</span></router-link>
               <router-link v-if="member.presentation_topic_slug" :to="`/topics/${member.presentation_topic_slug}`" class="btn btn-secondary btn-sm">✦ Présentation validée</router-link>
               <span v-else class="text-secondary text-sm">Présentation validée : aucune fiche archivée.</span>
               <router-link v-if="member.recap_topic_slug" :to="`/topics/${member.recap_topic_slug}`" class="btn btn-secondary btn-sm">✦ Carnet du personnage</router-link>

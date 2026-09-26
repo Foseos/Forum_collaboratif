@@ -39,6 +39,7 @@
         <template v-if="auth.isAuthenticated">
           <router-link v-if="isAdmin && notifications.pendingReports" to="/administration/signalements" class="admin-alert-link" :aria-label="`${notifications.pendingReports} signalement(s) à traiter`" title="Signalements à traiter">⚑ <strong>{{ notifications.pendingReports }}</strong></router-link>
           <router-link v-if="isAdmin && notifications.pendingQuestions" to="/administration/demandes" class="admin-alert-link" :aria-label="`${notifications.pendingQuestions} demande(s) de visiteurs à traiter`" title="Demandes de visiteurs à traiter">✉ <strong>{{ notifications.pendingQuestions }}</strong></router-link>
+          <router-link v-if="isAdmin && notifications.pendingForumQuestions" to="/administration/questions" class="admin-alert-link" :aria-label="`${notifications.pendingForumQuestions} question(s) du forum sans réponse du staff`" title="Questions du forum sans réponse du staff">? <strong>{{ notifications.pendingForumQuestions }}</strong></router-link>
           <!-- Notifications Bell -->
           <router-link to="/notifications" class="btn-icon notification-btn" title="Notifications">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -74,6 +75,7 @@
                   <span aria-hidden="true">⚑</span>
                   Signalements <span v-if="notifications.pendingReports" class="nav-msg-badge">{{ notifications.pendingReports }}</span>
                 </router-link>
+                <router-link v-if="isAdmin" to="/administration/questions" class="dropdown-item" @click="menuOpen = false">? Questions du forum <span v-if="notifications.pendingForumQuestions" class="nav-msg-badge">{{ notifications.pendingForumQuestions }}</span></router-link>
                 <button class="dropdown-item" @click="handleLogout">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
                   Déconnexion
@@ -116,6 +118,7 @@
         <router-link v-if="['admin', 'fondatrice'].includes(auth.user?.role)" to="/administration/alertes-activite" class="nav-mobile-link">⚑ Alertes d’activité</router-link>
         <router-link v-if="isAdmin" to="/administration/demandes" class="nav-mobile-link">✉ Demandes des visiteurs <span v-if="notifications.pendingQuestions" class="nav-msg-badge">{{ notifications.pendingQuestions }}</span></router-link>
         <router-link v-if="isAdmin" to="/administration/signalements" class="nav-mobile-link">⚑ Signalements <span v-if="notifications.pendingReports" class="nav-msg-badge">{{ notifications.pendingReports }}</span></router-link>
+        <router-link v-if="isAdmin" to="/administration/questions" class="nav-mobile-link">? Questions du forum <span v-if="notifications.pendingForumQuestions" class="nav-msg-badge">{{ notifications.pendingForumQuestions }}</span></router-link>
 
         <template v-if="!auth.isAuthenticated">
           <router-link to="/login" class="nav-mobile-link">Connexion</router-link>

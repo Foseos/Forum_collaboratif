@@ -14,6 +14,11 @@
         <button class="btn btn-secondary btn-sm" @click="toggleResolved(item)">{{ item.is_resolved ? 'Marquer à traiter' : 'Marquer comme traité' }}</button>
       </article>
     </div>
+    <nav v-if="pages > 1" class="request-pagination" aria-label="Pages des demandes">
+      <button class="btn btn-secondary btn-sm" :disabled="page === 1 || loading" @click="page--">← Précédent</button>
+      <span>Page {{ page }} sur {{ pages }} · {{ total }} éléments</span>
+      <button class="btn btn-secondary btn-sm" :disabled="page === pages || loading" @click="page++">Suivant →</button>
+    </nav>
   </div></div>
 </template>
 
@@ -30,16 +35,25 @@ const labels = { privacy: 'Données personnelles', report: 'Signalement', genera
 const requests = ref([])
 const loading = ref(true)
 const error = ref('')
+const page = ref(1)
+const pages = ref(1)
+const total = ref(0)
 
 async function loadRequests() {
   loading.value = true
   error.value = ''
-  try { requests.value = (await api.get('/administration/contact/', { params: { kind: reportsOnly.value ? 'report' : 'other' } })).data }
+  try {
+    const { data } = await api.get('/administration/contact/', { params: { kind: reportsOnly.value ? 'report' : 'other', page: page.value } })
+    requests.value = data.results
+    pages.value = data.pages
+    total.value = data.count
+  }
   catch { error.value = 'Impossible de charger les demandes.' }
   finally { loading.value = false }
 }
 onMounted(loadRequests)
-watch(reportsOnly, loadRequests)
+watch(reportsOnly, () => { page.value = 1; loadRequests() })
+watch(page, loadRequests)
 
 async function toggleResolved(item) {
   try {
@@ -58,4 +72,5 @@ async function toggleResolved(item) {
 .request-top { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 .request-top span { color: var(--text-secondary); }
 .request-message { white-space: pre-wrap; line-height: 1.6; }
+.request-pagination { display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
 </style>

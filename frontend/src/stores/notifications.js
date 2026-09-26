@@ -9,6 +9,7 @@ export const useNotificationStore = defineStore('notifications', {
     unreadMsgCount: 0,
     pendingReports: 0,
     pendingQuestions: 0,
+    pendingForumQuestions: 0,
     pagination: { count: 0, next: null, previous: null },
     _intervalId: null,
   }),
@@ -47,12 +48,14 @@ export const useNotificationStore = defineStore('notifications', {
       if (!['admin', 'fondatrice'].includes(auth.user?.role)) {
         this.pendingReports = 0
         this.pendingQuestions = 0
+        this.pendingForumQuestions = 0
         return
       }
       try {
         const { data } = await api.get('/administration/contact/', { params: { counts: 1 } })
         this.pendingReports = data.reports ?? 0
         this.pendingQuestions = data.questions ?? 0
+        this.pendingForumQuestions = data.forum_questions ?? 0
       } catch {
         // Conserver le dernier compteur si l'actualisation échoue.
       }
@@ -91,6 +94,7 @@ export const useNotificationStore = defineStore('notifications', {
       }
       this.pendingReports = 0
       this.pendingQuestions = 0
+      this.pendingForumQuestions = 0
     },
   },
 })

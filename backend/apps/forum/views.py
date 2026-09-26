@@ -3,6 +3,7 @@ import secrets
 
 from django.contrib.auth import get_user_model
 from django.db import transaction
+from django.core.paginator import Paginator
 from django.utils.html import escape
 from django.db.models import Count, Q, OuterRef, Subquery, F
 from django.utils import timezone
@@ -99,19 +100,42 @@ class ContactRequestAdminView(APIView):
     def get(self, request):
         if request.user.role not in ('admin', 'fondatrice'):
             return Response(status=403)
+        question_topics = Topic.objects.filter(
+            category__slug__in=('questions-invites', 'questions-membres'),
+        ).exclude(
+            posts__author__role__in=('admin', 'fondatrice', 'moderator'),
+        ).select_related('author', 'category').order_by('-created_at')
         if request.query_params.get('counts') == '1':
             pending = ContactRequest.objects.filter(is_resolved=False)
             return Response({
                 'reports': pending.filter(kind=ContactRequest.Kind.REPORT).count(),
                 'questions': pending.exclude(kind=ContactRequest.Kind.REPORT).count(),
+                'forum_questions': question_topics.count(),
             })
+        if request.query_params.get('kind') == 'forum_questions':
+            return Response([{
+                'title': topic.title,
+                'slug': topic.slug,
+                'category': topic.category.name,
+                'author': topic.author.username,
+                'created_at': topic.created_at,
+            } for topic in question_topics])
         requests = ContactRequest.objects.select_related('post__topic', 'author')
         if request.query_params.get('kind') == 'report':
             requests = requests.filter(kind=ContactRequest.Kind.REPORT)
         elif request.query_params.get('kind') == 'other':
             requests = requests.exclude(kind=ContactRequest.Kind.REPORT)
-        requests = requests[:100]
-        return Response([{
+        try:
+            page_number = int(request.query_params.get('page', '1'))
+        except ValueError:
+            return Response({'page': ['Indiquez un numéro de page valide.']}, status=400)
+        if page_number < 1:
+            return Response({'page': ['Indiquez un numéro de page valide.']}, status=400)
+        paginator = Paginator(requests.order_by('-created_at', '-pk'), 25)
+        page = paginator.get_page(page_number)
+        if page_number > paginator.num_pages:
+            return Response({'page': ['Cette page n’existe pas.']}, status=404)
+        results = [{
             'id': item.pk,
             'kind': item.kind,
             'email': item.email,
@@ -121,7 +145,8 @@ class ContactRequestAdminView(APIView):
             'author': item.author.username if item.author else None,
             'is_resolved': item.is_resolved,
             'created_at': item.created_at,
-        } for item in requests])
+        } for item in page.object_list]
+        return Response({'count': paginator.count, 'page': page_number, 'pages': paginator.num_pages, 'results': results})
 
     def patch(self, request):
         if request.user.role not in ('admin', 'fondatrice'):

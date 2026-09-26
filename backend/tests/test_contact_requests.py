@@ -35,9 +35,9 @@ class ContactRequestTests(APITestCase):
         self.client.force_authenticate(self.admin)
         listing = self.client.get('/api/administration/contact/?kind=report')
         self.assertEqual(listing.status_code, 200)
-        self.assertEqual(listing.data[0]['post_id'], self.post.pk)
+        self.assertEqual(listing.data['results'][0]['post_id'], self.post.pk)
         update = self.client.patch('/api/administration/contact/', {
-            'id': listing.data[0]['id'], 'is_resolved': True,
+            'id': listing.data['results'][0]['id'], 'is_resolved': True,
         }, format='json')
         self.assertEqual(update.status_code, 200)
         self.assertTrue(ContactRequest.objects.first().is_resolved)
@@ -73,7 +73,30 @@ class ContactRequestTests(APITestCase):
         self.client.force_authenticate(self.member)
         self.assertEqual(self.client.get('/api/administration/contact/?counts=1').status_code, 403)
         self.client.force_authenticate(self.admin)
-        self.assertEqual(self.client.get('/api/administration/contact/?counts=1').data, {'reports': 1, 'questions': 1})
+        self.assertEqual(self.client.get('/api/administration/contact/?counts=1').data, {'reports': 1, 'questions': 1, 'forum_questions': 0})
         question.is_resolved = True
         question.save(update_fields=['is_resolved'])
-        self.assertEqual(self.client.get('/api/administration/contact/?counts=1').data, {'reports': 1, 'questions': 0})
+        self.assertEqual(self.client.get('/api/administration/contact/?counts=1').data, {'reports': 1, 'questions': 0, 'forum_questions': 0})
+
+    def test_forum_questions_leave_alert_after_staff_reply(self):
+        category = Category.objects.create(name='Questions membres', slug='questions-membres')
+        topic = Topic.objects.create(title='Besoin d’aide', category=category, author=self.member)
+        Post.objects.create(topic=topic, author=self.member, content='Comment commencer ?')
+        self.client.force_authenticate(self.admin)
+        endpoint = '/api/administration/contact/'
+        self.assertEqual(self.client.get(endpoint + '?counts=1').data['forum_questions'], 1)
+        self.assertEqual(self.client.get(endpoint + '?kind=forum_questions').data[0]['slug'], topic.slug)
+        Post.objects.create(topic=topic, author=self.admin, content='Voici comment commencer.')
+        self.assertEqual(self.client.get(endpoint + '?counts=1').data['forum_questions'], 0)
+
+    def test_admin_can_page_through_all_contact_requests(self):
+        ContactRequest.objects.bulk_create([
+            ContactRequest(kind='general', email=f'visitor{i}@example.com', message='Une question')
+            for i in range(27)
+        ])
+        self.client.force_authenticate(self.admin)
+        first = self.client.get('/api/administration/contact/?kind=other&page=1')
+        second = self.client.get('/api/administration/contact/?kind=other&page=2')
+        self.assertEqual(first.data['count'], 27)
+        self.assertEqual(len(first.data['results']), 25)
+        self.assertEqual(len(second.data['results']), 2)
