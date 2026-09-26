@@ -1,16 +1,13 @@
-import ast
 import json
 import re
 from html import escape
-from html.parser import HTMLParser
 from pathlib import Path
 from django.conf import settings
 from django.db import transaction
 from django.utils import timezone
 from apps.forum.models import Topic
 
-tree=ast.parse(Path('fill_dior_kaya.py').read_text(encoding='utf-8'))
-exec(compile(ast.Module(body=[n for n in tree.body if isinstance(n,(ast.FunctionDef,ast.ClassDef)) and n.name in ('p','section','CheckHTML')],type_ignores=[]),'layout','exec'))
+from scenario_layout_helpers import CheckHTML, p, section
 
 VAMPIRE_POWERS=[
 ('Force vampirique','Force supérieure à celle d’une humaine, limitée à une action ciblée. Elle ne permet ni victoire automatique ni destruction massive. Les blessures, la faim et la fatigue influencent son efficacité.'),

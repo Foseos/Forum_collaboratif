@@ -1,8 +1,6 @@
-import ast
 import json
 import re
 from html import escape
-from html.parser import HTMLParser
 from pathlib import Path
 from django.conf import settings
 from django.db import transaction
@@ -10,9 +8,7 @@ from django.utils import timezone
 from apps.forum.models import Topic
 
 # Reuse only rendering helpers; do not execute the Montana data or mutations.
-source = ast.parse(Path('fill_dior_kaya.py').read_text(encoding='utf-8'))
-helpers = ast.Module(body=[node for node in source.body if isinstance(node, (ast.FunctionDef, ast.ClassDef)) and node.name in ('p', 'section', 'CheckHTML')], type_ignores=[])
-exec(compile(helpers, 'scenario_layout_helpers', 'exec'))
+from scenario_layout_helpers import CheckHTML, p, section
 
 DATA = [
 dict(slug='billie-jenkins', name='Billie Jenkins', age='Adulte, désormais plus âgée physiquement que Christy · âge exact à fixer selon la chronologie du forum', quote='Je peux te tendre la main sans te laisser choisir à ma place.', camp='Bien', job='Formatrice en autodéfense · activité proposée',

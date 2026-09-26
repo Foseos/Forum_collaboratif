@@ -1,15 +1,13 @@
-import ast,json,re
+import json,re
 from pathlib import Path
 from html import escape
-from html.parser import HTMLParser
 from urllib.request import Request,urlopen
 from concurrent.futures import ThreadPoolExecutor
 from django.conf import settings
 from django.db import transaction
 from django.utils import timezone
 from apps.forum.models import Topic
-module=ast.parse(Path('fill_dior_kaya.py').read_text(encoding='utf-8-sig'))
-exec(compile(ast.Module(body=[n for n in module.body if isinstance(n,(ast.FunctionDef,ast.ClassDef)) and n.name in ('p','section','CheckHTML')],type_ignores=[]),'layout','exec'))
+from scenario_layout_helpers import CheckHTML, p, section
 DATA=json.loads(Path('mikaelson_data.json').read_text(encoding='utf-8-sig'))
 GIFS={
 'Klaus Mikaelson':'https://media.tenor.com/ZfPfiXgwQ1cAAAAM/niklaus-mikaelson-klaus.gif',

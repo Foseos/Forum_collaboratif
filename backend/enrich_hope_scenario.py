@@ -1,15 +1,13 @@
-import ast,json,re
+import json,re
 from pathlib import Path
 from html import escape
-from html.parser import HTMLParser
 from urllib.request import Request,urlopen
 from concurrent.futures import ThreadPoolExecutor
 from django.conf import settings
 from django.db import transaction
 from django.utils import timezone
 from apps.forum.models import Topic
-module=ast.parse(Path('fill_dior_kaya.py').read_text(encoding='utf-8-sig'))
-exec(compile(ast.Module(body=[n for n in module.body if isinstance(n,(ast.FunctionDef,ast.ClassDef)) and n.name in ('p','section','CheckHTML')],type_ignores=[]),'layout','exec'))
+from scenario_layout_helpers import CheckHTML, p, section
 new=[
 ('Josie Saltzman — Amie, écoute réciproque','https://media1.tenor.com/m/bO6PajzKtcQAAAAC/josie-saltzman-kaylee-bryant.gif','Nous avons partagé un environnement où chacun essayait de comprendre sa place. Je veux entendre tes envies, pas seulement les solutions que tu trouves pour les autres. Notre amitié doit nous laisser à toutes les deux le droit d’avoir besoin d’aide.'),
 ('Lizzie Saltzman — De la friction à la confiance','https://media1.tenor.com/m/iQSHhVwHW_QAAAAC/jenny-boyd-lizzie-saltzman.gif','Nous savons nous provoquer et nous opposer. Cela ne nous empêche pas d’apprendre à compter l’une sur l’autre. Je souhaite construire notre lien présent sans prétendre que nos différences ou nos anciennes blessures ont disparu.'),
