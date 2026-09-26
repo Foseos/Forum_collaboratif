@@ -78,7 +78,7 @@ Défauts
 
 Trop idéaliste — donne parfois des leçons sans s'en rendre compte
 Évite les confrontations difficiles
-A du mal à accepter qu'il ne peut pas arranger tout par l'amour
+A du mal à accepter qu'il ne peut pas tout arranger par l'amour
 Garde pour lui sa propre douleur
 Peut paraître naïf face à la complexité du monde</p>
   </div>
@@ -101,7 +101,7 @@ Ce qu'il n'avait pas prévu, c'est que cet être radieux, entêté et profondém
 Coop et Phoebe se marièrent. Ce fut une période lumineuse — construite sur une tendresse réelle, une admiration mutuelle et la conviction partagée que l'amour pouvait se reconstruire sur les ruines de l'ancien.<br><br>
 
 <strong style="color: #e2d9f3;">Prudence Johanna, Parker, Peyton</strong><br>
-Prudence Johanna naquit en 2007. Perite fille sérieuse, déjà attentive aux émotions de ceux qui l'entouraient — héritière manifeste de la double nature de Phoebe et de Coop. Parker vint deux ans plus tard, explosive et frondeuse dès le premier jour. Peyton enfin, la plus jeune, silencieuse et profonde comme une eau tranquille.<br><br>
+Prudence Johanna naquit en 2007. Petite fille sérieuse, déjà attentive aux émotions de ceux qui l'entouraient — héritière manifeste de la double nature de Phoebe et de Coop. Parker vint deux ans plus tard, explosive et frondeuse dès le premier jour. Peyton enfin, la plus jeune, silencieuse et profonde comme une eau tranquille.<br><br>
 
 Trois filles, trois tempéraments radicalement différents, une même double nature mi-sorcière mi-cupidon. Coop s'attacha à chacune d'une façon particulière : avec P.J., une complicité intellectuelle et émotionnelle, une même vision idéaliste du monde. Avec Parker, une relation plus houleuse — elle refusait ses leçons, ses certitudes, son optimisme qu'elle trouvait trop facile. Avec Peyton, un lien presque silencieux : il avait le don de comprendre ce qu'elle ressentait sans qu'elle ait à parler, et elle le lui rendait en lui accordant une confiance que peu obtenaient.<br><br>
 
@@ -111,7 +111,7 @@ En 2014, Phoebe lui demanda le divorce. Coop ne fut pas surpris — il était Cu
 Ce qu'il apprit ensuite — qu'elle retrouvait Cole Turner, l'homme qui l'avait précédée et marquée avant lui — fut douloureux d'une façon particulière. Pas par jalousie. Par la conscience aiguë d'avoir été, peut-être, une étape dans une histoire dont il n'était pas le chapitre final. Il porta cette douleur seul, comme il portait tout ce qui l'atteignait vraiment.<br><br>
 
 <strong style="color: #e2d9f3;">Père avant tout — aujourd'hui</strong><br>
-Le divorce ne changea pas ce qui comptait le plus : il reste le père de ses trois filles, et ce rôle, personne ne peut le lui reprendre. Il co-parenté avec Phoebe avec une dignité que même Parker, pourtant prompte à tout critiquer, reconnaît en silence.<br><br>
+Le divorce ne changea pas ce qui comptait le plus : il reste le père de ses trois filles, et ce rôle, personne ne peut le lui reprendre. Il partage leur éducation avec Phoebe, avec une dignité que même Parker, pourtant prompte à tout critiquer, reconnaît en silence.<br><br>
 
 Sa relation avec P.J. est douce et forte — elle partage sa vision de l'amour comme force constructive, et il la voit avancer dans la vie avec une fierté tranquille. Avec Parker, les accrochages continuent : elle le trouve trop idéaliste, il la trouve trop prompte à tout brûler. Mais sous les tensions, il y a un amour solide que ni l'un ni l'autre ne remettra jamais vraiment en question. Avec Peyton, il n'a pas besoin de beaucoup de mots — ils se comprennent dans le silence, et c'est suffisant.<br><br>
 

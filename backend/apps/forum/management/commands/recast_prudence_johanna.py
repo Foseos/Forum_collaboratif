@@ -9,6 +9,7 @@ from apps.forum.models import Topic
 
 
 PORTRAIT = "https://upload.wikimedia.org/wikipedia/commons/f/f9/Emma_Watson_ONU_2017.jpg"
+LINK_GIF = "https://media1.tenor.com/m/Rx-rtspGFXoAAAAd/emma-watson.gif"
 PHOTO_SOURCE = "https://commons.wikimedia.org/wiki/File:Emma_Watson_ONU_2017.jpg"
 OLD_PORTRAIT = "https://zupimages.net/up/26/39/yqne.png"
 PREVIOUS_PORTRAIT = "https://upload.wikimedia.org/wikipedia/commons/2/2e/Emma_Watson_2017_%28cropped%29.jpg"
@@ -68,8 +69,9 @@ class Command(BaseCommand):
                 cards = related.scenario_link_cards or []
                 changed = False
                 for card in cards:
-                    if "Prudence Johanna" in card.get("title", "") and card.get("gif") != PORTRAIT:
-                        card["gif"] = PORTRAIT
+                    title = card.get("title", "")
+                    if ("Prudence Johanna" in title or "P.J Halliwell" in title) and card.get("gif") != LINK_GIF:
+                        card["gif"] = LINK_GIF
                         changed = True
                 if changed:
                     related.scenario_link_cards = cards

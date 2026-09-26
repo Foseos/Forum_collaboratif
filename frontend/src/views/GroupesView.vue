@@ -194,6 +194,11 @@
                 <img :src="selectedGroup.imageUrl" alt="Les quatre visages du Pouvoir des Quatre" />
               </div>
               <p class="modal-lore">{{ selectedGroup.description }}</p>
+              <router-link
+                v-if="selectedGroup.scenario"
+                class="modal-scenario-link"
+                :to="{ name: 'topic', params: { slug: selectedGroup.scenario.slug } }"
+              >Voir le scénario de {{ selectedGroup.scenario.nom }} →</router-link>
               <section v-if="selectedGroup.type === 'race' && raceSpecialties[selectedGroup.id]?.length" class="modal-specialties">
                 <h3>Branches, affinités et profils</h3>
                 <p>{{ raceSpecialties[selectedGroup.id].map(item => item.name).join(' · ') }}</p>
@@ -554,6 +559,7 @@ function buildGroup(g) {
     members: g.membres_count ?? null,
     theme: THEMES[g.id] || DEFAULT_THEME,
     type: g.type || 'race',
+    scenario: g.scenario || null,
   }
 }
 
@@ -1270,6 +1276,22 @@ onUnmounted(() => {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.75;
+}
+
+.modal-scenario-link {
+  display: inline-flex;
+  margin-top: .35rem;
+  padding: .65rem .9rem;
+  border: 1px solid var(--maccent, var(--accent));
+  border-radius: var(--radius);
+  color: var(--maccent, var(--accent));
+  font-size: .85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.modal-scenario-link:hover,
+.modal-scenario-link:focus-visible {
+  background: color-mix(in srgb, var(--maccent, var(--accent)) 14%, transparent);
 }
 
 .modal-sep {

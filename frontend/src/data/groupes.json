@@ -96,6 +96,7 @@
         "id": "maison-seconde-soif",
         "nom": "La Maison de la Seconde Soif",
         "description": "Dirigée par Mélissandre Barden, la Maison de la Seconde Soif est un coven d'Hérétiques : des vampires siphonneurs qui puisent la magie dans des sources disponibles, notamment leur propre vampirisme. Leur solidarité n'efface ni la soif ni les choix individuels.",
+        "scenario": { "nom": "Mélissandre Barden", "slug": "melissandre-barden" },
         "couleur": "danger",
         "icone": "Coven_Seconde_Soif.png",
         "type": "faction"
@@ -104,6 +105,7 @@
         "id": "chambre-murmures",
         "nom": "La Chambre des Murmures",
         "description": "Dirigée par Belisama Vaskov, la Chambre des Murmures réunit des sorcières et sorciers qui étudient et pratiquent en priorité l'Expression. Ses membres débattent de ses limites et des conséquences de leurs rituels.",
+        "scenario": { "nom": "Belisama Vaskov", "slug": "belisama-vaskov" },
         "couleur": "purple",
         "icone": "Coven_Chambre_Murmures.png",
         "type": "faction"
@@ -112,6 +114,7 @@
         "id": "heritiers-vide",
         "nom": "Les Héritiers du Vide",
         "description": "Dirigés par Florie Delacroix, les Héritiers du Vide sont un coven de siphonneurs non vampiriques. Ils apprennent à identifier des sources de magie et à négocier leur utilisation. Ils restent distincts des Hérétiques.",
+        "scenario": { "nom": "Florie Delacroix", "slug": "florie-delacroix" },
         "couleur": "blue",
         "icone": "Coven_Heritiers_Vide.png",
         "type": "faction"
@@ -120,6 +123,7 @@
         "id": "veilleurs-voile",
         "nom": "Les Veilleurs du Voile",
         "description": "Dirigés par Sélène Beauchamp, les Veilleurs du Voile préservent les rites ancestraux de La Nouvelle-Orléans. Ils entretiennent la mémoire des morts sans supposer que leurs volontés doivent toujours être suivies.",
+        "scenario": { "nom": "Sélène Beauchamp", "slug": "selene-beauchamp" },
         "couleur": "gold",
         "icone": "Coven_Veilleurs_Voile.png",
         "type": "faction"
@@ -128,6 +132,7 @@
         "id": "cercle-terres-perdues",
         "nom": "Le Cercle des Terres Perdues",
         "description": "Dirigé par Moira Osborne, le Cercle des Terres Perdues réunit des Voyageurs itinérants. Ses membres conservent des rites collectifs, parcourent les lieux touchés par la Convergence et cherchent un endroit où s'établir.",
+        "scenario": { "nom": "Moira Osborne", "slug": "moira-osborne" },
         "couleur": "green",
         "icone": "Coven_Terres_Perdues.png",
         "type": "faction"

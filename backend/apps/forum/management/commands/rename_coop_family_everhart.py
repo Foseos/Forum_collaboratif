@@ -2,6 +2,7 @@
 
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
+from django.db.models import Q
 
 from apps.forum.models import Post, Topic
 
@@ -20,8 +21,10 @@ class Command(BaseCommand):
                 raise CommandError("Le scénario de Coop est introuvable.")
 
             updated_posts = 0
-            for post in Post.objects.select_for_update().filter(content__icontains="Swann"):
-                content = post.content.replace("Swann", "Everhart")
+            for post in Post.objects.select_for_update().filter(
+                Q(content__icontains="Swann") | Q(content__icontains="Coop Halliwell")
+            ):
+                content = post.content.replace("Swann", "Everhart").replace("Coop Halliwell", "Coop Everhart")
                 if content != post.content:
                     post.content = content
                     post.save(update_fields=["content"])
