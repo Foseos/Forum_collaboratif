@@ -24,7 +24,7 @@ def section(number, title, color, items):
 CROSSOVER_GRIMOIRE = MARKER + """
 <div style="margin:1.75rem 0 1rem; padding:1rem; border:1px solid rgba(245,215,110,0.35); border-radius:8px; background:rgba(245,215,110,0.05);">
   <p style="margin:0; color:#f5d76e; font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase;">✦ Addendum crossover · Nexus Arcana ✦</p>
-  <p style="margin:0.5rem 0 0; color:#d8d1e5; line-height:1.7;">Les pouvoirs ci-dessous complètent le grimoire historique. Un personnage possède les dons liés à sa race et à son histoire, jamais l'intégralité des capacités de sa lignée. Toute évolution majeure, combinaison inhabituelle ou capacité de niveau exceptionnel passe par le staff.</p>
+  <p style="margin:0.5rem 0 0; color:#d8d1e5; line-height:1.7;">Les pouvoirs ci-dessous complètent le grimoire historique. Ce catalogue présente des possibilités, jamais des dons automatiquement acquis. Toute évolution majeure, combinaison inhabituelle ou capacité de niveau exceptionnel passe par le staff.</p>
 </div>
 """ + section("VIII", "Magies et disciplines du crossover", "rgba(139,92,246,0.30)", [
     ("Sorcellerie Charmed", "sorts, potions, télékinésie et pouvoirs actifs personnels. Les sortilèges collectifs demandent préparation et accord des participants."),
@@ -52,57 +52,66 @@ CROSSOVER_GRIMOIRE = MARKER + """
     ("Interdits", "pas d'omnipotence, d'immortalité sans faille, de voyage temporel libre, de résurrection sans conséquence ou de pouvoir qui annule le jeu d'autrui."),
 ])
 
-
 POWER_DIRECTORY = DIRECTORY_MARKER + """
 <div style="margin:2rem 0 1rem; text-align:center;">
   <p style="margin:0; color:#f5d76e; font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase;">✦ Répertoire détaillé des pouvoirs ✦</p>
   <p style="margin:0.5rem auto 0; max-width:680px; color:#c4b5d4; line-height:1.7; font-size:0.87rem;">Chaque ligne suit le modèle <strong style="color:#e2d9f3;">pouvoir de base → évolution → maîtrise</strong>. Les branches sont des pistes : un personnage n'a pas à toutes les posséder. Les mentions « staff » demandent une validation avant la fiche ou une évolution jouée.</p>
 </div>
 """ + section("XII", "Pouvoirs psychiques, médiumniques et émotionnels", "rgba(167,139,250,0.34)", [
-    ("Empathie → lecture des émotions → apaisement", "Sorciers Charmed, Sorciers, Cupidons, Muses et créatures sensibles. Aucun ressenti ne force le personnage visé à agir."),
-    ("Prémonition → vision partagée → projection dans la vision", "Sorciers, Banshees et Sphinx. Les visions sont fragmentaires, interprétables et ne garantissent pas l'avenir."),
-    ("Télépathie → lien mental → relais de groupe", "Sorciers et démons psychiques. La cible peut résister et le consentement OOC reste nécessaire."),
-    ("Suggestion → hypnose → altération brève d'un souvenir", "Démons, vampires et sorciers spécialisés. Toute perte durable de souvenir est soumise à l'accord du joueur."),
-    ("Clairsentience → rétrocognition → lecture d'un lieu", "Sorciers, médiums et Sphinx. Les informations reçues restent incomplètes et liées au support touché."),
-    ("Rêves lucides → intrusion onirique → illusion partagée", "Sorciers, démons et Kitsunes. L'illusion peut troubler, jamais décider définitivement d'une action adverse."),
-    ("Lecture d'aura → détection magique → dissimulation d'aura", "Sorciers, Êtres de Lumière et démons. La dissimulation n'annule pas tous les moyens de détection."),
-    ("Télépathie animale → communication → appel de meute", "Sorciers liés au vivant, changeformes et Kitsunes."),
+    ("Empathie → lecture des émotions → apaisement", "Perçoit les émotions, puis peut aider à les apaiser. Aucun ressenti ne force le personnage visé à agir."),
+    ("Prémonition → vision partagée → projection dans la vision", "Les visions sont fragmentaires, interprétables et ne garantissent pas l'avenir."),
+    ("Télépathie → lien mental → relais de groupe", "Permet une communication mentale limitée. La cible peut résister et le consentement hors jeu reste nécessaire."),
+    ("Suggestion → hypnose → altération brève d'un souvenir", "Toute perte durable de souvenir est soumise à l'accord du joueur concerné."),
+    ("Clairsentience → rétrocognition → lecture d'un lieu", "Les informations reçues restent incomplètes et liées au support touché."),
+    ("Rêves lucides → intrusion onirique → illusion partagée", "L'illusion peut troubler, jamais décider définitivement d'une action adverse."),
+    ("Lecture d'aura → détection magique → dissimulation d'aura", "La dissimulation n'annule pas tous les moyens de détection."),
+    ("Télépathie animale → communication → appel de meute", "Établit un contact limité avec un animal ; un appel de groupe demande portée et limites validées."),
 ]) + section("XIII", "Pouvoirs physiques, moléculaires et de soin", "rgba(96,165,250,0.30)", [
-    ("Télékinésie → répulsion → onde télékinétique", "Sorciers et démons. La masse, la distance et la concentration limitent l'effet."),
-    ("Accélération moléculaire → combustion → pyrokinésie", "Sorciers et démons liés au feu. La maîtrise finale est réservée à une évolution validée."),
-    ("Inhibition moléculaire → gel → cryokinésie", "Sorciers et démons liés au froid. Aucun gel total durable sur un personnage sans accord."),
-    ("Guérison → soin profond → transfert vital", "Êtres de Lumière, sorciers et créatures guérisseuses. La guérison ne ramène pas les morts."),
-    ("Régénération → guérison accélérée → résistance accrue", "Vampires, loups, Phénix et certains démons. Feu, décapitation ou faiblesse de l'espèce restent effectifs."),
-    ("Intangibilité → invisibilité → métamorphie", "Démons, sorciers et créatures féeriques. Une transformation conserve les limites physiques de la forme adoptée."),
-    ("Force accrue → réflexes surnaturels → vitesse", "Vampires, loups, changeformes et démons. Ne garantit jamais une attaque ou une esquive réussie."),
+    ("Télékinésie → répulsion → onde télékinétique", "La masse, la distance et la concentration limitent l'effet."),
+    ("Accélération moléculaire → combustion → pyrokinésie", "La maîtrise finale est réservée à une évolution validée."),
+    ("Inhibition moléculaire → gel → cryokinésie", "Aucun gel total durable sur un personnage sans accord."),
+    ("Guérison → soin profond → transfert vital", "La guérison ne ramène pas les morts."),
+    ("Régénération → guérison accélérée → résistance accrue", "Les faiblesses définies dans la fiche restent effectives."),
+    ("Intangibilité → invisibilité → métamorphie", "Une transformation conserve les limites physiques de la forme adoptée."),
+    ("Force accrue → réflexes surnaturels → vitesse", "Ne garantit jamais une attaque ou une esquive réussie."),
 ]) + section("XIV", "Éléments, énergie et matière", "rgba(251,146,60,0.30)", [
-    ("Boule de feu → jet de flammes → mur de feu", "Démons, sorciers du feu, Phénix et Chiens de l'enfer."),
-    ("Étincelle → éclair → électrokinésie", "Sorciers et Kitsunes électriques. L'eau, les isolants et l'épuisement modifient l'efficacité."),
-    ("Bulle d'eau → hydrokinésie → tempête locale", "Sirènes/Tritons Charmed et sorciers de l'eau. Les grandes manifestations exigent une source proche."),
-    ("Brise → rafale → aérokinésie", "Sorciers, Banshees et êtres ailés. Une tempête complète requiert une validation staff."),
-    ("Pierre → géokinésie → fissure contrôlée", "Sorciers terrestres et Chimères adaptées. Aucun séisme dévastateur sans accord staff."),
-    ("Lumière → flash aveuglant → photokinésie", "Sorciers, Êtres de Lumière et créatures célestes."),
-    ("Ombre → camouflage → umbrakinésie", "Démons, Êtres des Ténèbres et certaines lignées de Kitsunes."),
-    ("Graine → lianes → phytokinésie", "Sorciers, Fées, Nymphes et Satyres. La végétation existante facilite toujours l'usage."),
+    ("Boule de feu → jet de flammes → mur de feu", "La portée, la durée et la chaleur doivent être définies ; un mur de feu exige une évolution validée."),
+    ("Étincelle → éclair → électrokinésie", "L'eau, les isolants et l'épuisement modifient l'efficacité."),
+    ("Bulle d'eau → aquakinésie / hydrokinésie → tempête locale", "Les grandes manifestations exigent une source proche."),
+    ("Brise → rafale → aérokinésie", "Une tempête complète requiert une validation du staff."),
+    ("Pierre → géokinésie → fissure contrôlée", "Aucun séisme dévastateur sans accord du staff."),
+    ("Lumière → flash aveuglant → photokinésie", "L'éblouissement est temporaire et ne décide pas seul de l'issue d'une scène."),
+    ("Ombre → camouflage → umbrakinésie", "Le camouflage peut être percé par une perception ou une protection adaptée."),
+    ("Graine → lianes → phytokinésie", "La végétation existante facilite toujours l'usage."),
 ]) + section("XV", "Déplacement, espace et rituels", "rgba(45,212,191,0.30)", [
-    ("Projection astrale → projection tangible → ubiquité limitée", "Sorciers. Le corps reste vulnérable et une projection ne peut pas résoudre seule une intrigue."),
-    ("Téléportation → apportation → déplacement de groupe", "Sorciers et démons. La distance, les protections et la charge transportée limitent l'usage."),
-    ("Orbing → localisation → télékinésie orbing", "Êtres de Lumière. Lié à leurs règles de protection et à leur connexion magique."),
-    ("Clignement → clignement à distance → portail bref", "Démons et certaines lignées surnaturelles. Impossible à travers un sceau ou une barrière adaptée."),
-    ("Rituel de protection → cercle de scellement → bannissement", "Sorciers et covens. Un rituel majeur demande composants, temps de jeu et participants."),
-    ("Conjuration → création temporaire → invocation contrôlée", "Démons et sorciers. Les êtres invoqués ne sont jamais sous contrôle absolu."),
+    ("Projection astrale → projection tangible → ubiquité limitée", "Le corps reste vulnérable et une projection ne peut pas résoudre seule une intrigue."),
+    ("Téléportation → apportation → déplacement de groupe", "La distance, les protections et la charge transportée limitent l'usage."),
+    ("Orbing → localisation → télékinésie orbing", "Ces évolutions restent distinctes et doivent être validées séparément."),
+    ("Clignement → clignement à distance → portail bref", "Impossible à travers un sceau ou une barrière adaptée."),
+    ("Rituel de protection → cercle de scellement → bannissement", "Un rituel majeur demande composants, temps de jeu et participants."),
+    ("Conjuration → création temporaire → invocation contrôlée", "Les êtres invoqués ne sont jamais sous contrôle absolu."),
     ("Perception temporelle → boucle brève → déplacement temporel", "Staff uniquement pour tout effet sur le temps ; aucune réécriture unilatérale de l'histoire."),
-]) + section("XVI", "Affinités et limites selon les races", "rgba(244,114,182,0.28)", [
-    ("Sorciers Charmed", "quatre pouvoirs de base à la création, choisis dans les familles cohérentes avec leur lignée ; chacun peut évoluer deux fois après achat et validation. Les sorts et potions complètent leur magie."),
-    ("Sorciers", "magie de coven, canalisation, magie ancestrale et rituels issus de The Vampire Diaries, The Originals et Legacies."),
-    ("Démons", "langues démoniaques, résistance propre à leur rang et une manifestation personnelle. Les pouvoirs destructeurs majeurs évoluent uniquement en jeu."),
-    ("Vampires", "force, vitesse, sens, guérison et compulsions selon leur lignée. Soleil, verveine et faim restent des contraintes narratives."),
-    ("Sirènes/Tritons Charmed et Sirènes", "forme aquatique, chant et pouvoirs liés à l'eau pour les premiers ; appel psychique et connexion à l'au-delà pour les Sirènes TVD."),
-    ("Loups et changeformes", "sens, guérison et forme animale. Chaque lignée — WereCoyote, WereJaguar, WereLion — garde son identité et ses faiblesses."),
-    ("Banshees / Kanimas / Kitsunes", "présages et cri ; paralysie venimeuse ; feu, foudre ou illusions selon la lignée. Leurs effets majeurs restent temporaires et joués à deux."),
-    ("Chimères / Chiens de l'enfer / Sphinx", "traits combinés validés ; pistage infernal et chaleur ; énigmes et clairvoyance. Aucun ne donne d'information ou de victoire automatique."),
-    ("Trybrides et Hérétiques", "quatre capacités maximum à la création, réparties entre tous leurs héritages ; aucun don actif ou passif gratuit en supplément. Les capacités manquantes se débloquent en jeu par achat en Arcana Flouz et validation du staff."),
 ])
+
+POWER_DIRECTORY += """
+<div style="margin:1.4rem 0; border:1px solid rgba(167,139,250,0.34); border-radius:8px; overflow:hidden;">
+  <div style="padding:0.55rem 1rem; background:linear-gradient(90deg, rgba(167,139,250,0.34), transparent);">
+    <h2 style="margin:0; color:#f5d76e; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;">XVI. Capacités complémentaires</h2>
+  </div>
+  <div style="overflow-x:auto;"><table><thead><tr><th>Pouvoir</th><th>Description</th><th>Évolutions possibles</th></tr></thead><tbody>
+    <tr><td>Empathie inversée</td><td>Perçoit une émotion dominante et peut proposer à une cible proche un ressenti opposé pendant un court moment. Ne force ni décision ni souvenir.</td><td>Diffusion empathique ★ · Ancrage émotionnel ★</td></tr>
+    <tr><td>Réplique de pouvoir</td><td>Après avoir observé une capacité, en reproduit un seul effet affaibli, une seule fois dans une scène. La réplique ne donne ni maîtrise durable ni accès aux pouvoirs exceptionnels.</td><td>Réplique affinée ★ · Réplique prolongée ★</td></tr>
+    <tr><td>Toucher paralysant</td><td>Un contact direct peut engourdir brièvement un membre de la cible. Une immobilisation complète n'est pas automatique.</td><td>Entrave étendue ★ · Maintien bref ★</td></tr>
+    <tr><td>Hématokinésie</td><td>Déplace ou façonne une petite quantité de sang déjà versé. Le sang présent dans le corps d'une autre personne ne peut pas être contrôlé par ce pouvoir de base.</td><td>Hémostase ★ · Façonnage sanguin ★</td></tr>
+    <tr><td>Aérokinésie</td><td>Dirige des courants d'air à proximité pour créer une brise ou une rafale limitée. N'accorde ni vol libre ni contrôle général de la météo.</td><td>Mur de vent ★ · Courants multiples ★</td></tr>
+    <tr><td>Sens aiguisés</td><td>Perçoit plus finement les sons, les odeurs ou les mouvements proches. Les stimuli intenses peuvent aussi gêner le personnage.</td><td>Pistage sensoriel ★ · Perception sélective ★</td></tr>
+    <tr><td>Régénération</td><td>Récupère plus vite de blessures ordinaires, sans annuler les faiblesses ni les limites définies dans la fiche.</td><td>Guérison accélérée ★ · Résistance accrue ★</td></tr>
+    <tr><td>Force accrue</td><td>Déploie une force supérieure à la moyenne humaine, sans garantir la réussite d'une attaque ni supprimer la résistance d'une cible.</td><td>Réflexes surnaturels ★ · Vitesse accrue ★</td></tr>
+    <tr><td>Suggestion mentale</td><td>Tente d'influencer brièvement une décision simple chez une cible réceptive. Ne force pas un joueur à agir ni n'efface ses souvenirs.</td><td>Hypnose ★ · Suggestion différée ★</td></tr>
+    <tr><td>Perception des liens affectifs</td><td>Ressent l'existence d'un attachement émotionnel marqué entre deux personnes proches, sans en connaître la nature exacte ni accéder à leurs pensées.</td><td>Lecture affinée des liens ★ · Écho affectif ★</td></tr>
+    <tr><td>Élan affectif</td><td>Favorise une émotion positive déjà présente entre deux personnes consentantes, sans créer de l'amour ni imposer une relation.</td><td>Apaisement partagé ★ · Harmonie passagère ★</td></tr>
+  </tbody></table></div>
+</div>"""
 
 
 class Command(BaseCommand):

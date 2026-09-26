@@ -21,7 +21,6 @@ CHAPTERS = (
     ("XI", "XIII", "Pouvoirs physiques, moléculaires et de soin"),
     ("XII", "XIV", "Éléments, énergie et matière"),
     ("XIII", "XV", "Déplacement, espace et rituels"),
-    ("XIV", "XVI", "Pouvoirs innés par race"),
 )
 
 
@@ -76,10 +75,6 @@ class Command(BaseCommand):
 
         for old_number, new_number, title in CHAPTERS:
             content = content.replace(f">{old_number}. {title}</h2>", f">{new_number}. {title}</h2>")
-        content = content.replace(
-            ">XVI. Pouvoirs innés par race</h2>",
-            ">XVI. Affinités et limites selon les races</h2>",
-        )
 
         if content == post.content:
             self.stdout.write("Le Grimoire est déjà à jour.")
