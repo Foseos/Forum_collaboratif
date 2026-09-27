@@ -253,6 +253,15 @@ POWER_DIRECTORY += power_table("XVIII", "Perception et conscience", "rgba(167,13
 
 POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.30)", [
     (
+        "Arbalète d'ombre",
+        "Matérialise brièvement une arbalète d'énergie obscure et quelques traits surnaturels. Leur portée et leurs effets sont définis dans la fiche ; un tir n'atteint pas automatiquement sa cible.",
+        ("Orbes d'emprise ★", "Rempart d'orbes obscures ★"),
+        (
+            "Projette des orbes sombres pour attirer, repousser ou déplacer un petit objet visible. Une cible peut résister ; ce don ne déplace pas librement les personnes.",
+            "Assemble plusieurs orbes en bouclier temporaire capable d'amortir une attaque, avec une taille et une résistance validées par le staff.",
+        ),
+    ),
+    (
         "Voile cinétique",
         "Dresse devant soi une barrière physique brève qui amortit un choc ou dévie un petit projectile. Sa résistance est limitée et elle ne protège pas l'esprit.",
         ("Rempart partagé ★", "Déviation contrôlée ★"),
