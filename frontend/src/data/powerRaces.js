@@ -237,7 +237,11 @@ Sens aiguisés
 Régénération
 Invulnérabilité partielle
 Métabolisme accéléré
-Adaptation respiratoire`, [R.demon, R.vampire, R.heretique, R.loup, R.changeforme, R.kanima, R.phenix, R.valkyrie])
+Adaptation respiratoire`, [R.demon, R.heretique, R.loup, R.changeforme, R.kanima, R.phenix, R.valkyrie])
+add(`Force accrue
+Sens aiguisés
+Régénération
+Résistance vampirique`, [R.vampire])
 add(`Force accrue
 Sens aiguisés
 Régénération
@@ -248,7 +252,9 @@ add(`Vision thermique
 Nyctalopie
 Camouflage organique
 Piste brouillée
-Bond silencieux`, [R.loup, R.changeforme, R.kanima, R.vampire, R.elfe, R.kitsune])
+Bond silencieux`, [R.loup, R.changeforme, R.kanima, R.elfe, R.kitsune])
+add(`Nyctalopie
+Bond silencieux`, [R.vampire])
 add(`Vision thermique
 Nyctalopie`, [R.hellhound])
 add(`Métamorphose
@@ -261,10 +267,10 @@ add(`Communication animale
 Parole des bêtes
 Ascendant animal`, [R.sorcier, R.feeBois, R.elfeBois, R.nymphe, R.loup, R.changeforme])
 add(`Toucher paralysant`, [R.sorcier, R.demon, R.kanima, R.chimere, R.sirenePsychique])
-add(`Sillage des effluves`, [R.cupidon, R.fee, R.nymphe, R.sirenePsychique, R.demon, R.vampire])
+add(`Sillage des effluves`, [R.cupidon, R.fee, R.nymphe, R.sirenePsychique, R.demon])
 add(`Pétrification progressive`, [R.sorcier, R.demon, R.sphinx, R.chimere])
 add(`Myokinésie
-Neurokinésie`, [R.sorcier, R.demon, R.vampire, R.loup, R.changeforme, R.chimere])
+Neurokinésie`, [R.sorcier, R.demon, R.loup, R.changeforme, R.chimere])
 add(`Aile spectrale`, [R.sorcier, R.phenix, R.valkyrie, R.sphinx])
 
 add(`Absorption de magie`, [R.sorcier, R.heretique, R.demon])
