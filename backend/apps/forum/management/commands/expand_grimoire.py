@@ -186,6 +186,15 @@ POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.3
 ])
 
 POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.30)", [
+    (
+        "Clonage",
+        "Crée un double physique temporaire du personnage, capable d'agir à proximité pendant quelques tours de RP. Il partage ses limites et ne multiplie ni ses pouvoirs ni sa réserve d'énergie.",
+        ("Double prolongé ★", "Clones multiples ★"),
+        (
+            "Maintient un double pendant davantage de tours de RP, avec une durée validée par le staff.",
+            "Crée jusqu'à deux doubles temporaires à la fois. Leurs actions demandent l'attention du personnage et ne garantissent aucune réussite contre une cible.",
+        ),
+    ),
     ("Métabolisme accéléré", "Accorde un bref surcroît d'énergie physique au prix d'une fatigue ensuite. Ne remplace ni la guérison ni la vitesse surnaturelle.", ("Récupération brève", "Élan prolongé")),
     ("Camouflage organique", "Modifie les couleurs ou motifs du corps pour mieux se fondre dans un environnement. Le mouvement et les autres sens peuvent révéler le personnage.", ("Mimétisme complet", "Camouflage en mouvement")),
     ("Adaptation respiratoire", "Permet de supporter brièvement un air difficile ou de retenir son souffle plus longtemps. Ne protège pas de toutes les substances dangereuses.", ("Respiration prolongée", "Filtration de l'air ★")),
