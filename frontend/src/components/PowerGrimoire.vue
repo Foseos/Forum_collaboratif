@@ -47,7 +47,7 @@
         <template v-if="mode === 'powers'">
           <h3>Ce que fait ce pouvoir</h3>
           <p>{{ entry.notes?.[0] || entry.description }}</p>
-          <p class="guide-source"><strong>Règle du grimoire :</strong> {{ entry.description }}</p>
+          <p v-if="entry.notes" class="guide-source"><strong>Règle du grimoire :</strong> {{ entry.description }}</p>
           <template v-if="entry.notes">
             <h3>Exemple en RP</h3><p>{{ entry.notes[1] }}</p>
             <h3>Limites à jouer</h3><p>{{ entry.notes[2] }}</p>
@@ -91,7 +91,7 @@ const featuredPathTitles = new Set([
   'Hématokinésie', 'Aérokinésie', 'Sens aiguisés', 'Régénération',
   'Force accrue', 'Suggestion mentale', 'Perception des liens affectifs',
   'Élan affectif',
-  'Projection de peur', 'Rayonnement de joie', 'Vertige de folie',
+  'Phobokinésie', 'Rayonnement de joie', 'Vertige de folie',
   'Chagrin partagé', 'Élan de courage',
   'Illusion visuelle', 'Illusion mentale',
   'Malaise surnaturel',
@@ -119,11 +119,13 @@ const entries = computed(() => {
     if (cells.length !== 3) continue
     const [title, description, evolution] = cells
     const family = heading(row.closest('table'))
+    let evolutionExplanations = []
+    try { evolutionExplanations = JSON.parse(row.dataset.evolutionExplanations || '[]') } catch { /* Keep the standard explanation. */ }
     powers.push({ id: powers.length, title, description, evolution, family,
       showInPaths: row.closest('table')?.dataset.powerPaths === 'true',
       notes: powerNotes[title], hasStar: evolution.includes('★'),
       requiresStaff: title === 'Réplique de pouvoir',
-      steps: evolution.split('·').map(label => ({ label: label.trim(), explanation: explainStep(label) })),
+      steps: evolution.split('·').map((label, index) => ({ label: label.trim(), explanation: evolutionExplanations[index] || explainStep(label) })),
     })
   }
   const paths = powers.filter(power => power.showInPaths || featuredPathTitles.has(power.title)).map(power => ({

@@ -1,8 +1,10 @@
+import json
 from html import escape
 
 from django.core.management.base import BaseCommand, CommandError
 
 from apps.forum.models import Topic
+from apps.forum.power_kinesis import KINETIC_POWER_SECTIONS
 
 
 MARKER = "<!-- NEXUS-ARCANA-CROSSOVER-GRIMOIRE -->"
@@ -112,7 +114,7 @@ POWER_DIRECTORY += """
     <tr><td>Suggestion mentale</td><td>Tente d'influencer brièvement une décision simple chez une cible réceptive. Ne force pas un joueur à agir ni n'efface ses souvenirs.</td><td>Hypnose ★ · Suggestion différée ★</td></tr>
     <tr><td>Perception des liens affectifs</td><td>Ressent l'existence d'un attachement émotionnel marqué entre deux personnes proches, sans en connaître la nature exacte ni accéder à leurs pensées.</td><td>Lecture affinée des liens ★ · Écho affectif ★</td></tr>
     <tr><td>Élan affectif</td><td>Favorise une émotion positive déjà présente entre deux personnes consentantes, sans créer de l'amour ni imposer une relation.</td><td>Apaisement partagé ★ · Harmonie passagère ★</td></tr>
-    <tr><td>Projection de peur</td><td>Éveille brièvement une peur liée au contexte chez une cible proche. La cible choisit sa réaction et peut résister à l'effet.</td><td>Écho des craintes ★ · Onde d'effroi ★</td></tr>
+    <tr><td>Phobokinésie</td><td>Éveille brièvement une peur liée au contexte chez une cible proche. La cible choisit sa réaction et peut résister à l'effet.</td><td>Écho des craintes ★ · Onde d'effroi ★</td></tr>
     <tr><td>Rayonnement de joie</td><td>Diffuse une sensation de joie passagère autour du personnage, sans effacer une peine profonde ni forcer l'enthousiasme.</td><td>Joie partagée ★ · Réconfort durable ★</td></tr>
     <tr><td>Vertige de folie</td><td>Trouble brièvement les perceptions d'une cible, comme si le décor devenait incohérent. Ne provoque ni maladie mentale ni perte durable de contrôle.</td><td>Illusions sensorielles ★ · Désorientation de groupe ★</td></tr>
     <tr><td>Chagrin partagé</td><td>Fait ressentir une tristesse passagère ou permet d'en porter une part avec une personne consentante. Aucun souvenir n'est modifié.</td><td>Écho mélancolique ★ · Partage du fardeau ★</td></tr>
@@ -126,19 +128,28 @@ POWER_DIRECTORY += """
 
 
 def power_table(number, title, color, powers):
-    rows = "".join(
-        "<tr><td>{}</td><td>{}</td><td>{}</td></tr>".format(
-            escape(name), escape(description),
-            " · ".join(escape(evolution) for evolution in evolutions),
+    rows = []
+    for power in powers:
+        name, description, evolutions = power[:3]
+        explanations = power[3] if len(power) > 3 else ()
+        if explanations and len(explanations) != len(evolutions):
+            raise ValueError(f"Évolutions incomplètes pour {name}")
+        notes_attribute = (
+            f' data-evolution-explanations="{escape(json.dumps(explanations, ensure_ascii=False), quote=True)}"'
+            if explanations else ""
         )
-        for name, description, evolutions in powers
-    )
+        rows.append(
+            "<tr{}><td>{}</td><td>{}</td><td>{}</td></tr>".format(
+                notes_attribute, escape(name), escape(description),
+                " · ".join(escape(evolution) for evolution in evolutions),
+            )
+        )
     return f"""
 <div style="margin:1.4rem 0; border:1px solid {color}; border-radius:8px; overflow:hidden;">
   <div style="padding:0.55rem 1rem; background:linear-gradient(90deg, {color}, transparent);">
     <h2 style="margin:0; color:#f5d76e; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;">{number}. {escape(title)}</h2>
   </div>
-  <div style="overflow-x:auto;"><table data-power-paths="true"><thead><tr><th>Pouvoir</th><th>Description</th><th>Évolutions possibles</th></tr></thead><tbody>{rows}</tbody></table></div>
+  <div style="overflow-x:auto;"><table data-power-paths="true"><thead><tr><th>Pouvoir</th><th>Description</th><th>Évolutions possibles</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
 </div>"""
 
 
@@ -161,7 +172,7 @@ POWER_DIRECTORY += power_table("XVIII", "Perception et conscience", "rgba(167,13
 POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.30)", [
     ("Cristallokinésie", "Déplace ou façonne une petite quantité de cristal déjà présente. Ne crée pas de gemmes et ne traverse pas automatiquement les protections.", ("Barrière cristalline", "Résonance des gemmes")),
     ("Magnétokinésie", "Attire ou repousse de petits objets ferromagnétiques proches. Tous les métaux ne réagissent pas et une arme tenue peut être résistée.", ("Attraction multiple", "Bouclier magnétique ★")),
-    ("Gravité locale", "Allège ou alourdit légèrement un objet ou son propre corps pendant un court instant. Ne permet ni vol libre ni écrasement d'une personne.", ("Zone allégée ★", "Ancrage gravitationnel ★")),
+    ("Gravikinésie", "Allège ou alourdit légèrement un objet ou son propre corps pendant un court instant. Ne permet ni vol libre ni écrasement d'une personne.", ("Zone allégée ★", "Ancrage gravitationnel ★")),
     ("Brumokinésie", "Déplace et modèle une brume ou une vapeur déjà présente. L'effet dépend de la source et n'asphyxie pas automatiquement.", ("Voile de brume", "Brume dense ★")),
 ])
 
@@ -169,14 +180,14 @@ POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.3
     ("Métabolisme accéléré", "Accorde un bref surcroît d'énergie physique au prix d'une fatigue ensuite. Ne remplace ni la guérison ni la vitesse surnaturelle.", ("Récupération brève", "Élan prolongé")),
     ("Camouflage organique", "Modifie les couleurs ou motifs du corps pour mieux se fondre dans un environnement. Le mouvement et les autres sens peuvent révéler le personnage.", ("Mimétisme complet", "Camouflage en mouvement")),
     ("Adaptation respiratoire", "Permet de supporter brièvement un air difficile ou de retenir son souffle plus longtemps. Ne protège pas de toutes les substances dangereuses.", ("Respiration prolongée", "Filtration de l'air ★")),
-    ("Atténuation de la douleur", "Diminue temporairement une sensation douloureuse chez soi ou une personne consentante. La blessure reste présente et peut s'aggraver si elle est ignorée.", ("Apaisement ciblé", "Apaisement partagé ★")),
+    ("Algokinésie", "Module temporairement une sensation douloureuse chez soi ou une personne consentante. La blessure reste présente et peut s'aggraver si elle est ignorée.", ("Apaisement ciblé", "Apaisement partagé ★")),
 ])
 
 POWER_DIRECTORY += power_table("XXI", "Facultés mentales et pouvoirs insolites", "rgba(196,181,253,0.34)", [
     ("Torture mentale", "Inflige à une cible une sensation de souffrance psychique temporaire, sans blessure physique ni séquelle imposée. Les réactions, révélations et limites de la scène sont convenues avec son joueur.", ("Étau psychique ★", "Pression partagée ★")),
     ("Omnilinguisme", "Permet de comprendre et de parler les langues ordinaires entendues, sans donner accès aux pensées, aux codes secrets ou aux savoirs de leurs locuteurs.", ("Écritures anciennes", "Langues occultes ★")),
     ("Intuition des mensonges", "Perçoit une discordance lorsqu'une personne ment délibérément, sans connaître la vérité ni détecter une erreur sincère.", ("Dissonance des récits", "Lecture des omissions ★")),
-    ("Altération des probabilités", "Infléchit légèrement la chance d'un événement banal et incertain. Ne garantit aucun résultat et ne décide pas seule de l'issue d'une scène.", ("Chance favorable ★", "Malchance localisée ★")),
+    ("Tychokinésie", "Infléchit légèrement la chance d'un événement banal et incertain. Ne garantit aucun résultat et ne décide pas seule de l'issue d'une scène.", ("Chance favorable ★", "Malchance localisée ★")),
     ("Transmutation mineure", "Modifie temporairement la matière d'un petit objet inerte. Ne touche ni les êtres vivants ni les objets protégés sans accord.", ("Matière durable ★", "Transformation multiple ★")),
     ("Animation d'objets", "Anime brièvement un petit objet inerte pour une action simple. L'objet n'acquiert ni pensée ni pouvoir propre.", ("Mouvement coordonné", "Assistant animé ★")),
     ("Sommeil induit", "Favorise une somnolence progressive chez une cible réceptive. Ne provoque pas d'inconscience instantanée et la cible peut résister.", ("Sommeil profond ★", "Rêve dirigé ★")),
@@ -204,6 +215,9 @@ POWER_DIRECTORY += power_table("XXIII", "Nuages, poussières et lumière", "rgba
     ("Télékinésie lumineuse", "Emploie des filaments de lumière condensée pour attirer ou déplacer un petit objet visible. Une source lumineuse et la concentration sont nécessaires.", ("Prise photique", "Manipulation multiple ★")),
     ("Prisme de lumière", "Réfracte une lumière présente pour produire des reflets trompeurs ou dévier un éclat. Ne crée ni matière ni illusion mentale.", ("Déviation lumineuse", "Miroirs prismatiques ★")),
 ])
+
+for section_number, section_title, section_color, powers in KINETIC_POWER_SECTIONS:
+    POWER_DIRECTORY += power_table(section_number, section_title, section_color, powers)
 
 
 class Command(BaseCommand):
