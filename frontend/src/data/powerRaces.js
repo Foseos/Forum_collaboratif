@@ -182,8 +182,8 @@ add(`Phobokinésie`, [R.sorcier, R.demon, R.sirenePsychique, R.kitsuneEsprit])
 add(`Vertige de folie
 Malaise surnaturel
 Germe de discorde
-Algokinésie
 Torture mentale`, [R.sorcier, R.demon, R.tenebres, R.sirenePsychique, R.kitsuneEsprit])
+add(`Algokinésie`, [R.sorcier, R.demon, R.sirenePsychique, R.kitsuneEsprit])
 add(`Suggestion mentale
 Manipulation des sentiments
 Illusion mentale
