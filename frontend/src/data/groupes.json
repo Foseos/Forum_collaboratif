@@ -44,7 +44,7 @@
     {
         "id": "demon",
         "nom": "Démon",
-        "description": "Les entités démoniaques.",
+        "description": "Démons de Charmed : Furies, démons de Lazare, Kazi, succubes et incubes, Êtres des ténèbres et prophétesses démoniaques. Leurs capacités dépendent de leur fiche validée.",
         "couleur": "dark",
         "icone": "💀",
         "type": "race"

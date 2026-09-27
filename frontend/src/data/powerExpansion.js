@@ -1,5 +1,11 @@
 // Proposals for the broader registry. Every new ability and evolution needs staff approval.
 export const expandedPowerNotes = {
+  'Écho des fautes': ['Faire entendre un écho lié à la culpabilité d’une personne proche.', 'Déstabiliser brièvement une cible qui reconnaît les voix perçues.', 'Ne révèle pas la vérité sur ses actes et ne force ni aveu ni réaction.'],
+  'Mémoire des cendres': ['Retrouver une impression fragmentaire dans les cendres de sa propre destruction.', 'Percevoir une sensation liée au lieu où le personnage a été défait.', 'N’annule aucune mort en RP et ne révèle pas toute la scène.'],
+  'Pression crânienne': ['Exercer une pression magique brève sur une cible proche.', 'Tenter de la désorienter pendant un instant.', 'Aucune blessure ni perte de connaissance automatique ; la cible peut résister.'],
+  'Lecture des désirs': ['Percevoir une attirance ou un désir déjà présent chez une personne proche.', 'Adapter une approche à une émotion ressentie.', 'Ni télépathie, ni sentiment créé, ni accès libre à la vie intime de la cible.'],
+  'Marque de traque': ['Suivre momentanément une trace magique déjà identifiée.', 'Retrouver une direction après une rencontre.', 'Distance et protections brouillent la piste ; aucune localisation permanente.'],
+  'Présage de rupture': ['Entrevoir une décision susceptible de changer un événement.', 'Avertir une personne d’un risque possible.', 'La vision reste interprétable et ne garantit aucune issue.'],
   'Cri de Furie': ['Projeter une onde sonore alimentée par une émotion intense.', 'Tenter de repousser un obstacle ou de rompre une prise.', 'Portée courte et fatigue vocale ; la cible peut se protéger et aucun dégât n’est automatique.'],
   'Cri perçant': ['Émettre une fréquence qui gêne momentanément l’ouïe et la concentration.', 'Interrompre un chant ou détourner l’attention.', 'N’inflige pas de surdité durable et perd de son effet derrière une protection adaptée.'],
   'Chant apaisant': ['Aider les personnes qui entendent la voix à retrouver leur calme.', 'Soutenir des alliés au milieu d’une dispute.', 'Leur joueur choisit leur réaction ; le chant ne supprime pas leurs raisons d’être en colère.'],
@@ -49,6 +55,18 @@ export const expandedPowerNotes = {
 }
 
 export const expandedEvolutionNotes = {
+  'Clameur des fautes': 'Étendre un écho atténué à plusieurs cibles proches, sans imposer leurs réactions.',
+  'Voix persistante': 'Faire durer brièvement les voix pour une seule cible, sans souvenir imposé.',
+  'Lecture des vestiges': 'Préciser une impression liée à ses propres cendres, sans récit complet.',
+  'Retour des fragments': 'Reconstituer lentement un petit objet personnel à partir de ses fragments conservés.',
+  'Étau focalisé': 'Maintenir une pression modérée sur une seule cible, avec concentration et résistance possible.',
+  'Onde de pression': 'Répartir une pression plus faible entre quelques cibles proches.',
+  'Nuance du désir': 'Mieux distinguer une émotion déjà perçue sans connaître forcément sa cause.',
+  'Miroir du désir': 'Suggérer une brève illusion issue du désir perçu, sans modifier les choix de la cible.',
+  "Piste d'ombre": 'Retrouver une direction générale après une téléportation, sans découvrir sa destination.',
+  'Trace persistante': 'Suivre un peu plus longtemps une trace identifiée, sans pistage permanent.',
+  'Visions divergentes': 'Apercevoir deux issues possibles sans savoir laquelle adviendra.',
+  'Écho du choix': 'Partager un fragment de présage avec une personne consentante.',
   'Onde furieuse': 'Élargir légèrement l’onde du cri, avec une fatigue et des réactions possibles pour chaque cible.',
   'Déflagration vocale': 'Concentrer l’onde sur un obstacle ou une zone définie ; les dégâts sont convenus avec les joueurs concernés.',
   'Fréquence ciblée': 'Mieux diriger le cri vers une cible sans toucher automatiquement les personnes voisines.',

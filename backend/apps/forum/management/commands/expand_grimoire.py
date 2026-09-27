@@ -547,6 +547,63 @@ POWER_DIRECTORY += power_table("XXXI", "Instinct, traque et ralliement", "rgba(2
     ),
 ])
 
+POWER_DIRECTORY += power_table("XXXII", "Manifestations démoniaques", "rgba(248,113,113,0.32)", [
+    (
+        "Écho des fautes",
+        "Fait entendre à une cible proche un bref écho des voix de personnes qu'elle pense avoir blessées. Le pouvoir ne révèle aucun fait inconnu du lanceur et ne force ni aveu ni réaction.",
+        ("Clameur des fautes ★", "Voix persistante ★"),
+        (
+            "Étend un écho plus faible à quelques cibles proches, chacune conservant sa réaction.",
+            "Prolonge brièvement la perception chez une cible, sans l'épuiser ni lui imposer des souvenirs.",
+        ),
+    ),
+    (
+        "Mémoire des cendres",
+        "Perçoit des impressions fragmentaires laissées dans les cendres issues de sa propre destruction. Ne reconstitue ni toute la scène ni les pensées d'autrui.",
+        ("Lecture des vestiges ★", "Retour des fragments ★"),
+        (
+            "Affûte une impression liée à son corps disparu, sans obtenir un récit certain des événements.",
+            "Reconstitue lentement un petit objet personnel détruit avec lui, à condition d'en retrouver les fragments ; aucun objet magique ou détenu par autrui n'est recréé librement.",
+        ),
+    ),
+    (
+        "Pression crânienne",
+        "Exerce une pression magique brève sur une cible à courte portée, pouvant causer douleur ou désorientation passagère. Aucune lésion ni perte de connaissance n'est automatique.",
+        ("Étau focalisé ★", "Onde de pression ★"),
+        (
+            "Maintient la pression un peu plus longtemps sur une seule cible, avec concentration et possibilité de résistance.",
+            "Répartit une pression atténuée entre quelques cibles proches ; chacune peut réagir ou s'en protéger.",
+        ),
+    ),
+    (
+        "Lecture des désirs",
+        "Perçoit une attirance ou un désir déjà présent chez une personne proche, sans lire ses pensées ni connaître toute son histoire intime.",
+        ("Nuance du désir ★", "Miroir du désir ★"),
+        (
+            "Distingue plus finement une émotion déjà ressentie, sans en connaître nécessairement la cause.",
+            "Suggère une brève illusion liée au désir perçu ; la cible peut la reconnaître et conserve ses sentiments et ses choix.",
+        ),
+    ),
+    (
+        "Marque de traque",
+        "Suit pendant quelques tours de RP la trace magique d'une personne déjà rencontrée. La distance, les protections et les déplacements peuvent brouiller la piste.",
+        ("Piste d'ombre ★", "Trace persistante ★"),
+        (
+            "Retrouve la direction générale prise après une téléportation, sans connaître la destination exacte ni traverser les protections.",
+            "Conserve un peu plus longtemps une trace identifiée, sans localisation permanente.",
+        ),
+    ),
+    (
+        "Présage de rupture",
+        "Entrevoit qu'une décision proche pourrait infléchir un événement. La vision reste symbolique et ne donne ni issue certaine ni moyen d'imposer un choix.",
+        ("Visions divergentes ★", "Écho du choix ★"),
+        (
+            "Aperçoit deux issues possibles sans savoir laquelle se réalisera ; l'intrigue détermine les informations révélées.",
+            "Partage un fragment du présage avec une personne consentante, sans lui transmettre un pouvoir de divination.",
+        ),
+    ),
+])
+
 
 class Command(BaseCommand):
     help = "Complète le Grimoire des pouvoirs avec les capacités du crossover Nexus Arcana."

@@ -5,6 +5,11 @@ const R = {
   heretique: 'Hérétiques',
   demon: 'Démons',
   tenebres: 'Êtres des ténèbres',
+  furies: 'Furies',
+  lazare: 'Démons de Lazare',
+  kazi: 'Démons Kazi',
+  succubes: 'Succubes et incubes',
+  prophetesses: 'Prophétesses démoniaques',
   lumiere: 'Êtres de lumière',
   fee: 'Fées',
   feeBois: 'Fées sylvestres',
@@ -54,6 +59,13 @@ function add(names, races) {
     possibilities.set(name, existing)
   }
 }
+
+add(`Écho des fautes`, [R.furies])
+add(`Mémoire des cendres`, [R.lazare])
+add(`Pression crânienne`, [R.kazi])
+add(`Lecture des désirs`, [R.succubes])
+add(`Marque de traque`, [R.tenebres])
+add(`Présage de rupture`, [R.prophetesses])
 
 add(`Boules d'énergie
 Télékinésie
