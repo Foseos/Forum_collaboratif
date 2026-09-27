@@ -56,11 +56,12 @@ KINETIC_POWER_SECTIONS = (
         "XXV", "Terre, feu et résidus", "rgba(251,146,60,0.32)", (
             (
                 "Arénokinésie",
-                "Déplace et modèle du sable déjà présent. Les grains ne deviennent ni verre ni pierre sans autre pouvoir.",
-                ("Voile de sable", "Forme sableuse ★"),
+                "Déplace et modèle du sable déjà présent. Une évolution permet de soulever une tempête locale ; les grains ne deviennent ni verre ni pierre sans autre pouvoir.",
+                ("Voile de sable", "Forme sableuse ★", "Tempête de sable ★"),
                 (
                     "Soulève un rideau de sable qui gêne la vue mais peut être dispersé.",
                     "Donne au sable une forme temporaire de petite taille, sans solidité parfaite.",
+                    "Soulève une tempête dans une zone limitée si assez de sable est disponible. Sa durée et son intensité sont validées par le staff ; elle peut gêner la vue et les déplacements sans piéger ni blesser automatiquement une cible.",
                 ),
             ),
             (
