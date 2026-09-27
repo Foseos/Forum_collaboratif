@@ -153,7 +153,7 @@ add(`Chant apaisant
 Voix mimétique`, [R.sorcier, R.muse, R.fee, R.cupidon, R.sirenePsychique])
 add(`Cri de Furie`, [R.furies])
 add(`Hurlement de ralliement
-Rugissement de garde`, [R.demon, R.banshee, R.valkyrie, R.loup, R.changeforme, R.hellhound])
+Rugissement de garde`, [R.demon, R.valkyrie, R.loup, R.changeforme, R.hellhound])
 
 add(`Décélération moléculaire
 Éclat moléculaire
@@ -171,7 +171,12 @@ Lecture des intentions
 Regards croisés
 Écho des savoirs
 Augure des nuées
-Partage sensoriel`, [R.sorcier, R.fee, R.elfe, R.sphinx, R.muse, R.banshee, R.kitsuneEsprit])
+Partage sensoriel`, [R.sorcier, R.fee, R.elfe, R.sphinx, R.muse, R.kitsuneEsprit])
+add(`Détection de magie
+Précognition
+Clairvoyance
+Sens des présages
+Lecture des intentions`, [R.banshee])
 add(`Voile de présence`, [R.sorcier, R.fee, R.elfe, R.vampire, R.kitsuneOmbre])
 add(`Télépathie
 Empathie
@@ -262,7 +267,10 @@ add(`Tychokinésie`, [R.sorcier, R.fee, R.sphinx])
 add(`Prémonition
 Clairsentience
 Lecture d'aura
-Perception temporelle`, [R.sorcier, R.sphinx, R.banshee, R.elfeAstre, R.kitsuneEsprit])
+Perception temporelle`, [R.sorcier, R.sphinx, R.elfeAstre, R.kitsuneEsprit])
+add(`Prémonition
+Clairsentience
+Lecture d'aura`, [R.banshee])
 add(`Suggestion
 Rêves lucides`, [R.sorcier, R.demon, R.muse, R.sirenePsychique, R.kitsuneEsprit])
 add(`Télépathie animale`, [R.sorcier, R.feeBois, R.elfeBois, R.nymphe, R.loup, R.changeforme])

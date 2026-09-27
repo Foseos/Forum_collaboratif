@@ -33,7 +33,7 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Sonokinésie",
-                "Amplifie, atténue ou dévie des sons et peut émettre des ondes sonores à une fréquence choisie. Elle se distingue d'un cri surnaturel émis par la voix.",
+                "Amplifie, atténue ou dévie des sons et peut émettre des ondes sonores à une fréquence choisie. Chez une Banshee, elle prolonge son cri et passe par sa voix ; pour les autres espèces, sa source dépend de la fiche validée.",
                 ("Écho dirigé", "Silence sélectif ★", "Onde de fréquence ★"),
                 (
                     "Redirige un son identifiable vers un point proche sans inventer sa source.",
@@ -43,7 +43,7 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Vibrakinésie",
-                "Crée de faibles vibrations et peut les transmettre à un objet solide proche, sans le détruire automatiquement.",
+                "Crée de faibles vibrations et peut les transmettre à un objet solide proche, sans le détruire automatiquement. Chez une Banshee, les vibrations naissent de son cri.",
                 ("Résonance ciblée", "Onde vibratoire ★"),
                 (
                     "Fait vibrer un matériau précis pour émettre un signal ou en tester la structure.",
