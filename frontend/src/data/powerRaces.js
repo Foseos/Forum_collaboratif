@@ -153,7 +153,8 @@ Cri perçant
 Silence surnaturel
 Écholocalisation`, [R.sorcier, R.demon, R.banshee, R.muse, R.kitsuneSon, R.sirenePsychique])
 add(`Chant apaisant
-Voix mimétique`, [R.sorcier, R.muse, R.fee, R.cupidon, R.sirenePsychique])
+Voix mimétique`, [R.sorcier, R.muse, R.fee, R.sirenePsychique])
+add(`Chant apaisant`, [R.cupidon])
 add(`Cri de Furie`, [R.furies])
 add(`Hurlement de ralliement
 Rugissement de garde`, [R.demon, R.valkyrie, R.loup, R.changeforme])
@@ -190,7 +191,16 @@ Rayonnement de joie
 Chagrin partagé
 Élan de courage
 Accord des sens
-Émotionkinésie`, [R.sorcier, R.cupidon, R.muse, R.fee, R.nymphe, R.sirenePsychique, R.kitsuneEsprit])
+Émotionkinésie`, [R.sorcier, R.muse, R.fee, R.nymphe, R.sirenePsychique, R.kitsuneEsprit])
+add(`Empathie
+Empathie inversée
+Perception des liens affectifs
+Élan affectif
+Rayonnement de joie
+Chagrin partagé
+Élan de courage
+Accord des sens
+Émotionkinésie`, [R.cupidon])
 add(`Phobokinésie`, [R.sorcier, R.demon, R.sirenePsychique, R.kitsuneEsprit])
 add(`Vertige de folie
 Malaise surnaturel
@@ -201,7 +211,7 @@ add(`Suggestion mentale
 Manipulation des sentiments
 Illusion mentale
 Onirokinésie
-Chant envoûtant`, [R.sorcier, R.demon, R.fee, R.cupidon, R.muse, R.sirenePsychique, R.kitsuneEsprit])
+Chant envoûtant`, [R.sorcier, R.demon, R.fee, R.muse, R.sirenePsychique, R.kitsuneEsprit])
 add(`Illusion visuelle`, [R.sorcier, R.demon, R.fee, R.muse, R.sirenePsychique, R.kitsuneEsprit])
 add(`Sommeil induit`, [R.sorcier, R.demon, R.fee, R.muse, R.sirenePsychique, R.kitsuneEsprit])
 add(`Réminiscence
@@ -219,7 +229,7 @@ add(`Guérison`, [R.sorcier, R.lumiere, R.feeLumiere, R.elfeEau, R.nymphe])
 add(`Lien vital
 Rayonnement réparateur
 Rosée réparatrice
-Biokinésie`, [R.sorcier, R.lumiere, R.feeLumiere, R.elfeEau, R.nymphe, R.cupidon])
+Biokinésie`, [R.sorcier, R.lumiere, R.feeLumiere, R.elfeEau, R.nymphe])
 add(`Détection des protégés
 Localisation`, [R.lumiere, R.cupidon, R.sorcier, R.valkyrie])
 add(`Orbing`, [R.lumiere])
