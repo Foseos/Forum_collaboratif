@@ -211,8 +211,8 @@ Localisation`, [R.lumiere, R.cupidon, R.sorcier, R.valkyrie])
 add(`Orbing`, [R.lumiere, R.tenebres])
 add(`Téléportation / Flash
 Shimmer
-Lévitation
-Ailes d'énergie`, [R.sorcier, R.demon, R.fee, R.lumiere, R.tenebres, R.muse, R.phenix])
+Lévitation`, [R.sorcier, R.demon, R.fee, R.lumiere, R.tenebres, R.muse, R.phenix])
+add(`Ailes d'énergie`, [R.fee])
 add(`Corps de marée
 Marche des nuages
 Nuage protecteur`, [R.feeEau, R.nymphe, R.sireneMarine, R.kitsuneEau, R.kitsuneAir])
