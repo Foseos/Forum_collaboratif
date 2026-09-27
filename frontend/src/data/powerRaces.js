@@ -331,19 +331,6 @@ function limit(race, names) {
   }
 }
 
-limit(R.demon, `Boules d'énergie
-Télékinésie
-Vague de force
-Bouclier d'énergie
-Pyrokinésie
-Combustion par le regard
-Illusion visuelle
-Suggestion mentale
-Shimmer
-Force accrue
-Sens aiguisés
-Régénération
-Métamorphose`)
 limit(R.elfe, `Détection de magie
 Précognition
 Sens des présages
