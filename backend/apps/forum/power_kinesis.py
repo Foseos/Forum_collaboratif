@@ -14,11 +14,12 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Barokinésie",
-                "Modifie légèrement la pression de l'air dans un espace limité, sans priver quelqu'un d'oxygène.",
-                ("Poussée barométrique", "Zone de pression ★"),
+                "Modifie la pression de l'air dans un espace limité. Une évolution peut priver brièvement une cible d'oxygène.",
+                ("Poussée barométrique", "Zone de pression ★", "Privation d'oxygène ★"),
                 (
                     "Produit une poussée d'air par différence de pression, avec une portée courte.",
                     "Stabilise une variation modérée de pression dans une zone définie.",
+                    "Réduit l'oxygène autour d'une cible pendant un instant. L'effet et sa durée sont validés par le staff et joués avec l'accord de la cible, sans perte de connaissance ni séquelle imposée.",
                 ),
             ),
             (
