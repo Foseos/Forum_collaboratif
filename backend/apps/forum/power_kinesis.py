@@ -100,6 +100,16 @@ KINETIC_POWER_SECTIONS = (
                     "Guide la fumée hors d'une zone ou vers une ouverture sur une courte distance.",
                 ),
             ),
+            (
+                "Acidokinésie",
+                "Crée une petite quantité d'acide fictif ou guide celui qui est présent. Sa corrosion et sa durée restent limitées ; il n'impose aucune blessure à un personnage.",
+                ("Gouttes corrosives", "Jet acide ★", "Neutralisation acide ★"),
+                (
+                    "Dépose quelques gouttes pour attaquer lentement une petite surface non protégée.",
+                    "Projette un bref jet sur une cible proche ; tout dégât sur un personnage ou un objet lui appartenant se joue avec son accord.",
+                    "Dissipe ou neutralise une faible quantité d'acide créé ou déjà présent, sans annuler toutes les substances dangereuses.",
+                ),
+            ),
         ),
     ),
     (
