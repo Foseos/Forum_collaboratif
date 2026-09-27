@@ -66,6 +66,15 @@ add(`Pression crânienne`, [R.kazi])
 add(`Lecture des désirs`, [R.succubes])
 add(`Marque de traque`, [R.tenebres])
 add(`Présage de rupture`, [R.prophetesses])
+add(`Soif révélatrice
+Vitesse vampirique
+Contrainte du regard`, [R.vampire])
+add(`Transformation lupine
+Instinct de meute
+Pistage lupin`, [R.loup])
+add(`Formule improvisée
+Alchimie de terrain
+Lien d'incantation`, [R.sorcier])
 
 add(`Boules d'énergie
 Télékinésie
