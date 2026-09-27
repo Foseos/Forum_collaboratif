@@ -145,8 +145,8 @@ Silence surnaturel
 Écholocalisation`, [R.sorcier, R.demon, R.banshee, R.muse, R.kitsuneSon, R.sirenePsychique])
 add(`Chant apaisant
 Voix mimétique`, [R.sorcier, R.muse, R.fee, R.cupidon, R.sirenePsychique])
-add(`Cri de Furie
-Hurlement de ralliement
+add(`Cri de Furie`, [R.furies])
+add(`Hurlement de ralliement
 Rugissement de garde`, [R.demon, R.banshee, R.valkyrie, R.loup, R.changeforme, R.hellhound])
 
 add(`Décélération moléculaire

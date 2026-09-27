@@ -164,7 +164,6 @@ POWER_DIRECTORY += power_table("XVII", "Cris, voix et vibrations", "rgba(244,114
             "Compose plusieurs sons cohérents dans une petite zone, sans imposer ce que les auditeurs croient ou font.",
         ),
     ),
-    ("Cri de Furie", "Libère par la voix une onde liée à une émotion intense qui peut repousser ou déséquilibrer à courte portée. Ne blesse pas automatiquement une cible.", ("Onde furieuse ★", "Déflagration vocale ★")),
     ("Cri perçant", "Émet une fréquence aiguë capable de troubler brièvement l'ouïe et la concentration d'une cible proche. Ne rend pas sourd durablement.", ("Fréquence ciblée", "Cri de groupe ★")),
     ("Chant apaisant", "Apaise brièvement une tension chez les personnes qui entendent la voix et acceptent l'effet. Ne modifie ni souvenirs ni décisions.", ("Accord protecteur", "Chœur apaisant ★")),
     ("Voix mimétique", "Reproduit le timbre et la manière de parler d'une voix déjà entendue, sans acquérir les connaissances de son propriétaire.", ("Timbre parfait", "Écho différé")),
@@ -548,6 +547,7 @@ POWER_DIRECTORY += power_table("XXXI", "Instinct, traque et ralliement", "rgba(2
 ])
 
 POWER_DIRECTORY += power_table("XXXII", "Furies", "rgba(248,113,113,0.32)", [
+    ("Cri de Furie", "Libère par la voix une onde liée à une émotion intense qui peut repousser ou déséquilibrer à courte portée. Ne blesse pas automatiquement une cible.", ("Onde furieuse ★", "Déflagration vocale ★")),
     (
         "Écho des fautes",
         "Fait entendre à une cible proche un bref écho des voix de personnes qu'elle pense avoir blessées. Le pouvoir ne révèle aucun fait inconnu du lanceur et ne force ni aveu ni réaction.",
