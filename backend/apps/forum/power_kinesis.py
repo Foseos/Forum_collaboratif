@@ -92,6 +92,15 @@ KINETIC_POWER_SECTIONS = (
                 ),
             ),
             (
+                "Courant de limon",
+                "Crée une petite quantité de boue ou déplace celle qui est présente. Elle ne peut engloutir ni immobiliser automatiquement un personnage.",
+                ("Bourbier local ★", "Rempart de limon ★"),
+                (
+                    "Étend une zone boueuse qui ralentit les déplacements sans piéger une cible contre son gré.",
+                    "Dresse une masse de boue compacte pour amortir un choc, avec une résistance limitée.",
+                ),
+            ),
+            (
                 "Fumokinésie",
                 "Crée un peu de fumée ou déplace celle qui est présente. Elle ne produit pas de combustion et ne devient pas un poison.",
                 ("Écran de fumée", "Courant de fumée ★"),
@@ -117,10 +126,11 @@ KINETIC_POWER_SECTIONS = (
             (
                 "Photokinésie",
                 "Crée une lumière limitée ou module celle qui existe pour l'intensifier, l'adoucir ou la diriger, sans télékinésie sur la matière.",
-                ("Halo dirigé", "Éblouissement contrôlé ★"),
+                ("Halo dirigé", "Éblouissement contrôlé ★", "Lumière recueillie ★"),
                 (
                     "Crée ou concentre un halo lumineux mobile de petite taille.",
                     "Produit un éclat bref dont la cible peut détourner les yeux ou se protéger.",
+                    "Absorbe brièvement une partie de la lumière d'une petite zone pour la restituer ensuite, sans plonger automatiquement tout un lieu dans le noir.",
                 ),
             ),
             (
@@ -298,10 +308,11 @@ KINETIC_POWER_SECTIONS = (
             (
                 "Technokinésie",
                 "Génère une impulsion de commande ou influence une fonction simple d'un appareil proche. Ne crée pas d'appareil et ne donne pas accès à tous les systèmes ni à leurs données privées.",
-                ("Interface intuitive", "Réseau local ★"),
+                ("Interface intuitive", "Réseau local ★", "Silence des circuits ★"),
                 (
                     "Comprend et déclenche une commande simple d'un appareil compatible à portée.",
                     "Coordonne brièvement plusieurs appareils accessibles dans un même lieu.",
+                    "Émet une impulsion qui interrompt temporairement de petits appareils proches. N'efface aucune donnée et ne neutralise pas toutes les protections.",
                 ),
             ),
             (

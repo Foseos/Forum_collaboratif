@@ -253,6 +253,24 @@ POWER_DIRECTORY += power_table("XVIII", "Perception et conscience", "rgba(167,13
 
 POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.30)", [
     (
+        "Voile cinétique",
+        "Dresse devant soi une barrière physique brève qui amortit un choc ou dévie un petit projectile. Sa résistance est limitée et elle ne protège pas l'esprit.",
+        ("Rempart partagé ★", "Déviation contrôlée ★"),
+        (
+            "Élargit la barrière pour protéger quelques personnes proches pendant un court instant.",
+            "Oriente une partie de l'impact vers une zone libre, sans retourner automatiquement une attaque contre son auteur.",
+        ),
+    ),
+    (
+        "Flux emprunté",
+        "Absorbe une faible quantité d'énergie ambiante ou offerte par une personne consentante. Ne retire pas les pouvoirs d'autrui et ne constitue pas une réserve illimitée.",
+        ("Don de flux ★", "Décharge de flux ★"),
+        (
+            "Transmet une partie de l'énergie recueillie à une personne consentante, au prix d'une fatigue à jouer.",
+            "Libère l'énergie accumulée en une impulsion courte dont l'effet sur une cible se joue avec elle.",
+        ),
+    ),
+    (
         "Cristallokinésie",
         "Crée une petite quantité de cristaux, puis peut les déplacer et les façonner. Leur taille et leur résistance restent limitées.",
         ("Barrière cristalline ★", "Résonance des gemmes ★"),
@@ -267,6 +285,15 @@ POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.3
 ])
 
 POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.30)", [
+    (
+        "Accord des sens",
+        "Associe temporairement deux perceptions du personnage, par exemple voir un son comme une couleur. L'effet enrichit la perception sans révéler des informations cachées.",
+        ("Accord empathique ★", "Spectre élargi ★"),
+        (
+            "Perçoit une émotion forte comme une nuance sensorielle, sans lire les pensées ni connaître sa cause certaine.",
+            "Associe brièvement plusieurs sens avec une précision accrue, au risque d'une surcharge sensorielle.",
+        ),
+    ),
     (
         "Éclat moléculaire",
         "Accélère brièvement les molécules de l'air pour produire un flash lumineux local. Il peut gêner la vue sans brûlure ni aveuglement durable imposés.",
@@ -365,6 +392,15 @@ POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.3
 
 POWER_DIRECTORY += power_table("XXI", "Facultés mentales et pouvoirs insolites", "rgba(196,181,253,0.34)", [
     (
+        "Sillage fulgurant",
+        "Se déplace sur une très courte distance sous la forme d'un éclair magique. Le trajet doit rester accessible et les protections adaptées peuvent l'arrêter.",
+        ("Relais conducteur ★", "Passage accompagné ★"),
+        (
+            "Prolonge légèrement le trajet en suivant un conducteur visible, sans traverser librement les lieux protégés.",
+            "Emmène une personne consentante sur un trajet bref, avec un effort et une portée validés par le staff.",
+        ),
+    ),
+    (
         "Germe de discorde",
         "Accentue brièvement une tension déjà perceptible entre des personnes proches. Ne crée pas de haine durable et ne force ni dispute ni violence.",
         ("Dissonance partagée ★", "Tension dissipée ★"),
@@ -402,6 +438,15 @@ POWER_DIRECTORY += power_table("XXI", "Facultés mentales et pouvoirs insolites"
 ])
 
 POWER_DIRECTORY += power_table("XXII", "Eaux, lumière et enchantements", "rgba(103,232,249,0.34)", [
+    (
+        "Corps de marée",
+        "Liquéfie temporairement une petite partie de son propre corps. Cela ne rend ni insensible aux attaques ni capable de traverser toute surface.",
+        ("Forme fluide ★", "Écoulement guidé ★"),
+        (
+            "Étend la transformation à une plus grande partie du corps pendant quelques tours de RP, avec des limites validées.",
+            "Se glisse par une ouverture compatible sur une courte distance, sans contourner automatiquement les protections magiques.",
+        ),
+    ),
     ("Bouclier aquatique", "Crée ou rassemble de l'eau en barrière pour amortir une attaque. La protection a une résistance et une durée limitées.", ("Dôme aqueux ★", "Bouclier mobile ★")),
     ("Fouet d'eau", "Projette un jet d'eau souple pour repousser ou tenter de saisir un objet proche. N'immobilise pas automatiquement une personne.", ("Double fouet", "Entrave aqueuse ★")),
     ("Respiration aquatique", "Permet de respirer sous l'eau pendant quelques tours de RP, sans protéger du froid, de la pression ou des courants.", ("Souffle prolongé", "Partage du souffle ★")),
