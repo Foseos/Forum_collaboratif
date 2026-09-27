@@ -17,6 +17,7 @@
       </ol>
       <p>« Maîtrise » signifie un usage plus précis ou plus étendu, jamais une puissance sans limite. Contrôle mental, blessure grave, possession et mort nécessitent l’accord du joueur concerné. Le maître du jeu est la personne qui encadre l’événement.</p>
       <p>Les espèces indiquées sont des possibilités, jamais des pouvoirs acquis automatiquement. Les hybrides et Trybrides dépendent de leurs héritages validés. Les sorciers TVD, The Originals et Legacies sont exclus de cette liste de compatibilités.</p>
+      <p><strong>Chimères :</strong> aucune liste de pouvoirs commune ne s'applique à toutes. Leurs capacités possibles dépendent des origines et des deux axes retenus dans leur fiche validée ; un pouvoir présent dans ce registre peut être proposé au staff si cette combinaison le justifie.</p>
       <p>Chaque déblocage ou amélioration passe par la boutique : 300 Arcana Flouz pour le premier achat, puis 300 de plus par achat. Décrivez la capacité souhaitée et ses limites ; le staff approuve chaque ajout ou évolution. La capacité devient utilisable après validation, débit et mise à jour de la fiche.</p>
     </details>
 

@@ -143,7 +143,7 @@ Fumokinésie
 Cinerokinésie
 Poussiérokinésie`, [R.sorcier, R.demon, R.fee, R.kitsuneAir, R.phenix])
 add(`Acidokinésie
-Toxikinésie`, [R.sorcier, R.demon, R.kanima, R.chimere])
+Toxikinésie`, [R.sorcier, R.demon, R.kanima])
 add(`Hématokinésie
 Ostéokinésie`, [R.sorcier, R.demon, R.feeNoire, R.elfeNoir, R.kitsuneSang])
 add(`Sonokinésie
@@ -261,21 +261,21 @@ add(`Métamorphose
 Peau des bêtes
 Variation de taille
 Variation de densité
-Clonage`, [R.sorcier, R.demon, R.fee, R.changeforme, R.kitsune, R.chimere])
-add(`Invisibilité`, [R.sorcier, R.demon, R.fee, R.kitsune, R.chimere])
+Clonage`, [R.sorcier, R.demon, R.fee, R.changeforme, R.kitsune])
+add(`Invisibilité`, [R.sorcier, R.demon, R.fee, R.kitsune])
 add(`Communication animale
 Parole des bêtes
 Ascendant animal`, [R.sorcier, R.feeBois, R.elfeBois, R.nymphe, R.loup, R.changeforme])
-add(`Toucher paralysant`, [R.sorcier, R.demon, R.kanima, R.chimere, R.sirenePsychique])
+add(`Toucher paralysant`, [R.sorcier, R.demon, R.kanima, R.sirenePsychique])
 add(`Sillage des effluves`, [R.cupidon, R.fee, R.nymphe, R.sirenePsychique, R.demon])
-add(`Pétrification progressive`, [R.sorcier, R.demon, R.sphinx, R.chimere])
+add(`Pétrification progressive`, [R.sorcier, R.demon, R.sphinx])
 add(`Myokinésie
-Neurokinésie`, [R.sorcier, R.demon, R.loup, R.changeforme, R.chimere])
+Neurokinésie`, [R.sorcier, R.demon, R.loup, R.changeforme])
 add(`Aile spectrale`, [R.sorcier, R.phenix, R.valkyrie, R.sphinx])
 
 add(`Absorption de magie`, [R.sorcier, R.heretique, R.demon])
-add(`Réplique de pouvoir`, [R.sorcier, R.demon, R.chimere])
-add(`Technokinésie`, [R.sorcier, R.demon, R.phenix, R.chimere])
+add(`Réplique de pouvoir`, [R.sorcier, R.demon])
+add(`Technokinésie`, [R.sorcier, R.demon, R.phenix])
 add(`Tychokinésie`, [R.sorcier, R.fee, R.sphinx])
 
 // Noms de départ des parcours historiques qui n'ont pas de fiche autonome.
