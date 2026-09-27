@@ -5,7 +5,7 @@
     { "name": "Démons Kazi", "description": "Guerriers démoniaques liés à leur roi. Leur lien et leurs capacités sont précisés dans la fiche, sans imposer un contrôle automatique sur d'autres personnages." },
     { "name": "Succubes et incubes", "description": "Démons liés à la séduction et à l'énergie des passions. Ils peuvent susciter une attirance sexuelle passagère ou, avec une évolution validée, un sentiment amoureux temporaire. Ces émotions n'imposent ni relation ni acte à la personne ciblée ; leurs effets se jouent avec son joueur." },
     { "name": "Êtres des ténèbres", "description": "Démons spécialisés dans la traque des êtres de lumière. Arbalète d'ombre, pistage, marquage et orbing sombre forment leurs principales pistes de pouvoirs. Chaque capacité doit figurer dans la fiche validée." },
-    { "name": "Prophétesses démoniaques", "description": "Démones dotées de visions, à l'image des voyantes maléfiques de Charmed. Il s'agit d'un rôle ou d'un profil, pas d'une espèce distincte ; leurs visions restent partielles et leurs pouvoirs sont validés individuellement." }
+    { "name": "Prophétesses démoniaques", "description": "Démones dotées de visions, à l'image des voyantes maléfiques de Charmed. Il s'agit d'un rôle ou d'un profil, pas d'une espèce distincte ; elles peuvent connaître une issue précise telle qu'elle se dessine au moment de la vision, mais les actes ultérieurs peuvent la modifier. Leurs pouvoirs sont validés individuellement." }
   ],
   "Elfe": [
     {

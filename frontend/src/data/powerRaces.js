@@ -29,6 +29,8 @@ const R = {
   sphinx: 'Sphinx',
   vampire: 'Vampires',
   phenix: 'Phénix',
+  phenixLegacies: 'Phénix de Legacies',
+  phenixCharmed: 'Phénix de Charmed',
   loup: 'Loups-garous',
   changeforme: 'Autres changeformes',
   kanima: 'Kanimas',
@@ -77,6 +79,8 @@ Contrainte du regard`, [R.vampire])
 add(`Transformation lupine
 Instinct de meute
 Pistage lupin`, [R.loup])
+add(`Renaissance du phénix`, [R.phenixLegacies])
+add(`Reconstitution du phénix`, [R.phenixCharmed])
 add(`Formule improvisée
 Alchimie de terrain
 Lien d'incantation`, [R.sorcier])
@@ -314,6 +318,279 @@ add(`Pierre`, [R.sorcier, R.kitsuneTerre, R.elfeBois, R.nymphe])
 add(`Graine`, [R.sorcier, R.feeBois, R.elfeBois, R.nymphe, R.kitsunePlante])
 add(`Rituel de protection
 Conjuration`, [R.sorcier, R.demon, R.fee, R.elfe, R.sphinx])
+
+// Le registre rassemble des pistes très larges. Chaque filtre d'espèce ne garde
+// que les pouvoirs cohérents avec sa nature ou sa branche dans le codex.
+function limit(race, names) {
+  const allowed = new Set(names.trim().split('\n').map(name => name.trim()).filter(Boolean))
+  for (const name of allowed) {
+    if (!possibilities.has(name)) throw new Error(`Pouvoir introuvable dans le registre : ${name}`)
+  }
+  for (const [name, races] of possibilities) {
+    if (races.has(race) && !allowed.has(name)) races.delete(race)
+  }
+}
+
+limit(R.demon, `Boules d'énergie
+Télékinésie
+Vague de force
+Bouclier d'énergie
+Pyrokinésie
+Combustion par le regard
+Illusion visuelle
+Suggestion mentale
+Shimmer
+Force accrue
+Sens aiguisés
+Régénération
+Métamorphose`)
+limit(R.elfe, `Détection de magie
+Précognition
+Sens des présages
+Écho des savoirs
+Voile de présence
+Nyctalopie
+Bond silencieux`)
+limit(R.elfeAstre, `Photokinésie
+Poussière lumineuse
+Télékinésie lumineuse
+Prisme de lumière
+Glamour scintillant
+Prémonition
+Clairsentience
+Lecture d'aura`)
+limit(R.elfeEau, `Aquakinésie (contrôle de l'eau)
+Bouclier aquatique
+Fouet d'eau
+Respiration aquatique
+Voix des eaux
+Corps de marée
+Augure des marées
+Guérison
+Rosée réparatrice
+Bulle d'eau`)
+limit(R.elfeBois, `Phytokinésie (contrôle végétal)
+Lignokinésie
+Mycokinésie
+Augure des racines
+Communication animale
+Télépathie animale
+Graine`)
+limit(R.lumiere, `Bouclier d'énergie
+Télékinésie lumineuse
+Égide de l'esprit
+Guérison
+Lien vital
+Rayonnement réparateur
+Détection des protégés
+Localisation
+Orbing`)
+limit(R.fee, `Télékinésie
+Bouclier d'énergie
+Chant apaisant
+Voile de présence
+Empathie
+Illusion visuelle
+Lévitation
+Ailes d'énergie
+Poussière de fée
+Variation de taille
+Invisibilité
+Lumière`)
+limit(R.feeEau, `Cryokinésie
+Pluviokinésie
+Aquakinésie (contrôle de l'eau)
+Bouclier aquatique
+Fouet d'eau
+Respiration aquatique
+Voix des eaux
+Corps de marée
+Augure des marées
+Nuage protecteur
+Bulle d'eau`)
+limit(R.feeLumiere, `Photokinésie
+Poussière lumineuse
+Télékinésie lumineuse
+Prisme de lumière
+Glamour scintillant
+Guérison
+Rayonnement réparateur`)
+limit(R.kanima, `Toxikinésie
+Force accrue
+Sens aiguisés
+Régénération
+Nyctalopie
+Camouflage organique
+Toucher paralysant`)
+limit(R.kitsune, `Nyctalopie
+Bond silencieux
+Métamorphose
+Peau des bêtes`)
+limit(R.kitsuneAir, `Cyclogenèse
+Aérokinésie
+Barokinésie
+Néphokinésie
+Brumokinésie
+Marche des nuages
+Nuage protecteur
+Brise`)
+limit(R.kitsuneEau, `Pluviokinésie
+Aquakinésie (contrôle de l'eau)
+Bouclier aquatique
+Fouet d'eau
+Respiration aquatique
+Voix des eaux
+Corps de marée
+Augure des marées
+Bulle d'eau`)
+limit(R.kitsuneEsprit, `Détection de magie
+Précognition
+Clairvoyance
+Sens des présages
+Lecture des intentions
+Écho des savoirs
+Télépathie
+Empathie
+Illusion mentale
+Onirokinésie
+Illusion visuelle
+Réminiscence
+Mnémokinésie
+Projection astrale
+Prémonition
+Clairsentience
+Lecture d'aura
+Rêves lucides`)
+limit(R.kitsuneOmbre, `Umbrakinésie
+Camouflage magique
+Pas de brume
+Voile de présence
+Ombre`)
+limit(R.kitsuneLumiere, `Photokinésie
+Poussière lumineuse
+Télékinésie lumineuse
+Prisme de lumière
+Glamour scintillant
+Lumière`)
+limit(R.kitsuneTerre, `Géokinésie
+Cristallokinésie
+Arénokinésie
+Sismokinésie
+Courant de limon
+Pierre`)
+limit(R.kitsuneFeu, `Pyrokinésie
+Combustion par le regard
+Immunité aux flammes
+Magmakinésie
+Étincelle
+Boule de feu`)
+limit(R.kitsuneSang, `Hématokinésie`)
+limit(R.kitsuneTonnerre, `Foudre / Électrokinésie
+Sillage fulgurant`)
+limit(R.loup, `Transformation lupine
+Instinct de meute
+Pistage lupin
+Hurlement de ralliement
+Force accrue
+Sens aiguisés
+Régénération
+Nyctalopie
+Bond silencieux`)
+limit(R.changeforme, `Rugissement de garde
+Force accrue
+Sens aiguisés
+Régénération
+Nyctalopie
+Piste brouillée
+Bond silencieux
+Métamorphose
+Peau des bêtes`)
+limit(R.muse, `Leurre acoustique
+Chant apaisant
+Voix mimétique
+Animation d'objets
+Écho des savoirs
+Télépathie
+Empathie
+Accord des sens
+Émotionkinésie
+Illusion visuelle
+Réminiscence`)
+limit(R.nymphe, `Aquakinésie (contrôle de l'eau)
+Bouclier aquatique
+Géokinésie
+Phytokinésie (contrôle végétal)
+Lignokinésie
+Augure des racines
+Empathie
+Guérison
+Rosée réparatrice
+Communication animale
+Télépathie animale
+Bulle d'eau
+Pierre
+Graine`)
+limit(R.sireneMarine, `Aquakinésie (contrôle de l'eau)
+Bouclier aquatique
+Fouet d'eau
+Respiration aquatique
+Voix des eaux
+Corps de marée
+Bulle d'eau`)
+limit(R.sirenePsychique, `Chant apaisant
+Voix mimétique
+Télépathie
+Empathie
+Émotionkinésie
+Suggestion mentale
+Illusion mentale
+Onirokinésie
+Chant envoûtant
+Réminiscence
+Mnémokinésie
+Suggestion`)
+limit(R.sphinx, `Détection de magie
+Précognition
+Clairvoyance
+Sens des présages
+Lecture des intentions
+Écho des savoirs
+Réminiscence
+Intuition des mensonges
+Omnilinguisme
+Prémonition
+Clairsentience
+Lecture d'aura`)
+limit(R.valkyrie, `Écho des savoirs
+Localisation
+Force accrue
+Sens aiguisés
+Régénération
+Aile spectrale`)
+limit(R.heretique, `Force accrue
+Sens aiguisés
+Régénération
+Absorption de magie`)
+limit(R.banshee, `Sonokinésie
+Vibrakinésie
+Cri perçant
+Sens des présages
+Prémonition
+Clairsentience`)
+limit(R.cupidon, `Chant apaisant
+Empathie
+Empathie inversée
+Perception des liens affectifs
+Élan affectif
+Rayonnement de joie
+Chagrin partagé
+Élan de courage
+Émotionkinésie
+Détection des protégés
+Localisation`)
+limit(R.phenix, ``)
+possibilities.get('Shimmer')?.delete(R.sorcier)
+possibilities.get('Détection des protégés')?.delete(R.sorcier)
 
 export const powerRaces = Object.fromEntries(
   [...possibilities].map(([name, races]) => [name, [...races].sort((left, right) => left.localeCompare(right, 'fr'))]),

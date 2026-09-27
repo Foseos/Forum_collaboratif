@@ -704,6 +704,27 @@ POWER_DIRECTORY += power_table("XLI", "Chiens de l'enfer", "rgba(249,115,22,0.34
     ),
 ])
 
+POWER_DIRECTORY += power_table("XLII", "Phénix : deux continuités", "rgba(251,146,60,0.34)", [
+    (
+        "Renaissance du phénix",
+        "Pouvoir possible pour un phénix de Legacies : revient après une mort dans les conditions et avec les conséquences définies dans sa fiche. Aucun retour automatique ni résurrection d'autrui.",
+        ("Mémoire des renaissances ★", "Retour maîtrisé ★"),
+        (
+            "Conserve un souvenir fragmentaire d'une renaissance vécue, sans connaissance nouvelle de ce qui s'est passé après sa mort.",
+            "Comprend mieux les circonstances de son propre retour, sans choisir librement quand ni où renaître.",
+        ),
+    ),
+    (
+        "Reconstitution du phénix",
+        "Pouvoir possible pour une sorcière phénix de Charmed : reforme son propre corps après une destruction compatible avec sa fiche. Il ne s'agit pas de la renaissance du phénix de Legacies.",
+        ("Reconstitution stable ★", "Retour lucide ★"),
+        (
+            "Se reconstitue avec moins de désorientation lorsque les conditions validées sont réunies, sans annuler une mort définitive.",
+            "Retrouve plus vite ses repères après sa reconstitution, sans effacer les conséquences de la scène.",
+        ),
+    ),
+])
+
 
 class Command(BaseCommand):
     help = "Complète le Grimoire des pouvoirs avec les capacités du crossover Nexus Arcana."
