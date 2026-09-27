@@ -60,6 +60,7 @@ POWER_DIRECTORY = DIRECTORY_MARKER + """
 <div style="margin:2rem 0 1rem; text-align:center;">
   <p style="margin:0; color:#f5d76e; font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase;">✦ Répertoire détaillé des pouvoirs ✦</p>
   <p style="margin:0.5rem auto 0; max-width:680px; color:#c4b5d4; line-height:1.7; font-size:0.87rem;">Chaque ligne suit le modèle <strong style="color:#e2d9f3;">pouvoir de base → évolution → maîtrise</strong>. Les branches sont des pistes : un personnage n'a pas à toutes les posséder. Les mentions « staff » demandent une validation avant la fiche ou une évolution jouée.</p>
+  <p style="margin:0.5rem auto 0; max-width:680px; color:#c4b5d4; line-height:1.7; font-size:0.87rem;">Chaque kinésie peut produire une manifestation limitée de son élément ou de son effet sans source déjà présente. Une source existante peut faciliter un usage plus vaste ; elle n'est pas obligatoire pour le pouvoir de base. Pour les kinésies du corps ou de l'esprit, cela ne crée ni personne, ni organe complet, ni passé réel.</p>
 </div>
 """ + section("XII", "Pouvoirs psychiques, médiumniques et émotionnels", "rgba(167,139,250,0.34)", [
     ("Empathie → lecture des émotions → apaisement", "Perçoit les émotions, puis peut aider à les apaiser. Aucun ressenti ne force le personnage visé à agir."),
@@ -81,12 +82,12 @@ POWER_DIRECTORY = DIRECTORY_MARKER + """
 ]) + section("XIV", "Éléments, énergie et matière", "rgba(251,146,60,0.30)", [
     ("Boule de feu → jet de flammes → mur de feu", "La portée, la durée et la chaleur doivent être définies ; un mur de feu exige une évolution validée."),
     ("Étincelle → éclair → électrokinésie", "L'eau, les isolants et l'épuisement modifient l'efficacité."),
-    ("Bulle d'eau → aquakinésie / hydrokinésie → tempête locale", "Les grandes manifestations exigent une source proche."),
+    ("Bulle d'eau → aquakinésie / hydrokinésie → tempête locale", "Le pouvoir crée de l'eau dès sa base ; les grandes manifestations exigent une évolution et une ampleur validées."),
     ("Brise → rafale → aérokinésie", "Une tempête complète requiert une validation du staff."),
     ("Pierre → géokinésie → fissure contrôlée", "Aucun séisme dévastateur sans accord du staff."),
     ("Lumière → flash aveuglant → photokinésie", "L'éblouissement est temporaire et ne décide pas seul de l'issue d'une scène."),
     ("Ombre → camouflage → umbrakinésie", "Le camouflage peut être percé par une perception ou une protection adaptée."),
-    ("Graine → lianes → phytokinésie", "La végétation existante facilite toujours l'usage."),
+    ("Graine → lianes → phytokinésie", "Le pouvoir peut créer une petite pousse ; la végétation existante facilite les manifestations plus vastes."),
 ]) + section("XV", "Déplacement, espace et rituels", "rgba(45,212,191,0.30)", [
     ("Projection astrale → projection tangible → ubiquité limitée", "Le corps reste vulnérable et une projection ne peut pas résoudre seule une intrigue."),
     ("Téléportation → apportation → déplacement de groupe", "La distance, les protections et la charge transportée limitent l'usage."),
@@ -106,7 +107,7 @@ POWER_DIRECTORY += """
     <tr><td>Empathie inversée</td><td>Perçoit une émotion dominante et peut proposer à une cible proche un ressenti opposé pendant un court moment. Ne force ni décision ni souvenir.</td><td>Diffusion empathique ★ · Ancrage émotionnel ★</td></tr>
     <tr><td>Réplique de pouvoir</td><td>Après avoir observé une capacité, en reproduit un seul effet affaibli, une seule fois dans une scène. La réplique ne donne ni maîtrise durable ni accès aux pouvoirs exceptionnels.</td><td>Réplique affinée ★ · Réplique prolongée ★</td></tr>
     <tr><td>Toucher paralysant</td><td>Un contact direct peut engourdir brièvement un membre de la cible. Une immobilisation complète n'est pas automatique.</td><td>Entrave étendue ★ · Maintien bref ★</td></tr>
-    <tr><td>Hématokinésie</td><td>Déplace ou façonne une petite quantité de sang déjà versé. Une évolution validée peut aussi échauffer temporairement le sang d'une autre personne, avec l'accord du joueur concerné, sans lésion durable ni issue imposée.</td><td>Hémostase ★ · Façonnage sanguin ★ · Ébullition sanguine ★</td></tr>
+    <tr><td>Hématokinésie</td><td>Crée une petite quantité de sang ou façonne celui qui a été versé. Une évolution validée peut aussi échauffer temporairement le sang d'une autre personne, avec l'accord du joueur concerné, sans lésion durable ni issue imposée.</td><td>Hémostase ★ · Façonnage sanguin ★ · Ébullition sanguine ★</td></tr>
     <tr><td>Aérokinésie</td><td>Dirige des courants d'air à proximité pour créer une brise ou une rafale limitée. N'accorde ni vol libre ni contrôle général de la météo.</td><td>Mur de vent ★ · Courants multiples ★</td></tr>
     <tr><td>Sens aiguisés</td><td>Perçoit plus finement les sons, les odeurs ou les mouvements proches. Les stimuli intenses peuvent aussi gêner le personnage.</td><td>Pistage sensoriel ★ · Perception sélective ★</td></tr>
     <tr><td>Régénération</td><td>Récupère plus vite de blessures ordinaires, sans annuler les faiblesses ni les limites définies dans la fiche.</td><td>Guérison accélérée ★ · Résistance accrue ★</td></tr>
@@ -179,23 +180,23 @@ POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.3
             "Fait vibrer les cristaux proches pour produire un signal ou repérer une résonance, sans traverser toutes les protections.",
         ),
     ),
-    ("Magnétokinésie", "Attire ou repousse de petits objets ferromagnétiques proches. Tous les métaux ne réagissent pas et une arme tenue peut être résistée.", ("Attraction multiple", "Bouclier magnétique ★")),
-    ("Gravikinésie", "Allège ou alourdit légèrement un objet ou son propre corps pendant un court instant. Ne permet ni vol libre ni écrasement d'une personne.", ("Zone allégée ★", "Ancrage gravitationnel ★")),
-    ("Brumokinésie", "Déplace et modèle une brume ou une vapeur déjà présente. L'effet dépend de la source et n'asphyxie pas automatiquement.", ("Voile de brume", "Brume dense ★")),
+    ("Magnétokinésie", "Crée un champ magnétique local pour attirer ou repousser de petits objets ferromagnétiques proches. Tous les métaux ne réagissent pas et une arme tenue peut être résistée.", ("Attraction multiple", "Bouclier magnétique ★")),
+    ("Gravikinésie", "Crée une variation locale de gravité qui allège ou alourdit légèrement un objet ou son propre corps pendant un court instant. Ne permet ni vol libre ni écrasement d'une personne.", ("Zone allégée ★", "Ancrage gravitationnel ★")),
+    ("Brumokinésie", "Crée une faible brume ou vapeur, ou modèle celle qui est présente. Elle n'asphyxie pas automatiquement.", ("Voile de brume", "Brume dense ★")),
 ])
 
 POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.30)", [
     ("Métabolisme accéléré", "Accorde un bref surcroît d'énergie physique au prix d'une fatigue ensuite. Ne remplace ni la guérison ni la vitesse surnaturelle.", ("Récupération brève", "Élan prolongé")),
     ("Camouflage organique", "Modifie les couleurs ou motifs du corps pour mieux se fondre dans un environnement. Le mouvement et les autres sens peuvent révéler le personnage.", ("Mimétisme complet", "Camouflage en mouvement")),
     ("Adaptation respiratoire", "Permet de supporter brièvement un air difficile ou de retenir son souffle plus longtemps. Ne protège pas de toutes les substances dangereuses.", ("Respiration prolongée", "Filtration de l'air ★")),
-    ("Algokinésie", "Module temporairement une sensation douloureuse chez soi ou une personne consentante. La blessure reste présente et peut s'aggraver si elle est ignorée.", ("Apaisement ciblé", "Apaisement partagé ★")),
+    ("Algokinésie", "Crée ou module temporairement une sensation douloureuse chez soi ou une personne consentante, sans créer de blessure. Une blessure existante reste présente même si la douleur est apaisée.", ("Apaisement ciblé", "Apaisement partagé ★")),
 ])
 
 POWER_DIRECTORY += power_table("XXI", "Facultés mentales et pouvoirs insolites", "rgba(196,181,253,0.34)", [
     ("Torture mentale", "Inflige à une cible une sensation de souffrance psychique temporaire, sans blessure physique ni séquelle imposée. Les réactions, révélations et limites de la scène sont convenues avec son joueur.", ("Étau psychique ★", "Pression partagée ★")),
     ("Omnilinguisme", "Permet de comprendre et de parler les langues ordinaires entendues, sans donner accès aux pensées, aux codes secrets ou aux savoirs de leurs locuteurs.", ("Écritures anciennes", "Langues occultes ★")),
     ("Intuition des mensonges", "Perçoit une discordance lorsqu'une personne ment délibérément, sans connaître la vérité ni détecter une erreur sincère.", ("Dissonance des récits", "Lecture des omissions ★")),
-    ("Tychokinésie", "Infléchit légèrement la chance d'un événement banal et incertain. Ne garantit aucun résultat et ne décide pas seule de l'issue d'une scène.", ("Chance favorable ★", "Malchance localisée ★")),
+    ("Tychokinésie", "Crée une légère inflexion de chance autour d'un événement banal et incertain. Ne garantit aucun résultat et ne décide pas seule de l'issue d'une scène.", ("Chance favorable ★", "Malchance localisée ★")),
     ("Transmutation mineure", "Modifie temporairement la matière d'un petit objet inerte. Ne touche ni les êtres vivants ni les objets protégés sans accord.", ("Matière durable ★", "Transformation multiple ★")),
     ("Animation d'objets", "Anime brièvement un petit objet inerte pour une action simple. L'objet n'acquiert ni pensée ni pouvoir propre.", ("Mouvement coordonné", "Assistant animé ★")),
     ("Sommeil induit", "Favorise une somnolence progressive chez une cible réceptive. Ne provoque pas d'inconscience instantanée et la cible peut résister.", ("Sommeil profond ★", "Rêve dirigé ★")),
@@ -203,7 +204,7 @@ POWER_DIRECTORY += power_table("XXI", "Facultés mentales et pouvoirs insolites"
 ])
 
 POWER_DIRECTORY += power_table("XXII", "Eaux, lumière et enchantements", "rgba(103,232,249,0.34)", [
-    ("Bouclier aquatique", "Dresse une barrière d'eau issue d'une source proche pour amortir une attaque. La protection a une résistance et une durée limitées.", ("Dôme aqueux ★", "Bouclier mobile ★")),
+    ("Bouclier aquatique", "Crée ou rassemble de l'eau en barrière pour amortir une attaque. La protection a une résistance et une durée limitées.", ("Dôme aqueux ★", "Bouclier mobile ★")),
     ("Fouet d'eau", "Projette un jet d'eau souple pour repousser ou tenter de saisir un objet proche. N'immobilise pas automatiquement une personne.", ("Double fouet", "Entrave aqueuse ★")),
     ("Respiration aquatique", "Permet de respirer sous l'eau pendant quelques tours de RP, sans protéger du froid, de la pression ou des courants.", ("Souffle prolongé", "Partage du souffle ★")),
     ("Chant envoûtant", "Éveille une fascination passagère chez les personnes qui entendent la mélodie. Une cible garde ses choix et peut rompre l'écoute.", ("Mélodie collective ★", "Écho persistant ★")),
@@ -216,11 +217,11 @@ POWER_DIRECTORY += power_table("XXII", "Eaux, lumière et enchantements", "rgba(
 ])
 
 POWER_DIRECTORY += power_table("XXIII", "Nuages, poussières et lumière", "rgba(186,230,253,0.34)", [
-    ("Néphokinésie", "Déplace ou modèle des nuages déjà présents à proximité, ou condense une petite vapeur disponible. Ne contrôle pas librement le climat.", ("Courants nuageux", "Couverture céleste ★")),
+    ("Néphokinésie", "Crée un petit nuage ou déplace et modèle ceux qui sont présents à proximité. Ne contrôle pas librement le climat.", ("Courants nuageux", "Couverture céleste ★")),
     ("Nuage protecteur", "Maintient un nuage dense entre une attaque et ses cibles pour gêner la visée ou amortir un impact léger. Ne remplace pas un bouclier invulnérable.", ("Écran suspendu", "Dôme de nuages ★")),
     ("Marche des nuages", "Condense brièvement un appui sous les pieds pour franchir un vide limité. L'appui se dissipe rapidement et n'accorde pas le vol libre.", ("Pas successifs ★", "Plateforme partagée ★")),
     ("Poussière de fée", "Crée une fine poussière enchantée qui allège momentanément un petit objet ou une personne consentante. Ne donne ni vol permanent ni pouvoirs supplémentaires.", ("Lévitation légère ★", "Nuée féerique ★")),
-    ("Télékinésie lumineuse", "Emploie des filaments de lumière condensée pour attirer ou déplacer un petit objet visible. Une source lumineuse et la concentration sont nécessaires.", ("Prise photique", "Manipulation multiple ★")),
+    ("Télékinésie lumineuse", "Crée des filaments de lumière condensée pour attirer ou déplacer un petit objet visible. La concentration reste nécessaire.", ("Prise photique", "Manipulation multiple ★")),
     ("Prisme de lumière", "Réfracte une lumière présente pour produire des reflets trompeurs ou dévier un éclat. Ne crée ni matière ni illusion mentale.", ("Déviation lumineuse", "Miroirs prismatiques ★")),
 ])
 

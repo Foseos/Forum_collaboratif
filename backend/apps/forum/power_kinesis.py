@@ -5,11 +5,11 @@ KINETIC_POWER_SECTIONS = (
         "XXIV", "Ciel et phénomènes", "rgba(125,211,252,0.32)", (
             (
                 "Pluviokinésie",
-                "Guide une pluie déjà présente ou condense une faible averse locale. Ne déclenche pas un orage complet.",
+                "Crée une faible pluie locale ou guide une averse existante. Ne déclenche pas un orage complet.",
                 ("Rideau de pluie", "Averse dirigée ★"),
                 (
                     "Épaissit la pluie sur un passage étroit pour gêner la vue sans piéger une cible.",
-                    "Concentre une averse brève sur une petite zone avec humidité disponible.",
+                    "Concentre une averse brève sur une petite zone, même sans pluie préalable.",
                 ),
             ),
             (
@@ -43,7 +43,7 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Vibrakinésie",
-                "Anime légèrement les vibrations d'un objet solide touché ou proche, sans le détruire automatiquement.",
+                "Crée de faibles vibrations et peut les transmettre à un objet solide proche, sans le détruire automatiquement.",
                 ("Résonance ciblée", "Onde vibratoire ★"),
                 (
                     "Fait vibrer un matériau précis pour émettre un signal ou en tester la structure.",
@@ -56,17 +56,17 @@ KINETIC_POWER_SECTIONS = (
         "XXV", "Terre, feu et résidus", "rgba(251,146,60,0.32)", (
             (
                 "Arénokinésie",
-                "Déplace et modèle du sable déjà présent. Une évolution permet de soulever une tempête locale ; les grains ne deviennent ni verre ni pierre sans autre pouvoir.",
+                "Crée une petite quantité de sable ou modèle celui qui est présent. Une évolution permet de soulever une tempête locale ; les grains ne deviennent ni verre ni pierre sans autre pouvoir.",
                 ("Voile de sable", "Forme sableuse ★", "Tempête de sable ★"),
                 (
                     "Soulève un rideau de sable qui gêne la vue mais peut être dispersé.",
                     "Donne au sable une forme temporaire de petite taille, sans solidité parfaite.",
-                    "Soulève une tempête dans une zone limitée si assez de sable est disponible. Sa durée et son intensité sont validées par le staff ; elle peut gêner la vue et les déplacements sans piéger ni blesser automatiquement une cible.",
+                    "Crée ou rassemble assez de sable pour soulever une tempête dans une zone limitée. Sa durée et son intensité sont validées par le staff ; elle peut gêner la vue et les déplacements sans piéger ni blesser automatiquement une cible.",
                 ),
             ),
             (
                 "Cinerokinésie",
-                "Dirige des cendres déjà produites, sans créer de feu ni brûler une cible.",
+                "Crée une petite quantité de cendres ou dirige celles qui sont présentes, sans créer de feu ni brûler une cible.",
                 ("Nuage de cendres", "Traces cendrées"),
                 (
                     "Soulève une petite quantité de cendres pour masquer brièvement un passage.",
@@ -75,11 +75,11 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Magmakinésie",
-                "Influe sur une petite quantité de roche en fusion déjà disponible dans une scène adaptée. Chaleur et dégâts restent encadrés.",
+                "Crée une faible quantité de magma ou influe sur une coulée existante. Sa chaleur et ses dégâts restent encadrés.",
                 ("Croûte refroidie ★", "Courant magmatique ★"),
                 (
                     "Accélère le refroidissement d'une faible quantité de lave pour créer une croûte fragile.",
-                    "Guide un court écoulement existant sans provoquer d'éruption.",
+                    "Guide un court écoulement créé ou existant sans provoquer d'éruption.",
                 ),
             ),
             (
@@ -93,10 +93,10 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Fumokinésie",
-                "Déplace une fumée déjà présente. Elle ne produit pas de combustion et ne transforme pas la fumée en poison.",
+                "Crée un peu de fumée ou déplace celle qui est présente. Elle ne produit pas de combustion et ne devient pas un poison.",
                 ("Écran de fumée", "Courant de fumée ★"),
                 (
-                    "Épaissit un voile de fumée disponible pour réduire la visibilité.",
+                    "Forme ou épaissit un voile de fumée pour réduire la visibilité.",
                     "Guide la fumée hors d'une zone ou vers une ouverture sur une courte distance.",
                 ),
             ),
@@ -106,16 +106,16 @@ KINETIC_POWER_SECTIONS = (
         "XXVI", "Lumière, ombres et énergie", "rgba(196,181,253,0.34)", (
             (
                 "Photokinésie",
-                "Module une lumière existante pour l'intensifier, l'adoucir ou la diriger, sans télékinésie sur la matière.",
+                "Crée une lumière limitée ou module celle qui existe pour l'intensifier, l'adoucir ou la diriger, sans télékinésie sur la matière.",
                 ("Halo dirigé", "Éblouissement contrôlé ★"),
                 (
-                    "Concentre une source lumineuse en halo mobile de petite taille.",
+                    "Crée ou concentre un halo lumineux mobile de petite taille.",
                     "Produit un éclat bref dont la cible peut détourner les yeux ou se protéger.",
                 ),
             ),
             (
                 "Umbrakinésie",
-                "Épaissit et façonne les ombres présentes. L'ombre ne devient pas automatiquement un objet solide.",
+                "Crée une zone d'ombre ou façonne les ombres présentes. L'ombre ne devient pas automatiquement un objet solide.",
                 ("Voile d'ombre", "Forme ombreuse ★"),
                 (
                     "Étend une zone d'ombre pour faciliter une dissimulation imparfaite.",
@@ -124,10 +124,10 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Énergokinésie",
-                "Canalise une petite quantité d'énergie magique disponible. Ne copie, ne vole ni n'annule les dons d'autrui.",
+                "Génère et canalise une petite quantité d'énergie magique. Ne copie, ne vole ni n'annule les dons d'autrui.",
                 ("Flux stabilisé ★", "Impulsion énergétique ★"),
                 (
-                    "Stabilise brièvement un flux d'énergie déjà maîtrisé dans la fiche.",
+                    "Stabilise brièvement un flux d'énergie créé ou déjà maîtrisé dans la fiche.",
                     "Libère une faible poussée d'énergie dont l'impact se joue avec la cible.",
                 ),
             ),
@@ -137,34 +137,34 @@ KINETIC_POWER_SECTIONS = (
         "XXVII", "Matières et matériaux", "rgba(148,163,184,0.34)", (
             (
                 "Métallokinésie",
-                "Façonne un petit objet métallique disponible, même non magnétique. Ne crée pas de métal et se distingue de la magnétokinésie.",
+                "Crée une petite quantité de métal ou façonne un objet métallique, même non magnétique. Se distingue de la magnétokinésie.",
                 ("Fil métallique", "Armure souple ★"),
                 (
-                    "Étire le métal disponible en fil court sans le rendre incassable.",
-                    "Dispose du métal présent en protection limitée dont le poids reste à porter.",
+                    "Crée ou étire du métal en fil court sans le rendre incassable.",
+                    "Façonne du métal créé ou présent en protection limitée dont le poids reste à porter.",
                 ),
             ),
             (
                 "Vitrokinésie",
-                "Déplace ou modèle du verre déjà présent. Les éclats restent dangereux et aucune blessure n'est imposée.",
+                "Crée une petite quantité de verre ou modèle celui qui est présent. Les éclats restent dangereux et aucune blessure n'est imposée.",
                 ("Mosaïque mobile", "Écran de verre ★"),
                 (
-                    "Assemble de petits fragments en motif mobile sans les transformer en cristal.",
+                    "Crée ou assemble de petits fragments en motif mobile sans les transformer en cristal.",
                     "Place un panneau de verre fragile comme obstacle temporaire.",
                 ),
             ),
             (
                 "Lignokinésie",
-                "Façonne du bois mort ou travaillé déjà présent, sans commander les plantes vivantes de la phytokinésie.",
+                "Crée une petite quantité de bois ou façonne du bois mort ou travaillé, sans commander les plantes vivantes de la phytokinésie.",
                 ("Raccommodage du bois", "Barrière ligneuse ★"),
                 (
                     "Réassemble brièvement des fragments de bois compatibles.",
-                    "Dresse un obstacle à partir de bois disponible, avec une résistance limitée.",
+                    "Dresse un obstacle avec du bois créé ou présent, avec une résistance limitée.",
                 ),
             ),
             (
                 "Encrekinésie",
-                "Déplace de l'encre liquide ou sèche sur un support visible. Ne lit pas automatiquement les textes cachés.",
+                "Crée un peu d'encre ou déplace celle d'un support visible. Ne lit pas automatiquement les textes cachés.",
                 ("Message mouvant", "Encre dissimulée ★"),
                 (
                     "Fait se déplacer des mots déjà écrits sur une page proche.",
@@ -173,10 +173,10 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Halokinésie",
-                "Déplace et façonne du sel déjà présent, y compris dissous dans l'eau, en quantité limitée.",
+                "Crée une petite quantité de sel ou façonne celui qui est présent, y compris dissous dans l'eau.",
                 ("Extraction saline", "Brume de sel ★", "Rempart cristallin ★"),
                 (
-                    "Sépare une petite quantité de sel de l'eau et la rassemble sous forme de grains.",
+                    "Sépare une petite quantité de sel de l'eau et la rassemble sous forme de grains, sans dépendre de cette source pour en créer.",
                     "Disperse le sel en fine brume qui gêne brièvement la vue ou irrite légèrement, sans blessure durable.",
                     "Assemble les grains en une paroi de cristaux fragile qui ralentit un passage ou amortit un choc.",
                 ),
@@ -197,26 +197,26 @@ KINETIC_POWER_SECTIONS = (
         "XXVIII", "Nature et corps", "rgba(74,222,128,0.30)", (
             (
                 "Mycokinésie",
-                "Guide des champignons déjà présents et peut produire une petite quantité de spores. Leur effet, portée et durée sont définis dans la fiche ; aucune maladie réelle n'est transmise.",
+                "Fait apparaître quelques champignons ou spores, et guide ceux qui sont présents. Leur effet, portée et durée sont définis dans la fiche ; aucune maladie réelle n'est transmise.",
                 ("Réseau fongique", "Voile de spores ★", "Spores à effet ciblé ★"),
                 (
-                    "Étend un réseau de filaments sur une surface compatible pour transmettre un signal.",
+                    "Crée et étend un réseau de filaments sur une surface compatible pour transmettre un signal.",
                     "Produit et diffuse un nuage de spores dans une petite zone, avec une durée définie.",
                     "Donne aux spores un effet temporaire validé, comme une irritation, une somnolence ou un marquage visible, sans imposer la réaction d'une cible.",
                 ),
             ),
             (
                 "Ostéokinésie",
-                "Façonne des os déjà détachés ou agit sur son propre squelette selon sa fiche. Aucun os d'autrui n'est altéré sans accord.",
+                "Crée une petite quantité de matière osseuse, façonne des os détachés ou agit sur son propre squelette selon sa fiche. Aucun os d'autrui n'est altéré sans accord.",
                 ("Armature osseuse ★", "Façonnage d'ossements ★"),
                 (
                     "Renforce brièvement un appui osseux personnel sans annuler les blessures.",
-                    "Assemble de petits ossements disponibles en structure fragile.",
+                    "Crée ou assemble de petits ossements en une structure fragile.",
                 ),
             ),
             (
                 "Biokinésie",
-                "Influe modestement sur un tissu vivant du personnage ou d'une cible consentante. Ne remplace ni la guérison ni une transformation totale.",
+                "Génère une petite quantité de tissu vivant ou influe modestement sur celui du personnage ou d'une cible consentante. Ne crée pas d'être vivant et ne remplace ni la guérison ni une transformation totale.",
                 ("Réparation ciblée ★", "Adaptation organique ★"),
                 (
                     "Soutient la réparation d'une petite atteinte avec fatigue et limites validées.",
@@ -225,7 +225,7 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Myokinésie",
-                "Module l'effort de ses propres muscles pendant un court moment. N'accorde pas le contrôle des mouvements d'autrui.",
+                "Génère une brève impulsion musculaire et module l'effort de ses propres muscles. Ne crée pas de nouveaux muscles et ne contrôle pas les mouvements d'autrui.",
                 ("Précision musculaire", "Effort renforcé ★"),
                 (
                     "Affermit un geste fin ou un équilibre au prix d'une concentration accrue.",
@@ -234,7 +234,7 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Neurokinésie",
-                "Influence légèrement une sensation nerveuse chez soi ou une cible consentante. Ne commande ni les pensées ni les actes.",
+                "Crée ou module légèrement une sensation nerveuse chez soi ou une cible consentante. Ne commande ni les pensées ni les actes.",
                 ("Signal apaisé ★", "Perception affinée ★"),
                 (
                     "Atténue temporairement un signal sensoriel défini sans soigner sa cause.",
@@ -243,7 +243,7 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Toxikinésie",
-                "Déplace ou neutralise une faible quantité de toxine fictive déjà présente. N'invente ni maladie réelle ni effet mortel automatique.",
+                "Crée une faible quantité de toxine fictive ou déplace et neutralise celle qui est présente. N'invente ni maladie réelle ni effet mortel automatique.",
                 ("Extraction ciblée ★", "Confinement toxique ★"),
                 (
                     "Retire une petite quantité d'une substance identifiée avec accord des joueurs concernés.",
@@ -256,7 +256,7 @@ KINETIC_POWER_SECTIONS = (
         "XXIX", "Esprit et sensations", "rgba(244,114,182,0.30)", (
             (
                 "Mnémokinésie",
-                "Agit sur l'accès temporaire à un souvenir défini avec le joueur concerné. Ne réécrit ni n'efface durablement le passé.",
+                "Crée un écho mnésique ou agit sur l'accès temporaire à un souvenir défini avec le joueur concerné. Ne crée pas de faux passé et n'efface rien durablement.",
                 ("Rappel partagé ★", "Voile mnésique ★"),
                 (
                     "Aide une personne consentante à faire remonter un fragment de souvenir choisi.",
@@ -265,7 +265,7 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Onirokinésie",
-                "Modèle son propre rêve ou celui d'une personne endormie et consentante. Ne force pas l'endormissement.",
+                "Crée et modèle un rêve chez soi ou chez une personne endormie et consentante. Ne force pas l'endormissement.",
                 ("Rêve partagé ★", "Décor onirique ★"),
                 (
                     "Relie deux rêveurs volontaires dans un même rêve temporaire.",
@@ -274,7 +274,7 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Émotionkinésie",
-                "Amplifie ou atténue brièvement une émotion déjà présente. La naissance de sentiments amoureux relève du pouvoir distinct de manipulation des sentiments.",
+                "Fait naître, amplifie ou atténue brièvement une émotion simple. La naissance de sentiments amoureux relève du pouvoir distinct de manipulation des sentiments.",
                 ("Émotion partagée ★", "Équilibre affectif ★"),
                 (
                     "Fait ressentir une émotion présente à un allié consentant sans en transmettre la cause.",
@@ -287,7 +287,7 @@ KINETIC_POWER_SECTIONS = (
         "XXX", "Machines et poussière", "rgba(250,204,21,0.28)", (
             (
                 "Technokinésie",
-                "Influence une fonction simple d'un appareil proche. Ne donne pas accès à tous les systèmes ni à leurs données privées.",
+                "Génère une impulsion de commande ou influence une fonction simple d'un appareil proche. Ne crée pas d'appareil et ne donne pas accès à tous les systèmes ni à leurs données privées.",
                 ("Interface intuitive", "Réseau local ★"),
                 (
                     "Comprend et déclenche une commande simple d'un appareil compatible à portée.",
@@ -296,7 +296,7 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Poussiérokinésie",
-                "Rassemble et déplace la poussière ordinaire existante. Elle reste distincte de la poussière de fée enchantée.",
+                "Crée une petite quantité de poussière ordinaire ou déplace celle qui est présente. Elle reste distincte de la poussière de fée enchantée.",
                 ("Nuage de poussière", "Traces révélées"),
                 (
                     "Soulève un léger nuage qui gêne la vue sans étouffer une cible.",
