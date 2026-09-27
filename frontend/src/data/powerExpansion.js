@@ -1,5 +1,6 @@
 // Proposals for the broader registry. Every new ability and evolution needs staff approval.
 export const expandedPowerNotes = {
+  'Résistance aux flammes': ['Supporter mieux la chaleur et les flammes sans être invulnérable.', 'Traverser brièvement une zone en feu pour protéger quelqu’un.', 'Les fumées, les débris et l’épuisement restent dangereux ; la portée de la résistance dépend de la fiche validée.'],
   'Soif révélatrice': ['Déceler une trace de sang récente ou une blessure ouverte à proximité.', 'Suivre une odeur dans une pièce après une confrontation.', 'La foule, la distance et les odeurs concurrentes brouillent la perception.'],
   'Vitesse vampirique': ['Accélérer brièvement ses déplacements.', 'Tenter de rejoindre un abri avant une attaque.', 'Les obstacles, la fatigue et la réaction d’autrui demeurent ; aucun coup automatique.'],
   'Contrainte du regard': ['Tenter une suggestion simple lors d’un contact visuel.', 'Demander à une personne réceptive de quitter une pièce.', 'La cible peut résister ; la verveine et les protections restent pertinentes.'],

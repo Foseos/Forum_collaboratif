@@ -691,6 +691,18 @@ POWER_DIRECTORY += power_table("XL", "Prophétesses démoniaques", "rgba(168,85,
     ),
 ])
 
+POWER_DIRECTORY += power_table("XLI", "Chiens de l'enfer", "rgba(249,115,22,0.34)", [
+    (
+        "Résistance aux flammes",
+        "Supporte mieux la chaleur et les flammes grâce à sa nature de Hellhound, dans les limites définies par sa fiche. Les fumées, l'épuisement et les autres dangers du feu restent réels.",
+        ("Peau de braise ★", "Traversée des flammes ★"),
+        (
+            "Résiste plus longtemps à un contact direct avec le feu, sans immunité totale ni protection d'autrui.",
+            "Traverse brièvement une zone enflammée pour intervenir, sans ignorer les fumées, les débris ou la fatigue.",
+        ),
+    ),
+])
+
 
 class Command(BaseCommand):
     help = "Complète le Grimoire des pouvoirs avec les capacités du crossover Nexus Arcana."

@@ -95,7 +95,10 @@ Combustion moléculaire
 Combustion par le regard
 Boules d'énergie
 Immunité aux flammes
-Magmakinésie`, [R.sorcier, R.demon, R.phenix, R.hellhound, R.kitsuneFeu])
+Magmakinésie`, [R.sorcier, R.demon, R.phenix, R.kitsuneFeu])
+add(`Pyrokinésie
+Combustion par le regard
+Résistance aux flammes`, [R.hellhound])
 add(`Foudre / Électrokinésie
 Sillage fulgurant
 Magnétokinésie`, [R.sorcier, R.demon, R.kitsuneTonnerre, R.phenix])
@@ -140,7 +143,7 @@ Fumokinésie
 Cinerokinésie
 Poussiérokinésie`, [R.sorcier, R.demon, R.fee, R.kitsuneAir, R.phenix])
 add(`Acidokinésie
-Toxikinésie`, [R.sorcier, R.demon, R.kanima, R.chimere, R.hellhound])
+Toxikinésie`, [R.sorcier, R.demon, R.kanima, R.chimere])
 add(`Hématokinésie
 Ostéokinésie`, [R.sorcier, R.demon, R.feeNoire, R.elfeNoir, R.kitsuneSang])
 add(`Sonokinésie
@@ -153,7 +156,7 @@ add(`Chant apaisant
 Voix mimétique`, [R.sorcier, R.muse, R.fee, R.cupidon, R.sirenePsychique])
 add(`Cri de Furie`, [R.furies])
 add(`Hurlement de ralliement
-Rugissement de garde`, [R.demon, R.valkyrie, R.loup, R.changeforme, R.hellhound])
+Rugissement de garde`, [R.demon, R.valkyrie, R.loup, R.changeforme])
 
 add(`Décélération moléculaire
 Éclat moléculaire
@@ -234,14 +237,20 @@ Sens aiguisés
 Régénération
 Invulnérabilité partielle
 Métabolisme accéléré
-Adaptation respiratoire`, [R.demon, R.vampire, R.heretique, R.loup, R.changeforme, R.kanima, R.hellhound, R.phenix, R.valkyrie])
+Adaptation respiratoire`, [R.demon, R.vampire, R.heretique, R.loup, R.changeforme, R.kanima, R.phenix, R.valkyrie])
+add(`Force accrue
+Sens aiguisés
+Régénération
+Invulnérabilité partielle`, [R.hellhound])
 add(`Force accrue
 Sens aiguisés`, [R.tenebres])
 add(`Vision thermique
 Nyctalopie
 Camouflage organique
 Piste brouillée
-Bond silencieux`, [R.loup, R.changeforme, R.kanima, R.hellhound, R.vampire, R.elfe, R.kitsune])
+Bond silencieux`, [R.loup, R.changeforme, R.kanima, R.vampire, R.elfe, R.kitsune])
+add(`Vision thermique
+Nyctalopie`, [R.hellhound])
 add(`Métamorphose
 Peau des bêtes
 Variation de taille
@@ -250,7 +259,7 @@ Clonage`, [R.sorcier, R.demon, R.fee, R.changeforme, R.kitsune, R.chimere])
 add(`Invisibilité`, [R.sorcier, R.demon, R.fee, R.kitsune, R.chimere])
 add(`Communication animale
 Parole des bêtes
-Ascendant animal`, [R.sorcier, R.feeBois, R.elfeBois, R.nymphe, R.loup, R.changeforme, R.hellhound])
+Ascendant animal`, [R.sorcier, R.feeBois, R.elfeBois, R.nymphe, R.loup, R.changeforme])
 add(`Toucher paralysant`, [R.sorcier, R.demon, R.kanima, R.chimere, R.sirenePsychique])
 add(`Sillage des effluves`, [R.cupidon, R.fee, R.nymphe, R.sirenePsychique, R.demon, R.vampire])
 add(`Pétrification progressive`, [R.sorcier, R.demon, R.sphinx, R.chimere])
