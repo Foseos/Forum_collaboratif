@@ -1,7 +1,7 @@
 // Possibilités de Nexus Arcana. Elles n'accordent aucun pouvoir automatiquement.
 // Les sorciers TVD / The Originals / Legacies sont volontairement absents.
 const R = {
-  sorcier: 'Sorciers Charmed',
+  sorcier: 'Sorcières et sorciers Charmed',
   heretique: 'Hérétiques',
   demon: 'Démons',
   tenebres: 'Êtres des ténèbres',

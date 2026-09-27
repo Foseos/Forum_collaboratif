@@ -177,8 +177,21 @@ const entries = computed(() => {
   return { powers, paths, rules }
 })
 const frenchOrder = (left, right) => left.localeCompare(right, 'fr', { sensitivity: 'base' })
-const families = computed(() => [...new Set(entries.value[mode.value].map(entry => entry.family))].sort(frenchOrder))
-const races = computed(() => [...new Set(entries.value[mode.value].flatMap(entry => entry.races || []))].sort(frenchOrder))
+const highlightedFamilies = ['Vampires', 'Loups-garous', 'Sorcières et sorciers Charmed']
+const highlightedRaces = ['Vampires', 'Loups-garous', 'Sorcières et sorciers Charmed']
+function optionsWithHighlights(values, highlights) {
+  const available = new Set(values)
+  return [
+    ...highlights.filter(name => available.delete(name)),
+    ...[...available].sort(frenchOrder),
+  ]
+}
+const families = computed(() => optionsWithHighlights(
+  entries.value[mode.value].map(entry => entry.family), highlightedFamilies,
+))
+const races = computed(() => optionsWithHighlights(
+  entries.value[mode.value].flatMap(entry => entry.races || []), highlightedRaces,
+))
 const filtered = computed(() => {
   const terms = normalize(query.value).split(/\s+/).filter(Boolean)
   return entries.value[mode.value].filter(entry => {
