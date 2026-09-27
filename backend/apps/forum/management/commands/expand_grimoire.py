@@ -585,6 +585,15 @@ POWER_DIRECTORY += power_table("XXXIV", "Démons Kazi", "rgba(239,68,68,0.34)", 
 
 POWER_DIRECTORY += power_table("XXXV", "Succubes et incubes", "rgba(236,72,153,0.34)", [
     (
+        "Éveil de l'attirance",
+        "Suscite chez une personne proche une attirance sexuelle passagère, limitée à quelques tours de RP. L'effet et sa durée sont convenus avec le joueur ciblé ; il ne commande aucun acte ni relation.",
+        ("Amour éphémère ★", "Aura d'attirance ★"),
+        (
+            "Peut faire naître un sentiment amoureux temporaire avec l'accord du joueur ciblé ; il se dissipe et ne crée aucun lien durable.",
+            "Étend une attirance plus légère à quelques personnes proches, chacune gardant ses choix et sa possibilité de résistance.",
+        ),
+    ),
+    (
         "Lecture des désirs",
         "Perçoit une attirance ou un désir déjà présent chez une personne proche, sans lire ses pensées ni connaître toute son histoire intime.",
         ("Nuance du désir ★", "Miroir du désir ★"),

@@ -3,7 +3,7 @@
     { "name": "Furies", "description": "Démones liées à la colère et à la vengeance. Leur forme démoniaque et les effets de leur cri ou de leur fumée sont définis dans la fiche validée." },
     { "name": "Démons de Lazare", "description": "Démons connus pour leur capacité de reconstitution. Celle-ci doit être choisie et encadrée dans la fiche ; elle ne permet pas d'annuler librement une mort en RP." },
     { "name": "Démons Kazi", "description": "Guerriers démoniaques liés à leur roi. Leur lien et leurs capacités sont précisés dans la fiche, sans imposer un contrôle automatique sur d'autres personnages." },
-    { "name": "Succubes et incubes", "description": "Démons liés à la séduction et à l'énergie des passions. Leur influence ne force ni sentiments ni consentement ; chaque effet est soumis à validation." },
+    { "name": "Succubes et incubes", "description": "Démons liés à la séduction et à l'énergie des passions. Ils peuvent susciter une attirance sexuelle passagère ou, avec une évolution validée, un sentiment amoureux temporaire. Ces émotions n'imposent ni relation ni acte à la personne ciblée ; leurs effets se jouent avec son joueur." },
     { "name": "Êtres des ténèbres", "description": "Démons spécialisés dans la traque des êtres de lumière. Leur orbing sombre, leur arme ou leur poison éventuels doivent faire partie des pouvoirs validés." },
     { "name": "Prophétesses démoniaques", "description": "Démones dotées de visions, à l'image des voyantes maléfiques de Charmed. Il s'agit d'un rôle ou d'un profil, pas d'une espèce distincte ; leurs visions restent partielles et leurs pouvoirs sont validés individuellement." }
   ],

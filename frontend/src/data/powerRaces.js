@@ -63,7 +63,8 @@ function add(names, races) {
 add(`Écho des fautes`, [R.furies])
 add(`Mémoire des cendres`, [R.lazare])
 add(`Pression crânienne`, [R.kazi])
-add(`Lecture des désirs`, [R.succubes])
+add(`Lecture des désirs
+Éveil de l'attirance`, [R.succubes])
 add(`Marque de traque`, [R.tenebres])
 add(`Présage de rupture`, [R.prophetesses])
 add(`Soif révélatrice
