@@ -155,6 +155,15 @@ def power_table(number, title, color, powers):
 
 
 POWER_DIRECTORY += power_table("XVII", "Cris, voix et vibrations", "rgba(244,114,182,0.32)", [
+    (
+        "Leurre acoustique",
+        "Projette un son trompeur dans un point proche, comme une voix ou des pas. Le son ne crée aucune image et peut être démasqué.",
+        ("Écho différé ★", "Scène sonore ★"),
+        (
+            "Rejoue brièvement le même son après un court délai défini.",
+            "Compose plusieurs sons cohérents dans une petite zone, sans imposer ce que les auditeurs croient ou font.",
+        ),
+    ),
     ("Cri de Furie", "Libère par la voix une onde liée à une émotion intense qui peut repousser ou déséquilibrer à courte portée. Ne blesse pas automatiquement une cible.", ("Onde furieuse ★", "Déflagration vocale ★")),
     ("Cri perçant", "Émet une fréquence aiguë capable de troubler brièvement l'ouïe et la concentration d'une cible proche. Ne rend pas sourd durablement.", ("Fréquence ciblée", "Cri de groupe ★")),
     ("Chant apaisant", "Apaise brièvement une tension chez les personnes qui entendent la voix et acceptent l'effet. Ne modifie ni souvenirs ni décisions.", ("Accord protecteur", "Chœur apaisant ★")),
@@ -164,6 +173,42 @@ POWER_DIRECTORY += power_table("XVII", "Cris, voix et vibrations", "rgba(244,114
 ])
 
 POWER_DIRECTORY += power_table("XVIII", "Perception et conscience", "rgba(167,139,250,0.34)", [
+    (
+        "Écho des savoirs",
+        "Capte un fragment de connaissance précis au contact d'une personne ou d'un objet lié à ce savoir, avec l'accord du joueur concerné. Ne donne ni maîtrise complète ni accès libre aux secrets.",
+        ("Lecture approfondie ★", "Transmission d'un écho ★"),
+        (
+            "Obtient un détail supplémentaire sur le même sujet, avec des informations convenues avec les joueurs concernés.",
+            "Partage brièvement le fragment reçu avec une personne consentante, sans lui transmettre une compétence durable.",
+        ),
+    ),
+    (
+        "Augure des marées",
+        "Perçoit dans l'eau un présage fragmentaire lié à une personne, un lieu ou un événement proche. La vision ne garantit pas l'avenir.",
+        ("Reflet du passé ★", "Vision des courants ★"),
+        (
+            "Entrevoit une trace passée liée à l'eau consultée, sans reconstituer toute la scène.",
+            "Affûte un présage lié à un lieu traversé par l'eau, avec des limites validées par le staff.",
+        ),
+    ),
+    (
+        "Augure des nuées",
+        "Lit dans les nuages des signes incertains sur un danger ou un changement possible. Un ciel dégagé n'empêche pas le don, mais rend le présage plus diffus.",
+        ("Signe lointain ★", "Présage partagé ★"),
+        (
+            "Distingue un indice concernant un événement plus éloigné, sans en connaître la date certaine.",
+            "Montre à une personne consentante une partie de la vision, sans imposer une interprétation unique.",
+        ),
+    ),
+    (
+        "Augure des racines",
+        "Ressent dans une plante un écho du passé ou une possibilité à venir liée à son environnement. Les impressions restent fragmentaires.",
+        ("Mémoire végétale ★", "Avertissement des racines ★"),
+        (
+            "Perçoit une trace plus ancienne conservée par une plante ou par le sol qui la nourrit.",
+            "Reçoit un signal de danger proche à travers les végétaux, sans connaître automatiquement sa cause.",
+        ),
+    ),
     (
         "Détection des protégés",
         "Ressent la présence et l'état général des personnes avec lesquelles un lien de protection a été établi. Ne révèle ni leurs pensées ni leur position exacte.",
@@ -196,6 +241,15 @@ POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.3
 
 POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.30)", [
     (
+        "Sillage des effluves",
+        "Crée ou module une faible émission de phéromones surnaturelles qui peut attirer l'attention ou modifier une impression passagère. Ne fait naître ni amour ni obéissance.",
+        ("Empreinte apaisante ★", "Sillage diffus ★"),
+        (
+            "Propose une sensation de calme à une cible réceptive, qui garde ses choix et sa réaction.",
+            "Étend l'effluve à quelques personnes proches pendant une courte durée, avec leurs réactions jouées librement.",
+        ),
+    ),
+    (
         "Clonage",
         "Crée un double physique temporaire du personnage, capable d'agir à proximité pendant quelques tours de RP. Il partage ses limites et ne multiplie ni ses pouvoirs ni sa réserve d'énergie.",
         ("Double prolongé ★", "Clones multiples ★"),
@@ -211,6 +265,15 @@ POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.3
 ])
 
 POWER_DIRECTORY += power_table("XXI", "Facultés mentales et pouvoirs insolites", "rgba(196,181,253,0.34)", [
+    (
+        "Égide de l'esprit",
+        "Dresse une protection mentale temporaire contre une intrusion ou une influence psychique. Elle peut céder face à une force supérieure et ne bloque pas les attaques physiques.",
+        ("Égide partagée ★", "Ancrage mental ★"),
+        (
+            "Étend brièvement la protection à une personne consentante proche.",
+            "Renforce la résistance à une influence précise déjà identifiée, sans immunité absolue.",
+        ),
+    ),
     ("Torture mentale", "Inflige à une cible une sensation de souffrance psychique temporaire, sans blessure physique ni séquelle imposée. Les réactions, révélations et limites de la scène sont convenues avec son joueur.", ("Étau psychique ★", "Pression partagée ★")),
     ("Omnilinguisme", "Permet de comprendre et de parler les langues ordinaires entendues, sans donner accès aux pensées, aux codes secrets ou aux savoirs de leurs locuteurs.", ("Écritures anciennes", "Langues occultes ★")),
     ("Intuition des mensonges", "Perçoit une discordance lorsqu'une personne ment délibérément, sans connaître la vérité ni détecter une erreur sincère.", ("Dissonance des récits", "Lecture des omissions ★")),
@@ -247,6 +310,33 @@ for section_number, section_title, section_color, powers in KINETIC_POWER_SECTIO
     POWER_DIRECTORY += power_table(section_number, section_title, section_color, powers)
 
 POWER_DIRECTORY += power_table("XXXI", "Instinct, traque et ralliement", "rgba(251,191,36,0.32)", [
+    (
+        "Aile spectrale",
+        "Invoque un petit oiseau spectral capable d'observer un lieu proche ou de porter un message bref. Il ne combat pas et peut être dissipé.",
+        ("Messager lointain ★", "Volée spectrale ★"),
+        (
+            "Envoie l'oiseau plus loin avec un trajet et une durée définis, sans vision omnisciente.",
+            "Invoque quelques oiseaux pour explorer des directions distinctes ; les informations reçues restent partielles.",
+        ),
+    ),
+    (
+        "Parole des bêtes",
+        "Échange des impressions et des intentions simples avec un animal proche. Comprendre un animal ne garantit ni sa confiance ni son obéissance.",
+        ("Langage approfondi ★", "Appel animal ★"),
+        (
+            "Comprend un message animal plus précis dans les limites de ce que l'animal a réellement perçu.",
+            "Adresse un appel à des animaux proches, sans les forcer à venir ou à aider.",
+        ),
+    ),
+    (
+        "Ascendant animal",
+        "Tente d'orienter brièvement l'action simple d'un animal présent, selon son instinct et sa disposition. Ne commande pas une créature contre sa survie ou son maître sans accord.",
+        ("Lien de confiance ★", "Influence de groupe ★"),
+        (
+            "Renforce une coopération déjà acceptée par un animal, sans effacer sa volonté.",
+            "Adresse la même suggestion simple à quelques animaux proches, sans garantir leur réaction.",
+        ),
+    ),
     (
         "Hurlement de ralliement",
         "Transmet une alerte ou une direction simple aux alliés qui entendent le cri. Ne commande pas leurs actes et ne traverse pas toute distance.",
