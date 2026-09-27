@@ -172,6 +172,17 @@ POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.3
     ("Atténuation de la douleur", "Diminue temporairement une sensation douloureuse chez soi ou une personne consentante. La blessure reste présente et peut s'aggraver si elle est ignorée.", ("Apaisement ciblé", "Apaisement partagé ★")),
 ])
 
+POWER_DIRECTORY += power_table("XXI", "Facultés mentales et pouvoirs insolites", "rgba(196,181,253,0.34)", [
+    ("Torture mentale", "Inflige à une cible une sensation de souffrance psychique temporaire, sans blessure physique ni séquelle imposée. Les réactions, révélations et limites de la scène sont convenues avec son joueur.", ("Étau psychique ★", "Pression partagée ★")),
+    ("Omnilinguisme", "Permet de comprendre et de parler les langues ordinaires entendues, sans donner accès aux pensées, aux codes secrets ou aux savoirs de leurs locuteurs.", ("Écritures anciennes", "Langues occultes ★")),
+    ("Intuition des mensonges", "Perçoit une discordance lorsqu'une personne ment délibérément, sans connaître la vérité ni détecter une erreur sincère.", ("Dissonance des récits", "Lecture des omissions ★")),
+    ("Altération des probabilités", "Infléchit légèrement la chance d'un événement banal et incertain. Ne garantit aucun résultat et ne décide pas seule de l'issue d'une scène.", ("Chance favorable ★", "Malchance localisée ★")),
+    ("Transmutation mineure", "Modifie temporairement la matière d'un petit objet inerte. Ne touche ni les êtres vivants ni les objets protégés sans accord.", ("Matière durable ★", "Transformation multiple ★")),
+    ("Animation d'objets", "Anime brièvement un petit objet inerte pour une action simple. L'objet n'acquiert ni pensée ni pouvoir propre.", ("Mouvement coordonné", "Assistant animé ★")),
+    ("Sommeil induit", "Favorise une somnolence progressive chez une cible réceptive. Ne provoque pas d'inconscience instantanée et la cible peut résister.", ("Sommeil profond ★", "Rêve dirigé ★")),
+    ("Dissipation de magie", "Affaiblit ou dénoue un effet magique temporaire de portée limitée après concentration. N'efface pas les pouvoirs d'une personne.", ("Dissipation ciblée ★", "Cercle de dissipation ★")),
+])
+
 
 class Command(BaseCommand):
     help = "Complète le Grimoire des pouvoirs avec les capacités du crossover Nexus Arcana."

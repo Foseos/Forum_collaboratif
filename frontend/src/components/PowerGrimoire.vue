@@ -12,7 +12,7 @@
         <li><strong>4 capacités maximum à la création, toutes natures confondues.</strong> Hybrides, tribrides et Originels partagent le même plafond, capacités actives et passives comprises. Les capacités manquantes se débloquent en jeu avec des Arcana Flouz, après validation du staff. Une capacité déjà acquise peut être améliorée deux fois par des achats distincts.</li>
         <li><strong>Vérifiez votre fiche validée.</strong> Ce catalogue propose des possibilités ; il ne donne pas tous ces pouvoirs à votre personnage.</li>
         <li><strong>Choisissez une piste d’évolution.</strong> Les flèches indiquent des branches possibles, pas des niveaux débloqués automatiquement. Certaines branches sont des dons distincts.</li>
-        <li><strong>Faites valider chaque ajout.</strong> Présentez le pouvoir actuel, le changement souhaité et ses limites. Tous les nouveaux pouvoirs et toutes les évolutions demandent l'approbation du staff avant usage. Aucun RP justificatif n'est demandé. ★ signale un encadrement particulier, pas une exception à cette règle.</li>
+        <li><strong>Faites valider chaque ajout.</strong> Présentez le pouvoir actuel, le changement souhaité et ses limites. Tous les nouveaux pouvoirs et toutes les évolutions demandent l'approbation du staff avant usage. Aucun RP justificatif n'est demandé. ★ indique que sa portée, sa durée ou ses conséquences doivent être précisées avec le staff.</li>
         <li><strong>Proposez vos idées.</strong> Cette liste ne recense pas tous les pouvoirs ni toutes leurs évolutions. Vous pouvez proposer un pouvoir ou une évolution au staff et en discuter avec l’équipe avant de l’intégrer à votre fiche ou de l’utiliser en RP.</li>
       </ol>
       <p>« Maîtrise » signifie un usage plus précis ou plus étendu, jamais une puissance sans limite. Contrôle mental, blessure grave, possession et mort nécessitent l’accord du joueur concerné. Le maître du jeu est la personne qui encadre l’événement.</p>
@@ -41,7 +41,7 @@
       <summary>
         <span class="power-card-title">{{ entry.title }}<small>{{ entry.family }}</small></span>
         <span class="guide-badge">Validation du staff requise</span>
-        <span v-if="entry.requiresStaff || entry.hasStar" class="guide-badge">Encadrement particulier ★</span>
+        <span v-if="entry.requiresStaff || entry.hasStar" class="guide-badge">Limites à préciser ★</span>
       </summary>
       <div class="power-card-body">
         <template v-if="mode === 'powers'">
