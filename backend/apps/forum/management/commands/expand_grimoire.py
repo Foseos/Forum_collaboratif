@@ -77,7 +77,7 @@ POWER_DIRECTORY = DIRECTORY_MARKER + """
     ("Inhibition moléculaire → gel → cryokinésie", "Aucun gel total durable sur un personnage sans accord."),
     ("Guérison → soin profond → transfert vital", "La guérison ne ramène pas les morts."),
     ("Régénération → guérison accélérée → résistance accrue", "Les faiblesses définies dans la fiche restent effectives."),
-    ("Intangibilité → invisibilité → métamorphie", "Une transformation conserve les limites physiques de la forme adoptée."),
+    ("Intangibilité → ancrage tangible → phase sélective", "Le retour à l'état solide et le passage partiel à travers la matière sont deux maîtrises de l'intangibilité ; ils ne donnent ni invisibilité ni métamorphie."),
     ("Force accrue → réflexes surnaturels → vitesse", "Ne garantit jamais une attaque ou une esquive réussie."),
 ]) + section("XIV", "Éléments, énergie et matière", "rgba(251,146,60,0.30)", [
     ("Boule de feu → jet de flammes → mur de feu", "La portée, la durée et la chaleur doivent être définies ; un mur de feu exige une évolution validée."),
@@ -174,6 +174,15 @@ POWER_DIRECTORY += power_table("XVII", "Cris, voix et vibrations", "rgba(244,114
 
 POWER_DIRECTORY += power_table("XVIII", "Perception et conscience", "rgba(167,139,250,0.34)", [
     (
+        "Regards croisés",
+        "Perçoit brièvement deux points de vue à la fois : le sien et celui d'une personne consentante liée au pouvoir. Chaque vue reste limitée par les obstacles et la distance.",
+        ("Focalisation double ★", "Relais de regards ★"),
+        (
+            "Distingue un détail dans chaque vue au prix d'une forte concentration, sans agir plus vite.",
+            "Passe temporairement d'un point de vue volontaire à un autre, sans voir partout en même temps.",
+        ),
+    ),
+    (
         "Vision thermique",
         "Perçoit les différences de chaleur à courte portée, même dans une faible lumière. Les murs épais, les isolants et les sources chaudes peuvent brouiller la lecture.",
         ("Lecture des traces chaudes ★", "Contraste affiné ★"),
@@ -259,6 +268,51 @@ POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.3
 
 POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.30)", [
     (
+        "Éclat moléculaire",
+        "Accélère brièvement les molécules de l'air pour produire un flash lumineux local. Il peut gêner la vue sans brûlure ni aveuglement durable imposés.",
+        ("Flash dirigé ★", "Éclats successifs ★"),
+        (
+            "Concentre l'éclat dans une direction définie, avec la réaction des personnes exposées jouée librement.",
+            "Produit deux flashes brefs à quelques instants d'intervalle, au prix d'une fatigue accrue.",
+        ),
+    ),
+    (
+        "Souffle d'expansion",
+        "Dilate temporairement une petite quantité de matière inerte pour déplacer ou écarter un objet léger. Ne provoque ni explosion ni dommage corporel automatique.",
+        ("Expansion dirigée ★", "Retour stable ★"),
+        (
+            "Oriente la dilatation pour exercer une poussée courte sur un objet compatible.",
+            "Ramène plus vite la matière modifiée à sa forme initiale, sans réparer les dégâts antérieurs.",
+        ),
+    ),
+    (
+        "Rémanence moléculaire",
+        "Rétablit progressivement une petite matière inerte récemment altérée par un effet moléculaire identifiable. N'annule pas une blessure, une mort ou toute magie adverse.",
+        ("Stabilisation ciblée ★", "Réversion étendue ★"),
+        (
+            "Interrompt la progression d'une altération moléculaire limitée avant de rétablir la matière.",
+            "Rétablit une zone inerte un peu plus grande avec l'accord des joueurs concernés et une ampleur validée par le staff.",
+        ),
+    ),
+    (
+        "Peau des bêtes",
+        "Adopte temporairement une forme animale définie dans la fiche. La transformation ne donne ni les souvenirs ni tous les instincts de l'animal.",
+        ("Forme affinée ★", "Répertoire animal ★"),
+        (
+            "Maîtrise mieux une forme choisie et ses mouvements, sans supprimer ses faiblesses.",
+            "Ajoute une seconde forme animale validée, avec ses propres limites et une durée définie.",
+        ),
+    ),
+    (
+        "Rayonnement réparateur",
+        "Diffuse un soin léger à deux personnes consentantes proches. La fatigue augmente avec le nombre de cibles et les blessures graves restent hors de portée.",
+        ("Cercle de soin ★", "Soutien prolongé ★"),
+        (
+            "Étend le soin léger à quelques personnes supplémentaires dans une zone limitée.",
+            "Maintient le soin sur deux personnes pendant quelques tours de RP, avec un coût physique accru.",
+        ),
+    ),
+    (
         "Pétrification progressive",
         "Durcit temporairement une petite partie de son corps ou une surface touchée. Une atteinte sur un autre personnage demande son accord et ne l'immobilise pas automatiquement.",
         ("Pétrification étendue ★", "Réversion de la pierre ★"),
@@ -310,6 +364,15 @@ POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.3
 ])
 
 POWER_DIRECTORY += power_table("XXI", "Facultés mentales et pouvoirs insolites", "rgba(196,181,253,0.34)", [
+    (
+        "Germe de discorde",
+        "Accentue brièvement une tension déjà perceptible entre des personnes proches. Ne crée pas de haine durable et ne force ni dispute ni violence.",
+        ("Dissonance partagée ★", "Tension dissipée ★"),
+        (
+            "Étend la tension à quelques personnes réceptives, chacune gardant ses choix.",
+            "Apaise plus vite une discorde provoquée par ce pouvoir, sans effacer les désaccords réels.",
+        ),
+    ),
     (
         "Pas de brume",
         "Se dissout brièvement en brume pour rejoindre un point visible à courte distance. Les protections magiques et les obstacles hermétiques peuvent interrompre le trajet.",

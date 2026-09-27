@@ -195,7 +195,7 @@ export const pathwayNotes = {
   'Inhibition moléculaire': ['Ralentir l’activité moléculaire.', 'Renforcer l’immobilisation temporaire.', 'Explorer une branche de froid et de glace, différente d’un simple ralentissement.'],
   'Guérison': ['Soigner une blessure compatible avec sa lignée.', 'Traiter une atteinte plus importante avec davantage de fatigue.', 'Engager sa vitalité pour soutenir quelqu’un ; ce n’est pas une résurrection.'],
   'Régénération': ['Récupérer selon les capacités naturelles de sa lignée.', 'Réduire le temps de récupération dans les limites validées.', 'Mieux supporter certaines atteintes, sans supprimer les faiblesses de l’espèce.'],
-  'Intangibilité': ['Traverser certaines matières dans des conditions définies.', 'Explorer une branche de dissimulation visuelle.', 'Explorer une branche de changement de forme. Ces trois dons restent distincts et ne sont pas accordés ensemble.'],
+  'Intangibilité': ['Traverser certaines matières dans des conditions définies.', 'Reprendre une forme solide au moment choisi, sans rester intangible et tangible à la fois.', 'Rendre seulement une partie du corps intangible pendant un instant, avec les limites validées par le staff.'],
   'Force accrue': ['Déployer une force supérieure à celle d’un humain ordinaire.', 'Réagir plus rapidement à une menace perceptible.', 'Se déplacer plus vite, sans esquive ni attaque automatiquement réussie.'],
   'Boule de feu': ['Projeter une flamme concentrée.', 'Maintenir un flux de flammes.', 'Disposer le feu en barrière temporaire, avec attention aux alliés.'],
   'Étincelle': ['Produire une faible manifestation électrique.', 'Projeter une décharge dirigée.', 'Contrôler plus finement l’électricité, en tenant compte des conducteurs et isolants.'],
