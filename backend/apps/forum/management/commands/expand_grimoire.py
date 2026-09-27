@@ -183,6 +183,19 @@ POWER_DIRECTORY += power_table("XXI", "Facultés mentales et pouvoirs insolites"
     ("Dissipation de magie", "Affaiblit ou dénoue un effet magique temporaire de portée limitée après concentration. N'efface pas les pouvoirs d'une personne.", ("Dissipation ciblée ★", "Cercle de dissipation ★")),
 ])
 
+POWER_DIRECTORY += power_table("XXII", "Eaux, lumière et enchantements", "rgba(103,232,249,0.34)", [
+    ("Bouclier aquatique", "Dresse une barrière d'eau issue d'une source proche pour amortir une attaque. La protection a une résistance et une durée limitées.", ("Dôme aqueux ★", "Bouclier mobile ★")),
+    ("Fouet d'eau", "Projette un jet d'eau souple pour repousser ou tenter de saisir un objet proche. N'immobilise pas automatiquement une personne.", ("Double fouet", "Entrave aqueuse ★")),
+    ("Respiration aquatique", "Permet de respirer sous l'eau pendant quelques tours de RP, sans protéger du froid, de la pression ou des courants.", ("Souffle prolongé", "Partage du souffle ★")),
+    ("Chant envoûtant", "Éveille une fascination passagère chez les personnes qui entendent la mélodie. Une cible garde ses choix et peut rompre l'écoute.", ("Mélodie collective ★", "Écho persistant ★")),
+    ("Voix des eaux", "Transmet quelques mots au travers d'une étendue d'eau reliée au personnage. N'entend pas toutes les conversations proches de l'eau.", ("Écoute des courants", "Message des marées ★")),
+    ("Glamour scintillant", "Modifie l'apparence perçue du personnage par un éclat magique discret. Son corps réel ne change pas et le leurre peut être décelé.", ("Glamour prolongé", "Glamour partagé ★")),
+    ("Poussière lumineuse", "Fait apparaître des particules de lumière capables d'éclairer ou de révéler brièvement une trace. Elles ne blessent pas et ne neutralisent pas une cible.", ("Traînée révélatrice", "Nuée scintillante")),
+    ("Ailes d'énergie", "Forme des ailes magiques pour planer sur une courte distance. Le vol soutenu et le transport d'autrui sont des évolutions distinctes.", ("Vol soutenu ★", "Portage léger ★")),
+    ("Bénédiction fugace", "Accorde à une personne consentante un soutien modeste et temporaire face à une épreuve précise, sans garantir sa réussite ni lui transmettre un pouvoir.", ("Bénédiction ciblée", "Bénédiction partagée ★")),
+    ("Rosée réparatrice", "Rassemble de l'humidité pour apaiser une blessure superficielle ou une irritation. Ne remplace pas la guérison des atteintes graves.", ("Soin apaisant", "Rosée collective ★")),
+])
+
 
 class Command(BaseCommand):
     help = "Complète le Grimoire des pouvoirs avec les capacités du crossover Nexus Arcana."
