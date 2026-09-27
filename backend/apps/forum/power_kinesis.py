@@ -33,11 +33,12 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Sonokinésie",
-                "Amplifie, atténue ou dévie des sons existants. Elle se distingue d'un cri surnaturel émis par la voix.",
-                ("Écho dirigé", "Silence sélectif ★"),
+                "Amplifie, atténue ou dévie des sons et peut émettre des ondes sonores à une fréquence choisie. Elle se distingue d'un cri surnaturel émis par la voix.",
+                ("Écho dirigé", "Silence sélectif ★", "Onde de fréquence ★"),
                 (
                     "Redirige un son identifiable vers un point proche sans inventer sa source.",
                     "Atténue une source sonore choisie, sans supprimer toutes les vibrations.",
+                    "Projette une onde vibratoire dont la fréquence peut dévier de petits objets ou repousser brièvement une personne proche. Sa portée et son intensité sont validées par le staff ; la réaction d'un personnage se joue avec son accord.",
                 ),
             ),
             (
