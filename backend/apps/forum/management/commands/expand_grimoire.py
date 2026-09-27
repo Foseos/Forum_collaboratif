@@ -170,7 +170,15 @@ POWER_DIRECTORY += power_table("XVIII", "Perception et conscience", "rgba(167,13
 ])
 
 POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.30)", [
-    ("Cristallokinésie", "Déplace ou façonne une petite quantité de cristal déjà présente. Ne crée pas de gemmes et ne traverse pas automatiquement les protections.", ("Barrière cristalline", "Résonance des gemmes")),
+    (
+        "Cristallokinésie",
+        "Crée une petite quantité de cristaux, puis peut les déplacer et les façonner. Leur taille et leur résistance restent limitées.",
+        ("Barrière cristalline ★", "Résonance des gemmes ★"),
+        (
+            "Assemble les cristaux créés en une protection temporaire dont la taille et la solidité sont validées.",
+            "Fait vibrer les cristaux proches pour produire un signal ou repérer une résonance, sans traverser toutes les protections.",
+        ),
+    ),
     ("Magnétokinésie", "Attire ou repousse de petits objets ferromagnétiques proches. Tous les métaux ne réagissent pas et une arme tenue peut être résistée.", ("Attraction multiple", "Bouclier magnétique ★")),
     ("Gravikinésie", "Allège ou alourdit légèrement un objet ou son propre corps pendant un court instant. Ne permet ni vol libre ni écrasement d'une personne.", ("Zone allégée ★", "Ancrage gravitationnel ★")),
     ("Brumokinésie", "Déplace et modèle une brume ou une vapeur déjà présente. L'effet dépend de la source et n'asphyxie pas automatiquement.", ("Voile de brume", "Brume dense ★")),
