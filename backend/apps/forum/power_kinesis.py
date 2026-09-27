@@ -170,20 +170,22 @@ KINETIC_POWER_SECTIONS = (
             ),
             (
                 "Halokinésie",
-                "Rassemble et modèle du sel disponible en petite quantité. Ne purifie pas automatiquement un lieu ni une personne.",
-                ("Cercle salin", "Cristaux de sel ★"),
+                "Déplace et façonne du sel déjà présent, y compris dissous dans l'eau, en quantité limitée.",
+                ("Extraction saline", "Brume de sel ★", "Rempart cristallin ★"),
                 (
-                    "Trace un petit cercle de sel qui peut servir de support à un rituel distinct.",
-                    "Épaissit le sel disponible en cristaux fragiles et temporaires.",
+                    "Sépare une petite quantité de sel de l'eau et la rassemble sous forme de grains.",
+                    "Disperse le sel en fine brume qui gêne brièvement la vue ou irrite légèrement, sans blessure durable.",
+                    "Assemble les grains en une paroi de cristaux fragile qui ralentit un passage ou amortit un choc.",
                 ),
             ),
             (
                 "Fibrokinésie",
-                "Anime des fibres, fils ou tissus déjà présents, sans créer de matière ni contrôler un corps vêtu.",
-                ("Tissage mobile", "Filet de fibres ★"),
+                "Crée une quantité limitée de fibres, fils ou tissu, puis peut les animer et les façonner. La matière créée reste fragile et ne contrôle pas le corps d'une personne vêtue.",
+                ("Tissage mobile", "Filet de fibres ★", "Étoffe persistante ★"),
                 (
-                    "Réorganise des fils disponibles pour former un motif ou réparer une petite déchirure.",
-                    "Tisse un filet léger dont une cible peut se dégager.",
+                    "Tisse et déplace les fibres créées pour former un motif ou réparer une petite déchirure.",
+                    "Crée puis tend un filet léger dont une cible peut se dégager.",
+                    "Maintient une étoffe créée pendant une durée plus longue, avec une taille validée.",
                 ),
             ),
         ),
@@ -192,11 +194,12 @@ KINETIC_POWER_SECTIONS = (
         "XXVIII", "Nature et corps", "rgba(74,222,128,0.30)", (
             (
                 "Mycokinésie",
-                "Guide la croissance ou les filaments de champignons déjà présents. Ne crée ni maladie ni spores nocives automatiquement.",
-                ("Réseau fongique", "Voile de spores ★"),
+                "Guide des champignons déjà présents et peut produire une petite quantité de spores. Leur effet, portée et durée sont définis dans la fiche ; aucune maladie réelle n'est transmise.",
+                ("Réseau fongique", "Voile de spores ★", "Spores à effet ciblé ★"),
                 (
                     "Étend un réseau de filaments sur une surface compatible pour transmettre un signal.",
-                    "Libère des spores fictives non toxiques dans une petite zone, avec effets définis par le staff.",
+                    "Produit et diffuse un nuage de spores dans une petite zone, avec une durée définie.",
+                    "Donne aux spores un effet temporaire validé, comme une irritation, une somnolence ou un marquage visible, sans imposer la réaction d'une cible.",
                 ),
             ),
             (
