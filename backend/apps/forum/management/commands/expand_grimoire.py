@@ -174,6 +174,24 @@ POWER_DIRECTORY += power_table("XVII", "Cris, voix et vibrations", "rgba(244,114
 
 POWER_DIRECTORY += power_table("XVIII", "Perception et conscience", "rgba(167,139,250,0.34)", [
     (
+        "Vision thermique",
+        "Perçoit les différences de chaleur à courte portée, même dans une faible lumière. Les murs épais, les isolants et les sources chaudes peuvent brouiller la lecture.",
+        ("Lecture des traces chaudes ★", "Contraste affiné ★"),
+        (
+            "Repère pendant un court moment la chaleur laissée récemment sur une surface accessible.",
+            "Distingue mieux deux sources proches sans identifier automatiquement une personne ni voir à travers tous les obstacles.",
+        ),
+    ),
+    (
+        "Nyctalopie",
+        "Voit mieux dans la pénombre et l'obscurité partielle. Une absence totale de lumière, un éblouissement ou une illusion adaptée peuvent gêner la vision.",
+        ("Pénombre profonde ★", "Adaptation rapide ★"),
+        (
+            "Distingue davantage de formes dans une obscurité presque complète, sans voir dans le noir absolu.",
+            "S'adapte plus vite aux changements entre lumière et obscurité, sans immunité à l'éblouissement.",
+        ),
+    ),
+    (
         "Écho des savoirs",
         "Capte un fragment de connaissance précis au contact d'une personne ou d'un objet lié à ce savoir, avec l'accord du joueur concerné. Ne donne ni maîtrise complète ni accès libre aux secrets.",
         ("Lecture approfondie ★", "Transmission d'un écho ★"),
@@ -241,6 +259,33 @@ POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.3
 
 POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.30)", [
     (
+        "Pétrification progressive",
+        "Durcit temporairement une petite partie de son corps ou une surface touchée. Une atteinte sur un autre personnage demande son accord et ne l'immobilise pas automatiquement.",
+        ("Pétrification étendue ★", "Réversion de la pierre ★"),
+        (
+            "Étend l'effet à une zone plus grande pendant une durée validée, avec l'accord de toute personne ciblée.",
+            "Met fin plus rapidement à une pétrification causée par ce pouvoir, sans annuler toutes les malédictions de pierre.",
+        ),
+    ),
+    (
+        "Variation de taille",
+        "Agrandit ou réduit légèrement sa propre taille pendant quelques tours de RP. La masse, la force et l'accès aux lieux ne changent pas sans limites convenues.",
+        ("Changement marqué ★", "Taille d'autrui ★"),
+        (
+            "Accentue la variation de taille avec une durée et des effets physiques validés par le staff.",
+            "Applique une variation modérée à une personne consentante proche, sans lui imposer d'action.",
+        ),
+    ),
+    (
+        "Variation de densité",
+        "Allège ou densifie temporairement son propre corps dans une mesure limitée. Cela ne rend ni intangible ni invulnérable et ne permet pas le vol libre.",
+        ("Ancrage dense ★", "Légèreté accrue ★"),
+        (
+            "Résiste mieux à une poussée ou à un choc, sans annuler les dégâts ni empêcher toute chute.",
+            "Réduit davantage le poids ressenti pour franchir un obstacle court, sans flotter indéfiniment.",
+        ),
+    ),
+    (
         "Sillage des effluves",
         "Crée ou module une faible émission de phéromones surnaturelles qui peut attirer l'attention ou modifier une impression passagère. Ne fait naître ni amour ni obéissance.",
         ("Empreinte apaisante ★", "Sillage diffus ★"),
@@ -265,6 +310,15 @@ POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.3
 ])
 
 POWER_DIRECTORY += power_table("XXI", "Facultés mentales et pouvoirs insolites", "rgba(196,181,253,0.34)", [
+    (
+        "Pas de brume",
+        "Se dissout brièvement en brume pour rejoindre un point visible à courte distance. Les protections magiques et les obstacles hermétiques peuvent interrompre le trajet.",
+        ("Trajet voilé ★", "Passage accompagné ★"),
+        (
+            "Parcourt une distance un peu plus longue dans les limites du lieu, sans devenir invisible ni intouchable durant toute la scène.",
+            "Emmène une personne consentante sur un court trajet, avec une charge et un effort validés par le staff.",
+        ),
+    ),
     (
         "Égide de l'esprit",
         "Dresse une protection mentale temporaire contre une intrusion ou une influence psychique. Elle peut céder face à une force supérieure et ne bloque pas les attaques physiques.",
