@@ -3,7 +3,7 @@
     <header class="guide-heading">
       <p class="guide-eyebrow">Nexus Arcana · Guide des joueurs</p>
       <h2>Registre des pouvoirs et de leurs évolutions</h2>
-      <p>Explorez les types de pouvoirs et leurs évolutions possibles. Ce registre n'est pas exhaustif : vous pouvez proposer un pouvoir ou une évolution au staff et en discuter avec l'équipe. <strong>Tout ajout de pouvoir et toute évolution, même présents dans ce registre, exigent l'approbation du staff avant utilisation en RP.</strong></p>
+      <p>Explorez les types de pouvoirs, les espèces possibles et leurs évolutions. Ce registre n'est pas exhaustif : vous pouvez proposer un pouvoir ou une évolution au staff et en discuter avec l'équipe. <strong>Tout ajout de pouvoir et toute évolution, même présents dans ce registre, exigent l'approbation du staff avant utilisation en RP.</strong></p>
     </header>
 
     <details class="guide-help" open>
@@ -16,6 +16,7 @@
         <li><strong>Proposez vos idées.</strong> Cette liste ne recense pas tous les pouvoirs ni toutes leurs évolutions. Vous pouvez proposer un pouvoir ou une évolution au staff et en discuter avec l’équipe avant de l’intégrer à votre fiche ou de l’utiliser en RP.</li>
       </ol>
       <p>« Maîtrise » signifie un usage plus précis ou plus étendu, jamais une puissance sans limite. Contrôle mental, blessure grave, possession et mort nécessitent l’accord du joueur concerné. Le maître du jeu est la personne qui encadre l’événement.</p>
+      <p>Les espèces indiquées sont des possibilités, jamais des pouvoirs acquis automatiquement. Les hybrides et Trybrides dépendent de leurs héritages validés. Les sorciers TVD, The Originals et Legacies sont exclus de cette liste de compatibilités.</p>
       <p>Chaque déblocage ou amélioration passe par la boutique : 300 Arcana Flouz pour le premier achat, puis 300 de plus par achat. Décrivez la capacité souhaitée et ses limites ; le staff approuve chaque ajout ou évolution. La capacité devient utilisable après validation, débit et mise à jour de la fiche.</p>
     </details>
 
@@ -23,7 +24,7 @@
       <label for="power-search">Rechercher un pouvoir ou une évolution</label>
       <div class="guide-search-row">
         <input id="power-search" v-model="query" type="search" placeholder="Ex. télékinésie, soin, orbing…" class="form-input" />
-        <button v-if="query || family" class="btn btn-secondary btn-sm" @click="reset">Effacer les filtres</button>
+        <button v-if="query || family || race" class="btn btn-secondary btn-sm" @click="reset">Effacer les filtres</button>
       </div>
       <div class="guide-tabs" aria-label="Type de contenu">
         <button v-for="tab in tabs" :key="tab.id" class="btn btn-sm" :class="mode === tab.id ? 'btn-primary' : 'btn-secondary'" :aria-pressed="mode === tab.id" @click="selectMode(tab.id)">{{ tab.label }}</button>
@@ -33,6 +34,13 @@
         <option value="">Toutes les catégories</option>
         <option v-for="name in families" :key="name" :value="name">{{ name }}</option>
       </select>
+      <template v-if="mode !== 'rules'">
+        <label for="power-race">Espèce possible</label>
+        <select id="power-race" v-model="race" class="form-input">
+          <option value="">Toutes les espèces</option>
+          <option v-for="name in races" :key="name" :value="name">{{ name }}</option>
+        </select>
+      </template>
       <p role="status" class="guide-result-count">{{ filtered.length }} fiche{{ filtered.length > 1 ? 's' : '' }} trouvée{{ filtered.length > 1 ? 's' : '' }} dans le registre</p>
     </div>
 
@@ -49,6 +57,7 @@
         <span v-if="entry.requiresStaff || entry.hasStar" class="guide-badge">Limites à préciser ★</span>
       </summary>
       <div class="power-card-body">
+        <p v-if="entry.races?.length" class="guide-races"><strong>Espèces possibles :</strong> {{ entry.races.join(' · ') }}</p>
         <template v-if="mode === 'powers'">
           <h3>Ce que fait ce pouvoir</h3>
           <p>{{ entry.notes?.[0] || entry.description }}</p>
@@ -85,10 +94,12 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { powerNotes, evolutionNotes, pathwayNotes, normalize } from '../data/powerGuide'
+import { powerRaces } from '../data/powerRaces'
 
 const props = defineProps({ content: { type: String, required: true } })
 const query = ref('')
 const family = ref('')
+const race = ref('')
 const mode = ref('powers')
 const tabs = [{ id: 'powers', label: 'Tous les pouvoirs' }, { id: 'paths', label: 'Évolutions possibles' }, { id: 'rules', label: 'Règles et limites' }]
 const featuredPathTitles = new Set([
@@ -128,6 +139,7 @@ const entries = computed(() => {
     let evolutionExplanations = []
     try { evolutionExplanations = JSON.parse(row.dataset.evolutionExplanations || '[]') } catch { /* Keep the standard explanation. */ }
     powers.push({ id: powers.length, title, description, evolution, family,
+      races: powerRaces[title] || [],
       showInPaths: row.closest('table')?.dataset.powerPaths === 'true',
       notes: powerNotes[title], hasStar: evolution.includes('★'),
       requiresStaff: title === 'Réplique de pouvoir',
@@ -136,6 +148,7 @@ const entries = computed(() => {
   }
   const paths = powers.filter(power => power.showInPaths || featuredPathTitles.has(power.title)).map(power => ({
     id: `power-${power.id}`, title: power.title, description: power.description,
+    races: power.races,
     family: power.family, requiresStaff: power.requiresStaff,
     steps: [
       { label: power.title, explanation: power.notes?.[0] || power.description },
@@ -154,7 +167,7 @@ const entries = computed(() => {
       const names = title.split('→').map(name => name.trim())
       if (featuredPathTitles.has(names[0])) continue
       const explanations = pathwayNotes[names[0]]
-      paths.push({ id: paths.length, title, description, family, requiresStaff: names[0] === 'Perception temporelle',
+      paths.push({ id: paths.length, title, description, family, races: powerRaces[names[0]] || [], requiresStaff: names[0] === 'Perception temporelle',
         steps: names.map((label, index) => ({ label, explanation: explanations?.[index] || explainStep(label) })),
       })
     } else {
@@ -165,11 +178,13 @@ const entries = computed(() => {
 })
 const frenchOrder = (left, right) => left.localeCompare(right, 'fr', { sensitivity: 'base' })
 const families = computed(() => [...new Set(entries.value[mode.value].map(entry => entry.family))].sort(frenchOrder))
+const races = computed(() => [...new Set(entries.value[mode.value].flatMap(entry => entry.races || []))].sort(frenchOrder))
 const filtered = computed(() => {
   const terms = normalize(query.value).split(/\s+/).filter(Boolean)
   return entries.value[mode.value].filter(entry => {
     if (family.value && entry.family !== family.value) return false
-    const text = normalize([entry.title, entry.description, entry.evolution || '', entry.family, ...(entry.notes || []), ...(entry.steps || []).flatMap(step => [step.label, step.explanation])].join(' '))
+    if (race.value && !entry.races?.includes(race.value)) return false
+    const text = normalize([entry.title, entry.description, entry.evolution || '', entry.family, ...(entry.races || []), ...(entry.notes || []), ...(entry.steps || []).flatMap(step => [step.label, step.explanation])].join(' '))
     return terms.every(term => text.includes(term))
   })
 })
@@ -179,8 +194,8 @@ const grouped = computed(() => families.value
     entries: filtered.value.filter(entry => entry.family === name).sort((left, right) => frenchOrder(left.title, right.title)),
   }))
   .filter(group => group.entries.length))
-function reset() { query.value = ''; family.value = '' }
-function selectMode(value) { mode.value = value; family.value = '' }
+function reset() { query.value = ''; family.value = ''; race.value = '' }
+function selectMode(value) { mode.value = value; family.value = ''; race.value = '' }
 </script>
 
 <style scoped>
@@ -213,6 +228,7 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; b
 .power-card-body h3 { font-size: .9rem; margin: 1rem 0 .35rem; }
 .power-card-body p { font-size: .9rem; line-height: 1.75; margin: .3rem 0 .8rem; overflow-wrap: anywhere; }
 .guide-source { padding: .8rem; background: rgba(124,58,237,.06); border-radius: 6px; }
+.guide-races { padding: .65rem .8rem; border-left: 3px solid var(--accent); background: rgba(124,58,237,.08); }
 .guide-evolutions { padding-left: 1.3rem; }
 .guide-evolutions li { margin: .8rem 0; }
 .guide-steps { list-style: none; padding: 0; }
