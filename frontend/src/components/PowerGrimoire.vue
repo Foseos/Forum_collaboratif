@@ -28,18 +28,23 @@
       <div class="guide-tabs" aria-label="Type de contenu">
         <button v-for="tab in tabs" :key="tab.id" class="btn btn-sm" :class="mode === tab.id ? 'btn-primary' : 'btn-secondary'" :aria-pressed="mode === tab.id" @click="selectMode(tab.id)">{{ tab.label }}</button>
       </div>
-      <label for="power-family">Famille ou rubrique</label>
+      <label for="power-family">Catégorie</label>
       <select id="power-family" v-model="family" class="form-input">
-        <option value="">Toutes les rubriques</option>
+        <option value="">Toutes les catégories</option>
         <option v-for="name in families" :key="name" :value="name">{{ name }}</option>
       </select>
       <p role="status" class="guide-result-count">{{ filtered.length }} fiche{{ filtered.length > 1 ? 's' : '' }} trouvée{{ filtered.length > 1 ? 's' : '' }} dans le registre</p>
     </div>
 
     <p v-if="!filtered.length" class="guide-empty">Aucun résultat. Essayez un autre mot ou effacez les filtres.</p>
-    <details v-for="entry in filtered" :key="mode + entry.id" class="power-card">
+    <section v-for="group in grouped" :key="mode + group.name" class="guide-group" :aria-label="group.name">
+      <header class="guide-group-heading">
+        <h3>{{ group.name }}</h3>
+        <span>{{ group.entries.length }} fiche{{ group.entries.length > 1 ? 's' : '' }}</span>
+      </header>
+    <details v-for="entry in group.entries" :key="mode + entry.id" class="power-card">
       <summary>
-        <span class="power-card-title">{{ entry.title }}<small>{{ entry.family }}</small></span>
+        <span class="power-card-title">{{ entry.title }}</span>
         <span class="guide-badge">Validation du staff requise</span>
         <span v-if="entry.requiresStaff || entry.hasStar" class="guide-badge">Limites à préciser ★</span>
       </summary>
@@ -67,6 +72,7 @@
         <template v-else><p>{{ entry.description }}</p></template>
       </div>
     </details>
+    </section>
 
     <details class="guide-reference">
       <summary>Consulter le texte complet du grimoire</summary>
@@ -157,7 +163,8 @@ const entries = computed(() => {
   }
   return { powers, paths, rules }
 })
-const families = computed(() => [...new Set(entries.value[mode.value].map(entry => entry.family))])
+const frenchOrder = (left, right) => left.localeCompare(right, 'fr', { sensitivity: 'base' })
+const families = computed(() => [...new Set(entries.value[mode.value].map(entry => entry.family))].sort(frenchOrder))
 const filtered = computed(() => {
   const terms = normalize(query.value).split(/\s+/).filter(Boolean)
   return entries.value[mode.value].filter(entry => {
@@ -166,6 +173,12 @@ const filtered = computed(() => {
     return terms.every(term => text.includes(term))
   })
 })
+const grouped = computed(() => families.value
+  .map(name => ({
+    name,
+    entries: filtered.value.filter(entry => entry.family === name).sort((left, right) => frenchOrder(left.title, right.title)),
+  }))
+  .filter(group => group.entries.length))
 function reset() { query.value = ''; family.value = '' }
 function selectMode(value) { mode.value = value; family.value = '' }
 </script>
@@ -188,10 +201,13 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; b
 .guide-search-row input { flex: 1 1 220px; min-width: 0; }
 .guide-tabs { display: flex; flex-wrap: wrap; gap: .5rem; margin: .8rem 0; }
 .guide-result-count { color: var(--text-secondary); font-size: .8rem; margin: .8rem 0; }
+.guide-group { margin: 1.45rem 0 1.8rem; }
+.guide-group-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: .65rem .85rem; border-bottom: 1px solid var(--border); background: linear-gradient(90deg, rgba(124,58,237,.13), transparent); }
+.guide-group-heading h3 { margin: 0; color: var(--accent); font-family: var(--font-heading); font-size: 1rem; line-height: 1.4; }
+.guide-group-heading span { color: var(--text-secondary); font-size: .76rem; white-space: nowrap; }
 .power-card { border: 1px solid var(--border); border-radius: 10px; margin: .65rem 0; overflow: hidden; }
 .power-card > summary { padding: 1rem; background: var(--bg-secondary); }
 .power-card-title { overflow-wrap: anywhere; }
-.power-card-title small { display: block; color: var(--text-secondary); font-size: .72rem; font-weight: 400; margin: .2rem 0 0 1rem; }
 .guide-badge { display: inline-block; margin: .5rem 0 0 1rem; color: var(--accent); font-size: .72rem; }
 .power-card-body { padding: .3rem 1rem 1rem; }
 .power-card-body h3 { font-size: .9rem; margin: 1rem 0 .35rem; }
