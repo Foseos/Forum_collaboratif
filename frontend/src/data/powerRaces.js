@@ -187,9 +187,9 @@ add(`Suggestion mentale
 Manipulation des sentiments
 Illusion mentale
 Illusion visuelle
-Sommeil induit
 Onirokinésie
 Chant envoûtant`, [R.sorcier, R.demon, R.fee, R.cupidon, R.muse, R.sirenePsychique, R.kitsuneEsprit])
+add(`Sommeil induit`, [R.sorcier, R.demon, R.fee, R.muse, R.sirenePsychique, R.kitsuneEsprit])
 add(`Réminiscence
 Mnémokinésie
 Intuition des mensonges
