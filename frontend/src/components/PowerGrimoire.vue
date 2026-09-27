@@ -120,12 +120,13 @@ const entries = computed(() => {
     const [title, description, evolution] = cells
     const family = heading(row.closest('table'))
     powers.push({ id: powers.length, title, description, evolution, family,
+      showInPaths: row.closest('table')?.dataset.powerPaths === 'true',
       notes: powerNotes[title], hasStar: evolution.includes('★'),
       requiresStaff: title === 'Réplique de pouvoir',
       steps: evolution.split('·').map(label => ({ label: label.trim(), explanation: explainStep(label) })),
     })
   }
-  const paths = powers.filter(power => featuredPathTitles.has(power.title)).map(power => ({
+  const paths = powers.filter(power => power.showInPaths || featuredPathTitles.has(power.title)).map(power => ({
     id: `power-${power.id}`, title: power.title, description: power.description,
     family: power.family, requiresStaff: power.requiresStaff,
     steps: [

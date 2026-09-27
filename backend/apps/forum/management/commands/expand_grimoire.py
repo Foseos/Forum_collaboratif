@@ -1,3 +1,5 @@
+from html import escape
+
 from django.core.management.base import BaseCommand, CommandError
 
 from apps.forum.models import Topic
@@ -121,6 +123,54 @@ POWER_DIRECTORY += """
     <tr><td>Illusion mentale</td><td>Fait percevoir à une cible une scène, une voix ou une sensation qui n'existe que dans son esprit. Le décor réel ne change pas et la cible garde ses décisions.</td><td>Illusion multisensorielle ★ · Projection mentale multiple ★</td></tr>
   </tbody></table></div>
 </div>"""
+
+
+def power_table(number, title, color, powers):
+    rows = "".join(
+        "<tr><td>{}</td><td>{}</td><td>{}</td></tr>".format(
+            escape(name), escape(description),
+            " · ".join(escape(evolution) for evolution in evolutions),
+        )
+        for name, description, evolutions in powers
+    )
+    return f"""
+<div style="margin:1.4rem 0; border:1px solid {color}; border-radius:8px; overflow:hidden;">
+  <div style="padding:0.55rem 1rem; background:linear-gradient(90deg, {color}, transparent);">
+    <h2 style="margin:0; color:#f5d76e; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;">{number}. {escape(title)}</h2>
+  </div>
+  <div style="overflow-x:auto;"><table data-power-paths="true"><thead><tr><th>Pouvoir</th><th>Description</th><th>Évolutions possibles</th></tr></thead><tbody>{rows}</tbody></table></div>
+</div>"""
+
+
+POWER_DIRECTORY += power_table("XVII", "Cris, voix et vibrations", "rgba(244,114,182,0.32)", [
+    ("Cri de Furie", "Libère par la voix une onde liée à une émotion intense qui peut repousser ou déséquilibrer à courte portée. Ne blesse pas automatiquement une cible.", ("Onde furieuse ★", "Déflagration vocale ★")),
+    ("Cri perçant", "Émet une fréquence aiguë capable de troubler brièvement l'ouïe et la concentration d'une cible proche. Ne rend pas sourd durablement.", ("Fréquence ciblée", "Cri de groupe ★")),
+    ("Chant apaisant", "Apaise brièvement une tension chez les personnes qui entendent la voix et acceptent l'effet. Ne modifie ni souvenirs ni décisions.", ("Accord protecteur", "Chœur apaisant ★")),
+    ("Voix mimétique", "Reproduit le timbre et la manière de parler d'une voix déjà entendue, sans acquérir les connaissances de son propriétaire.", ("Timbre parfait", "Écho différé")),
+    ("Silence surnaturel", "Atténue les sons dans une petite zone pendant un court moment. Les vibrations et les autres moyens de communication restent possibles.", ("Bulle silencieuse", "Silence dirigé")),
+    ("Écholocalisation", "Perçoit les contours proches grâce au retour d'un son émis. Le bruit, les protections et les matières absorbantes peuvent brouiller la lecture.", ("Cartographie sonore", "Filtrage des échos")),
+])
+
+POWER_DIRECTORY += power_table("XVIII", "Perception et conscience", "rgba(167,139,250,0.34)", [
+    ("Partage sensoriel", "Transmet brièvement ce que le personnage voit ou entend à une personne consentante. Ne transmet ni pensées ni souvenirs.", ("Connexion prolongée", "Relais sensoriel ★")),
+    ("Lecture des intentions", "Ressent une intention immédiate et marquée, comme attaquer ou protéger. N'offre pas la lecture des pensées ni la certitude sur les actes futurs.", ("Anticipation brève", "Veille collective ★")),
+    ("Voile de présence", "Rend le personnage moins remarquable pour l'attention ordinaire sans le rendre invisible ni effacer ses traces.", ("Discrétion accrue", "Voile de groupe ★")),
+    ("Sens des présages", "Ressent qu'un danger proche se prépare sans connaître sa cause exacte. Le signal peut être ambigu ou contrarié.", ("Alerte ciblée", "Pressentiment partagé ★")),
+])
+
+POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.30)", [
+    ("Cristallokinésie", "Déplace ou façonne une petite quantité de cristal déjà présente. Ne crée pas de gemmes et ne traverse pas automatiquement les protections.", ("Barrière cristalline", "Résonance des gemmes")),
+    ("Magnétokinésie", "Attire ou repousse de petits objets ferromagnétiques proches. Tous les métaux ne réagissent pas et une arme tenue peut être résistée.", ("Attraction multiple", "Bouclier magnétique ★")),
+    ("Gravité locale", "Allège ou alourdit légèrement un objet ou son propre corps pendant un court instant. Ne permet ni vol libre ni écrasement d'une personne.", ("Zone allégée ★", "Ancrage gravitationnel ★")),
+    ("Brumokinésie", "Déplace et modèle une brume ou une vapeur déjà présente. L'effet dépend de la source et n'asphyxie pas automatiquement.", ("Voile de brume", "Brume dense ★")),
+])
+
+POWER_DIRECTORY += power_table("XX", "Corps et adaptation", "rgba(45,212,191,0.30)", [
+    ("Métabolisme accéléré", "Accorde un bref surcroît d'énergie physique au prix d'une fatigue ensuite. Ne remplace ni la guérison ni la vitesse surnaturelle.", ("Récupération brève", "Élan prolongé")),
+    ("Camouflage organique", "Modifie les couleurs ou motifs du corps pour mieux se fondre dans un environnement. Le mouvement et les autres sens peuvent révéler le personnage.", ("Mimétisme complet", "Camouflage en mouvement")),
+    ("Adaptation respiratoire", "Permet de supporter brièvement un air difficile ou de retenir son souffle plus longtemps. Ne protège pas de toutes les substances dangereuses.", ("Respiration prolongée", "Filtration de l'air ★")),
+    ("Atténuation de la douleur", "Diminue temporairement une sensation douloureuse chez soi ou une personne consentante. La blessure reste présente et peut s'aggraver si elle est ignorée.", ("Apaisement ciblé", "Apaisement partagé ★")),
+])
 
 
 class Command(BaseCommand):

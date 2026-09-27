@@ -1,4 +1,5 @@
 // Explanations supplement the live grimoire; they do not grant powers.
+import { expandedPowerNotes, expandedEvolutionNotes } from './powerExpansion'
 export const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[’]/g, "'").trim()
 
 export const powerNotes = {
@@ -60,6 +61,7 @@ export const powerNotes = {
   "Aquakinésie (contrôle de l'eau)": ['Déplacer ou modeler de l’eau.', 'Dévier un flux ou former une barrière temporaire.', 'Les volumes importants nécessitent une source. Agir sur l’eau ne donne pas un contrôle libre du corps d’autrui.'],
   'Communication animale': ['Comprendre et transmettre des intentions à des animaux.', 'Demander à un animal ce qu’il a perçu.', 'Un animal possède ses sens et ses connaissances, pas celles d’un humain omniscient. Communiquer ne force pas l’obéissance.'],
   'Géokinésie': ['Agir sur la terre et les pierres.', 'Déplacer une pierre ou façonner un abri modeste.', 'Masse, terrain et concentration limitent l’effet. Une catastrophe à grande échelle nécessite l’équipe.'],
+  ...expandedPowerNotes,
 }
 
 export const evolutionNotes = {
@@ -174,6 +176,7 @@ export const evolutionNotes = {
   'Transformation animale': 'Adopter une forme animale validée, avec ses capacités et ses limites physiques.',
   'Séisme': 'Faire trembler une zone ; tout effet dévastateur requiert l’équipe.',
   'Mur de pierre': 'Façonner le matériau disponible en une barrière dont la taille dépend de la maîtrise.',
+  ...expandedEvolutionNotes,
 }
 
 // The live directory uses these branches in addition to the historic tables.
