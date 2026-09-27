@@ -177,8 +177,14 @@ const entries = computed(() => {
   return { powers, paths, rules }
 })
 const frenchOrder = (left, right) => left.localeCompare(right, 'fr', { sensitivity: 'base' })
-const highlightedFamilies = ['Vampires', 'Loups-garous', 'Sorcières et sorciers Charmed', 'Furies', 'Démons de Lazare', 'Démons Kazi', 'Succubes et incubes', 'Êtres des ténèbres', 'Prophétesses démoniaques']
+const speciesFamilies = new Set(['Vampires', 'Loups-garous', 'Sorcières et sorciers Charmed', 'Furies', 'Démons de Lazare', 'Démons Kazi', 'Succubes et incubes', 'Êtres des ténèbres', 'Prophétesses démoniaques'])
 const highlightedRaces = ['Vampires', 'Loups-garous', 'Sorcières et sorciers Charmed', 'Furies', 'Démons de Lazare', 'Démons Kazi', 'Succubes et incubes', 'Êtres des ténèbres', 'Prophétesses démoniaques']
+function categoryForFamily(name) {
+  if (speciesFamilies.has(name)) return 'Pouvoirs liés aux espèces'
+  if (name === 'Sorcellerie Charmed') return 'Traditions magiques'
+  if (name === 'Vampires, loups et héritages hybrides') return 'Règles des espèces'
+  return name
+}
 function optionsWithHighlights(values, highlights) {
   const available = new Set(values)
   return [
@@ -186,22 +192,20 @@ function optionsWithHighlights(values, highlights) {
     ...[...available].sort(frenchOrder),
   ]
 }
-const families = computed(() => optionsWithHighlights(
-  entries.value[mode.value].map(entry => entry.family), highlightedFamilies,
-))
+const families = computed(() => [...new Set(entries.value[mode.value].map(entry => categoryForFamily(entry.family)))].sort(frenchOrder))
 const races = computed(() => optionsWithHighlights(
   entries.value[mode.value].flatMap(entry => entry.races || []), highlightedRaces,
 ))
 const filtered = computed(() => {
   const terms = normalize(query.value).split(/\s+/).filter(Boolean)
   return entries.value[mode.value].filter(entry => {
-    if (family.value && entry.family !== family.value) return false
+    if (family.value && categoryForFamily(entry.family) !== family.value) return false
     if (race.value && !entry.races?.includes(race.value)) return false
     const text = normalize([entry.title, entry.description, entry.evolution || '', entry.family, ...(entry.races || []), ...(entry.notes || []), ...(entry.steps || []).flatMap(step => [step.label, step.explanation])].join(' '))
     return terms.every(term => text.includes(term))
   })
 })
-const grouped = computed(() => families.value
+const grouped = computed(() => [...new Set(filtered.value.map(entry => entry.family))].sort(frenchOrder)
   .map(name => ({
     name,
     entries: filtered.value.filter(entry => entry.family === name).sort((left, right) => frenchOrder(left.title, right.title)),
