@@ -241,8 +241,8 @@ add(`Métamorphose
 Peau des bêtes
 Variation de taille
 Variation de densité
-Invisibilité
 Clonage`, [R.sorcier, R.demon, R.fee, R.changeforme, R.kitsune, R.chimere])
+add(`Invisibilité`, [R.sorcier, R.demon, R.fee, R.kitsune, R.chimere])
 add(`Communication animale
 Parole des bêtes
 Ascendant animal`, [R.sorcier, R.feeBois, R.elfeBois, R.nymphe, R.loup, R.changeforme, R.hellhound])
