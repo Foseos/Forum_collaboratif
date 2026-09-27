@@ -219,6 +219,45 @@ POWER_DIRECTORY += power_table("XXIII", "Nuages, poussières et lumière", "rgba
 for section_number, section_title, section_color, powers in KINETIC_POWER_SECTIONS:
     POWER_DIRECTORY += power_table(section_number, section_title, section_color, powers)
 
+POWER_DIRECTORY += power_table("XXXI", "Instinct, traque et ralliement", "rgba(251,191,36,0.32)", [
+    (
+        "Hurlement de ralliement",
+        "Transmet une alerte ou une direction simple aux alliés qui entendent le cri. Ne commande pas leurs actes et ne traverse pas toute distance.",
+        ("Appel lointain", "Ralliement coordonné ★"),
+        (
+            "Porte l'alerte un peu plus loin dans un environnement où le son circule.",
+            "Permet à plusieurs alliés volontaires de reconnaître un même signal convenu.",
+        ),
+    ),
+    (
+        "Piste brouillée",
+        "Atténue temporairement sa propre trace olfactive ou ses empreintes récentes. Ne supprime pas toutes les preuves de son passage.",
+        ("Fausse piste", "Effacement de groupe ★"),
+        (
+            "Oriente un poursuivant vers une trace trompeuse, sans garantir qu'il la suivra.",
+            "Aide quelques alliés proches à brouiller leurs traces pendant une courte traversée.",
+        ),
+    ),
+    (
+        "Bond silencieux",
+        "Effectue un saut court en réduisant le bruit de l'atterrissage. Ne permet ni vol ni franchissement illimité.",
+        ("Atterrissage feutré", "Bond enchaîné ★"),
+        (
+            "Amortit davantage le bruit et l'impact d'une réception sur un sol compatible.",
+            "Enchaîne deux sauts courts au prix d'un effort accru et avec des appuis disponibles.",
+        ),
+    ),
+    (
+        "Rugissement de garde",
+        "Soutient brièvement la détermination d'alliés proches qui entendent le rugissement. Ne crée pas de bouclier physique ni d'obéissance.",
+        ("Courage partagé", "Cri dissuasif ★"),
+        (
+            "Étend le soutien moral à plusieurs alliés réceptifs pendant une action précise.",
+            "Intimide momentanément une cible réceptive, qui conserve sa réaction et peut résister.",
+        ),
+    ),
+])
+
 
 class Command(BaseCommand):
     help = "Complète le Grimoire des pouvoirs avec les capacités du crossover Nexus Arcana."

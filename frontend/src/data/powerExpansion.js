@@ -42,6 +42,10 @@ export const expandedPowerNotes = {
   'Poussière de fée': ['Faire flotter brièvement un petit objet ou alléger une personne consentante.', 'Aider un allié à franchir un obstacle par un saut plus léger.', 'L’effet s’épuise rapidement et n’accorde aucun pouvoir permanent à la cible.'],
   'Télékinésie lumineuse': ['Déplacer un petit objet visible à l’aide de filaments de lumière condensée.', 'Faire venir une clé éclairée posée à quelques pas.', 'La lumière disponible, la masse, la distance et la concentration limitent la prise.'],
   'Prisme de lumière': ['Réfracter une source lumineuse pour créer des reflets trompeurs.', 'Dévier un rayon vers un mur pour distraire un observateur.', 'Ne crée pas de matière, ne lit pas l’esprit et perd son effet sans lumière.'],
+  'Hurlement de ralliement': ['Envoyer par la voix une alerte ou une direction simple aux alliés à portée.', 'Prévenir un groupe d’un danger au-delà d’une clairière.', 'Il faut entendre le cri ; aucun ordre ni déplacement n’est imposé aux alliés.'],
+  'Piste brouillée': ['Rendre sa propre piste olfactive ou ses empreintes moins faciles à suivre.', 'Traverser un terrain meuble sans laisser une trace nette.', 'D’autres indices subsistent et un pisteur attentif peut retrouver le passage.'],
+  'Bond silencieux': ['Sauter sur une courte distance avec une réception discrète.', 'Passer d’un muret à un toit bas sans bruit important.', 'Ne permet ni vol ni saut sans appui ; hauteur et fatigue restent à jouer.'],
+  'Rugissement de garde': ['Soutenir le courage d’alliés proches grâce à un rugissement.', 'Aider un groupe à tenir sa position face à une menace.', 'Aucune protection physique ni victoire automatique ; chacun choisit sa réaction.'],
 }
 
 export const expandedEvolutionNotes = {
