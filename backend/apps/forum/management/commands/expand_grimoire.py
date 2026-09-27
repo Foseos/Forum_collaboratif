@@ -164,6 +164,15 @@ POWER_DIRECTORY += power_table("XVII", "Cris, voix et vibrations", "rgba(244,114
 ])
 
 POWER_DIRECTORY += power_table("XVIII", "Perception et conscience", "rgba(167,139,250,0.34)", [
+    (
+        "Détection des protégés",
+        "Ressent la présence et l'état général des personnes avec lesquelles un lien de protection a été établi. Ne révèle ni leurs pensées ni leur position exacte.",
+        ("Alerte du protégé ★", "Repérage du protégé ★"),
+        (
+            "Perçoit un appel ou un danger marqué touchant un protégé lié, sans en connaître automatiquement la cause.",
+            "Obtient une direction approximative vers un protégé lié. La distance, les protections et l'accord du joueur concerné limitent la précision.",
+        ),
+    ),
     ("Partage sensoriel", "Transmet brièvement ce que le personnage voit ou entend à une personne consentante. Ne transmet ni pensées ni souvenirs.", ("Connexion prolongée", "Relais sensoriel ★")),
     ("Lecture des intentions", "Ressent une intention immédiate et marquée, comme attaquer ou protéger. N'offre pas la lecture des pensées ni la certitude sur les actes futurs.", ("Anticipation brève", "Veille collective ★")),
     ("Voile de présence", "Rend le personnage moins remarquable pour l'attention ordinaire sans le rendre invisible ni effacer ses traces.", ("Discrétion accrue", "Voile de groupe ★")),
