@@ -178,8 +178,8 @@ Chagrin partagé
 Élan de courage
 Accord des sens
 Émotionkinésie`, [R.sorcier, R.cupidon, R.muse, R.fee, R.nymphe, R.sirenePsychique, R.kitsuneEsprit])
-add(`Phobokinésie
-Vertige de folie
+add(`Phobokinésie`, [R.sorcier, R.demon, R.sirenePsychique, R.kitsuneEsprit])
+add(`Vertige de folie
 Malaise surnaturel
 Germe de discorde
 Algokinésie
