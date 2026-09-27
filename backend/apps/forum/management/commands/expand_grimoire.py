@@ -655,11 +655,38 @@ POWER_DIRECTORY += power_table("XXXIX", "Êtres des ténèbres", "rgba(99,102,24
 POWER_DIRECTORY += power_table("XL", "Prophétesses démoniaques", "rgba(168,85,247,0.34)", [
     (
         "Présage de rupture",
-        "Entrevoit qu'une décision proche pourrait infléchir un événement. La vision reste symbolique et ne donne ni issue certaine ni moyen d'imposer un choix.",
+        "Voit l'issue d'un événement proche au moment de la vision et reconnaît la décision qui pourrait la faire basculer. Une intervention ultérieure peut changer cet avenir ; la prophétie ne commande aucun personnage.",
         ("Visions divergentes ★", "Écho du choix ★"),
         (
-            "Aperçoit deux issues possibles sans savoir laquelle se réalisera ; l'intrigue détermine les informations révélées.",
-            "Partage un fragment du présage avec une personne consentante, sans lui transmettre un pouvoir de divination.",
+            "Voit deux issues précises et le choix qui sépare leurs chemins ; leur réalisation dépend des actes des personnages.",
+            "Partage la vision de l'issue avec une personne consentante, sans lui transmettre un pouvoir de divination.",
+        ),
+    ),
+    (
+        "Vision d'issue",
+        "Connaît l'issue d'une action ou d'une confrontation déjà engagée, telle qu'elle se dessine au moment de la vision. Si les participants changent leurs actes, l'issue peut changer aussi.",
+        ("Destin convergent ★", "Vision des survivants ★"),
+        (
+            "Identifie les décisions qui conduisent à l'issue entrevue, sans contraindre quiconque à les prendre.",
+            "Voit qui survivrait à la confrontation si son cours actuel se poursuivait ; une intervention peut modifier ce résultat.",
+        ),
+    ),
+    (
+        "Lecture des destinées",
+        "Connaît l'issue d'un événement futur précis concernant une personne déjà rencontrée. La vision décrit l'avenir au moment où elle survient, sans rendre cet avenir immuable.",
+        ("Destins croisés ★", "Échéance révélée ★"),
+        (
+            "Distingue comment les décisions de plusieurs personnes infléchissent l'issue de cet événement.",
+            "Situe plus précisément le moment de l'issue annoncée, tant que les circonstances entrevues restent réunies.",
+        ),
+    ),
+    (
+        "Révélation du point de rupture",
+        "Voit l'acte précis qui ferait basculer une situation vers une issue déterminée. Cette connaissance n'oblige personne à accomplir l'acte.",
+        ("Parole décisive ★", "Main du destin ★"),
+        (
+            "Entend les mots qui pourraient provoquer le basculement, sans pouvoir imposer leur prononciation ou leur effet.",
+            "Reconnaît la personne qui accomplirait l'acte décisif si les événements suivaient leur cours actuel.",
         ),
     ),
 ])

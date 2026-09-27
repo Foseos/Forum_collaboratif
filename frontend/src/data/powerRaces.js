@@ -67,7 +67,10 @@ add(`Lecture des désirs
 Éveil de l'attirance`, [R.succubes])
 add(`Marque de traque`, [R.tenebres])
 add(`Traque des êtres de lumière`, [R.tenebres])
-add(`Présage de rupture`, [R.prophetesses])
+add(`Présage de rupture
+Vision d'issue
+Lecture des destinées
+Révélation du point de rupture`, [R.prophetesses])
 add(`Soif révélatrice
 Vitesse vampirique
 Contrainte du regard`, [R.vampire])
