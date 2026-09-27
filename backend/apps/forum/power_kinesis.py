@@ -278,7 +278,7 @@ KINETIC_POWER_SECTIONS = (
         ),
     ),
     (
-        "XXX", "Machines, papier et poussière", "rgba(250,204,21,0.28)", (
+        "XXX", "Machines et poussière", "rgba(250,204,21,0.28)", (
             (
                 "Technokinésie",
                 "Influence une fonction simple d'un appareil proche. Ne donne pas accès à tous les systèmes ni à leurs données privées.",
@@ -286,15 +286,6 @@ KINETIC_POWER_SECTIONS = (
                 (
                     "Comprend et déclenche une commande simple d'un appareil compatible à portée.",
                     "Coordonne brièvement plusieurs appareils accessibles dans un même lieu.",
-                ),
-            ),
-            (
-                "Papierkinésie",
-                "Déplace ou plie du papier déjà présent. Ne révèle pas un texte fermé ou caché par magie.",
-                ("Origami animé", "Essaim de feuilles ★"),
-                (
-                    "Anime un pliage de papier pour lui faire porter un petit message.",
-                    "Dirige plusieurs feuilles légères, sans créer une barrière solide.",
                 ),
             ),
             (
