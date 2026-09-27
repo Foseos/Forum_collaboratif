@@ -255,10 +255,11 @@ POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.3
     (
         "Arbalète d'ombre",
         "Matérialise brièvement une arbalète d'énergie obscure et quelques traits surnaturels. Leur portée et leurs effets sont définis dans la fiche ; un tir n'atteint pas automatiquement sa cible.",
-        ("Orbes d'emprise ★", "Rempart d'orbes obscures ★"),
+        ("Orbes d'emprise ★", "Rempart d'orbes obscures ★", "Transit d'orbes sombres ★"),
         (
             "Projette des orbes sombres pour attirer, repousser ou déplacer un petit objet visible. Une cible peut résister ; ce don ne déplace pas librement les personnes.",
             "Assemble plusieurs orbes en bouclier temporaire capable d'amortir une attaque, avec une taille et une résistance validées par le staff.",
+            "Se téléporte en orbes sombres vers un point connu et accessible à courte distance. Les protections magiques peuvent bloquer le trajet ; transporter une autre personne demande une évolution distincte.",
         ),
     ),
     (
