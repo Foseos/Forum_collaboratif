@@ -252,16 +252,6 @@ POWER_DIRECTORY += power_table("XVIII", "Perception et conscience", "rgba(167,13
 
 POWER_DIRECTORY += power_table("XIX", "Matière et forces", "rgba(96,165,250,0.30)", [
     (
-        "Arbalète d'ombre",
-        "Matérialise brièvement une arbalète d'énergie obscure et quelques traits surnaturels. Leur portée et leurs effets sont définis dans la fiche ; un tir n'atteint pas automatiquement sa cible.",
-        ("Orbes d'emprise ★", "Rempart d'orbes obscures ★", "Transit d'orbes sombres ★"),
-        (
-            "Projette des orbes sombres pour attirer, repousser ou déplacer un petit objet visible. Une cible peut résister ; ce don ne déplace pas librement les personnes.",
-            "Assemble plusieurs orbes en bouclier temporaire capable d'amortir une attaque, avec une taille et une résistance validées par le staff.",
-            "Se téléporte en orbes sombres vers un point connu et accessible à courte distance. Les protections magiques peuvent bloquer le trajet ; transporter une autre personne demande une évolution distincte.",
-        ),
-    ),
-    (
         "Voile cinétique",
         "Dresse devant soi une barrière physique brève qui amortit un choc ou dévie un petit projectile. Sa résistance est limitée et elle ne protège pas l'esprit.",
         ("Rempart partagé ★", "Déviation contrôlée ★"),
@@ -623,6 +613,34 @@ POWER_DIRECTORY += power_table("XXXVIII", "Sorcières et sorciers Charmed", "rgb
 ])
 
 POWER_DIRECTORY += power_table("XXXIX", "Êtres des ténèbres", "rgba(99,102,241,0.34)", [
+    (
+        "Arbalète d'ombre",
+        "Matérialise brièvement une arbalète d'énergie obscure et quelques traits surnaturels. Leur portée et leurs effets sont définis dans la fiche ; un tir n'atteint pas automatiquement sa cible.",
+        ("Trait d'ombre précis ★", "Salve obscure ★"),
+        (
+            "Affûte un tir contre une cible visible, sans garantir qu'il touche ni contourner les protections.",
+            "Matérialise plusieurs traits pour une attaque brève ; chaque cible conserve la possibilité d'esquiver ou de se protéger.",
+        ),
+    ),
+    (
+        "Orbing sombre",
+        "Se déplace en orbes sombres vers un lieu connu et accessible. La portée, les protections et le transport éventuel d'une autre personne dépendent de la fiche validée.",
+        ("Transit d'orbes sombres ★", "Orbes d'emprise ★", "Rempart d'orbes obscures ★"),
+        (
+            "Allonge un déplacement vers un point connu, sans franchir automatiquement les barrières magiques.",
+            "Projette des orbes sombres pour attirer, repousser ou déplacer un petit objet visible. Une cible peut résister ; ce don ne déplace pas librement les personnes.",
+            "Assemble plusieurs orbes en bouclier temporaire capable d'amortir une attaque, avec une taille et une résistance validées par le staff.",
+        ),
+    ),
+    (
+        "Traque des êtres de lumière",
+        "Repère à courte portée la signature magique récente d'un être de lumière connu. Les protections, la distance et les autres signatures peuvent brouiller la piste ; aucun protégé n'est révélé automatiquement.",
+        ("Pistage d'orbes ★", "Traque ciblée ★"),
+        (
+            "Suit brièvement un résidu d'orbing récent, sans connaître la destination exacte du déplacement.",
+            "Distingue plus sûrement la trace d'un être de lumière déjà rencontré, sans localisation permanente ni traversée des protections.",
+        ),
+    ),
     (
         "Marque de traque",
         "Suit pendant quelques tours de RP la trace magique d'une personne déjà rencontrée. La distance, les protections et les déplacements peuvent brouiller la piste.",

@@ -66,6 +66,7 @@ add(`Pression crânienne`, [R.kazi])
 add(`Lecture des désirs
 Éveil de l'attirance`, [R.succubes])
 add(`Marque de traque`, [R.tenebres])
+add(`Traque des êtres de lumière`, [R.tenebres])
 add(`Présage de rupture`, [R.prophetesses])
 add(`Soif révélatrice
 Vitesse vampirique
@@ -84,7 +85,7 @@ Bouclier d'énergie
 Voile cinétique
 Gravikinésie
 Énergokinésie
-Flux emprunté`, [R.sorcier, R.demon, R.fee, R.elfe, R.lumiere, R.tenebres])
+Flux emprunté`, [R.sorcier, R.demon, R.fee, R.elfe, R.lumiere])
 
 add(`Pyrokinésie
 Combustion moléculaire
@@ -127,9 +128,10 @@ Télékinésie lumineuse
 Prisme de lumière
 Glamour scintillant`, [R.sorcier, R.feeLumiere, R.elfeAstre, R.lumiere, R.kitsuneLumiere])
 add(`Umbrakinésie
-Arbalète d'ombre
 Camouflage magique
-Pas de brume`, [R.demon, R.tenebres, R.feeNoire, R.elfeNoir, R.kitsuneOmbre])
+Pas de brume`, [R.demon, R.feeNoire, R.elfeNoir, R.kitsuneOmbre])
+add(`Arbalète d'ombre
+Orbing sombre`, [R.tenebres])
 add(`Brumokinésie
 Fumokinésie
 Cinerokinésie
@@ -182,7 +184,7 @@ add(`Phobokinésie`, [R.sorcier, R.demon, R.sirenePsychique, R.kitsuneEsprit])
 add(`Vertige de folie
 Malaise surnaturel
 Germe de discorde
-Torture mentale`, [R.sorcier, R.demon, R.tenebres, R.sirenePsychique, R.kitsuneEsprit])
+Torture mentale`, [R.sorcier, R.demon, R.sirenePsychique, R.kitsuneEsprit])
 add(`Algokinésie`, [R.sorcier, R.demon, R.sirenePsychique, R.kitsuneEsprit])
 add(`Suggestion mentale
 Manipulation des sentiments
@@ -197,7 +199,7 @@ Intuition des mensonges
 Omnilinguisme`, [R.sorcier, R.sphinx, R.muse, R.elfe, R.sirenePsychique, R.kitsuneEsprit])
 add(`Nécromancie
 Projection astrale
-Écho des savoirs`, [R.sorcier, R.demon, R.tenebres, R.sphinx, R.valkyrie, R.kitsuneEsprit])
+Écho des savoirs`, [R.sorcier, R.demon, R.sphinx, R.valkyrie, R.kitsuneEsprit])
 add(`Égide de l'esprit
 Dissipation de magie
 Bénédiction fugace`, [R.sorcier, R.lumiere, R.fee, R.elfe, R.sphinx])
@@ -209,10 +211,10 @@ Rosée réparatrice
 Biokinésie`, [R.sorcier, R.lumiere, R.feeLumiere, R.elfeEau, R.nymphe, R.cupidon])
 add(`Détection des protégés
 Localisation`, [R.lumiere, R.cupidon, R.sorcier, R.valkyrie])
-add(`Orbing`, [R.lumiere, R.tenebres])
+add(`Orbing`, [R.lumiere])
 add(`Téléportation / Flash
 Shimmer
-Lévitation`, [R.sorcier, R.demon, R.fee, R.lumiere, R.tenebres, R.muse, R.phenix])
+Lévitation`, [R.sorcier, R.demon, R.fee, R.lumiere, R.muse, R.phenix])
 add(`Ailes d'énergie`, [R.fee])
 add(`Corps de marée
 Marche des nuages
@@ -224,7 +226,9 @@ Sens aiguisés
 Régénération
 Invulnérabilité partielle
 Métabolisme accéléré
-Adaptation respiratoire`, [R.demon, R.tenebres, R.vampire, R.heretique, R.loup, R.changeforme, R.kanima, R.hellhound, R.phenix, R.valkyrie])
+Adaptation respiratoire`, [R.demon, R.vampire, R.heretique, R.loup, R.changeforme, R.kanima, R.hellhound, R.phenix, R.valkyrie])
+add(`Force accrue
+Sens aiguisés`, [R.tenebres])
 add(`Vision thermique
 Nyctalopie
 Camouflage organique
@@ -246,7 +250,7 @@ add(`Myokinésie
 Neurokinésie`, [R.sorcier, R.demon, R.vampire, R.loup, R.changeforme, R.chimere])
 add(`Aile spectrale`, [R.sorcier, R.phenix, R.valkyrie, R.sphinx])
 
-add(`Absorption de magie`, [R.sorcier, R.heretique, R.demon, R.tenebres])
+add(`Absorption de magie`, [R.sorcier, R.heretique, R.demon])
 add(`Réplique de pouvoir`, [R.sorcier, R.demon, R.chimere])
 add(`Technokinésie`, [R.sorcier, R.demon, R.phenix, R.chimere])
 add(`Tychokinésie`, [R.sorcier, R.fee, R.sphinx])
@@ -265,7 +269,7 @@ Inhibition moléculaire
 Boule de feu`, [R.sorcier, R.demon, R.phenix, R.kitsuneFeu])
 add(`Intangibilité
 Téléportation
-Clignement`, [R.sorcier, R.demon, R.fee, R.lumiere, R.tenebres])
+Clignement`, [R.sorcier, R.demon, R.fee, R.lumiere])
 add(`Brise
 Lumière
 Ombre`, [R.sorcier, R.fee, R.elfe, R.kitsuneAir, R.kitsuneLumiere, R.kitsuneOmbre])
