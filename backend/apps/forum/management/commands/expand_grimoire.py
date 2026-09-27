@@ -547,7 +547,7 @@ POWER_DIRECTORY += power_table("XXXI", "Instinct, traque et ralliement", "rgba(2
     ),
 ])
 
-POWER_DIRECTORY += power_table("XXXII", "Manifestations démoniaques", "rgba(248,113,113,0.32)", [
+POWER_DIRECTORY += power_table("XXXII", "Furies", "rgba(248,113,113,0.32)", [
     (
         "Écho des fautes",
         "Fait entendre à une cible proche un bref écho des voix de personnes qu'elle pense avoir blessées. Le pouvoir ne révèle aucun fait inconnu du lanceur et ne force ni aveu ni réaction.",
@@ -557,6 +557,9 @@ POWER_DIRECTORY += power_table("XXXII", "Manifestations démoniaques", "rgba(248
             "Prolonge brièvement la perception chez une cible, sans l'épuiser ni lui imposer des souvenirs.",
         ),
     ),
+])
+
+POWER_DIRECTORY += power_table("XXXIII", "Démons de Lazare", "rgba(148,163,184,0.34)", [
     (
         "Mémoire des cendres",
         "Perçoit des impressions fragmentaires laissées dans les cendres issues de sa propre destruction. Ne reconstitue ni toute la scène ni les pensées d'autrui.",
@@ -566,6 +569,9 @@ POWER_DIRECTORY += power_table("XXXII", "Manifestations démoniaques", "rgba(248
             "Reconstitue lentement un petit objet personnel détruit avec lui, à condition d'en retrouver les fragments ; aucun objet magique ou détenu par autrui n'est recréé librement.",
         ),
     ),
+])
+
+POWER_DIRECTORY += power_table("XXXIV", "Démons Kazi", "rgba(239,68,68,0.34)", [
     (
         "Pression crânienne",
         "Exerce une pression magique brève sur une cible à courte portée, pouvant causer douleur ou désorientation passagère. Aucune lésion ni perte de connaissance n'est automatique.",
@@ -575,6 +581,9 @@ POWER_DIRECTORY += power_table("XXXII", "Manifestations démoniaques", "rgba(248
             "Répartit une pression atténuée entre quelques cibles proches ; chacune peut réagir ou s'en protéger.",
         ),
     ),
+])
+
+POWER_DIRECTORY += power_table("XXXV", "Succubes et incubes", "rgba(236,72,153,0.34)", [
     (
         "Lecture des désirs",
         "Perçoit une attirance ou un désir déjà présent chez une personne proche, sans lire ses pensées ni connaître toute son histoire intime.",
@@ -584,6 +593,27 @@ POWER_DIRECTORY += power_table("XXXII", "Manifestations démoniaques", "rgba(248
             "Suggère une brève illusion liée au désir perçu ; la cible peut la reconnaître et conserve ses sentiments et ses choix.",
         ),
     ),
+])
+
+POWER_DIRECTORY += power_table("XXXVI", "Vampires", "rgba(185,28,28,0.34)", [
+    ("Soif révélatrice", "Perçoit à courte portée une odeur de sang récente ou la présence d'une blessure ouverte. Ne révèle ni identité certaine ni état de santé complet.", ("Piste sanguine ★", "Faim maîtrisée ★"), ("Suit une trace de sang récente sur une distance limitée, tant qu'elle n'est pas masquée.", "Distingue plus facilement une piste malgré la soif, sans supprimer celle-ci ni les autres faiblesses.")),
+    ("Vitesse vampirique", "Accélère brièvement ses mouvements pour franchir une courte distance ou esquiver. Ne rend pas invisible et ne garantit aucun coup porté.", ("Élan prolongé ★", "Réflexe fulgurant ★"), ("Maintient la vitesse sur un trajet un peu plus long, avec fatigue et obstacles à jouer.", "Réagit plus vite à une menace perceptible, sans esquive automatique.")),
+    ("Contrainte du regard", "Tente une suggestion simple par contact visuel direct. La cible peut résister et le joueur concerné décide de sa réaction ; la verveine et les protections adaptées restent efficaces.", ("Suggestion précise ★", "Souvenir voilé ★"), ("Formule une consigne simple plus claire, sans contrôler durablement une personne.", "Brouille un détail récent avec l'accord du joueur concerné, sans réécrire tout un souvenir.")),
+])
+
+POWER_DIRECTORY += power_table("XXXVII", "Loups-garous", "rgba(217,119,6,0.34)", [
+    ("Transformation lupine", "Prend une forme lupine ou manifeste un trait de cette forme selon sa continuité d'origine. La transformation et son contrôle sont définis dans la fiche.", ("Mutation partielle ★", "Retour maîtrisé ★"), ("Manifeste un trait précis sans transformation complète, selon sa continuité validée.", "Revient plus sûrement à sa forme ordinaire, sans annuler les contraintes lunaires ou émotionnelles.")),
+    ("Instinct de meute", "Ressent l'état émotionnel général d'un allié de meute proche avec lequel un lien a été établi. Ne lit ni pensées ni position exacte.", ("Alerte de meute ★", "Lien resserré ★"), ("Transmet une impression simple de danger aux alliés réceptifs à proximité.", "Distingue mieux l'état d'un allié lié, sans accéder à ses secrets ni imposer ses décisions.")),
+    ("Pistage lupin", "Suit une odeur récente sur une distance limitée. Pluie, foule, obstacles et autres pistes peuvent brouiller la trace.", ("Tri des effluves ★", "Piste prolongée ★"), ("Isole une odeur connue parmi plusieurs traces proches, sans certitude absolue.", "Suit plus longtemps une trace exploitable, avec fatigue et perturbations possibles.")),
+])
+
+POWER_DIRECTORY += power_table("XXXVIII", "Sorcières et sorciers Charmed", "rgba(167,139,250,0.34)", [
+    ("Formule improvisée", "Compose un sort simple pour un effet limité et préparé dans la scène. Son fonctionnement et ses limites sont validés ; elle ne remplace pas n'importe quel pouvoir du registre.", ("Formule affinée ★", "Incantation partagée ★"), ("Rend un effet déjà connu plus précis, sans élargir librement sa portée.", "Réalise un sort défini avec une personne consentante, selon une préparation commune.")),
+    ("Alchimie de terrain", "Prépare une potion simple avec des ingrédients identifiés et du temps de jeu. L'effet doit être défini dans la fiche ou validé par le staff.", ("Préparation stable ★", "Potion adaptée ★"), ("Conserve un peu plus longtemps une préparation connue dans des conditions adaptées.", "Ajuste une recette connue à une cible précise sans inventer un nouvel effet sur place.")),
+    ("Lien d'incantation", "Synchronise brièvement un sort connu avec une autre sorcière ou un autre sorcier volontaire. Chacun doit posséder et employer ses propres capacités validées.", ("Cercle restreint ★", "Harmonie rituelle ★"), ("Coordonne quelques participants consentants pour un rituel défini, sans cumul illimité de puissance.", "Réduit une perturbation mineure pendant un sort commun préparé, sans garantir sa réussite.")),
+])
+
+POWER_DIRECTORY += power_table("XXXIX", "Êtres des ténèbres", "rgba(99,102,241,0.34)", [
     (
         "Marque de traque",
         "Suit pendant quelques tours de RP la trace magique d'une personne déjà rencontrée. La distance, les protections et les déplacements peuvent brouiller la piste.",
@@ -593,6 +623,9 @@ POWER_DIRECTORY += power_table("XXXII", "Manifestations démoniaques", "rgba(248
             "Conserve un peu plus longtemps une trace identifiée, sans localisation permanente.",
         ),
     ),
+])
+
+POWER_DIRECTORY += power_table("XL", "Prophétesses démoniaques", "rgba(168,85,247,0.34)", [
     (
         "Présage de rupture",
         "Entrevoit qu'une décision proche pourrait infléchir un événement. La vision reste symbolique et ne donne ni issue certaine ni moyen d'imposer un choix.",
@@ -602,24 +635,6 @@ POWER_DIRECTORY += power_table("XXXII", "Manifestations démoniaques", "rgba(248
             "Partage un fragment du présage avec une personne consentante, sans lui transmettre un pouvoir de divination.",
         ),
     ),
-])
-
-POWER_DIRECTORY += power_table("XXXIII", "Vampires", "rgba(185,28,28,0.34)", [
-    ("Soif révélatrice", "Perçoit à courte portée une odeur de sang récente ou la présence d'une blessure ouverte. Ne révèle ni identité certaine ni état de santé complet.", ("Piste sanguine ★", "Faim maîtrisée ★"), ("Suit une trace de sang récente sur une distance limitée, tant qu'elle n'est pas masquée.", "Distingue plus facilement une piste malgré la soif, sans supprimer celle-ci ni les autres faiblesses.")),
-    ("Vitesse vampirique", "Accélère brièvement ses mouvements pour franchir une courte distance ou esquiver. Ne rend pas invisible et ne garantit aucun coup porté.", ("Élan prolongé ★", "Réflexe fulgurant ★"), ("Maintient la vitesse sur un trajet un peu plus long, avec fatigue et obstacles à jouer.", "Réagit plus vite à une menace perceptible, sans esquive automatique.")),
-    ("Contrainte du regard", "Tente une suggestion simple par contact visuel direct. La cible peut résister et le joueur concerné décide de sa réaction ; la verveine et les protections adaptées restent efficaces.", ("Suggestion précise ★", "Souvenir voilé ★"), ("Formule une consigne simple plus claire, sans contrôler durablement une personne.", "Brouille un détail récent avec l'accord du joueur concerné, sans réécrire tout un souvenir.")),
-])
-
-POWER_DIRECTORY += power_table("XXXIV", "Loups-garous", "rgba(217,119,6,0.34)", [
-    ("Transformation lupine", "Prend une forme lupine ou manifeste un trait de cette forme selon sa continuité d'origine. La transformation et son contrôle sont définis dans la fiche.", ("Mutation partielle ★", "Retour maîtrisé ★"), ("Manifeste un trait précis sans transformation complète, selon sa continuité validée.", "Revient plus sûrement à sa forme ordinaire, sans annuler les contraintes lunaires ou émotionnelles.")),
-    ("Instinct de meute", "Ressent l'état émotionnel général d'un allié de meute proche avec lequel un lien a été établi. Ne lit ni pensées ni position exacte.", ("Alerte de meute ★", "Lien resserré ★"), ("Transmet une impression simple de danger aux alliés réceptifs à proximité.", "Distingue mieux l'état d'un allié lié, sans accéder à ses secrets ni imposer ses décisions.")),
-    ("Pistage lupin", "Suit une odeur récente sur une distance limitée. Pluie, foule, obstacles et autres pistes peuvent brouiller la trace.", ("Tri des effluves ★", "Piste prolongée ★"), ("Isole une odeur connue parmi plusieurs traces proches, sans certitude absolue.", "Suit plus longtemps une trace exploitable, avec fatigue et perturbations possibles.")),
-])
-
-POWER_DIRECTORY += power_table("XXXV", "Sorcières et sorciers Charmed", "rgba(167,139,250,0.34)", [
-    ("Formule improvisée", "Compose un sort simple pour un effet limité et préparé dans la scène. Son fonctionnement et ses limites sont validés ; elle ne remplace pas n'importe quel pouvoir du registre.", ("Formule affinée ★", "Incantation partagée ★"), ("Rend un effet déjà connu plus précis, sans élargir librement sa portée.", "Réalise un sort défini avec une personne consentante, selon une préparation commune.")),
-    ("Alchimie de terrain", "Prépare une potion simple avec des ingrédients identifiés et du temps de jeu. L'effet doit être défini dans la fiche ou validé par le staff.", ("Préparation stable ★", "Potion adaptée ★"), ("Conserve un peu plus longtemps une préparation connue dans des conditions adaptées.", "Ajuste une recette connue à une cible précise sans inventer un nouvel effet sur place.")),
-    ("Lien d'incantation", "Synchronise brièvement un sort connu avec une autre sorcière ou un autre sorcier volontaire. Chacun doit posséder et employer ses propres capacités validées.", ("Cercle restreint ★", "Harmonie rituelle ★"), ("Coordonne quelques participants consentants pour un rituel défini, sans cumul illimité de puissance.", "Réduit une perturbation mineure pendant un sort commun préparé, sans garantir sa réussite.")),
 ])
 
 

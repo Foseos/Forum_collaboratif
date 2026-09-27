@@ -119,7 +119,7 @@ function heading(element) {
   let parent = element.parentElement
   while (parent) {
     const title = parent.querySelector('h2')
-    if (title) return title.textContent.trim().replace(/^[^\p{L}]*[IVX]+\.\s*/u, '')
+    if (title) return title.textContent.trim().replace(/^[^\p{L}]*[IVXLCDM]+\.\s*/u, '')
     parent = parent.parentElement
   }
   return 'Grimoire'
@@ -177,8 +177,8 @@ const entries = computed(() => {
   return { powers, paths, rules }
 })
 const frenchOrder = (left, right) => left.localeCompare(right, 'fr', { sensitivity: 'base' })
-const highlightedFamilies = ['Vampires', 'Loups-garous', 'Sorcières et sorciers Charmed']
-const highlightedRaces = ['Vampires', 'Loups-garous', 'Sorcières et sorciers Charmed']
+const highlightedFamilies = ['Vampires', 'Loups-garous', 'Sorcières et sorciers Charmed', 'Furies', 'Démons de Lazare', 'Démons Kazi', 'Succubes et incubes', 'Êtres des ténèbres', 'Prophétesses démoniaques']
+const highlightedRaces = ['Vampires', 'Loups-garous', 'Sorcières et sorciers Charmed', 'Furies', 'Démons de Lazare', 'Démons Kazi', 'Succubes et incubes', 'Êtres des ténèbres', 'Prophétesses démoniaques']
 function optionsWithHighlights(values, highlights) {
   const available = new Set(values)
   return [
