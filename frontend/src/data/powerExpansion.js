@@ -36,6 +36,12 @@ export const expandedPowerNotes = {
   "Ailes d'énergie": ['Former des ailes temporaires pour planer sur une courte distance.', 'Descendre sans chute brutale depuis une hauteur modeste.', 'Ne donne pas encore le vol libre ; durée, charge et espace disponible limitent l’effet.'],
   'Bénédiction fugace': ['Soutenir modestement une personne consentante pour une épreuve précise.', 'L’aider à garder son calme avant une tentative difficile.', 'Ne garantit pas la réussite et ne lui transmet aucun pouvoir.'],
   'Rosée réparatrice': ['Utiliser l’humidité pour apaiser une atteinte superficielle.', 'Calmer une petite brûlure ou une irritation.', 'Ne referme pas une blessure grave et nécessite une source d’humidité.'],
+  'Néphokinésie': ['Modeler des nuages présents ou une petite quantité de vapeur disponible.', 'Déplacer une masse nuageuse pour dégager brièvement la lune.', 'Ne commande pas toute la météo ; humidité, vent, distance et durée limitent l’effet.'],
+  'Nuage protecteur': ['Placer un nuage dense entre une menace et ses cibles.', 'Gêner la visée d’un projectile à travers une nappe suspendue.', 'Amortit seulement un impact léger et peut être traversé ou dispersé.'],
+  'Marche des nuages': ['Créer un appui éphémère à partir d’un nuage condensé.', 'Franchir un petit intervalle entre deux toits.', 'L’appui disparaît vite ; ce pouvoir n’accorde ni vol libre ni chute sans risque.'],
+  'Poussière de fée': ['Faire flotter brièvement un petit objet ou alléger une personne consentante.', 'Aider un allié à franchir un obstacle par un saut plus léger.', 'L’effet s’épuise rapidement et n’accorde aucun pouvoir permanent à la cible.'],
+  'Télékinésie lumineuse': ['Déplacer un petit objet visible à l’aide de filaments de lumière condensée.', 'Faire venir une clé éclairée posée à quelques pas.', 'La lumière disponible, la masse, la distance et la concentration limitent la prise.'],
+  'Prisme de lumière': ['Réfracter une source lumineuse pour créer des reflets trompeurs.', 'Dévier un rayon vers un mur pour distraire un observateur.', 'Ne crée pas de matière, ne lit pas l’esprit et perd son effet sans lumière.'],
 }
 
 export const expandedEvolutionNotes = {
@@ -111,4 +117,16 @@ export const expandedEvolutionNotes = {
   'Bénédiction partagée': 'Soutenir modestement plusieurs alliés consentants pour une même épreuve.',
   'Soin apaisant': 'Soulager plus efficacement une blessure légère sans réparer une atteinte grave.',
   'Rosée collective': 'Apaiser plusieurs atteintes superficielles grâce à une source d’humidité suffisante.',
+  'Courants nuageux': 'Guider plus précisément plusieurs petits nuages disponibles, sans déclencher de tempête.',
+  'Couverture céleste': 'Étendre une masse nuageuse sur une zone convenue, avec humidité et durée limitées.',
+  'Écran suspendu': 'Maintenir le nuage protecteur dans une position choisie malgré un vent modéré.',
+  'Dôme de nuages': 'Étendre la protection visuelle à plusieurs alliés proches, sans devenir un mur solide.',
+  'Pas successifs': 'Former plusieurs appuis très brefs à la suite, avec un risque de chute à jouer.',
+  'Plateforme partagée': 'Soutenir momentanément une autre personne consentante sur un appui nuageux.',
+  'Lévitation légère': 'Faire flotter brièvement une personne consentante à faible hauteur.',
+  'Nuée féerique': 'Répartir la poussière sur plusieurs petites cibles avec une durée réduite.',
+  'Prise photique': 'Rendre la saisie lumineuse plus précise pour manipuler un objet fragile.',
+  'Manipulation multiple': 'Déplacer plusieurs petits objets éclairés au prix d’une concentration accrue.',
+  'Déviation lumineuse': 'Orienter un éclat vers une direction précise sans aveugler automatiquement une cible.',
+  'Miroirs prismatiques': 'Créer plusieurs reflets cohérents dans une zone limitée, chacun pouvant être décelé.',
 }

@@ -196,6 +196,15 @@ POWER_DIRECTORY += power_table("XXII", "Eaux, lumière et enchantements", "rgba(
     ("Rosée réparatrice", "Rassemble de l'humidité pour apaiser une blessure superficielle ou une irritation. Ne remplace pas la guérison des atteintes graves.", ("Soin apaisant", "Rosée collective ★")),
 ])
 
+POWER_DIRECTORY += power_table("XXIII", "Nuages, poussières et lumière", "rgba(186,230,253,0.34)", [
+    ("Néphokinésie", "Déplace ou modèle des nuages déjà présents à proximité, ou condense une petite vapeur disponible. Ne contrôle pas librement le climat.", ("Courants nuageux", "Couverture céleste ★")),
+    ("Nuage protecteur", "Maintient un nuage dense entre une attaque et ses cibles pour gêner la visée ou amortir un impact léger. Ne remplace pas un bouclier invulnérable.", ("Écran suspendu", "Dôme de nuages ★")),
+    ("Marche des nuages", "Condense brièvement un appui sous les pieds pour franchir un vide limité. L'appui se dissipe rapidement et n'accorde pas le vol libre.", ("Pas successifs ★", "Plateforme partagée ★")),
+    ("Poussière de fée", "Crée une fine poussière enchantée qui allège momentanément un petit objet ou une personne consentante. Ne donne ni vol permanent ni pouvoirs supplémentaires.", ("Lévitation légère ★", "Nuée féerique ★")),
+    ("Télékinésie lumineuse", "Emploie des filaments de lumière condensée pour attirer ou déplacer un petit objet visible. Une source lumineuse et la concentration sont nécessaires.", ("Prise photique", "Manipulation multiple ★")),
+    ("Prisme de lumière", "Réfracte une lumière présente pour produire des reflets trompeurs ou dévier un éclat. Ne crée ni matière ni illusion mentale.", ("Déviation lumineuse", "Miroirs prismatiques ★")),
+])
+
 
 class Command(BaseCommand):
     help = "Complète le Grimoire des pouvoirs avec les capacités du crossover Nexus Arcana."
