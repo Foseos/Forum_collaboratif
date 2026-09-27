@@ -186,9 +186,9 @@ Torture mentale`, [R.sorcier, R.demon, R.tenebres, R.sirenePsychique, R.kitsuneE
 add(`Suggestion mentale
 Manipulation des sentiments
 Illusion mentale
-Illusion visuelle
 Onirokinésie
 Chant envoûtant`, [R.sorcier, R.demon, R.fee, R.cupidon, R.muse, R.sirenePsychique, R.kitsuneEsprit])
+add(`Illusion visuelle`, [R.sorcier, R.demon, R.fee, R.muse, R.sirenePsychique, R.kitsuneEsprit])
 add(`Sommeil induit`, [R.sorcier, R.demon, R.fee, R.muse, R.sirenePsychique, R.kitsuneEsprit])
 add(`Réminiscence
 Mnémokinésie
@@ -201,8 +201,8 @@ add(`Égide de l'esprit
 Dissipation de magie
 Bénédiction fugace`, [R.sorcier, R.lumiere, R.fee, R.elfe, R.sphinx])
 
-add(`Guérison
-Lien vital
+add(`Guérison`, [R.sorcier, R.lumiere, R.feeLumiere, R.elfeEau, R.nymphe])
+add(`Lien vital
 Rayonnement réparateur
 Rosée réparatrice
 Biokinésie`, [R.sorcier, R.lumiere, R.feeLumiere, R.elfeEau, R.nymphe, R.cupidon])
@@ -248,7 +248,7 @@ add(`Aile spectrale`, [R.sorcier, R.phenix, R.valkyrie, R.sphinx])
 add(`Absorption de magie`, [R.sorcier, R.heretique, R.demon, R.tenebres])
 add(`Réplique de pouvoir`, [R.sorcier, R.demon, R.chimere])
 add(`Technokinésie`, [R.sorcier, R.demon, R.phenix, R.chimere])
-add(`Tychokinésie`, [R.sorcier, R.cupidon, R.fee, R.sphinx])
+add(`Tychokinésie`, [R.sorcier, R.fee, R.sphinx])
 
 // Noms de départ des parcours historiques qui n'ont pas de fiche autonome.
 add(`Prémonition
