@@ -467,7 +467,6 @@ Courant de limon
 Pierre`)
 limit(R.kitsuneFeu, `Pyrokinésie
 Combustion par le regard
-Immunité aux flammes
 Magmakinésie
 Étincelle
 Boule de feu`)
@@ -578,6 +577,36 @@ Localisation`)
 limit(R.phenix, ``)
 possibilities.get('Shimmer')?.delete(R.sorcier)
 possibilities.get('Détection des protégés')?.delete(R.sorcier)
+
+// Quatre pistes au minimum pour chaque choix du filtre. Pour les chimères,
+// ces exemples restent conditionnés aux deux origines validées.
+add(`Fumokinésie
+Shimmer`, [R.furies])
+add(`Régénération
+Force accrue
+Shimmer`, [R.lazare])
+add(`Force accrue
+Sens aiguisés
+Bouclier d'énergie`, [R.kazi])
+add(`Empathie
+Sillage des effluves`, [R.succubes])
+add(`Lévitation
+Aile spectrale
+Régénération`, [R.phenixLegacies])
+add(`Boules d'énergie
+Formule improvisée
+Alchimie de terrain`, [R.phenixCharmed])
+add(`Brume glacée
+Bouclier de givre`, [R.kitsuneGlace])
+add(`Écho du sang
+Fil sanguin
+Garde de sang`, [R.kitsuneSang])
+add(`Étincelle
+Magnétokinésie`, [R.kitsuneTonnerre])
+add(`Métamorphose
+Force accrue
+Sens aiguisés
+Régénération`, [R.chimere])
 
 export const powerRaces = Object.fromEntries(
   [...possibilities].map(([name, races]) => [name, [...races].sort((left, right) => left.localeCompare(right, 'fr'))]),

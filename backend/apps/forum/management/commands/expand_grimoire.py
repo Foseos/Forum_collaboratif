@@ -725,6 +725,84 @@ POWER_DIRECTORY += power_table("XLII", "Phénix : deux continuités", "rgba(251,
     ),
 ])
 
+POWER_DIRECTORY += power_table("XLIII", "Kitsunes de la glace", "rgba(125,211,252,0.34)", [
+    (
+        "Brume glacée",
+        "Crée une brume froide dans une petite zone. Elle peut gêner la vue et déposer du givre, sans geler automatiquement une personne ni priver d'air.",
+        ("Voile de givre ★", "Brume dense ★"),
+        (
+            "Dépose une fine couche de givre sur une surface proche, sans immobilisation imposée.",
+            "Étend la brume sur une zone légèrement plus vaste pour un court moment, sans dissimuler totalement les personnes présentes.",
+        ),
+    ),
+    (
+        "Bouclier de givre",
+        "Forme une protection de glace limitée devant soi. Elle peut amortir une attaque mais se fissure et ne rend pas invulnérable.",
+        ("Paroi renforcée ★", "Abri partagé ★"),
+        (
+            "Épaissit brièvement le bouclier au prix d'un effort accru, sans résister à tout type de pouvoir.",
+            "Élargit la protection pour couvrir une personne proche consentante pendant une attaque.",
+        ),
+    ),
+])
+
+POWER_DIRECTORY += power_table("XLIV", "Kitsunes du sang", "rgba(190,24,93,0.34)", [
+    (
+        "Écho du sang",
+        "Perçoit à courte portée une circulation sanguine ou une trace de sang récente. Ne révèle ni pensées, ni identité certaine, ni état de santé complet.",
+        ("Pulsation ciblée ★", "Lecture des traces ★"),
+        (
+            "Distingue mieux un rythme déjà repéré parmi plusieurs présences proches.",
+            "Suit brièvement une trace sanguine récente encore accessible, sans localisation permanente.",
+        ),
+    ),
+    (
+        "Fil sanguin",
+        "Établit un lien magique bref à partir d'une trace de sang déjà connue pour en suivre la direction générale. Les protections et la distance peuvent rompre ce lien.",
+        ("Piste persistante ★", "Lien différencié ★"),
+        (
+            "Conserve un peu plus longtemps une piste identifiée, sans découvrir une position exacte.",
+            "Distingue deux traces déjà rencontrées dans un même lieu sans accéder aux souvenirs de leurs propriétaires.",
+        ),
+    ),
+    (
+        "Garde de sang",
+        "Crée ou rassemble une petite quantité de sang pour former une protection temporaire. Elle amortit un choc limité sans blesser automatiquement l'adversaire.",
+        ("Paroi épaissie ★", "Protection partagée ★"),
+        (
+            "Renforce brièvement la protection contre un choc défini, sans la rendre indestructible.",
+            "Étend la garde à une personne proche consentante au prix d'une défense moins résistante.",
+        ),
+    ),
+])
+
+POWER_DIRECTORY += power_table("XLV", "Pouvoirs de base complémentaires", "rgba(139,92,246,0.34)", [
+    ("Boules d'énergie", "Projette une sphère d'énergie vers une cible visible. La portée et les dégâts dépendent de la fiche ; la cible peut esquiver ou se protéger.", ("Tir précis ★", "Salve limitée ★")),
+    ("Bouclier d'énergie", "Déploie une barrière d'énergie temporaire contre une attaque. Sa taille et sa résistance sont définies dans la fiche.", ("Paroi renforcée ★", "Protection partagée ★")),
+    ("Pyrokinésie", "Crée et dirige des flammes dans les limites validées. Le pouvoir ne protège pas automatiquement son porteur du feu.", ("Flamme dirigée ★", "Rideau de feu ★")),
+    ("Cryokinésie", "Produit du froid et crée de la glace dans un périmètre limité. Elle ne gèle pas automatiquement un personnage.", ("Givre dirigé ★", "Paroi de glace ★")),
+    ("Foudre / Électrokinésie", "Crée et dirige une décharge électrique limitée. Conducteurs, isolants et présence d'alliés influencent son usage.", ("Arc précis ★", "Décharge ramifiée ★")),
+    ("Absorption de magie", "Absorbe temporairement une quantité limitée de magie disponible, selon la nature du personnage. Ne vole pas définitivement les dons d'autrui.", ("Réserve affinée ★", "Siphonnage contrôlé ★")),
+    ("Métamorphose", "Modifie sa forme selon la nature et les transformations validées dans la fiche. Ne donne pas librement les capacités d'une autre espèce.", ("Transformation partielle ★", "Retour maîtrisé ★")),
+    ("Lévitation", "S'élève et reste brièvement suspendu au-dessus du sol. La hauteur, l'équilibre et la durée sont limités ; ce n'est pas encore un vol libre.", ("Élévation stable ★", "Déplacement aérien bref ★")),
+    ("Shimmer", "Se déplace par une manifestation démoniaque vers un point connu et accessible. La portée et les protections du lieu limitent le trajet.", ("Trajet prolongé ★", "Transport accompagné ★")),
+])
+
+POWER_DIRECTORY += power_table("XLVI", "Autres facultés du registre", "rgba(168,85,247,0.34)", [
+    ("Vague de force", "Projette une poussée d'énergie dans une direction. Elle peut repousser sans garantir la chute ni la blessure d'une cible.", ("Onde dirigée ★", "Poussée élargie ★")),
+    ("Combustion moléculaire", "Accélère les molécules d'une cible pour provoquer une combustion ou une explosion limitée. Les effets graves sur un personnage exigent son accord.", ("Combustion précise ★", "Déflagration contrôlée ★")),
+    ("Combustion par le regard", "Concentre une chaleur surnaturelle sur une cible visible. La concentration peut être rompue et une atteinte grave se joue avec le joueur concerné.", ("Point de chaleur ★", "Regard prolongé ★")),
+    ("Immunité aux flammes", "Nom traditionnel d'une forte résistance aux flammes dans les conditions validées. Elle ne protège pas automatiquement des fumées, des débris ni de tous les feux magiques.", ("Résistance prolongée ★", "Protection ciblée ★")),
+    ("Géokinésie", "Crée et façonne une quantité limitée de terre ou de roche. Un effet sur un bâtiment ou une zone vaste requiert une évolution validée.", ("Rempart de pierre ★", "Sol mouvant ★")),
+    ("Camouflage magique", "Altère brièvement la perception de sa présence ou de son apparence sans devenir invisible. Une vigilance ou une protection adaptée peut le percer.", ("Voile affiné ★", "Camouflage partagé ★")),
+    ("Décélération moléculaire", "Ralentit brièvement le mouvement d'un objet ou d'une cible à portée définie. Une immobilisation complète n'est pas automatique.", ("Ralentissement ciblé ★", "Champ restreint ★")),
+    ("Illusion visuelle", "Fait apparaître une image trompeuse dans un périmètre limité. Elle n'a pas de matière et ne décide pas de la réaction de ceux qui la voient.", ("Image mobile ★", "Décor illusoire ★")),
+    ("Nécromancie", "Entre en contact avec des morts ou anime brièvement des restes selon les limites de la fiche. Aucun esprit n'obéit automatiquement et aucune résurrection n'en découle.", ("Écho des morts ★", "Serviteur temporaire ★")),
+    ("Téléportation / Flash", "Disparaît puis réapparaît à un endroit connu et accessible sans parcourir le trajet. Portée, protections et charge transportée limitent l'usage.", ("Flash prolongé ★", "Passager accompagné ★")),
+    ("Invulnérabilité partielle", "Résiste mieux à un type d'attaque défini dans la fiche. Les faiblesses de l'espèce et les autres formes de blessure restent effectives.", ("Résistance affinée ★", "Protection brève ★")),
+    ("Invisibilité", "Masque son apparence pendant un temps limité. Le son, les traces et les perceptions adaptées peuvent toujours révéler sa présence.", ("Déplacement discret ★", "Voile prolongé ★")),
+])
+
 
 class Command(BaseCommand):
     help = "Complète le Grimoire des pouvoirs avec les capacités du crossover Nexus Arcana."
