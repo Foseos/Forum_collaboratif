@@ -1274,8 +1274,7 @@ function formatDate(dateStr) {
 }
 
 function toRelativeAvatar(url) {
-  if (!url) return null
-  try { return new URL(url).pathname } catch { return url }
+  return toRelativeUrl(url)
 }
 
 onMounted(() => {
