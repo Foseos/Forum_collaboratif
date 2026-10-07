@@ -39,6 +39,10 @@ if missing_storage_keys:
         "Stockage des images incomplet : " + ", ".join(missing_storage_keys)
     )
 
+AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
+AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
+AWS_STORAGE_BUCKET_NAME = os.environ["AWS_STORAGE_BUCKET_NAME"]
+AWS_S3_ENDPOINT_URL = os.environ["AWS_S3_ENDPOINT_URL"]
 AWS_S3_REGION_NAME = os.environ.get("AWS_REGION", "us-east-2")
 AWS_S3_ADDRESSING_STYLE = "path"
 AWS_QUERYSTRING_AUTH = False
