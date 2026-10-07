@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 from django.db import transaction
 from django.core.paginator import Paginator
 from django.utils.html import escape
-from django.db.models import Count, Q, OuterRef, Subquery, F
+from django.db.models import Count, Q, OuterRef, Subquery, F, Prefetch
 from django.utils import timezone
 from rest_framework import generics, permissions, serializers, status, viewsets
 from rest_framework.response import Response
@@ -282,7 +282,22 @@ class DemonicFormEntryDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
-    queryset = Category.objects.all()
+    queryset = Category.objects.annotate(
+        _topic_count=Count('topics', distinct=True),
+        _post_count=Count('topics__posts', distinct=True),
+    ).order_by('order', 'name').prefetch_related(
+        Prefetch(
+            'topics',
+            queryset=Topic.objects.prefetch_related(
+                Prefetch(
+                    'posts',
+                    queryset=Post.objects.select_related('author').order_by('-created_at'),
+                    to_attr='_prefetched_posts',
+                ),
+            ),
+            to_attr='_prefetched_topics',
+        ),
+    )
     lookup_field = "slug"
     search_fields = ["name", "description"]
 

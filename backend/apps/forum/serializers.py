@@ -275,7 +275,14 @@ class CategorySerializer(serializers.ModelSerializer):
         read_only_fields = ["id", "slug"]
 
     def get_last_post(self, obj):
-        last = Post.objects.filter(topic__category=obj).order_by('-created_at').select_related('author', 'topic').first()
+        if hasattr(obj, '_prefetched_topics'):
+            last = max(
+                (post for topic in obj._prefetched_topics for post in topic._prefetched_posts),
+                key=lambda post: (post.created_at, post.pk),
+                default=None,
+            )
+        else:
+            last = Post.objects.filter(topic__category=obj).order_by('-created_at').select_related('author', 'topic').first()
         if not last:
             return None
         request = self.context.get('request')
@@ -298,7 +305,7 @@ class CategoryDetailSerializer(CategorySerializer):
         fields = CategorySerializer.Meta.fields + ["latest_topics"]
 
     def get_latest_topics(self, obj):
-        topics = obj.topics.all()[:5]
+        topics = obj._prefetched_topics[:5] if hasattr(obj, '_prefetched_topics') else obj.topics.all()[:5]
         return TopicSerializer(topics, many=True, context=self.context).data
 
 

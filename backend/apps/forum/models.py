@@ -28,10 +28,14 @@ class Category(models.Model):
 
     @property
     def topic_count(self):
+        if hasattr(self, '_topic_count'):
+            return self._topic_count
         return self.topics.count()
 
     @property
     def post_count(self):
+        if hasattr(self, '_post_count'):
+            return self._post_count
         return Post.objects.filter(topic__category=self).count()
 
 
