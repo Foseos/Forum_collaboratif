@@ -17,6 +17,8 @@ services:
         value: https://nexus-arcana.fr,https://www.nexus-arcana.fr
       - key: DEFAULT_FROM_EMAIL
         value: Nexus Arcana <noreply@nexus-arcana.fr>
+      - key: FORUM_URL
+        value: https://nexus-arcana.fr
       - key: DATABASE_URL
         sync: false
       - key: AWS_ACCESS_KEY_ID
