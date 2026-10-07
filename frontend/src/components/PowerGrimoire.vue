@@ -9,17 +9,18 @@
     <details class="guide-help" open>
       <summary>Comment lire ce grimoire ?</summary>
       <ol>
-        <li><strong>4 capacités maximum à la création, toutes natures confondues.</strong> Hybrides, tribrides et Originels partagent le même plafond, capacités actives et passives comprises. Les capacités manquantes se débloquent en jeu avec des Arcana Flouz, après validation du staff. Une capacité déjà acquise peut être améliorée deux fois par des achats distincts.</li>
+        <li><strong>4 pouvoirs de base maximum à la création ; un 5e peut être acheté ensuite.</strong> Le plafond est de 5 pouvoirs de base au total, capacités actives et passives comprises, pour toutes les espèces, y compris les hybrides, tribrides et Originels. Chaque pouvoir de base peut recevoir au maximum 2 évolutions, achetées et validées séparément. Les évolutions ne créent pas de nouvel emplacement de pouvoir de base.</li>
         <li><strong>Vérifiez votre fiche validée.</strong> Ce catalogue propose des possibilités ; il ne donne pas tous ces pouvoirs à votre personnage.</li>
         <li><strong>Choisissez une piste d’évolution.</strong> Les flèches indiquent des branches possibles, pas des niveaux débloqués automatiquement. Certaines branches sont des dons distincts.</li>
         <li><strong>Faites valider chaque ajout.</strong> Présentez le pouvoir actuel, le changement souhaité et ses limites. Tous les nouveaux pouvoirs et toutes les évolutions demandent l'approbation du staff avant usage. Aucun RP justificatif n'est demandé. ★ indique que sa portée, sa durée ou ses conséquences doivent être précisées avec le staff.</li>
         <li><strong>Proposez vos idées.</strong> Cette liste ne recense pas tous les pouvoirs ni toutes leurs évolutions. Vous pouvez proposer un pouvoir ou une évolution au staff et en discuter avec l’équipe avant de l’intégrer à votre fiche ou de l’utiliser en RP.</li>
       </ol>
       <p>« Maîtrise » signifie un usage plus précis ou plus étendu, jamais une puissance sans limite. Contrôle mental, blessure grave, possession et mort nécessitent l’accord du joueur concerné. Le maître du jeu est la personne qui encadre l’événement.</p>
-      <p>Les espèces indiquées sont des possibilités, jamais des pouvoirs acquis automatiquement. Les hybrides et Trybrides dépendent de leurs héritages validés. Les sorciers TVD, The Originals et Legacies sont exclus de cette liste de compatibilités.</p>
+      <p>Les espèces indiquées sont des possibilités, jamais des pouvoirs acquis automatiquement. Les hybrides dépendent de leurs héritages validés ; la nature de trybride est réservée à Hope Mikaelson. Les sorciers TVD et les hérétiques disposent de fiches propres dans le registre ; les autres pouvoirs restent à discuter selon leur fiche validée.</p>
+      <p><strong>Siphonneurs et hérétiques TVD :</strong> ils peuvent choisir les mêmes pistes de sorts et d’évolutions que les autres sorciers TVD. Pour utiliser un sort, ils doivent d’abord siphonner de la magie depuis une source accessible ; les hérétiques peuvent notamment puiser dans leur propre nature vampirique. Sans magie siphonnée disponible, le sort ne fonctionne pas. Chaque pouvoir et évolution reste soumis à la fiche validée et à l’accord du staff.</p>
       <p><strong>Chimères :</strong> les quatre pistes affichées sont des exemples, pas des dons communs à toutes. Leurs capacités dépendent des origines et des deux axes retenus dans la fiche validée ; d'autres pouvoirs du registre peuvent être proposés au staff si la combinaison les justifie.</p>
       <p><strong>Démons, phénix et branches :</strong> le filtre « Démons » conserve son large éventail de pistes ; le type démoniaque, la forme choisie et la fiche validée déterminent celles qui conviennent au personnage. Les phénix de Legacies et ceux de Charmed ont des possibilités distinctes. Pour les autres espèces à branches, les pouvoirs généraux et ceux de l'affinité choisie restent soumis à la fiche validée. Une fiche sans espèce indiquée peut être proposée au staff si le personnage la justifie.</p>
-      <p>Chaque déblocage ou amélioration passe par la boutique : 300 Arcana Flouz pour le premier achat, puis 300 de plus par achat. Décrivez la capacité souhaitée et ses limites ; le staff approuve chaque ajout ou évolution. La capacité devient utilisable après validation, débit et mise à jour de la fiche.</p>
+      <p>Le 5e pouvoir de base coûte 600 Arcana Flouz ; chaque évolution coûte 300 Arcana Flouz, quel que soit le nombre d’achats précédents. Aucun 6e pouvoir de base ni 3e évolution d’un même pouvoir ne peut être acheté. Décrivez la capacité souhaitée et ses limites ; le staff approuve chaque ajout ou évolution. La capacité devient utilisable après validation, débit et mise à jour de la fiche.</p>
     </details>
 
     <div class="guide-controls">
@@ -73,7 +74,7 @@
             <li v-for="step in entry.steps" :key="step.label"><strong>{{ step.label }}</strong><p>{{ step.explanation }}</p></li>
           </ul>
         </template>
-        <template v-else-if="mode === 'paths'">
+        <template v-else-if="mode === 'paths' || mode === 'tvd' || mode === 'heretics'">
           <p class="guide-source"><strong>Conditions du grimoire :</strong> {{ entry.description }}</p>
           <ol class="guide-steps">
             <li v-for="(step, index) in entry.steps" :key="step.label"><span class="guide-step-number">{{ index + 1 }}</span><div><h3>{{ step.label }}</h3><p>{{ step.explanation }}</p></div></li>
@@ -103,7 +104,7 @@ const query = ref('')
 const family = ref('')
 const race = ref('')
 const mode = ref('powers')
-const tabs = [{ id: 'powers', label: 'Tous les pouvoirs' }, { id: 'paths', label: 'Évolutions possibles' }, { id: 'rules', label: 'Règles et limites' }]
+const tabs = [{ id: 'powers', label: 'Tous les pouvoirs' }, { id: 'paths', label: 'Évolutions possibles' }, { id: 'tvd', label: 'Sorciers TVD' }, { id: 'heretics', label: 'Hérétiques TVD' }, { id: 'rules', label: 'Règles et limites' }]
 const featuredPathTitles = new Set([
   'Empathie inversée', 'Réplique de pouvoir', 'Toucher paralysant',
   'Phytokinésie (contrôle végétal)', "Aquakinésie (contrôle de l'eau)",
@@ -141,7 +142,7 @@ const entries = computed(() => {
     let evolutionExplanations = []
     try { evolutionExplanations = JSON.parse(row.dataset.evolutionExplanations || '[]') } catch { /* Keep the standard explanation. */ }
     powers.push({ id: powers.length, title, description, evolution, family,
-      races: powerRaces[title] || [],
+      races: row.dataset.races ? row.dataset.races.split('|') : (powerRaces[title] || []),
       showInPaths: row.closest('table')?.dataset.powerPaths === 'true',
       notes: powerNotes[title], hasStar: evolution.includes('★'),
       requiresStaff: title === 'Réplique de pouvoir',
@@ -176,7 +177,12 @@ const entries = computed(() => {
       rules.push({ id: rules.length, title, description, family })
     }
   }
-  return { powers, paths, rules }
+  return {
+    powers, paths,
+    tvd: paths.filter(path => path.family === 'Sorciers TVD'),
+    heretics: paths.filter(path => path.races?.includes('Hérétiques')),
+    rules,
+  }
 })
 const frenchOrder = (left, right) => left.localeCompare(right, 'fr', { sensitivity: 'base' })
 const speciesFamilies = new Set(['Vampires', 'Loups-garous', 'Sorcières et sorciers Charmed', 'Furies', 'Démons de Lazare', 'Démons Kazi', 'Succubes et incubes', 'Êtres des ténèbres', 'Prophétesses démoniaques', "Chiens de l'enfer", 'Phénix : deux continuités', 'Kitsunes de la glace', 'Kitsunes du sang'])

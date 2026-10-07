@@ -13,7 +13,7 @@
       <form v-if="showForm" class="form-fields" @submit.prevent="createEntry">
         <label>Nom de la forme démoniaque <input v-model.trim="newEntry.name" maxlength="120" required></label>
         <label>Photo ou GIF (adresse de l'image) <input v-model.trim="newEntry.image_url" type="url" maxlength="500" placeholder="https://…"></label>
-        <label>Nom du personnage lié <input v-model.trim="newEntry.character" maxlength="150" required></label>
+        <label>Nom d'utilisateur du personnage démon <input v-model.trim="newEntry.character" maxlength="150" required></label>
         <p v-if="formError" role="alert">{{ formError }}</p>
         <button type="submit" class="btn btn-primary" :disabled="saving">{{ saving ? 'Enregistrement…' : 'Enregistrer' }}</button>
       </form>
@@ -31,6 +31,7 @@
         <div class="form-body">
           <h2>{{ entry.name }}</h2>
           <p>{{ entry.character }}</p>
+          <p v-if="isAdmin && entry.needs_review" role="alert">À vérifier : ce compte n'existe plus ou son espèce n'est plus Démon.</p>
           <div v-if="isAdmin" class="entry-actions">
             <button type="button" @click="startEdit(entry)">Modifier</button>
             <button type="button" @click="removeEntry(entry)">Retirer</button>
@@ -38,7 +39,7 @@
           <form v-if="editingId === entry.id" class="form-fields edit-fields" @submit.prevent="saveEdit(entry)">
             <label>Nom de la forme <input v-model.trim="editEntry.name" maxlength="120" required></label>
             <label>Photo ou GIF <input v-model.trim="editEntry.image_url" type="url" maxlength="500"></label>
-            <label>Personnage lié <input v-model.trim="editEntry.character" maxlength="150" required></label>
+            <label>Nom d'utilisateur du personnage démon <input v-model.trim="editEntry.character" maxlength="150" required></label>
             <p v-if="editError" role="alert">{{ editError }}</p>
             <div class="edit-actions"><button type="submit" :disabled="saving">Enregistrer</button><button type="button" @click="editingId = null">Annuler</button></div>
           </form>

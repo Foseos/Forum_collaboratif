@@ -169,8 +169,8 @@ _creatures_body = (
         "Tout nouveau pouvoir ou capacité inhabituelle doit être <strong style='color:#e2d9f3;'>soumis à validation</strong> avant utilisation en RP.",
     ]))
     + box_purple("II", "Races magiques et de lumière", rule_list([
-        "<strong style='color:#e2d9f3;'>Sorciers Charmed</strong> — Pouvoirs actifs uniques, sorts, potions et magie de lignée issus de l'univers Charmed.",
-        "<strong style='color:#e2d9f3;'>Sorciers</strong> — Sorciers et sorcières de The Vampire Diaries, The Originals et Legacies : covens, canalisation, rituels et magie ancestrale.",
+        "<strong style='color:#e2d9f3;'>Sorciers Charmed</strong> — Nature de sorcière distincte : pouvoirs personnels liés à la lignée, sorts et potions propres à cette continuité.",
+        "<strong style='color:#e2d9f3;'>Sorciers TVD</strong> — Nature de sorcière distincte dans The Vampire Diaries, The Originals et Legacies : canalisation de sources, rituels et traditions de coven ou pratique indépendante. L'apprentissage d'un sort de l'autre tradition ne transmet pas sa nature ni ses pouvoirs propres.",
         "<strong style='color:#e2d9f3;'>Êtres de Lumière</strong> — Orbing, guérison, connexion aux Anciens. Protecteurs attitrés de sorcières. Ne peuvent tuer.",
         "<strong style='color:#e2d9f3;'>Fées</strong> — Magie de nature, invisibilité, liens aux sorcières. Taille normale possible.",
         "<strong style='color:#e2d9f3;'>Elfes</strong> — Magie primordiale, prescience, garde de l'équilibre. Discrets par nature.",
@@ -183,12 +183,12 @@ _creatures_body = (
         "<strong style='color:#e2d9f3;'>Démons</strong> — Boules de feu, fumée noire, téléportation démoniaque. Peuvent évoluer en niveau (inférieur → supérieur).",
         "<strong style='color:#e2d9f3;'>Vampires</strong> — Force et vitesse surnaturelles, manipulation mentale. Sensibles à la lumière du soleil et à l'ail concentré.",
         "<strong style='color:#e2d9f3;'>Loups-garous</strong> — Transformation au clair de lune, force brute, odorat. Sensibles à l'argent.",
-        "<strong style='color:#e2d9f3;'>WereCoyotes, WereJaguars et WereLions</strong> — Changeformes aux instincts, capacités et territoires propres à leur lignée.",
+        "<strong style='color:#e2d9f3;'>WereCoyotes, WereJaguars et WereLions</strong> — Changeformes aux instincts, capacités et territoires propres à leur lignée. Le WereLion est une adaptation de Nexus Arcana inspirée de Teen Wolf.",
         "<strong style='color:#e2d9f3;'>Kanimas</strong> — Créatures reptiliennes à la transformation altérée, dont le venin peut paralyser.",
         "<strong style='color:#e2d9f3;'>Kitsunes</strong> — Esprits-renards maniant, selon leur lignée, le feu, les illusions ou l'électricité.",
         "<strong style='color:#e2d9f3;'>Chiens de l'enfer</strong> — Traqueurs infernaux liés aux passages entre les mondes et aux âmes perdues.",
         "<strong style='color:#e2d9f3;'>Chimères</strong> — Êtres aux origines multiples portant les traits et les capacités de plusieurs créatures.",
-        "<strong style='color:#e2d9f3;'>Phénix</strong> — Résurrection (limitée), maîtrise du feu, traque de démons. Indépendants, souvent mercenaires.",
+        "<strong style='color:#e2d9f3;'>Phénix</strong> — Deux origines distinctes : la renaissance éventuelle des Phénix de Legacies et la lignée de sorcières Phénix de Charmed. Leurs capacités ne se cumulent pas et ne sont pas acquises automatiquement.",
     ]))
     + box_purple("IV", "Races neutres, ancestrales et hybrides", rule_list([
         "<strong style='color:#e2d9f3;'>Humains</strong> — Sans pouvoir intrinsèque, mais peuvent être médiums, chasseurs de démons entraînés ou alliés de sorcières. Leur force est leur adaptabilité.",
@@ -197,8 +197,8 @@ _creatures_body = (
         "<strong style='color:#e2d9f3;'>Nymphes / Satyres</strong> — Esprits liés aux forêts, sources et forces vivantes de la nature.",
         "<strong style='color:#e2d9f3;'>Sphinx</strong> — Gardiens énigmatiques des savoirs interdits, associés aux énigmes et à la clairvoyance.",
         "<strong style='color:#e2d9f3;'>Hybrides</strong> — Héritage double, pouvoirs mélangés, souvent instables. Requièrent une justification narrative solide.",
-        "<strong style='color:#e2d9f3;'>Trybrides</strong> — Réunissent les héritages de sorcière, vampire et loup-garou ; leur équilibre demande une validation renforcée.",
-        "<strong style='color:#e2d9f3;'>Hérétiques</strong> — Vampires siphonneurs capables d'absorber et de canaliser l'énergie magique.",
+        "<strong style='color:#e2d9f3;'>Trybride</strong> — Hope Mikaelson est la seule Trybride de Nexus Arcana ; cette nature n'est pas ouverte à d'autres personnages.",
+        "<strong style='color:#e2d9f3;'>Hérétiques</strong> — Profil de vampires siphonneurs, et non espèce indépendante : ils peuvent absorber et canaliser l'énergie magique.",
     ]))
     + box_gold("V", "Soumission d'une nouvelle fiche de race", rule_list([
         "Contactez le staff via MP ou Discord pour proposer une nouvelle race non listée.",
@@ -297,11 +297,11 @@ _formes_body = (
 <p style="margin: 0; line-height: 1.9; color: #c4b5d4; font-size: 0.87rem;">
 Dans l'esprit de Charmed, chaque <strong style="color:#e2d9f3;">personnage démon</strong> choisit et décrit une forme démoniaque dans sa fiche de présentation. Ce bottin recense ces apparences afin d'éviter les
 doublons et de garantir la cohérence de l'univers. La forme doit aussi être déclarée ici avant
-utilisation en RP. Les autres natures admises peuvent proposer une forme alternative si leur fiche le justifie.
+utilisation en RP. Seuls les démons peuvent posséder une forme démoniaque.
 </p>""")
     + box_purple("II", "Règles de réservation", rule_list([
         "Pour un personnage <strong style='color:#e2d9f3;'>Démon</strong>, le choix et la description d'une forme démoniaque font partie de la fiche. Cette apparence n'ajoute aucun pouvoir à ceux validés.",
-        "Seuls les personnages de race <strong style='color:#e2d9f3;'>Démon, Hybride, Loup-garou, Vampire ou Phénix</strong> peuvent revendiquer une forme démoniaque.",
+        "Seuls les personnages de race <strong style='color:#e2d9f3;'>Démon</strong> peuvent revendiquer une forme démoniaque.",
         "Une forme est liée à <strong style='color:#e2d9f3;'>un seul personnage</strong>. Elle ne peut pas être identique à celle d'un autre joueur.",
         "La description de la forme doit être <strong style='color:#e2d9f3;'>cohérente avec la race</strong> du personnage (ex : un démon de feu aura une forme ignée).",
         "Les formes empruntant directement l'apparence de <strong style='color:#e2d9f3;'>créatures canoniques</strong> des univers du crossover nécessitent une validation staff préalable.",
@@ -311,7 +311,7 @@ utilisation en RP. Les autres natures admises peuvent proposer une forme alterna
 <p style="margin: 0 0 0.6rem; font-size: 0.85rem; color: #c4b5d4;">Répondez à ce sujet avec le modèle suivant :</p>""" + info_table([
         ("Pseudonyme", "Votre pseudo sur le forum"),
         ("Personnage concerné", "Prénom Nom du personnage"),
-        ("Race du personnage", "Démon / Hybride / Vampire / Loup-garou / Phénix"),
+        ("Race du personnage", "Démon"),
         ("Nom de la forme", "Nom donné à la forme démoniaque"),
         ("Description visuelle", "Apparence, couleurs, traits distinctifs (5 lignes min.)"),
         ("Image de référence", "URL (facultatif)"),

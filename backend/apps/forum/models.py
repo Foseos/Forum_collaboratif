@@ -51,13 +51,44 @@ class AvatarDirectoryEntry(models.Model):
 class DemonicFormEntry(models.Model):
     name = models.CharField(max_length=120, unique=True)
     image_url = models.URLField(max_length=500, blank=True)
-    character = models.CharField(max_length=150, unique=True)
+    character = models.CharField(max_length=150)
+    character_user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="demonic_form",
+    )
 
     class Meta:
         ordering = ["name"]
 
+    def clean(self):
+        from django.contrib.auth import get_user_model
+        from django.core.exceptions import ValidationError
+
+        existing = type(self).objects.filter(pk=self.pk).values("character").first() if self.pk else None
+        if existing and existing["character"] == self.character and self.character_user_id:
+            character = self.character_user
+        else:
+            character = get_user_model().objects.filter(username__iexact=self.character.strip()).first()
+        if character is None:
+            raise ValidationError({"character": "Ce personnage n'est pas inscrit sur le forum."})
+        if character.race.strip().casefold() != "démon":
+            raise ValidationError({"character": "Seuls les démons peuvent avoir une forme démoniaque."})
+        self.character = character.username
+        self.character_user = character
+
+    @property
+    def current_character(self):
+        return self.character_user.username if self.character_user_id else self.character
+
+    @property
+    def needs_review(self):
+        return self.character_user_id is None or self.character_user.race.strip().casefold() != "démon"
+
     def __str__(self):
-        return f"{self.name} — {self.character}"
+        return f"{self.name} — {self.current_character}"
 
 
 class Topic(models.Model):
@@ -166,6 +197,22 @@ class ArcanaTransaction(models.Model):
 
     class Meta:
         ordering = ['-created_at', '-id']
+
+
+class PowerPurchase(models.Model):
+    class Kind(models.TextChoices):
+        FIFTH = 'fifth', 'Cinquième pouvoir'
+        EVOLUTION = 'evolution', 'Évolution'
+
+    request_post = models.OneToOneField(Post, on_delete=models.PROTECT, related_name='power_purchase')
+    character = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, related_name='power_purchases')
+    approved_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, related_name='approved_power_purchases')
+    kind = models.CharField(max_length=12, choices=Kind.choices)
+    power_name = models.CharField(max_length=120)
+    evolution_name = models.CharField(max_length=120, blank=True, default='')
+    cost = models.PositiveIntegerField()
+    transaction = models.OneToOneField(ArcanaTransaction, on_delete=models.PROTECT, related_name='power_purchase')
+    created_at = models.DateTimeField(auto_now_add=True)
 
 
 class Reaction(models.Model):

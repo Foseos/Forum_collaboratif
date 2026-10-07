@@ -1,0 +1,22 @@
+FROM node:22-alpine AS frontend-build
+WORKDIR /frontend
+COPY frontend/package*.json ./
+RUN npm ci
+COPY frontend/ ./
+RUN VITE_STATIC_BASE=/static/frontend/ npm run build
+
+FROM python:3.12-slim
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    DJANGO_SETTINGS_MODULE=config.settings.render
+WORKDIR /app
+COPY backend/requirements/ requirements/
+RUN pip install --no-cache-dir -r requirements/render.txt
+COPY backend/ ./
+COPY --from=frontend-build /frontend/dist/ static/frontend/
+RUN mkdir -p templates/frontend && cp static/frontend/index.html templates/frontend/index.html
+RUN SECRET_KEY=build-only ALLOWED_HOSTS=localhost DATABASE_URL=postgresql://build:build@localhost/build \
+    AWS_ACCESS_KEY_ID=build AWS_SECRET_ACCESS_KEY=build AWS_STORAGE_BUCKET_NAME=build \
+    AWS_S3_ENDPOINT_URL=https://example.invalid RESEND_API_KEY=build \
+    python manage.py collectstatic --noinput
+CMD ["sh", "-c", "python manage.py migrate --noinput && exec gunicorn config.wsgi:application --bind 0.0.0.0:${PORT:-10000} --workers 1 --threads 2 --timeout 120"]

@@ -1,7 +1,7 @@
 <template>
   <div class="page"><div class="container rp-tracker">
     <h1 class="page-title">Mes RP</h1>
-    <p class="text-secondary">Retrouvez les sujets auxquels vous participez. « À reprendre » signifie qu’un partenaire a écrit le dernier message.</p>
+    <p class="text-secondary">Retrouvez les sujets auxquels vous participez. Le dernier auteur affiché ne détermine pas à qui revient le prochain tour, notamment dans un RP à plusieurs.</p>
     <div class="rp-filters" aria-label="Filtrer mes RP">
       <button v-for="item in filters" :key="item.value" class="btn btn-sm" :class="filter === item.value ? 'btn-primary' : 'btn-secondary'" :aria-pressed="filter === item.value" @click="selectFilter(item.value)">{{ item.label }}</button>
       <button class="btn btn-secondary btn-sm" :disabled="loading" @click="load">Actualiser</button>
@@ -13,7 +13,7 @@
       <article v-for="topic in topics" :key="topic.id" class="card rp-item">
         <div class="rp-item-top">
           <span class="text-sm text-secondary">{{ topic.category }}</span>
-          <span class="badge" :class="topic.awaiting_reply ? 'badge-warning' : ''">{{ topic.is_locked ? 'Verrouillé' : topic.awaiting_reply ? 'À reprendre' : 'En attente des partenaires' }}</span>
+          <span class="badge" :class="!topic.is_locked && topic.awaiting_reply ? 'badge-warning' : ''">{{ topic.is_locked ? 'Verrouillé' : topic.awaiting_reply ? 'Dernier message : autre joueur' : 'Dernier message : vous' }}</span>
         </div>
         <h2><router-link :to="topicLink(topic)">{{ topic.title }}</router-link></h2>
         <p class="text-sm text-secondary">{{ topic.post_count }} message{{ topic.post_count > 1 ? 's' : '' }}<template v-if="topic.last_author"> · Dernier message de {{ topic.last_author }} · {{ formatDate(topic.last_activity) }}</template></p>
@@ -30,7 +30,7 @@ import api from '../composables/useApi'
 import LoadingSpinner from '../components/LoadingSpinner.vue'
 import PaginationBar from '../components/PaginationBar.vue'
 
-const filters = [{ value: 'active', label: 'En cours' }, { value: 'waiting', label: 'À reprendre' }, { value: 'locked', label: 'Verrouillés' }, { value: 'all', label: 'Tous' }]
+const filters = [{ value: 'active', label: 'En cours' }, { value: 'waiting', label: 'Dernier message : autre joueur' }, { value: 'locked', label: 'Verrouillés' }, { value: 'all', label: 'Tous' }]
 const filter = ref('active')
 const page = ref(1)
 const count = ref(0)

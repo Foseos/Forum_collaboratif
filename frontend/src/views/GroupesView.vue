@@ -471,7 +471,7 @@ const THEMES = {
   'Phoenix': {
     gradient: 'linear-gradient(135deg,#7c2d12,#ea580c,#fb923c)',
     glow: 'rgba(234,88,12,0.5)', accent: '#fdba74', particle: '🔥',
-    mood: "Des cendres, ils renaissent plus forts qu'avant",
+    mood: "Deux héritages distincts, deux façons de traverser l'épreuve",
   },
   'Valkyrie': {
     gradient: 'linear-gradient(135deg,#1a1a2e,#374151,#d4af37)',
@@ -511,12 +511,12 @@ const THEMES = {
   'Loup-garou': {
     gradient: 'linear-gradient(135deg,#1c1917,#44403c,#78716c)',
     glow: 'rgba(120,113,108,0.4)', accent: '#d6d3d1', particle: '🌕',
-    mood: 'La pleine lune éveille la bête qui sommeille',
+    mood: 'Deux lignées lupines, chacune avec ses propres règles',
   },
   'Fée': {
     gradient: 'linear-gradient(135deg,#14532d,#15803d,#86efac)',
     glow: 'rgba(134,239,172,0.4)', accent: '#bbf7d0', particle: '🌸',
-    mood: 'La magie des fleurs et des forêts les guide',
+    mood: 'Des affinités multiples, de la nature à la lumière et aux ombres',
   },
   'Muse': {
     gradient: 'linear-gradient(135deg,#1e1040,#6b21a8,#e879f9)',
@@ -526,7 +526,7 @@ const THEMES = {
   'Hybride': {
     gradient: 'linear-gradient(135deg,#312e81,#7c3aed,#ec4899)',
     glow: 'rgba(236,72,153,0.4)', accent: '#f0abfc', particle: '⚡',
-    mood: 'Entre deux mondes, leur puissance est sans limite',
+    mood: 'Deux héritages à concilier, des choix qui leur appartiennent',
   },
 }
 

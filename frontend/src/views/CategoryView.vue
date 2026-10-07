@@ -533,6 +533,21 @@
       </router-link>
     </div>
 
+    <!-- Repaires des covens et alliances -->
+    <div v-if="props.slug === 'repaires-des-alliances'" class="sub-list">
+      <router-link v-for="sub in allianceLairsSubCategories" :key="sub.slug" :to="`/categories/${sub.slug}`" class="sub-row card">
+        <div class="sub-icon">{{ sub.icon }}</div>
+        <div class="sub-info">
+          <span class="sub-name">{{ sub.name }}</span>
+          <span class="sub-desc">{{ sub.desc }}</span>
+        </div>
+        <div class="sub-stats">
+          <div class="sub-stat"><span class="sub-stat-value">{{ categoryStats[sub.slug]?.topic_count ?? 0 }}</span><span class="sub-stat-label">sujets</span></div>
+          <div class="sub-stat"><span class="sub-stat-value">{{ categoryStats[sub.slug]?.post_count ?? 0 }}</span><span class="sub-stat-label">messages</span></div>
+        </div>
+      </router-link>
+    </div>
+
     <!-- Sous-catégories École de magie -->
     <div v-if="props.slug === 'ecole-de-magie'" class="sub-list">
       <router-link
@@ -1097,6 +1112,7 @@ const presidioSubCategories = subData.presidio
 const fishermansWharfSubCategories = subData.fishermansWharf
 const cimetiereSubCategories = subData.cimetiere
 const ecoleMagieSubCategories = subData.ecoleMagie
+const allianceLairsSubCategories = subData.allianceLairs
 const lesEnfersSubCategories = subData.lesEnfers
 const lesCieuxSubCategories = subData.lesCieux
 const continentsSubCategories = subData.continents
@@ -1129,6 +1145,7 @@ const isParentCategory = computed(() => {
     'fishermans-wharf',
     'cimetiere',
     'ecole-de-magie',
+    'repaires-des-alliances',
     'les-enfers',
     'dimensions-alternatives',
     'les-cieux',
@@ -1316,14 +1333,14 @@ const FICHE_HTML_TEMPLATE = `<div style="font-family: Georgia, 'Times New Roman'
     <h2 style="margin: 0; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #a78bfa; font-weight: normal;">◈ II. Pouvoirs Magiques &amp; Aptitudes</h2>
   </div>
   <div style="padding: 0.85rem 1rem 0.75rem;">
-    <p style="margin: 0 0 0.4rem; font-size: 0.78rem; font-weight: 600; color: #c4b5fd;">⚡ Pouvoirs actifs :</p>
+    <p style="margin: 0 0 0.4rem; font-size: 0.78rem; font-weight: 600; color: #c4b5fd;">⚡ Pouvoirs de base (4 maximum à la création, actifs et passifs confondus) :</p>
     <ul style="margin: 0; padding-left: 1.3rem; line-height: 1.85; font-size: 0.87rem; color: #c4b5d4;">
       <li><strong style="color: #e2d9f3;">Nom du pouvoir</strong> — Description et limites du pouvoir</li>
       <li><strong style="color: #e2d9f3;">Nom du pouvoir</strong> — Description et limites du pouvoir</li>
       <li><strong style="color: #e2d9f3;">Nom du pouvoir</strong> — Description et limites du pouvoir</li>
       <li><strong style="color: #e2d9f3;">Nom du pouvoir</strong> — Description et limites du pouvoir</li>
-      <li><strong style="color: #e2d9f3;">Nom du pouvoir</strong> — Description et limites du pouvoir</li>
     </ul>
+    <p style="margin: 0.55rem 0 0; font-size: 0.76rem; color: #a78bfa;">Un 5e pouvoir de base peut être acheté après validation de la fiche. Chacun des 5 pouvoirs peut recevoir jusqu’à 2 évolutions achetées séparément.</p>
   </div>
 </div>
 

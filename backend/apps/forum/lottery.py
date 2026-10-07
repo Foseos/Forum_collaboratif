@@ -7,27 +7,13 @@ from django.contrib.auth import get_user_model
 from django.db import transaction
 from django.utils import timezone
 
-from .models import Category, LotteryDraw, Post
+from .models import LotteryDraw, Post
 from .arcana import credit
 from .rewards import count_message_words
+from .rp_locations import rp_category_ids
 
 
-RP_ROOTS = {'san-francisco', 'mystic-falls', 'la-nouvelle-orleans', 'beacon-hills',
-            'les-enfers', 'les-cieux', 'dimensions-alternatives', 'continents'}
 PRIZES = (5, 5, 5, 10, 10, 10, 15, 15, 20, 30)
-
-
-def rp_category_ids():
-    categories = list(Category.objects.values('id', 'slug', 'parent_id'))
-    # San Francisco's location categories were created without parent links;
-    # their reserved order range identifies those RP locations.
-    selected = {row['id'] for row in categories if row['slug'] in RP_ROOTS}
-    selected.update(Category.objects.filter(order__gte=100, order__lt=300).values_list('id', flat=True))
-    while True:
-        expanded = selected | {row['id'] for row in categories if row['parent_id'] in selected}
-        if expanded == selected:
-            return selected
-        selected = expanded
 
 
 def lottery_status(user, now=None):

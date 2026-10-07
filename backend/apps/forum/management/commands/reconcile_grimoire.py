@@ -53,7 +53,7 @@ class Command(BaseCommand):
             ),
             (
                 "Les pouvoirs de départ sont libres dans la limite de la cohérence avec votre race et votre camp.",
-                "À la création, chaque personnage choisit quatre capacités maximum, actives et passives comprises, cohérentes avec sa nature et validées dans sa fiche. Les capacités et évolutions supplémentaires s'acquièrent ensuite en jeu selon les règles de la boutique.",
+                "À la création, chaque personnage choisit quatre pouvoirs de base maximum, actifs et passifs compris, cohérents avec sa nature et validés dans sa fiche. Un cinquième pouvoir de base peut être acheté ensuite, sans dépasser cinq au total. Chacun peut recevoir deux évolutions maximum, achetées et validées séparément.",
             ),
             (
                 "Les pouvoirs sans marquage sont libres à la création du personnage (dans la limite de la cohérence de la race et du camp).",

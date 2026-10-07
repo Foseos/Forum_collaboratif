@@ -93,6 +93,15 @@
       "lastPost": { "title": "—", "author": "—", "date": "—" }
     }
   ],
+  "allianceLairs": [
+    { "slug": "repaire-maison-seconde-soif", "icon": "🩸", "name": "Maison de la Seconde Soif", "desc": "Refuge du coven d'Hérétiques de Mélissandre Barden, à Mystic Falls." },
+    { "slug": "repaire-chambre-murmures", "icon": "🕯️", "name": "Chambre des Murmures", "desc": "Salle de travail du coven de Belisama Vaskov, consacré à l'Expression." },
+    { "slug": "repaire-heritiers-vide", "icon": "🌑", "name": "Héritiers du Vide", "desc": "Lieu de réunion des siphonneurs de Florie Delacroix." },
+    { "slug": "repaire-veilleurs-voile", "icon": "🪦", "name": "Veilleurs du Voile", "desc": "Maison de rites du coven de Sélène Beauchamp, à La Nouvelle-Orléans." },
+    { "slug": "repaire-cercle-terres-perdues", "icon": "🧭", "name": "Cercle des Terres Perdues", "desc": "Campement actuel des Voyageurs de Moira Osborne ; son emplacement peut évoluer en RP." },
+    { "slug": "repaire-meute-beacon-hills", "icon": "🐺", "name": "Meute de Beacon Hills", "desc": "Point de ralliement de la meute près de la réserve et du Nemeton." },
+    { "slug": "repaire-gardiens-mystic-falls", "icon": "🛡️", "name": "Gardiens de Mystic Falls", "desc": "Quartier général de l'alliance chargée de protéger Mystic Falls." }
+  ],
   "lesEnfers": [
     {
       "slug": "repaire-source-du-mal",

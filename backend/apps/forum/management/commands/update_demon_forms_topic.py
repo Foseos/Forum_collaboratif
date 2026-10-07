@@ -8,7 +8,7 @@ from apps.forum.models import Category, Post, Topic
 
 
 class Command(BaseCommand):
-    help = "Rappelle le choix obligatoire d'une forme pour les démons."
+    help = "Réserve les formes démoniaques aux seuls démons."
 
     def handle(self, *args, **options):
         category = Category.objects.filter(slug="bottin-des-formes-demoniaques").first()
@@ -27,8 +27,22 @@ class Command(BaseCommand):
         post = topic.posts.order_by("created_at", "id").first()
         if post is None:
             Post.objects.create(topic=topic, author=author, content=CONTENT_FORMES, is_trusted_html=True)
-        elif "chaque <strong style=\"color:#e2d9f3;\">personnage démon</strong>" not in post.content:
-            note = "<p>Chaque personnage démon choisit et décrit sa forme démoniaque dans sa fiche, puis la déclare ici avant de la jouer. Cette forme n'ajoute aucun pouvoir.</p>"
-            post.content = note + post.content
-            post.save(update_fields=["content"])
+        else:
+            content = post.content
+            if "chaque <strong style=\"color:#e2d9f3;\">personnage démon</strong>" not in content:
+                note = "<p>Chaque personnage démon choisit et décrit sa forme démoniaque dans sa fiche, puis la déclare ici avant de la jouer. Cette forme n'ajoute aucun pouvoir.</p>"
+                content = note + content
+            content = content.replace(
+                "Les autres natures admises peuvent proposer une forme alternative si leur fiche le justifie.",
+                "Seuls les démons peuvent posséder une forme démoniaque.",
+            ).replace(
+                "Démon, Hybride, Loup-garou, Vampire ou Phénix</strong> peuvent revendiquer une forme démoniaque.",
+                "Démon</strong> peuvent revendiquer une forme démoniaque.",
+            ).replace(
+                "Démon / Hybride / Vampire / Loup-garou / Phénix",
+                "Démon",
+            )
+            if content != post.content:
+                post.content = content
+                post.save(update_fields=["content"])
         self.stdout.write(self.style.SUCCESS("Règles des formes démoniaques actualisées."))

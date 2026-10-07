@@ -125,6 +125,11 @@ class User(AbstractUser):
         verbose_name="Âge du personnage",
     )
     pouvoirs = models.TextField(blank=True, default="")
+    power_progression = models.JSONField(
+        default=list, blank=True,
+        verbose_name="Pouvoirs de base et évolutions validés",
+        help_text="Au plus cinq pouvoirs de base, avec deux évolutions par pouvoir.",
+    )
     lieu_residence = models.CharField(
         max_length=200,
         blank=True,

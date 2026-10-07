@@ -140,7 +140,7 @@
     {
         "id": "sorcier-charmed",
         "nom": "Sorcier Charmed",
-        "description": "Sorciers et sorcières issus de Charmed. Leur magie personnelle, leurs sorts et leurs potions sont définis dans leur fiche ; ils ne choisissent aucune branche, seulement leur camp selon leurs convictions.",
+        "description": "Nature de sorcière propre à Charmed, distincte de celle des sorcières TVD. Ses pouvoirs personnels s'expriment par sa lignée ; sorts et potions complètent sa pratique. Aucune branche à choisir : son camp dépend de ses convictions.",
         "couleur": "purple",
         "icone": "🧙",
         "type": "race"
@@ -212,7 +212,7 @@
     {
         "id": "Loup-garou",
         "nom": "Loup-garou",
-        "description": "Les loups-garous sont des êtres magiques qui cherchent à se nourrir de sang pour survivre.Ils développent des capacités de transformation en loup et une force surnaturelle",
+        "description": "Les loups-garous de The Vampire Diaries et de Teen Wolf possèdent des sens et une force accrus. Leur transformation, le rôle de la pleine lune et leur lien à une meute dépendent de leur univers d'origine et sont précisés dans leur fiche.",
         "couleur": "purple",
         "icone": "🐺",
         "type": "race"
@@ -235,8 +235,8 @@
     },
     {
         "id": "sorcier-tvd",
-        "nom": "Sorcier",
-        "description": "Sorciers et sorcières de The Vampire Diaries, The Originals et Legacies : membres d’un coven ou indépendants. Leurs traditions et aptitudes magiques se précisent dans leur fiche.",
+        "nom": "Sorcier TVD",
+        "description": "Nature de sorcière propre à The Vampire Diaries, The Originals et Legacies, distincte de celle des sorcières Charmed. Sa magie passe notamment par la canalisation de sources et les rituels. Le personnage appartient à un coven ou pratique en indépendant.",
         "couleur": "purple",
         "icone": "🕯️",
         "type": "race"
@@ -284,7 +284,7 @@
     {
         "id": "WereLion",
         "nom": "WereLion",
-        "description": "Fiers et protecteurs, les WereLions portent une présence imposante et un instinct de chef naturel. Leur rugissement et leur force font d'eux de précieux gardiens de territoire.",
+        "description": "Adaptation de Nexus Arcana inspirée des changeformes de Teen Wolf, les WereLions portent une présence imposante et un instinct protecteur. Leur rugissement et leur force peuvent en faire des gardiens de territoire, selon leur fiche validée.",
         "couleur": "purple",
         "icone": "🦁",
         "type": "race"
@@ -308,7 +308,7 @@
     {
         "id": "Chimère",
         "nom": "Chimère",
-        "description": "Êtres aux origines multiples, les Chimères portent en elles des traits de plusieurs créatures. Leur nature singulière peut leur donner des capacités rares, mais exige une grande maîtrise de leurs instincts.",
+        "description": "Dans Teen Wolf, les Chimères résultent des expériences des Médecins de l'Effroi, qui ont associé artificiellement des traits surnaturels. Elles se distinguent des hybrides nés de deux lignées ; leurs capacités et leurs limites sont précisées dans leur fiche.",
         "couleur": "purple",
         "icone": "🪽",
         "type": "race"
@@ -316,7 +316,7 @@
     {
         "id": "Trybride",
         "nom": "Trybride",
-        "description": "Être exceptionnel réunissant les héritages de sorcière, vampire et loup-garou, la Trybride possède un potentiel magique immense. L'équilibre de ses trois natures demande toutefois une discipline constante.",
+        "description": "Hope Mikaelson est la seule Trybride de Nexus Arcana. Elle réunit les héritages de sorcière, vampire et loup-garou ; cette nature n'est pas ouverte à d'autres personnages.",
         "couleur": "purple",
         "icone": "🔱",
         "type": "race"
@@ -324,7 +324,7 @@
     {
         "id": "Hérétique",
         "nom": "Hérétique",
-        "description": "À la fois vampire et siphonneur de magie, l'Hérétique peut absorber l'énergie mystique qui l'entoure et la canaliser. Sa soif et sa magie doivent rester maîtrisées pour préserver son équilibre.",
+        "description": "Profil de vampire siphonneur issu de The Vampire Diaries, l'Hérétique peut absorber une énergie magique disponible et la canaliser. Ce n'est pas une espèce indépendante : sa soif et ses contraintes vampiriques demeurent.",
         "couleur": "purple",
         "icone": "🩸",
         "type": "race"

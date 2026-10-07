@@ -6,10 +6,10 @@ L'envoi d'e-mails du forum n'est pas encore opérationnel : le test SMTP du 23 s
 
 ## Étapes à faire plus tard
 
-1. Choisir un expéditeur : commencer éventuellement avec une adresse Gmail dédiée au forum, ou acheter un nom de domaine pour une adresse comme `contact@nom-du-forum.fr`.
-2. Si Gmail est choisi : activer la validation en deux étapes, créer un mot de passe d'application et configurer l'envoi SMTP du forum. Ne jamais mettre le mot de passe Gmail habituel dans le projet.
-3. Si un domaine est choisi : l'ajouter à Resend, recopier les réglages DNS fournis, attendre la vérification du domaine, créer une nouvelle clé Resend et remplacer les réglages d'expédition dans `.env`.
-4. Redémarrer le forum et envoyer un message de test à la fondatrice, puis tester une inscription et un lien « Mot de passe oublié » de bout en bout.
+1. Le domaine `nexus-arcana.fr` est acheté. Créer un compte auprès du service d'envoi retenu, par exemple Resend, puis y ajouter ce domaine.
+2. Recopier chez OVHcloud les réglages DNS fournis par le service d'envoi et attendre la vérification du domaine.
+3. Créer la clé d'envoi et configurer l'expéditeur du forum, par exemple `contact@nexus-arcana.fr`, dans les réglages privés du serveur.
+4. Après la mise en ligne, envoyer un message de test à la fondatrice, puis tester une inscription et un lien « Mot de passe oublié » de bout en bout.
 
 Ne pas copier de clé API ou de mot de passe dans ce document ni dans une conversation. Les comptes déjà existants restent accessibles pendant cette attente.
 
@@ -21,4 +21,4 @@ Ne pas copier de clé API ou de mot de passe dans ce document ni dans une conver
 - Resend : offre gratuite affichée à 3 000 e-mails/mois, avec 100/jour, sous réserve des conditions en vigueur : https://resend.com/pricing
 - Budget indicatif domaine + VPS : environ 60 à 65 € par an au départ, hors options, boîte mail éventuelle et variation tarifaire. Ce n'est pas un devis.
 - Lors de la mise en ligne : relier le domaine au serveur, configurer HTTPS, vérifier sauvegardes et restauration, mettre à jour `FORUM_URL`, puis tester inscription, e-mails et récupération du mot de passe de bout en bout.
-- Aucun achat ni réservation n'a été effectué.
+- Le domaine `nexus-arcana.fr` a été acheté ; l'hébergement public et le service d'envoi restent à finaliser.

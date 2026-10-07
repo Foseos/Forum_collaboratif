@@ -14,7 +14,7 @@ from rest_framework.views import APIView
 
 from apps.users.permissions import IsAdminOrModerator
 
-from .models import ArcanaTransaction, AvatarDirectoryEntry, Category, ChatMessage, ContactRequest, DemonicFormEntry, Post, PrivateMessage, Reaction, SitePage, Topic
+from .models import ArcanaTransaction, AvatarDirectoryEntry, Category, ChatMessage, ContactRequest, DemonicFormEntry, Post, PowerPurchase, PrivateMessage, Reaction, SitePage, Topic
 from .avatar_directory import clean_avatar_name, scenario_avatar
 from .permissions import IsAuthorOrModeratorOrReadOnly, IsTopicNotLocked
 from .rewards import award_publication
@@ -166,8 +166,8 @@ NON_RP_CATEGORY_SLUGS = {
     'fiches-de-presentation-terminees', 'fiche-personnage', 'reglement-magique',
     'reglement-du-forum', 'creatures-et-races', 'factions', 'bottin-des-avatars',
     'bottin-des-formes-demoniaques', 'contextes-et-animations', 'liens-magiques',
-    'recherche-de-rp', 'demande-partenaire-rp', 'une-question', 'questions-invites',
-    'questions-membres', 'signaler-absence', 'ma-situation-magique',
+    'une-question', 'questions-invites',
+    'questions-membres', 'signaler-absence', 'ma-situation-magique', 'parrainage',
     'demande-double-compte', 'partenariats-et-arcades', 'jeu-des-prenoms',
     'demande-de-partenariats', 'grimoire-des-pouvoirs',
 }
@@ -257,16 +257,28 @@ class IsAdminOrFondatrice(permissions.BasePermission):
 
 
 class DemonicFormDirectoryView(generics.ListCreateAPIView):
-    queryset = DemonicFormEntry.objects.all()
+    queryset = DemonicFormEntry.objects.select_related("character_user")
     serializer_class = DemonicFormEntrySerializer
     permission_classes = [IsAdminOrFondatrice]
     pagination_class = None
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        if self.request.user.is_authenticated and self.request.user.role in ("admin", "fondatrice"):
+            return queryset
+        return queryset.filter(character_user__race__iexact="Démon")
+
 
 class DemonicFormEntryDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = DemonicFormEntry.objects.all()
+    queryset = DemonicFormEntry.objects.select_related("character_user")
     serializer_class = DemonicFormEntrySerializer
     permission_classes = [IsAdminOrFondatrice]
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        if self.request.user.is_authenticated and self.request.user.role in ("admin", "fondatrice"):
+            return queryset
+        return queryset.filter(character_user__race__iexact="Démon")
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
@@ -491,7 +503,7 @@ class PostViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthorOrModeratorOrReadOnly, IsTopicNotLocked]
 
     def get_queryset(self):
-        queryset = Post.objects.select_related("author").prefetch_related("reactions")
+        queryset = Post.objects.select_related("author", "power_purchase").prefetch_related("reactions")
         topic_slug = self.kwargs.get("topic_slug")
         if topic_slug:
             queryset = queryset.filter(topic__slug=topic_slug)
@@ -518,6 +530,9 @@ class PostViewSet(viewsets.ModelViewSet):
             raise PermissionDenied("Seule l’administration peut modifier la fiche d’un scénario.")
 
     def perform_update(self, serializer):
+        if PowerPurchase.objects.filter(request_post=serializer.instance).exists():
+            from rest_framework.exceptions import PermissionDenied
+            raise PermissionDenied("Ce message justifie un achat validé et ne peut plus être modifié.")
         if serializer.instance.dice_result is not None:
             from rest_framework.exceptions import PermissionDenied
             raise PermissionDenied("Un lancer de dé ne peut pas être modifié.")
@@ -528,6 +543,9 @@ class PostViewSet(viewsets.ModelViewSet):
         serializer.save(is_trusted_html=self.request.user.role in ('admin', 'fondatrice'))
 
     def perform_destroy(self, instance):
+        if PowerPurchase.objects.filter(request_post=instance).exists():
+            from rest_framework.exceptions import PermissionDenied
+            raise PermissionDenied("Ce message justifie un achat validé et ne peut plus être supprimé.")
         if instance.dice_result is not None:
             from rest_framework.exceptions import PermissionDenied
             raise PermissionDenied("Un lancer de dé ne peut pas être supprimé.")
@@ -554,6 +572,75 @@ class PostViewSet(viewsets.ModelViewSet):
 
         award_publication(post)
         transaction.on_commit(lambda: send_topic_reply_emails(topic, post.author_id))
+
+
+class PowerPurchaseApproveView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    @transaction.atomic
+    def post(self, request, post_id):
+        if request.user.role not in ('admin', 'fondatrice'):
+            return Response({'detail': 'Réservé à l’administration.'}, status=403)
+        post = Post.objects.select_for_update().select_related('topic__category').filter(pk=post_id).first()
+        if post is None:
+            return Response({'detail': 'Message introuvable.'}, status=404)
+        if post.topic.slug != 'catalogue-boutique-magique' or post.topic.category.slug != 'boutique-magique':
+            return Response({'detail': 'Cette validation est réservée aux demandes de la boutique.'}, status=400)
+        first_id = post.topic.posts.order_by('created_at', 'pk').values_list('pk', flat=True).first()
+        if post.pk == first_id or post.dice_result is not None:
+            return Response({'detail': 'Ce message ne peut pas servir de demande d’achat.'}, status=400)
+        if PowerPurchase.objects.filter(request_post=post).exists():
+            return Response({'detail': 'Cette demande a déjà été validée.'}, status=409)
+
+        character = get_user_model().objects.select_for_update().get(pk=post.author_id)
+        if character.fiche_status != 'validated':
+            return Response({'detail': 'La fiche du personnage doit être validée avant un achat.'}, status=400)
+        kind = request.data.get('kind')
+        if kind not in PowerPurchase.Kind.values:
+            return Response({'kind': ['Choisissez un cinquième pouvoir ou une évolution.']}, status=400)
+        name = request.data.get('name')
+        if not isinstance(name, str) or not name.strip() or len(name.strip()) > 120:
+            return Response({'name': ['Indiquez un nom de 120 caractères maximum.']}, status=400)
+        name = name.strip()
+        powers = [dict(power, evolutions=list(power['evolutions'])) for power in character.power_progression]
+
+        if kind == PowerPurchase.Kind.FIFTH:
+            if len(powers) != 4:
+                return Response({'detail': 'Les quatre pouvoirs de base validés doivent figurer sur le profil avant cet achat.'}, status=400)
+            if any(power['name'].casefold() == name.casefold() for power in powers):
+                return Response({'name': ['Ce pouvoir figure déjà sur le profil.']}, status=400)
+            powers.append({'name': name, 'evolutions': []})
+            power_name, evolution_name, cost = name, '', 600
+        else:
+            index = request.data.get('power_index')
+            if not isinstance(index, int) or isinstance(index, bool) or index < 0 or index >= len(powers):
+                return Response({'power_index': ['Choisissez un pouvoir de base validé.']}, status=400)
+            if len(powers[index]['evolutions']) >= 2:
+                return Response({'detail': 'Ce pouvoir possède déjà deux évolutions.'}, status=400)
+            if name.casefold() in (e.casefold() for e in powers[index]['evolutions']):
+                return Response({'name': ['Cette évolution est déjà acquise.']}, status=400)
+            powers[index]['evolutions'].append(name)
+            power_name, evolution_name, cost = powers[index]['name'], name, 300
+
+        if character.compte_bancaire < cost:
+            return Response({'detail': f'Solde insuffisant : {cost} Arcana Flouz nécessaires.'}, status=400)
+        character.compte_bancaire -= cost
+        character.power_progression = powers
+        character.save(update_fields=['compte_bancaire', 'power_progression'])
+        entry = ArcanaTransaction.objects.create(
+            user=character, amount=-cost, balance_after=character.compte_bancaire,
+            reason=f"Achat de pouvoir : {name}"[:200],
+        )
+        purchase = PowerPurchase.objects.create(
+            request_post=post, character=character, approved_by=request.user,
+            kind=kind, power_name=power_name, evolution_name=evolution_name,
+            cost=cost, transaction=entry,
+        )
+        return Response({
+            'id': purchase.pk, 'kind': kind, 'power_name': power_name,
+            'evolution_name': evolution_name, 'cost': cost,
+            'balance_after': character.compte_bancaire,
+        }, status=201)
 
 
 class DiceRollView(APIView):

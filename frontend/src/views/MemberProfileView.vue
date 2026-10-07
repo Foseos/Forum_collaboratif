@@ -183,6 +183,7 @@
                 <span class="info-label">Pouvoirs</span>
                 <span class="info-value">{{ member.pouvoirs }}</span>
               </div>
+              <div class="info-row full"><PowerProgression :powers="member.power_progression" /></div>
               <div v-if="member.bio" class="info-row full">
                 <span class="info-label">Biographie</span>
                 <p class="info-bio">{{ member.bio }}</p>
@@ -260,6 +261,7 @@
 </template>
 
 <script setup>
+import PowerProgression from '../components/PowerProgression.vue'
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useAuthStore } from '../stores/auth'

@@ -16,7 +16,6 @@ from apps.forum.models import Topic
 DEFAULT = "Au choix du joueur, dans le respect des liens déjà établis"
 ORIENTATIONS = {
     "abigael-jameson-caine": DEFAULT,
-    "briseis-argent": DEFAULT,
     "chris-argent": DEFAULT,
     "isaac-lahey": DEFAULT,
     "isabella-montana": DEFAULT,
@@ -29,7 +28,6 @@ ORIENTATIONS = {
     "kira-yukimura": DEFAULT,
     "liam-dunbar": DEFAULT,
     "malia-tate": DEFAULT,
-    "nymea-argent": DEFAULT,
     "parker-caine": DEFAULT,
     "vivienne-montana": DEFAULT,
     "waverly-jameson": DEFAULT,

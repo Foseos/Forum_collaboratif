@@ -178,6 +178,40 @@
           </button>
         </div>
 
+        <div v-if="powerPurchaseRequest" class="power-purchase-box">
+          <p v-if="post.power_purchase" class="purchase-confirmed" role="status">
+            ✓ Achat validé : {{ post.power_purchase.kind === 'fifth' ? post.power_purchase.power_name : `${post.power_purchase.evolution_name} (${post.power_purchase.power_name})` }} · {{ post.power_purchase.cost }} Arcana Flouz débités.
+          </p>
+          <template v-else-if="isPurchaseAdmin">
+            <button type="button" class="btn btn-secondary btn-sm" @click="showPurchaseForm = !showPurchaseForm">
+              {{ showPurchaseForm ? 'Fermer' : 'Valider un achat sur cette demande' }}
+            </button>
+            <div v-if="showPurchaseForm" class="purchase-form">
+              <p>Demande de {{ post.author?.username }} · solde : {{ post.author?.compte_bancaire ?? 0 }} Arcana Flouz</p>
+              <label>Type d’achat
+                <select v-model="purchaseKind" class="form-input">
+                  <option value="evolution">Évolution · 300 Arcana Flouz</option>
+                  <option value="fifth">5e pouvoir de base · 600 Arcana Flouz</option>
+                </select>
+              </label>
+              <label v-if="purchaseKind === 'evolution'">Pouvoir à faire évoluer
+                <select v-model.number="purchasePowerIndex" class="form-input">
+                  <option :value="null" disabled>Choisir un pouvoir validé</option>
+                  <option v-for="(power, index) in post.author?.power_progression || []" :key="index" :value="index" :disabled="power.evolutions.length >= 2">{{ power.name }} · {{ power.evolutions.length }}/2 évolutions</option>
+                </select>
+              </label>
+              <label>{{ purchaseKind === 'fifth' ? 'Nom du nouveau pouvoir' : 'Nom de l’évolution' }}
+                <input v-model.trim="purchaseName" class="form-input" maxlength="120" placeholder="Nom validé avec le joueur" />
+              </label>
+              <p class="purchase-hint">Vérifiez que le nom correspond à la demande ci-dessus. Le débit et le profil seront mis à jour ensemble.</p>
+              <button type="button" class="btn btn-primary btn-sm" :disabled="purchaseSaving || !purchaseName || (purchaseKind === 'evolution' && purchasePowerIndex === null)" @click="approvePurchase">
+                {{ purchaseSaving ? 'Validation…' : `Confirmer et débiter ${purchaseKind === 'fifth' ? 600 : 300} Arcana Flouz` }}
+              </button>
+              <p v-if="purchaseError" class="purchase-error" role="alert">{{ purchaseError }}</p>
+            </div>
+          </template>
+        </div>
+
         <!-- Signature RPG de l'auteur : texte ou image/GIF -->
         <div v-if="post.author?.signature" class="post-signature">
           <img
@@ -214,13 +248,39 @@ const props = defineProps({
   grimoire: { type: Boolean, default: false },
   locked: { type: Boolean, default: false },
   scenarioFirstPost: { type: Boolean, default: false },
+  powerPurchaseRequest: { type: Boolean, default: false },
 })
 const showGrimoire = computed(() => props.grimoire && props.post.content.includes('NEXUS-ARCANA-POWER-DIRECTORY'))
 const isRaceDirectory = computed(() => props.post.content.includes('data-nexus-race-directory="1"'))
 
-const emit = defineEmits(['edit', 'delete', 'react', 'avatarUpdated'])
+const emit = defineEmits(['edit', 'delete', 'react', 'avatarUpdated', 'purchaseApproved'])
 
 const auth = useAuthStore()
+const isPurchaseAdmin = computed(() => ['admin', 'fondatrice'].includes(auth.user?.role))
+const showPurchaseForm = ref(false)
+const purchaseKind = ref('evolution')
+const purchasePowerIndex = ref(null)
+const purchaseName = ref('')
+const purchaseSaving = ref(false)
+const purchaseError = ref('')
+
+async function approvePurchase() {
+  purchaseError.value = ''
+  purchaseSaving.value = true
+  try {
+    await api.post(`/posts/${props.post.id}/power-purchase/`, {
+      kind: purchaseKind.value,
+      name: purchaseName.value,
+      power_index: purchaseKind.value === 'evolution' ? purchasePowerIndex.value : undefined,
+    })
+    showPurchaseForm.value = false
+    emit('purchaseApproved')
+  } catch (error) {
+    purchaseError.value = Object.values(error.response?.data || {}).flat().join(' ') || 'La validation a échoué.'
+  } finally {
+    purchaseSaving.value = false
+  }
+}
 
 // Collapse long posts
 const COLLAPSE_HEIGHT = 500
@@ -330,6 +390,13 @@ function formatDate(dateStr) {
 </script>
 
 <style scoped>
+.power-purchase-box { margin: 1rem 0; padding: .8rem; border: 1px solid rgba(245, 215, 110, .35); border-radius: 8px; background: rgba(245, 215, 110, .05); }
+.purchase-confirmed { margin: 0; color: var(--gold); font-weight: 600; }
+.purchase-form { display: grid; gap: .7rem; margin-top: .8rem; }
+.purchase-form p { margin: 0; }
+.purchase-form label { display: grid; gap: .3rem; font-size: .85rem; }
+.purchase-hint { color: var(--text-secondary); font-size: .78rem; }
+.purchase-error { color: #fca5a5; font-size: .8rem; }
 .post-report-link { display: inline-block; margin-top: .55rem; font-size: .78rem; color: var(--text-secondary); }
 .dice-result { padding:.75rem 1rem;margin:0 0 1rem;border:1px solid rgba(245,215,110,.45);border-radius:8px;background:rgba(245,215,110,.08);color:#f5d76e;display:flex;gap:.5rem;flex-wrap:wrap;align-items:center; }
 .post-card {

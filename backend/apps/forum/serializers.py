@@ -10,10 +10,41 @@ User = get_user_model()
 
 
 class DemonicFormEntrySerializer(serializers.ModelSerializer):
+    def validate_character(self, value):
+        character = User.objects.filter(username__iexact=value.strip()).first()
+        if character is None:
+            raise serializers.ValidationError(
+                "Choisissez le nom d'utilisateur exact d'un personnage inscrit sur le forum."
+            )
+        if character.race.strip().casefold() != "démon":
+            raise serializers.ValidationError(
+                "Seul un personnage dont l'espèce est Démon peut avoir une forme démoniaque."
+            )
+        existing = DemonicFormEntry.objects.filter(character_user=character)
+        if self.instance:
+            existing = existing.exclude(pk=self.instance.pk)
+        if existing.exists():
+            raise serializers.ValidationError("Ce personnage possède déjà une forme dans le bottin.")
+        return character.username
+
     class Meta:
         model = DemonicFormEntry
-        fields = ["id", "name", "image_url", "character"]
-        read_only_fields = ["id"]
+        fields = ["id", "name", "image_url", "character", "needs_review"]
+        read_only_fields = ["id", "needs_review"]
+
+    def create(self, validated_data):
+        validated_data["character_user"] = User.objects.get(username=validated_data["character"])
+        return super().create(validated_data)
+
+    def update(self, instance, validated_data):
+        if "character" in validated_data:
+            validated_data["character_user"] = User.objects.get(username=validated_data["character"])
+        return super().update(instance, validated_data)
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data["character"] = instance.current_character
+        return data
 
 
 class AuthorSerializer(serializers.ModelSerializer):
@@ -26,7 +57,7 @@ class AuthorSerializer(serializers.ModelSerializer):
             "pseudo", "groupe", "race", "role", "fiche_status",
             "sexe", "nature", "camp",
             "situation", "metier", "age_personnage",
-            "pouvoirs", "lieu_residence", "quartier_residentiel", "credits",
+            "pouvoirs", "power_progression", "lieu_residence", "quartier_residentiel", "credits",
             "compte_bancaire", "double_compte",
             "date_joined", "messages_count",
         ]
@@ -54,12 +85,13 @@ class PostSerializer(serializers.ModelSerializer):
     content = serializers.SerializerMethodField()
     reactions_count = serializers.SerializerMethodField()
     user_reactions = serializers.SerializerMethodField()
+    power_purchase = serializers.SerializerMethodField()
 
     class Meta:
         model = Post
         fields = [
             "id", "author", "content", "dice_result", "created_at", "updated_at",
-            "is_edited", "reactions_count", "user_reactions",
+            "is_edited", "reactions_count", "user_reactions", "power_purchase",
         ]
         read_only_fields = ["id", "author", "created_at", "updated_at", "is_edited"]
 
@@ -73,6 +105,15 @@ class PostSerializer(serializers.ModelSerializer):
         if obj.is_trusted_html:
             return obj.content
         return sanitize_member_html(obj.content)
+
+    def get_power_purchase(self, obj):
+        purchase = getattr(obj, 'power_purchase', None)
+        if purchase is None:
+            return None
+        return {
+            'kind': purchase.kind, 'power_name': purchase.power_name,
+            'evolution_name': purchase.evolution_name, 'cost': purchase.cost,
+        }
 
     def get_user_reactions(self, obj):
         request = self.context.get("request")

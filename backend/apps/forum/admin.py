@@ -11,8 +11,12 @@ class AvatarDirectoryEntryAdmin(admin.ModelAdmin):
 
 @admin.register(DemonicFormEntry)
 class DemonicFormEntryAdmin(admin.ModelAdmin):
-    list_display = ["name", "character"]
-    search_fields = ["name", "character"]
+    list_display = ["name", "current_character", "needs_review"]
+    search_fields = ["name", "character", "character_user__username"]
+    readonly_fields = ["character", "character_user"]
+
+    def has_add_permission(self, request):
+        return False
 
 
 @admin.register(Category)

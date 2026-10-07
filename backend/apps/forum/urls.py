@@ -6,7 +6,7 @@ from .views import (
     PMDetailView, PMInboxView, PMMarkReadView, PMSendView, PMSentView, PMUnreadCountView,
     PostViewSet, ReactionToggleView, SitePageView, TopicViewSet, UserParticipatedTopicsView,
     PartnershipRequestView, PartnershipApproveView,
-    DiceRollView, LotteryDrawView, ArcanaHistoryView, NextStepsView,
+    DiceRollView, LotteryDrawView, ArcanaHistoryView, NextStepsView, PowerPurchaseApproveView,
     ContactRequestView, ContactRequestAdminView,
 )
 
@@ -34,6 +34,7 @@ urlpatterns = [
     path('administration/contact/', ContactRequestAdminView.as_view(), name='admin-contact-requests'),
     path('posts/images/', PostImageUploadView.as_view(), name='post-image-upload'),
     path('arcana/history/', ArcanaHistoryView.as_view(), name='arcana-history'),
+    path('posts/<int:post_id>/power-purchase/', PowerPurchaseApproveView.as_view(), name='power-purchase-approve'),
     path('next-steps/', NextStepsView.as_view(), name='next-steps'),
     path('lottery/draw/', LotteryDrawView.as_view(), name='lottery-draw'),
     path('partnership-requests/', PartnershipRequestView.as_view(), name='partnership-request'),

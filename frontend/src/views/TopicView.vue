@@ -212,10 +212,12 @@
             :locked="forum.currentTopic?.is_locked"
             :scenario-first-post="isScenario && post.id === forum.currentTopic?.first_post_id"
             :grimoire="slug === 'liste-des-pouvoirs-magiques'"
+            :power-purchase-request="slug === 'catalogue-boutique-magique' && post.id !== forum.currentTopic?.first_post_id"
             @edit="startEdit"
             @delete="handleDelete"
             @react="handleReaction"
             @avatarUpdated="load"
+            @purchaseApproved="load"
           />
         </TransitionGroup>
 
@@ -305,6 +307,14 @@
         <div v-else-if="canReply" class="mt-2">
           <p v-if="postError" role="alert" class="text-sm">{{ postError }}</p>
           <PostEditor :loading="posting" @submit="handleNewPost" />
+        </div>
+
+        <div
+          v-else-if="isPartnerRequest && auth.isAuthenticated && !forum.currentTopic?.is_locked && !canPostPartnerRequest"
+          class="card text-center text-secondary mt-2"
+          style="padding: 1.5rem"
+        >
+          Votre fiche de présentation doit être validée avant de publier une recherche de RP. Vous pouvez déjà consulter les demandes des autres membres.
         </div>
 
         <div
@@ -670,8 +680,12 @@ async function selectAndCopy() {
 }
 
 const canReply = computed(() => {
-  return auth.isAuthenticated && !forum.currentTopic?.is_locked
+  return auth.isAuthenticated && !forum.currentTopic?.is_locked &&
+    (!isPartnerRequest.value || canPostPartnerRequest.value)
 })
+const canPostPartnerRequest = computed(() =>
+  auth.user?.fiche_status === 'validated' || ['admin', 'fondatrice'].includes(auth.user?.role)
+)
 
 async function load() {
   await forum.fetchTopic(props.slug)

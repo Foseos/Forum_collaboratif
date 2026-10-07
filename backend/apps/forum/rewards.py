@@ -2,6 +2,7 @@ import re
 from html.parser import HTMLParser
 
 from .arcana import credit
+from .rp_locations import rp_category_ids
 
 
 class MessageTextParser(HTMLParser):
@@ -38,5 +39,5 @@ def count_message_words(content):
 
 def award_publication(post):
     """Called once on publication, inside the post creation transaction."""
-    if count_message_words(post.content) > 100:
+    if post.topic.category_id in rp_category_ids() and count_message_words(post.content) > 100:
         credit(post.author_id, 10, f'Publication : {post.topic.title[:170]}')

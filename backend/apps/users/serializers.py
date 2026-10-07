@@ -27,7 +27,7 @@ PROFILE_FIELDS = [
     "id", "username", "email", "role", "show_in_staff_team", "fiche_status", "rp_availability", "avatar", "bio", "signature", "profile_gif_url", "date_joined",
     "last_login", "last_seen",
     "sexe", "race", "nature", "camp", "groupe", "pseudo", "situation", "metier",
-    "age_personnage", "pouvoirs", "lieu_residence", "quartier_residentiel", "credits", "compte_bancaire",
+    "age_personnage", "pouvoirs", "power_progression", "lieu_residence", "quartier_residentiel", "credits", "compte_bancaire",
     "avatar_name", "double_compte", "email_topic_replies",
 ]
 
@@ -36,7 +36,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = [field for field in PROFILE_FIELDS if field != 'email']
-        read_only_fields = ["id", "role", "show_in_staff_team", "fiche_status", "date_joined", "last_seen", "compte_bancaire"]
+        read_only_fields = ["id", "role", "show_in_staff_team", "fiche_status", "date_joined", "last_seen", "compte_bancaire", "power_progression"]
 
 
 class MemberProfileSerializer(UserSerializer):
@@ -101,7 +101,7 @@ class ProfileSerializer(UniqueAccountEmailMixin, serializers.ModelSerializer):
         model = User
         fields = PROFILE_FIELDS + ["presentation_topic_slug", "recap_topic_slug"]
         read_only_fields = [
-            "id", "username", "email", "role", "show_in_staff_team", "fiche_status", "race", "nature", "groupe", "date_joined", "last_seen", "compte_bancaire", "presentation_topic_slug", "recap_topic_slug",
+            "id", "username", "email", "role", "show_in_staff_team", "fiche_status", "race", "nature", "groupe", "date_joined", "last_seen", "compte_bancaire", "power_progression", "presentation_topic_slug", "recap_topic_slug",
         ]
 
     def validate(self, attrs):
@@ -133,6 +133,27 @@ class AdminProfileSerializer(UniqueAccountEmailMixin, serializers.ModelSerialize
         model = User
         fields = PROFILE_FIELDS
         read_only_fields = ["id", "date_joined"]
+
+    def validate_power_progression(self, value):
+        if not isinstance(value, list) or len(value) > 5:
+            raise serializers.ValidationError('Cinq pouvoirs de base maximum.')
+        cleaned = []
+        names = set()
+        for item in value:
+            if not isinstance(item, dict) or set(item) != {'name', 'evolutions'}:
+                raise serializers.ValidationError('Indiquez un nom et les évolutions de chaque pouvoir.')
+            name = item['name']
+            evolutions = item['evolutions']
+            if not isinstance(name, str) or not name.strip() or len(name.strip()) > 120:
+                raise serializers.ValidationError('Chaque pouvoir doit avoir un nom de 120 caractères maximum.')
+            if name.strip().casefold() in names:
+                raise serializers.ValidationError('Un pouvoir de base apparaît deux fois.')
+            names.add(name.strip().casefold())
+            if (not isinstance(evolutions, list) or len(evolutions) > 2 or
+                    any(not isinstance(e, str) or not e.strip() or len(e.strip()) > 120 for e in evolutions)):
+                raise serializers.ValidationError('Deux évolutions maximum, avec un nom pour chacune.')
+            cleaned.append({'name': name.strip(), 'evolutions': [e.strip() for e in evolutions]})
+        return cleaned
 
     def validate(self, attrs):
         request = self.context.get('request')

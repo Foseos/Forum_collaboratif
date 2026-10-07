@@ -39,9 +39,9 @@ CROSSOVER_GRIMOIRE = MARKER + """
 ]) + section("IX", "Vampires, loups et héritages hybrides", "rgba(185,28,28,0.30)", [
     ("Vampires", "force, vitesse, guérison et compulsions selon l'âge et la lignée. Le soleil, la verveine, le feu et la décapitation restent des menaces sérieuses."),
     ("Loups-garous", "sens décuplés, guérison et transformation. Les contraintes de la pleine lune, de la meute et du contrôle émotionnel doivent être jouées."),
-    ("WereCoyote / WereJaguar / WereLion", "capacités de changeforme propres à leur espèce : adaptabilité du coyote, agilité du jaguar, puissance et présence du lion. Une forme animale n'est jamais invulnérable."),
-    ("Hybrides et Trybrides", "cumulent des héritages mais aussi leurs faiblesses. Les Trybrides sont exceptionnelles et nécessitent l'accord préalable du staff."),
-    ("Hérétiques", "vampires siphonneurs : ils canalisent une magie absorbée, mais leur soif et l'épuisement limitent leur puissance."),
+    ("WereCoyote / WereJaguar / WereLion", "capacités de changeforme : adaptabilité du coyote, agilité du jaguar, puissance et présence du lion. Le WereLion est une adaptation de Nexus Arcana inspirée de Teen Wolf. Une forme animale n'est jamais invulnérable."),
+    ("Hybrides et Trybride", "les hybrides cumulent des héritages mais aussi leurs faiblesses. Hope Mikaelson est la seule Trybride ; cette nature n'est pas ouverte à d'autres personnages."),
+    ("Hérétiques", "profil de vampires siphonneurs, non espèce indépendante : ils canalisent une magie absorbée, mais leur soif et l'épuisement limitent leur puissance."),
 ]) + section("X", "Créatures singulières", "rgba(20,184,166,0.28)", [
     ("Banshees", "présages, perception des morts et cri surnaturel. Les visions sont fragmentaires et ne donnent jamais une solution certaine."),
     ("Kanimas", "venin paralysant, sens aiguisés et transformation reptilienne. Le venin immobilise temporairement ; il ne décide pas de l'issue d'une scène."),
@@ -50,7 +50,7 @@ CROSSOVER_GRIMOIRE = MARKER + """
     ("Chimères", "combinaison contrôlée de traits surnaturels. Deux axes de capacités cohérents maximum, avec contreparties validées."),
     ("Sphinx", "clairvoyance, énigmes et mémoire des savoirs cachés. Les prophéties indiquent des possibilités, jamais une vérité immuable."),
 ]) + section("XI", "Règles d'évolution et limites", "rgba(245,215,110,0.25)", [
-    ("Progression", "quatre capacités maximum à la création pour tous, capacités actives et passives comprises. Tout ajout de pouvoir et toute évolution, y compris ceux de ce registre, s’achètent en Arcana Flouz avec approbation du staff avant utilisation. Aucun RP justificatif n’est demandé. Deux améliorations maximum par capacité acquise."),
+    ("Progression", "quatre pouvoirs de base maximum à la création pour tous, capacités actives et passives comprises. Un cinquième pouvoir de base peut être acheté ensuite ; cinq pouvoirs de base sont le plafond total. Chacun peut recevoir deux évolutions maximum, achetées séparément. Aucun sixième pouvoir de base ni troisième évolution d’un même pouvoir. Tout achat et toute évolution exigent l’approbation du staff avant utilisation. Aucun RP justificatif n’est demandé."),
     ("Contrecoup", "chaque grand usage implique fatigue, douleur, perte de contrôle, besoin d'une source ou conséquence narrative équivalente."),
     ("Consentement RP", "contrôle mental, possession, paralysie prolongée, blessure grave ou mort demandent l'accord OOC de la personne concernée."),
     ("Interdits", "pas d'omnipotence, d'immortalité sans faille, de voyage temporel libre, de résurrection sans conséquence ou de pouvoir qui annule le jeu d'autrui."),
@@ -133,12 +133,15 @@ def power_table(number, title, color, powers):
     for power in powers:
         name, description, evolutions = power[:3]
         explanations = power[3] if len(power) > 3 else ()
+        races = power[4] if len(power) > 4 else ()
         if explanations and len(explanations) != len(evolutions):
             raise ValueError(f"Évolutions incomplètes pour {name}")
         notes_attribute = (
             f' data-evolution-explanations="{escape(json.dumps(explanations, ensure_ascii=False), quote=True)}"'
             if explanations else ""
         )
+        if races:
+            notes_attribute += f' data-races="{escape("|".join(races), quote=True)}"'
         rows.append(
             "<tr{}><td>{}</td><td>{}</td><td>{}</td></tr>".format(
                 notes_attribute, escape(name), escape(description),
@@ -802,6 +805,38 @@ POWER_DIRECTORY += power_table("XLVI", "Autres facultés du registre", "rgba(168
     ("Invulnérabilité partielle", "Résiste mieux à un type d'attaque défini dans la fiche. Les faiblesses de l'espèce et les autres formes de blessure restent effectives.", ("Résistance affinée ★", "Protection brève ★")),
     ("Invisibilité", "Masque son apparence pendant un temps limité. Le son, les traces et les perceptions adaptées peuvent toujours révéler sa présence.", ("Déplacement discret ★", "Voile prolongé ★")),
 ])
+
+TVD_DIRECTORY_MARKER = "<!-- NEXUS-ARCANA-TVD-EVOLUTIONS -->"
+TVD_DIRECTORY_END = "<!-- END-NEXUS-ARCANA-TVD-EVOLUTIONS -->"
+_TVD_RACES = ("Sorcières et sorciers TVD", "Siphonneurs TVD", "Hérétiques")
+_SIPHON_RACES = ("Siphonneurs TVD", "Hérétiques")
+_HERETIC_RACES = ("Hérétiques",)
+_SIPHON_CONDITION = " Les siphonneurs et les hérétiques doivent d’abord siphonner une source de magie accessible ; les hérétiques peuvent puiser dans leur nature vampirique."
+TVD_DIRECTORY = TVD_DIRECTORY_MARKER + '<div data-tvd-paths="true">' + power_table("XLVII", "Sorciers TVD", "rgba(167,139,250,0.34)", [
+    ("Canalisation", "Maîtrise d’une source de magie disponible, sans réserve illimitée." + _SIPHON_CONDITION,
+     ("Canalisation prolongée", "Canalisation partagée"),
+     ("Maintient plus longtemps le lien avec une source identifiée, avec fatigue et limites définies.", "Répartit l’énergie entre plusieurs participants consentants lors d’un rituel préparé."), _TVD_RACES),
+    ("Protections rituelles", "Protège une personne contre un effet défini pendant une durée limitée." + _SIPHON_CONDITION,
+     ("Cercle de protection", "Protection collective"),
+     ("Délimite un espace protégé par un rituel et un ancrage identifiables.", "Étend la protection à plusieurs personnes, avec une durée et des failles convenues avec le staff."), _TVD_RACES),
+    ("Liens magiques", "Ancre un effet limité dans un objet préparé." + _SIPHON_CONDITION,
+     ("Ancrage durable", "Réseau rituel"),
+     ("Stabilise le lien plus longtemps, tant que ses conditions d’entretien sont respectées.", "Relie plusieurs ancrages dans un même rituel, sans effet permanent ni automatique."), _TVD_RACES),
+    ("Rituels de coven", "Réalise un sort complexe avec les composants, le temps et les participants nécessaires. Rejoindre un coven ne débloque rien automatiquement ; un indépendant peut proposer un rituel adapté à ses ressources." + _SIPHON_CONDITION,
+     ("Rituel coordonné", "Rituel étendu"),
+     ("Coordonne plusieurs praticiens consentants autour d’un objectif précis.", "Augmente la portée ou la durée d’un rituel validé, avec un coût et des limites définis."), _TVD_RACES),
+    ("Siphonnage", "Réservé aux siphonneurs TVD et aux hérétiques : absorbe une quantité limitée de magie accessible par contact avant de lancer un sort. Ne vole aucun don permanent.",
+     ("Siphonnage contrôlé", "Redistribution rituelle"),
+     ("Dose l’absorption et interrompt volontairement le prélèvement.", "Emploie temporairement l’énergie absorbée pour alimenter un sort ou un rituel."), _SIPHON_RACES),
+]) + power_table("XLVIII", "Hérétiques TVD", "rgba(185,28,28,0.34)", [
+    ("Magie puisée dans sa nature vampirique", "Alimente un sort limité en siphonnant sa propre nature vampirique. La soif et les vulnérabilités du vampire demeurent.",
+     ("Dosage du prélèvement", "Rituel alimenté"),
+     ("Maintient un sort plus précisément sans épuiser sa source d’un seul coup.", "Soutient un rituel préparé grâce à cette source, avec fatigue, portée et durée validées."), _HERETIC_RACES),
+    ("Magie et réflexes vampiriques", "Lance un effet magique simple pendant une action vampirique, sans multiplier les effets ; requiert de la magie siphonnée.",
+     ("Enchaînement maîtrisé", "Coordination soutenue"),
+     ("Prépare une défense ou un contre-sort rapide après un déplacement, dans les limites de la fiche.", "Enchaîne deux actions complémentaires avec un coût magique et des limites précisés par le staff."), _HERETIC_RACES),
+]) + '</div>' + TVD_DIRECTORY_END
+POWER_DIRECTORY += TVD_DIRECTORY
 
 
 class Command(BaseCommand):

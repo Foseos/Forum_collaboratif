@@ -47,7 +47,7 @@
           <div class="stat-item">
             <span class="stat-icon">🔮</span>
             <div class="stat-content">
-              <span class="stat-value">{{ forum.categories?.length || 0 }}</span>
+              <span class="stat-value">5</span>
               <span class="stat-label">Univers reliés</span>
             </div>
           </div>
@@ -683,11 +683,25 @@
           </svg>
           <div>
             <h2 class="bgroup-title">Lieux magiques</h2>
-            <p class="bgroup-subtitle">Les endroits imprégnés de magie, refuges et nexus de pouvoir à San Francisco</p>
+            <p class="bgroup-subtitle">Refuges et lieux de pouvoir à travers les villes du Nexus</p>
           </div>
         </div>
 
         <div class="bgroup-grid sf-grid">
+
+          <!-- Repaires des covens et alliances -->
+          <div class="bgroup-card card">
+            <router-link to="/categories/repaires-des-alliances" class="bgroup-cat-header">
+              <span class="bgroup-cat-icon">✦</span>
+              <span class="bgroup-cat-title">Repaires des alliances</span>
+              <svg class="bgroup-cat-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </router-link>
+            <div class="bgroup-chips">
+              <span v-for="sub in allianceLairsSubCategories" :key="sub.slug" class="bgroup-chip" :title="sub.desc">
+                <span>{{ sub.icon }}</span> {{ sub.name }}
+              </span>
+            </div>
+          </div>
 
           <!-- L'école de magie -->
           <div class="bgroup-card card">
@@ -878,11 +892,11 @@
                   v-if="toRelativeAvatar(stats.newest_member.avatar)"
                   :src="toRelativeAvatar(stats.newest_member.avatar)"
                   class="dash-avatar"
-                  :alt="stats.newest_member.pseudo"
+                  :alt="stats.newest_member.username"
                 />
                 <span v-else class="dash-avatar dash-avatar-placeholder">✦</span>
                 <div>
-                  <span class="dash-member-name">{{ stats.newest_member.pseudo }}</span>
+                  <span class="dash-member-name">{{ stats.newest_member.username }}</span>
                   <span class="dash-member-date">Inscrit le {{ formatDate(stats.newest_member.date_joined) }}</span>
                 </div>
               </router-link>
@@ -900,16 +914,16 @@
                   :key="m.username"
                   to="/membres"
                   class="dash-online-item"
-                  :title="m.pseudo"
+                  :title="m.username"
                 >
                   <img
                     v-if="toRelativeAvatar(m.avatar)"
                     :src="toRelativeAvatar(m.avatar)"
                     class="dash-avatar dash-avatar-sm"
-                    :alt="m.pseudo"
+                    :alt="m.username"
                   />
                   <span v-else class="dash-avatar dash-avatar-sm dash-avatar-placeholder">✦</span>
-                  <span class="dash-online-name">{{ m.pseudo }}</span>
+                  <span class="dash-online-name">{{ m.username }}</span>
                 </router-link>
               </div>
             </template>
@@ -936,12 +950,11 @@ const auth = useAuthStore()
 
 // Scénarios à prendre — topics de la catégorie scenarios-a-prendre
 const featuredScenarios = ref([])
-const hiddenFeaturedScenarioTitles = new Set(['Nyméa Argent', 'Briséis Argent'])
 async function fetchFeaturedScenarios() {
   try {
     const { data } = await api.get('/categories/scenarios-a-prendre/topics/?page_size=100')
     featuredScenarios.value = (data.results || data).filter(
-      (scenario) => !hiddenFeaturedScenarioTitles.has(scenario.title) && scenario.scenario_status !== 'played',
+      (scenario) => scenario.scenario_status !== 'played',
     )
   } catch { /* silent */ }
 }
@@ -966,11 +979,14 @@ function fillSlot() {
   staffMembers.value.push({ id: Date.now(), username: '', pseudo: '', role: 'moderator', avatar: null })
 }
 
-// Convertit une URL avatar absolue (http://host/media/...) en URL relative (/media/...)
-// pour qu'elle passe par le proxy Vite et évite les problèmes cross-origin
+// Garde les URLs d'images externes ; les médias locaux passent par le proxy Vite.
 function toRelativeUrl(url) {
   if (!url) return null
-  try { return new URL(url).pathname } catch { return url }
+  try {
+    const parsed = new URL(url)
+    const sameHost = parsed.hostname === window.location.hostname
+    return sameHost && parsed.pathname.startsWith('/media/') ? parsed.pathname : url
+  } catch { return url }
 }
 
 async function fetchStaff() {
@@ -1169,6 +1185,7 @@ const presidioSubCategories = subData.presidio
 const fishermansWharfSubCategories = subData.fishermansWharf
 const cimetiereSubCategories = subData.cimetiere
 const ecoleMagieSubCategories = subData.ecoleMagie
+const allianceLairsSubCategories = subData.allianceLairs
 const lesEnfersSubCategories = subData.lesEnfers
 const dimensionsAlternativesSubCategories = subData.dimensionsAlternatives
 const lesCieuxSubCategories = subData.lesCieux
@@ -1629,10 +1646,12 @@ html.light .hero-overlay {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   align-items: stretch;
 }
+
+.intro-grid > * { min-width: 0; }
 
 /* Lore block */
 .intro-lore {
@@ -2974,11 +2993,11 @@ html.light .hero-overlay {
   }
 
   .intro-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .intro-scenarios {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: none;
   }
 
   .hero {

@@ -1,0 +1,5 @@
+-r prod.txt
+dj-database-url>=2.2,<4
+whitenoise>=6.8,<7
+django-storages[s3]>=1.14,<2
+django-anymail>=15,<16

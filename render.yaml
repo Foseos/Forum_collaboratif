@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: nexus-arcana
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile.render
+    dockerContext: .
+    healthCheckPath: /health/
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: nexus-arcana.fr,www.nexus-arcana.fr
+      - key: CSRF_TRUSTED_ORIGINS
+        value: https://nexus-arcana.fr,https://www.nexus-arcana.fr
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://nexus-arcana.fr,https://www.nexus-arcana.fr
+      - key: DEFAULT_FROM_EMAIL
+        value: Nexus Arcana <noreply@nexus-arcana.fr>
+      - key: DATABASE_URL
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_STORAGE_BUCKET_NAME
+        sync: false
+      - key: AWS_S3_ENDPOINT_URL
+        sync: false
+      - key: AWS_REGION
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false

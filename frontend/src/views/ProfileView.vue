@@ -128,6 +128,8 @@
 
             <div class="divider"></div>
 
+            <PowerProgression :powers="auth.user?.power_progression" />
+
             <div class="profile-sheet-links">
               <div class="profile-sheet-item">
                 <span class="meta-label">Présentation validée</span>
@@ -417,6 +419,21 @@
               </button>
             </div>
           </div>
+          <div class="admin-icoin-edit" style="margin-top: .8rem;">
+            <label>Pouvoirs et évolutions validés</label>
+            <p class="form-hint">Renseignez uniquement les capacités approuvées. Les quatre premiers pouvoirs sont de base ; le cinquième est acheté.</p>
+            <div v-for="(slot, index) in adminPowerSlots" :key="index" class="admin-power-row">
+              <strong>{{ index === 4 ? '5e pouvoir · achat' : `Pouvoir ${index + 1}` }}</strong>
+              <input v-model.trim="slot.name" class="form-input" maxlength="120" placeholder="Nom du pouvoir de base" />
+              <input v-model.trim="slot.evolutions[0]" class="form-input" maxlength="120" placeholder="Évolution 1 validée" />
+              <input v-model.trim="slot.evolutions[1]" class="form-input" maxlength="120" placeholder="Évolution 2 validée" />
+            </div>
+            <button type="button" class="btn btn-primary" :disabled="adminSaving" @click="saveAdminPowers">
+              {{ adminSaving ? 'Enregistrement…' : 'Enregistrer les pouvoirs' }}
+            </button>
+            <p v-if="adminPowerSuccess" class="admin-icoin-success">✓ Progression enregistrée.</p>
+            <p v-if="adminPowerError" class="admin-icoin-error">{{ adminPowerError }}</p>
+          </div>
         </div>
       </div>
       </div>
@@ -429,6 +446,7 @@ import { computed, onMounted, reactive, ref, watch } from 'vue'
 import { useAuthStore } from '../stores/auth'
 import api from '../composables/useApi'
 import { useRouter } from 'vue-router'
+import PowerProgression from '../components/PowerProgression.vue'
 
 const router = useRouter()
 
@@ -595,6 +613,16 @@ const adminNewBalance = ref(null)
 const adminSaving = ref(false)
 const adminIcoinSuccess = ref(false)
 const adminIcoinError = ref('')
+const adminPowerSlots = ref([])
+const adminPowerSuccess = ref(false)
+const adminPowerError = ref('')
+
+function makePowerSlots(powers = []) {
+  return Array.from({ length: 5 }, (_, index) => ({
+    name: powers[index]?.name || '',
+    evolutions: [powers[index]?.evolutions?.[0] || '', powers[index]?.evolutions?.[1] || ''],
+  }))
+}
 
 watch(showAdminIcoin, async (val) => {
   if (val && !adminAllUsers.value.length) {
@@ -619,6 +647,44 @@ function selectAdminUser(u) {
   adminNewBalance.value = u.compte_bancaire
   adminSearch.value = u.username
   adminFiltered.value = []
+  adminPowerSlots.value = makePowerSlots(u.power_progression)
+  adminPowerError.value = ''
+}
+
+async function saveAdminPowers() {
+  adminPowerError.value = ''
+  adminPowerSuccess.value = false
+  const powers = []
+  let emptySlotSeen = false
+  for (const slot of adminPowerSlots.value) {
+    if (!slot.name && slot.evolutions.some(Boolean)) {
+      adminPowerError.value = 'Donnez un nom au pouvoir avant de renseigner ses évolutions.'
+      return
+    }
+    if (!slot.name) { emptySlotSeen = true; continue }
+    if (emptySlotSeen) {
+      adminPowerError.value = 'Remplissez les emplacements dans l’ordre, sans laisser de case vide.'
+      return
+    }
+    const evolutions = slot.evolutions.filter(Boolean)
+    if (slot.evolutions[1] && !slot.evolutions[0]) {
+      adminPowerError.value = 'Renseignez la première évolution avant la seconde.'
+      return
+    }
+    powers.push({ name: slot.name, evolutions })
+  }
+  adminSaving.value = true
+  try {
+    const { data } = await api.patch(`/users/${adminSelectedUser.value.id}/`, { power_progression: powers })
+    adminSelectedUser.value.power_progression = data.power_progression
+    adminPowerSlots.value = makePowerSlots(data.power_progression)
+    if (auth.user?.id === data.id) await auth.fetchProfile()
+    adminPowerSuccess.value = true
+  } catch (e) {
+    adminPowerError.value = Object.values(e.response?.data || {}).flat().join(' ') || 'Impossible d’enregistrer les pouvoirs.'
+  } finally {
+    adminSaving.value = false
+  }
 }
 
 async function saveAdminIcoin() {
@@ -1302,6 +1368,10 @@ async function handleUpdate() {
   letter-spacing: 0.05em;
   font-weight: 600;
 }
+
+.admin-power-row { display: grid; grid-template-columns: minmax(100px, 1fr) repeat(3, minmax(120px, 2fr)); gap: .4rem; align-items: center; padding: .5rem 0; border-bottom: 1px solid rgba(167, 139, 250, .16); }
+.admin-power-row strong { color: var(--gold); font-size: .78rem; }
+@media (max-width: 800px) { .admin-power-row { grid-template-columns: 1fr; } }
 
 .admin-icoin-input-row {
   display: flex;

@@ -11,8 +11,10 @@ NOTICE = (
     'border:1px solid rgba(245,215,110,.5);border-radius:8px;'
     'background:rgba(245,215,110,.07);color:#e2d9f3;line-height:1.7">'
     '<strong style="color:#f5d76e">Ajouts et évolutions des pouvoirs</strong><br>'
-    'Après la création du personnage, tout nouveau pouvoir et toute évolution doivent être '
-    'approuvés par le staff avant d’être utilisés en RP, même s’ils figurent déjà dans le grimoire. '
+    'Quatre pouvoirs de base maximum à la création, puis un cinquième achetable : cinq au total. '
+    'Chaque pouvoir de base peut recevoir deux évolutions maximum, achetées séparément. '
+    'Aucun sixième pouvoir de base ni troisième évolution d’un même pouvoir. '
+    'Tout achat doit être approuvé par le staff avant utilisation en RP, même s’il figure déjà dans le grimoire. '
     'Présentez la capacité souhaitée et ses limites ; aucun RP justificatif n’est demandé. L’achat et la fiche sont '
     'mis à jour après validation.'
     '</aside>'
@@ -29,8 +31,17 @@ class Command(BaseCommand):
             post = Topic.objects.get(slug=slug).posts.order_by('created_at').first()
             if post is None:
                 raise ValueError(f'Sujet sans contenu : {slug}')
-            if 'data-universal-staff-approval="1"' not in post.content:
-                post.content = NOTICE + post.content
+            marker = 'data-universal-staff-approval="1"'
+            if marker in post.content:
+                start = post.content.find('<aside ', max(0, post.content.find(marker) - 15))
+                end = post.content.find('</aside>', start) + len('</aside>')
+                if start < 0 or end < len('</aside>'):
+                    raise ValueError(f'Encadré de validation malformé : {slug}')
+                updated = post.content[:start] + NOTICE + post.content[end:]
+            else:
+                updated = NOTICE + post.content
+            if updated != post.content:
+                post.content = updated
                 post.save(update_fields=['content'])
                 changed.append(slug)
         self.stdout.write(self.style.SUCCESS(f"Règle affichée : {', '.join(changed) or 'déjà en place'}."))
