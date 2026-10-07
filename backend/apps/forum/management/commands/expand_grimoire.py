@@ -12,10 +12,18 @@ DIRECTORY_MARKER = "<!-- NEXUS-ARCANA-POWER-DIRECTORY -->"
 
 
 def section(number, title, color, items):
-    lines = "".join(
-        f"<li style='margin:0 0 0.55rem;'><strong style='color:#e2d9f3;'>{name}</strong> — {text}</li>"
-        for name, text in items
-    )
+    lines = ""
+    for name, text in items:
+        if "→" in name:
+            base, *options = (part.strip() for part in name.split("→"))
+            options_attr = escape(json.dumps(options, ensure_ascii=False), quote=True)
+            lines += (
+                f"<li data-power-options=\"{options_attr}\" style='margin:0 0 0.55rem;'>"
+                f"<strong style='color:#e2d9f3;'>{base}</strong> — "
+                f"Pistes de spécialisation : {' ; '.join(options)}. {text}</li>"
+            )
+        else:
+            lines += f"<li style='margin:0 0 0.55rem;'><strong style='color:#e2d9f3;'>{name}</strong> — {text}</li>"
     return f"""
 <div style="margin:1.4rem 0; border:1px solid {color}; border-radius:8px; overflow:hidden;">
   <div style="padding:0.55rem 1rem; background:linear-gradient(90deg, {color}, transparent);">
@@ -59,7 +67,7 @@ CROSSOVER_GRIMOIRE = MARKER + """
 POWER_DIRECTORY = DIRECTORY_MARKER + """
 <div style="margin:2rem 0 1rem; text-align:center;">
   <p style="margin:0; color:#f5d76e; font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase;">✦ Répertoire détaillé des pouvoirs ✦</p>
-  <p style="margin:0.5rem auto 0; max-width:680px; color:#c4b5d4; line-height:1.7; font-size:0.87rem;">Chaque ligne suit le modèle <strong style="color:#e2d9f3;">pouvoir de base → évolution → maîtrise</strong>. Les branches sont des pistes : un personnage n'a pas à toutes les posséder. Les mentions « staff » demandent une validation avant la fiche ou une évolution jouée.</p>
+  <p style="margin:0.5rem auto 0; max-width:680px; color:#c4b5d4; line-height:1.7; font-size:0.87rem;">Chaque pouvoir de base propose des <strong style="color:#e2d9f3;">options de spécialisation</strong>, et non une progression imposée. Une option améliore le pouvoir concerné ; elle ne donne pas automatiquement les autres options. Chaque achat exige la validation du staff.</p>
   <p style="margin:0.5rem auto 0; max-width:680px; color:#c4b5d4; line-height:1.7; font-size:0.87rem;">Chaque kinésie peut produire une manifestation limitée de son élément ou de son effet sans source déjà présente. Une source existante peut faciliter un usage plus vaste ; elle n'est pas obligatoire pour le pouvoir de base. Pour les kinésies du corps ou de l'esprit, cela ne crée ni personne, ni organe complet, ni passé réel.</p>
 </div>
 """ + section("XII", "Pouvoirs psychiques, médiumniques et émotionnels", "rgba(167,139,250,0.34)", [
@@ -73,14 +81,14 @@ POWER_DIRECTORY = DIRECTORY_MARKER + """
     ("Télépathie animale → communication → appel de meute", "Établit un contact limité avec un animal ; un appel de groupe demande portée et limites validées."),
 ]) + section("XIII", "Pouvoirs physiques, moléculaires et de soin", "rgba(96,165,250,0.30)", [
     ("Télékinésie → répulsion → onde télékinétique", "La masse, la distance et la concentration limitent l'effet."),
-    ("Accélération moléculaire → combustion → pyrokinésie", "La maîtrise finale est réservée à une évolution validée."),
+    ("Accélération moléculaire → échauffement ciblé → propagation thermique limitée", "La chaleur reste liée à la cible et à la portée validées ; ce pouvoir ne donne pas automatiquement la pyrokinésie."),
     ("Inhibition moléculaire → gel → cryokinésie", "Aucun gel total durable sur un personnage sans accord."),
     ("Guérison → soin profond → transfert vital", "La guérison ne ramène pas les morts."),
     ("Régénération → guérison accélérée → résistance accrue", "Les faiblesses définies dans la fiche restent effectives."),
     ("Intangibilité → ancrage tangible → phase sélective", "Le retour à l'état solide et le passage partiel à travers la matière sont deux maîtrises de l'intangibilité ; ils ne donnent ni invisibilité ni métamorphie."),
     ("Force accrue → réflexes surnaturels → vitesse", "Ne garantit jamais une attaque ou une esquive réussie."),
 ]) + section("XIV", "Éléments, énergie et matière", "rgba(251,146,60,0.30)", [
-    ("Boule de feu → jet de flammes → mur de feu", "La portée, la durée et la chaleur doivent être définies ; un mur de feu exige une évolution validée."),
+    ("Boule de feu → précision du projectile → maintien d'une flamme", "La précision améliore le tir ; le maintien prolonge une flamme limitée dans le temps. Aucun effet de zone n'est acquis automatiquement."),
     ("Étincelle → éclair → électrokinésie", "L'eau, les isolants et l'épuisement modifient l'efficacité."),
     ("Bulle d'eau → aquakinésie / hydrokinésie → tempête locale", "Le pouvoir crée de l'eau dès sa base ; les grandes manifestations exigent une évolution et une ampleur validées."),
     ("Brise → rafale → aérokinésie", "Une tempête complète requiert une validation du staff."),

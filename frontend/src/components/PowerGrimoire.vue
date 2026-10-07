@@ -11,7 +11,7 @@
       <ol>
         <li><strong>4 pouvoirs de base maximum à la création ; un 5e peut être acheté ensuite.</strong> Le plafond est de 5 pouvoirs de base au total, capacités actives et passives comprises, pour toutes les espèces, y compris les hybrides, tribrides et Originels. Chaque pouvoir de base peut recevoir au maximum 2 évolutions, achetées et validées séparément. Les évolutions ne créent pas de nouvel emplacement de pouvoir de base.</li>
         <li><strong>Vérifiez votre fiche validée.</strong> Ce catalogue propose des possibilités ; il ne donne pas tous ces pouvoirs à votre personnage.</li>
-        <li><strong>Choisissez une piste d’évolution.</strong> Les flèches indiquent des branches possibles, pas des niveaux débloqués automatiquement. Certaines branches sont des dons distincts.</li>
+        <li><strong>Choisissez une spécialisation.</strong> Les options proposées pour un pouvoir de base ne forment pas une chaîne obligatoire. Chaque option achetée améliore ce pouvoir et doit être validée séparément.</li>
         <li><strong>Faites valider chaque ajout.</strong> Présentez le pouvoir actuel, le changement souhaité et ses limites. Tous les nouveaux pouvoirs et toutes les évolutions demandent l'approbation du staff avant usage. Aucun RP justificatif n'est demandé. ★ indique que sa portée, sa durée ou ses conséquences doivent être précisées avec le staff.</li>
         <li><strong>Proposez vos idées.</strong> Cette liste ne recense pas tous les pouvoirs ni toutes leurs évolutions. Vous pouvez proposer un pouvoir ou une évolution au staff et en discuter avec l’équipe avant de l’intégrer à votre fiche ou de l’utiliser en RP.</li>
       </ol>
@@ -77,9 +77,9 @@
         <template v-else-if="mode === 'paths' || mode === 'tvd' || mode === 'heretics'">
           <p class="guide-source"><strong>Conditions du grimoire :</strong> {{ entry.description }}</p>
           <ol class="guide-steps">
-            <li v-for="(step, index) in entry.steps" :key="step.label"><span class="guide-step-number">{{ index + 1 }}</span><div><h3>{{ step.label }}</h3><p>{{ step.explanation }}</p></div></li>
+            <li v-for="(step, index) in entry.steps" :key="step.label"><span class="guide-step-number">{{ index === 0 ? 'B' : index }}</span><div><h3>{{ index === 0 ? 'Pouvoir de base' : `Option ${index}` }} : {{ step.label }}</h3><p>{{ step.explanation }}</p></div></li>
           </ol>
-          <p class="guide-caution">Chaque étape est une possibilité à faire valider selon votre personnage. Elle n’accorde pas automatiquement les autres branches du même pouvoir.</p>
+      <p class="guide-caution">Chaque option est à acheter et à faire valider selon votre personnage. Elle n’accorde pas automatiquement les autres spécialisations du même pouvoir.</p>
         </template>
         <template v-else><p>{{ entry.description }}</p></template>
       </div>
@@ -166,12 +166,13 @@ const entries = computed(() => {
     const title = strong.textContent.trim()
     const description = item.textContent.trim().slice(title.length).replace(/^\s*[—–-]\s*/, '')
     const family = heading(item)
-    if (title.includes('→')) {
-      const names = title.split('→').map(name => name.trim())
-      if (featuredPathTitles.has(names[0])) continue
-      const explanations = pathwayNotes[names[0]]
-      paths.push({ id: paths.length, title, description, family, races: powerRaces[names[0]] || [], requiresStaff: names[0] === 'Perception temporelle',
-        steps: names.map((label, index) => ({ label, explanation: explanations?.[index] || explainStep(label) })),
+    if (item.dataset.powerOptions) {
+      let options = []
+      try { options = JSON.parse(item.dataset.powerOptions) } catch { /* Keep the base power visible. */ }
+      if (featuredPathTitles.has(title)) continue
+      const explanations = pathwayNotes[title]
+      paths.push({ id: paths.length, title, description, family, races: powerRaces[title] || [], requiresStaff: title === 'Perception temporelle',
+        steps: [title, ...options].map((label, index) => ({ label, explanation: explanations?.[index] || explainStep(label) })),
       })
     } else {
       rules.push({ id: rules.length, title, description, family })
