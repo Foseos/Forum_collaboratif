@@ -61,7 +61,7 @@
               <div v-if="menuOpen" class="dropdown">
                 <router-link to="/profile" class="dropdown-item" @click="menuOpen = false">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                  Profil
+                  Profil du personnage
                 </router-link>
                 <router-link to="/parametres" class="dropdown-item" @click="menuOpen = false">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v2m0 14v2M3 12h2m14 0h2"/></svg>
@@ -169,7 +169,7 @@ const navItems = [
   },
   {
     path: '/profile',
-    label: 'Profil',
+    label: 'Profil du personnage',
     icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>'
   },
   {
