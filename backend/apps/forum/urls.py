@@ -2,7 +2,7 @@ from django.urls import path
 from .post_images import PostImageUploadView
 
 from .views import (
-    AvatarDirectoryEntryDetailView, AvatarDirectoryView, CategoryViewSet, ChatMessageView, ChatPresenceView, DemonicFormDirectoryView, DemonicFormEntryDetailView, ForumStatsView, GuestPresenceView, MyRPView,
+    AvatarDirectoryEntryDetailView, AvatarDirectoryView, CategoryViewSet, ChatMessageView, ChatPresenceView, DemonicFormDirectoryView, DemonicFormEntryDetailView, ForumStatsView, MyRPView,
     PMDetailView, PMInboxView, PMMarkReadView, PMSendView, PMSentView, PMUnreadCountView,
     PostViewSet, ReactionToggleView, SitePageView, TopicViewSet, UserParticipatedTopicsView,
     PartnershipRequestView, PartnershipApproveView,
@@ -81,7 +81,6 @@ urlpatterns = [
     path("pages/<slug:slug>/", SitePageView.as_view(), name="site-page"),
     # Stats globales du forum
     path("stats/", ForumStatsView.as_view(), name="forum-stats"),
-    path("guests/presence/", GuestPresenceView.as_view(), name="guest-presence"),
     # Messages privés
     path("messages/", PMInboxView.as_view(), name="pm-inbox"),
     path("messages/sent/", PMSentView.as_view(), name="pm-sent"),

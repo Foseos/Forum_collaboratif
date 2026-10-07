@@ -14,7 +14,7 @@ from rest_framework.views import APIView
 
 from apps.users.permissions import IsAdminOrModerator
 
-from .models import ArcanaTransaction, AvatarDirectoryEntry, Category, ChatMessage, ContactRequest, DemonicFormEntry, GuestPresence, Post, PowerPurchase, PrivateMessage, Reaction, SitePage, Topic
+from .models import ArcanaTransaction, AvatarDirectoryEntry, Category, ChatMessage, ContactRequest, DemonicFormEntry, Post, PowerPurchase, PrivateMessage, Reaction, SitePage, Topic
 from .avatar_directory import clean_avatar_name, scenario_avatar
 from .permissions import IsAuthorOrModeratorOrReadOnly, IsTopicNotLocked
 from .rewards import award_publication
@@ -790,25 +790,6 @@ class ChatPresenceView(generics.GenericAPIView):
         ])
 
 
-class GuestPresenceView(APIView):
-    permission_classes = [permissions.AllowAny]
-
-    def post(self, request):
-        if request.user.is_authenticated:
-            return Response(status=status.HTTP_204_NO_CONTENT)
-
-        now = timezone.now()
-        token = request.COOKIES.get('guest_presence')
-        if not token or len(token) != 64 or not all(c in '0123456789abcdef' for c in token):
-            token = secrets.token_hex(32)
-            GuestPresence.objects.filter(last_seen__lt=now - timedelta(minutes=10)).delete()
-        GuestPresence.objects.update_or_create(token=token, defaults={'last_seen': now})
-        response = Response(status=status.HTTP_204_NO_CONTENT)
-        response.set_cookie('guest_presence', token, max_age=120, httponly=True,
-                            secure=request.is_secure(), samesite='Lax')
-        return response
-
-
 class ForumStatsView(generics.GenericAPIView):
     permission_classes = [permissions.AllowAny]
 
@@ -845,17 +826,12 @@ class ForumStatsView(generics.GenericAPIView):
                 'last_login': u.last_login,
             })
 
-        result = {
+        return Response({
             'member_count': member_count,
             'message_count': message_count,
             'newest_member': newest_member,
             'recent_members': recent_members,
-        }
-        if request.user.is_authenticated and request.user.role in ('admin', 'fondatrice'):
-            result['guest_count'] = GuestPresence.objects.filter(
-                last_seen__gte=timezone.now() - timedelta(minutes=2)
-            ).count()
-        return Response(result)
+        })
 
 
 class SitePageView(generics.RetrieveUpdateAPIView):

@@ -82,9 +82,8 @@ const { theme, toggleTheme } = useTheme()
 let presenceTimer = null
 
 async function sendPresence() {
-  if (document.visibilityState !== 'visible') return
-  const endpoint = auth.isAuthenticated ? '/users/presence/' : '/guests/presence/'
-  try { await api.post(endpoint) } catch { /* présence momentanément indisponible */ }
+  if (!auth.isAuthenticated || document.visibilityState !== 'visible') return
+  try { await api.post('/users/presence/') } catch { /* session gérée par auth */ }
 }
 
 function onVisibilityChange() {
@@ -95,10 +94,10 @@ onMounted(async () => {
   await auth.init()
   if (auth.isAuthenticated) {
     notifications.startPolling()
+    await sendPresence()
+    presenceTimer = window.setInterval(sendPresence, 45000)
+    document.addEventListener('visibilitychange', onVisibilityChange)
   }
-  await sendPresence()
-  presenceTimer = window.setInterval(sendPresence, 45000)
-  document.addEventListener('visibilitychange', onVisibilityChange)
 })
 
 onBeforeUnmount(() => {

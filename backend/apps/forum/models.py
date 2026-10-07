@@ -3,11 +3,6 @@ from django.db import models
 from django.utils.text import slugify
 
 
-class GuestPresence(models.Model):
-    token = models.CharField(max_length=64, primary_key=True)
-    last_seen = models.DateTimeField(db_index=True)
-
-
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True, blank=True)
