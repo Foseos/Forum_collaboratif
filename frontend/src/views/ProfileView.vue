@@ -235,25 +235,6 @@
         </div>
       </form>
 
-      <section class="card" style="margin-top:1.5rem;padding:1.5rem">
-        <h2 style="margin-top:0">Adresse e-mail du compte</h2>
-        <p class="text-secondary">Adresse actuelle : {{ auth.user?.email || 'Non renseignée' }}</p>
-        <p class="form-hint">Pour la modifier, confirmez votre mot de passe. Un lien sera envoyé à la nouvelle adresse et votre adresse actuelle sera avertie.</p>
-        <form @submit.prevent="requestEmailChange" class="form-grid">
-          <div class="form-group">
-            <label for="new-email">Nouvelle adresse e-mail</label>
-            <input id="new-email" v-model.trim="newEmail" class="form-input" type="email" autocomplete="email" required />
-          </div>
-          <div class="form-group">
-            <label for="email-password">Mot de passe actuel</label>
-            <input id="email-password" v-model="emailPassword" class="form-input" type="password" autocomplete="current-password" required />
-          </div>
-          <p v-if="emailChangeError" class="form-error grid-col-2">{{ emailChangeError }}</p>
-          <p v-if="emailChangeSuccess" class="alert alert-success grid-col-2">{{ emailChangeSuccess }}</p>
-          <button class="btn btn-secondary" type="submit" :disabled="emailChangeLoading">{{ emailChangeLoading ? 'Envoi…' : 'Confirmer le changement' }}</button>
-        </form>
-      </section>
-
       <section class="card" style="margin-top:1rem;padding:1.5rem">
         <h2 style="margin-top:0">Alertes par e-mail</h2>
         <label><input type="checkbox" :checked="auth.user?.email_topic_replies !== false" @change="saveReplyEmailPreference($event.target.checked)" /> Recevoir un e-mail lorsqu’un sujet auquel j’ai participé reçoit une réponse</label>
@@ -458,11 +439,6 @@ const uploadingAvatar = ref(false)
 const error = ref('')
 const success = ref(false)
 const loading = ref(false)
-const newEmail = ref('')
-const emailPassword = ref('')
-const emailChangeLoading = ref(false)
-const emailChangeError = ref('')
-const emailChangeSuccess = ref('')
 const replyEmailFeedback = ref('')
 const arcanaHistory = ref([])
 const arcanaHistoryError = ref('')
@@ -497,23 +473,6 @@ onMounted(loadProfileExtras)
 watch(() => auth.user?.fiche_status, (status) => {
   if (status === 'validated' && !nextSteps.value) loadProfileExtras()
 })
-
-async function requestEmailChange() {
-  emailChangeError.value = ''
-  emailChangeSuccess.value = ''
-  emailChangeLoading.value = true
-  try {
-    const { data } = await api.post('/auth/request-email-change/', {
-      email: newEmail.value, password: emailPassword.value,
-    })
-    emailChangeSuccess.value = data.detail
-    emailPassword.value = ''
-  } catch (e) {
-    emailChangeError.value = Object.values(e.response?.data || {}).flat().join(' ') || "Le changement d'adresse a échoué."
-  } finally {
-    emailChangeLoading.value = false
-  }
-}
 
 function triggerAvatarUpload() {
   fileInputRef.value?.click()
