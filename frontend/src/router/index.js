@@ -8,6 +8,7 @@ import ConfirmEmailView from '../views/ConfirmEmailView.vue'
 import ForgotPasswordView from '../views/ForgotPasswordView.vue'
 import ResetPasswordView from '../views/ResetPasswordView.vue'
 import ProfileView from '../views/ProfileView.vue'
+import SettingsView from '../views/SettingsView.vue'
 import CategoryView from '../views/CategoryView.vue'
 import TopicView from '../views/TopicView.vue'
 import NotificationsView from '../views/NotificationsView.vue'
@@ -47,6 +48,12 @@ const routes = [
     path: '/profile',
     name: 'profile',
     component: ProfileView,
+    meta: { auth: true },
+  },
+  {
+    path: '/parametres',
+    name: 'settings',
+    component: SettingsView,
     meta: { auth: true },
   },
   {

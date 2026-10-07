@@ -63,6 +63,10 @@
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                   Profil
                 </router-link>
+                <router-link to="/parametres" class="dropdown-item" @click="menuOpen = false">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v2m0 14v2M3 12h2m14 0h2"/></svg>
+                  Paramètres
+                </router-link>
                 <router-link v-if="['admin', 'fondatrice'].includes(auth.user?.role)" to="/administration/alertes-activite" class="dropdown-item" @click="menuOpen = false">
                   <span aria-hidden="true">⚑</span>
                   Alertes d’activité
@@ -114,6 +118,8 @@
         </router-link>
 
         <div class="nav-mobile-divider"></div>
+
+        <router-link v-if="auth.isAuthenticated" to="/parametres" class="nav-mobile-link">⚙ Paramètres</router-link>
 
         <router-link v-if="['admin', 'fondatrice'].includes(auth.user?.role)" to="/administration/alertes-activite" class="nav-mobile-link">⚑ Alertes d’activité</router-link>
         <router-link v-if="isAdmin" to="/administration/demandes" class="nav-mobile-link">✉ Demandes des visiteurs <span v-if="notifications.pendingQuestions" class="nav-msg-badge">{{ notifications.pendingQuestions }}</span></router-link>

@@ -255,27 +255,6 @@
       </section>
 
       <section class="card" style="margin-top:1rem;padding:1.5rem">
-        <h2 style="margin-top:0">Mot de passe du compte</h2>
-        <p class="form-hint">Après le changement, vous devrez vous reconnecter avec votre nouveau mot de passe.</p>
-        <form @submit.prevent="changePassword" class="form-grid">
-          <div class="form-group">
-            <label for="current-password">Mot de passe actuel</label>
-            <input id="current-password" v-model="currentPassword" class="form-input" type="password" autocomplete="current-password" required />
-          </div>
-          <div class="form-group">
-            <label for="new-password">Nouveau mot de passe</label>
-            <input id="new-password" v-model="newPassword" class="form-input" type="password" autocomplete="new-password" required />
-          </div>
-          <div class="form-group">
-            <label for="confirm-password">Confirmer le nouveau mot de passe</label>
-            <input id="confirm-password" v-model="newPasswordConfirm" class="form-input" type="password" autocomplete="new-password" required />
-          </div>
-          <p v-if="passwordChangeError" class="form-error grid-col-2" role="alert">{{ passwordChangeError }}</p>
-          <button class="btn btn-secondary" type="submit" :disabled="passwordChangeLoading">{{ passwordChangeLoading ? 'Modification…' : 'Changer mon mot de passe' }}</button>
-        </form>
-      </section>
-
-      <section class="card" style="margin-top:1rem;padding:1.5rem">
         <h2 style="margin-top:0">Alertes par e-mail</h2>
         <label><input type="checkbox" :checked="auth.user?.email_topic_replies !== false" @change="saveReplyEmailPreference($event.target.checked)" /> Recevoir un e-mail lorsqu’un sujet auquel j’ai participé reçoit une réponse</label>
         <p v-if="replyEmailFeedback" role="status" class="form-hint">{{ replyEmailFeedback }}</p>
@@ -445,10 +424,7 @@
 import { computed, onMounted, reactive, ref, watch } from 'vue'
 import { useAuthStore } from '../stores/auth'
 import api from '../composables/useApi'
-import { useRouter } from 'vue-router'
 import PowerProgression from '../components/PowerProgression.vue'
-
-const router = useRouter()
 
 const auth = useAuthStore()
 const isAvatarAdmin = computed(() => ['admin', 'fondatrice'].includes(auth.user?.role))
@@ -487,11 +463,6 @@ const emailPassword = ref('')
 const emailChangeLoading = ref(false)
 const emailChangeError = ref('')
 const emailChangeSuccess = ref('')
-const currentPassword = ref('')
-const newPassword = ref('')
-const newPasswordConfirm = ref('')
-const passwordChangeLoading = ref(false)
-const passwordChangeError = ref('')
 const replyEmailFeedback = ref('')
 const arcanaHistory = ref([])
 const arcanaHistoryError = ref('')
@@ -541,27 +512,6 @@ async function requestEmailChange() {
     emailChangeError.value = Object.values(e.response?.data || {}).flat().join(' ') || "Le changement d'adresse a échoué."
   } finally {
     emailChangeLoading.value = false
-  }
-}
-
-async function changePassword() {
-  passwordChangeError.value = ''
-  passwordChangeLoading.value = true
-  try {
-    await api.post('/users/me/change-password/', {
-      current_password: currentPassword.value,
-      new_password: newPassword.value,
-      new_password_confirm: newPasswordConfirm.value,
-    })
-    auth.logout()
-    await router.push({ path: '/login', query: { password_changed: '1' } })
-  } catch (e) {
-    passwordChangeError.value = Object.values(e.response?.data || {}).flat().join(' ') || 'Le changement de mot de passe a échoué.'
-  } finally {
-    currentPassword.value = ''
-    newPassword.value = ''
-    newPasswordConfirm.value = ''
-    passwordChangeLoading.value = false
   }
 }
 
