@@ -63,6 +63,8 @@ class AuthorSerializer(serializers.ModelSerializer):
         ]
 
     def get_messages_count(self, obj):
+        if hasattr(obj, '_messages_count'):
+            return obj._messages_count
         return obj.posts.count()
 
 
@@ -207,7 +209,10 @@ class TopicSerializer(serializers.ModelSerializer):
         return value
 
     def get_first_image(self, obj):
-        first_post = obj.posts.order_by("created_at").first()
+        if hasattr(obj, '_prefetched_posts'):
+            first_post = obj._prefetched_posts[0] if obj._prefetched_posts else None
+        else:
+            first_post = obj.posts.order_by("created_at").first()
         if first_post:
             content = first_post.content if first_post.is_trusted_html else sanitize_member_html(first_post.content)
             m = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', content)
