@@ -928,6 +928,9 @@
               </div>
             </template>
             <p v-else class="dash-empty">Aucun membre actif récemment.</p>
+            <p v-if="isAdmin && stats && stats.guest_count !== undefined" class="guest-presence-count">
+              {{ stats.guest_count }} invité{{ stats.guest_count > 1 ? 's' : '' }} en ligne
+            </p>
           </div>
 
         </div>
@@ -938,7 +941,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useForumStore } from '../stores/forum'
 import { useAuthStore } from '../stores/auth'
 import api from '../composables/useApi'
@@ -1259,6 +1262,7 @@ async function saveContext() {
 
 // --- Tableau de bord ---
 const stats = ref(null)
+let statsTimer = null
 
 async function fetchStats() {
   try {
@@ -1283,6 +1287,16 @@ onMounted(() => {
   fetchFeaturedScenarios()
   fetchStats()
   loadContext()
+})
+
+watch(isAdmin, (active) => {
+  if (statsTimer) window.clearInterval(statsTimer)
+  statsTimer = active ? window.setInterval(fetchStats, 45000) : null
+  if (active) fetchStats()
+}, { immediate: true })
+
+onBeforeUnmount(() => {
+  if (statsTimer) window.clearInterval(statsTimer)
 })
 </script>
 
@@ -3210,6 +3224,11 @@ html.light .hero-overlay {
 }
 
 /* En ligne */
+.guest-presence-count {
+  margin: 1rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
 .dash-online-list {
   display: flex;
   flex-direction: column;
